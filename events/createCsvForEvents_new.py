@@ -1,8 +1,9 @@
+
 import csv
 import json
 
 INPUT_FILE = 'EventsBandsInTown.json'
-OUTPUT_FILE = 'EventsForArtists.csv'
+OUTPUT_FILE = 'EventsForArtists_new.csv'
 cols = ['id', 'artist_id', 'on_sale_datetime','datetime','description','lineup','venue','city','country']
 
 def create_csv():

@@ -11,7 +11,7 @@ REQUEST_INC = "?inc=release-groups"
 OUTPUT_FILE = 'EventsBandsInTown.json'
 INPUT_FILE = 'topArtists.csv'
 APP_ID = '?app_id=111'
-DATES = '&date=2015-05-05%2C2019-05-05'
+DATES = '&date=2018-01-01%2C2025-01-01'
 
 def getRequest(artist_name):
     return (URL_PREFIX+artist_name+REQUEST_METHOD+APP_ID+DATES)
@@ -22,18 +22,21 @@ def main():
         reader = csv.reader(artists)
         try:
             for row in reader:
-                artist_event = (requests.get(getRequest(row[1]))).json()
+                try:
+                    artist_event = (requests.get(getRequest(row[1]))).json()
+                except:
+                    print("Couldn't parse this artist: %s", row[1])
+                    artist_event = [row[1], "error"]
                 #sys.stdout.write(row[1])
                 #sys.stdout.flush()
-                if "error" in artist_event:
-                    print "Request error"
-                    break
+                if len(artist_event) == 0:
+                    artist_event = [row[1], "error"]
                 artistEvents.append(artist_event)
                 #time.sleep(1.2)
         except requests.exceptions.RequestException:
-            print("ERROR")
+            print "ERROR"
     print "Now writing the json"
-    with open(OUTPUT_FILE) as out_file:
+    with open(OUTPUT_FILE, 'w+') as out_file:
         json.dump(artistEvents, out_file)
 
 main()
