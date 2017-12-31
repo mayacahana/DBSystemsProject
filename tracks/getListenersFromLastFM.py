@@ -10,15 +10,15 @@ REQUEST_METHOD = "?method=track.search"
 REQUEST_API = "&api_key="+API_KEY
 REQUEST_FORMAT = "&format=json"
 REQUEST_LIMIT = "&limit=1"
-REQUEST_ARTIST = "&track="
-REQUEST_TRACK = "&artist="
+REQUEST_ARTIST = "&artist="
+REQUEST_TRACK = "&track="
 track_title_col_index = 4
 artist_name_col_index = 0
 
 def createRequestURI(trackName, artistName):
     return (URL_PREFIX + REQUEST_METHOD +
             REQUEST_ARTIST + artistName + REQUEST_TRACK+ trackName+
-            REQUEST_API+ REQUEST_LIMIT+ REQUEST_FORMAT)
+            REQUEST_LIMIT + REQUEST_API + REQUEST_FORMAT)
 def main():
     with open(INPUT_FILE, 'r') as fin, open(OUTPUT_FILE, 'w') as fout:
         reader = csv.reader(fin, lineterminator='\n')
@@ -31,7 +31,7 @@ def main():
             #search in lyrics API's:
             # lyrics.ovh:
             try:
-                trackData = (requests.get(createRequestURI(track_title,artist_name))).json()
+                trackData = (requests.get(createRequestURI(track_title,artist_name))).json()                
                 track = trackData["results"]["trackmatches"]["track"]
                 if len(track) == 0  or "listeners" not in track[0]:
                     print(artist_name+" "+track_title+" not found")
@@ -41,8 +41,10 @@ def main():
                     continue
 
             except requests.exceptions.RequestException:
-                print("except")
-                writer.writerow(row + ["NULL"])       
-            
+                print("Request Exception")
+                writer.writerow(row + ["NULL"])
+            except json.decoder.JSONDecodeError:
+                print("Decoder Exception")
+                writer.writerow(row + ["NULL"])            
 
 main()
