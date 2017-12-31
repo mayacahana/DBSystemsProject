@@ -11,7 +11,7 @@ REQUEST_INC = "?inc=release-groups"
 OUTPUT_FILE = 'EventsBandsInTown.json'
 INPUT_FILE = 'topArtists.csv'
 APP_ID = '?app_id=111'
-DATES = '&date=2018-01-01%2C2025-01-01'
+DATES = '&date=2018-01-01%2C2025-05-05'
 
 def getRequest(artist_name):
     return (URL_PREFIX+artist_name+REQUEST_METHOD+APP_ID+DATES)
