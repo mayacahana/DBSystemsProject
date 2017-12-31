@@ -33,9 +33,11 @@ with open(INPUT_FILE, 'r') as fin:
             # inserting 0 for country_id to use sql auto increment
             cursor.execute(add_country,(0,country))
             db.commit()
-        except:
+        except Exception as e:
             print("error")
+            print(e)
             db.rollback()
+            break;
 
 
 # disconnect from server
