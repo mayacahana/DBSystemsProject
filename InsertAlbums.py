@@ -1,7 +1,7 @@
 import csv
 import MySQLdb
 
-INPUT_FILE = "artists\\artists.csv"
+INPUT_FILE = "albums\\artistsAlbumsMusicgraph.csv"
 SERVER_NAME = "localhost"
 DB_USERNAME = "root"
 DB_PASSWORD = ""
@@ -23,6 +23,12 @@ db = MySQLdb.connect(SERVER_NAME,DB_USERNAME,DB_PASSWORD,DB_NAME)
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
 
+# to prevent encoding problems
+db.set_character_set('utf8')
+cursor.execute('SET NAMES utf8;')
+cursor.execute('SET CHARACTER SET utf8;')
+cursor.execute('SET character_set_connection=utf8;')
+
 # Inserting...
 x = 0
 with open(INPUT_FILE, 'r') as fin:
@@ -34,23 +40,23 @@ with open(INPUT_FILE, 'r') as fin:
 
         # csv row info
         artist_name = row[1]
-        artist_genre = row[3]
-        artist_playcount = row[4]
-        artist_listeners = row[5]
+        album_title = row[3]
+        album_year = row[4]
+        num_of_tracks = row[6]
         
 
         # define sql queries
-        add_artist = """INSERT INTO artist (artist_id, name, genre_id, playcount, listeners)
+        add_album = """INSERT INTO album (album_id, title, artist_id, release_year, num_of_tracks)
                         VALUES (%s,%s,%s,%s,%s)"""
-        get_genre_id = "SELECT genre_id from genre WHERE genre = %s"
+        get_artist_id = "SELECT artist_id from artist WHERE name = %s"
 
-        # getting the foreign keys from genre table
-        genre = getForeignKeyFromTable(get_genre_id, artist_genre)
+        # getting the foreign keys from artist table
+        artist_id = getForeignKeyFromTable(get_artist_id, artist_name)
 
-        # inserting the artist
+        # inserting the album
         try:
             # inserting 0 for artist_id to use sql auto increment
-            cursor.execute(add_artist, (0,artist_name,genre,artist_playcount,artist_listeners))
+            cursor.execute(add_album, (0,album_title,artist_id,album_year,num_of_tracks))
             db.commit()
         except Exception as e:
             print("error")

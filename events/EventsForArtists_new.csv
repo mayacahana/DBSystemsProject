@@ -72,7 +72,7 @@
 1,19892868,190899,2017-10-20T10:00:00,2018-11-03T19:00:00,Ed Sheeran,Ed Sheeran,Minute Maid Park,Houston,United States
 1,19884383,190899,2017-10-16T14:00:00,2018-11-07T19:00:00,Ed Sheeran,Ed Sheeran,Raymond James Stadium,Tampa,United States
 1,19892990,190899,2017-10-16T14:00:00,2018-11-10T19:00:00,** Date is subject to the 2018 National Football League schedule **,Ed Sheeran,Mercedes-Benz Stadium,Atlanta,United States
-2,Coldplay,error
+2,Coldplay,error,,,,,,,
 4,20195345,538746,2017-10-04T07:55:00,2018-02-07T18:03:00,,Kendrick Lamar,3Arena,Dublin,Ireland
 4,20195516,538746,2017-10-04T00:00:00,2018-02-09T19:30:00,,Kendrick Lamar,Genting Arena,Birmingham,United Kingdom
 4,20195517,538746,2017-10-04T00:00:00,2018-02-10T19:30:00,,Kendrick Lamar,Manchester Arena,Manchester,United Kingdom
@@ -90,7 +90,7 @@
 4,20195567,538746,2017-10-06T08:00:30,2018-03-03T19:30:00,,Kendrick Lamar,Ericsson Globe,Stockholm,Sweden
 4,20195568,538746,2017-10-13T11:43:00,2018-03-05T19:30:00,,Kendrick Lamar,Mercedes-Benz Arena,Berlin,Germany
 4,20617915,538746,,2018-05-20T19:00:00,,Kendrick Lamar,Hangout Music Festival,Gulf Shores,United States
-5,Eminem,error
+5,Eminem,error,,,,,,,
 6,20078680,330488,,2018-01-06T20:00:16,,Imagine Dragons,Malawati Shah Alam Arena,Kuala Lumpur,Malaysia
 6,20078715,330488,2017-10-10T02:00:00,2018-01-07T20:00:19,,Imagine Dragons,Singapore Indoor Stadium,Singapore,Singapore
 6,20215507,330488,2017-12-09T09:00:17,2018-01-09T19:00:00,,Imagine Dragons,Tokyo Metropolitan Gymnasium,Shibuya,Japan
@@ -125,8 +125,8 @@
 6,19818301,330488,2017-09-22T08:00:00,2018-04-25T19:00:00,,Imagine Dragons,oslo spektrum,Oslo,Norway
 6,19818296,330488,2017-09-22T08:00:52,2018-04-26T19:00:00,,Imagine Dragons,Ericsson Globe,Stockholm,Sweden
 6,20896454,330488,,2018-08-16T14:00:35,,Imagine Dragons,Green Park,St Polten,Austria
-7,The Beatles,error
-8,Queen,error
+7,The Beatles,error,,,,,,,
+8,Queen,error,,,,,,,
 9,20442402,157,2017-12-05T16:55:00,2018-05-08T19:30:00,Taylor Swift,Taylor Swift,University of Phoenix Stadium,Glendale,United States
 9,20712981,157,2017-12-05T17:55:00,2018-05-18T19:00:00,Taylor Swift,Taylor Swift,Rose Bowl,Pasadena,United States
 9,20442409,157,2017-12-05T17:55:00,2018-05-19T19:00:00,Taylor Swift,Taylor Swift,Rose Bowl,Pasadena,United States
@@ -204,10 +204,10 @@
 10,20242815,510,,2018-10-12T19:30:40,,Maroon 5,Wells Fargo Center,Philadelphia,United States
 10,20242813,510,,2018-10-14T19:30:24,,Maroon 5,Madison Square Garden,New York,United States
 10,20242807,510,,2018-10-15T19:30:09,,Maroon 5,Madison Square Garden,New York,United States
-11,Kanye West,error
-12,David Bowie,error
-13,Arctic Monkeys,error
-14,Red Hot Chili Peppers,error
+11,Kanye West,error,,,,,,,
+12,David Bowie,error,,,,,,,
+13,Arctic Monkeys,error,,,,,,,
+14,Red Hot Chili Peppers,error,,,,,,,
 15,18895880,5522674,2017-06-20T15:00:00,2018-03-01T19:00:00,,Lorde,BMO Harris Bradley Center,Milwaukee,United States
 15,18895887,5522674,2017-06-20T15:00:00,2018-03-02T19:00:00,,Lorde,Chaifetz Arena,St Louis,United States
 15,18895891,5522674,,2018-03-03T18:00:00,,Lorde,Sprint Center,Kansas City,United States
@@ -242,9 +242,9 @@
 15,20284295,5522674,2017-11-02T16:38:46,2018-05-26T12:00:42,,Lorde,All Points East Festival,London,United Kingdom
 15,20888174,5522674,,2018-05-29T19:00:00,,Lorde,Ice Palace,Saint Petersburg,Russian Federation
 15,20888171,5522674,,2018-05-31T19:00:00,,Lorde,Crocus Hall,Moscow,Russian Federation
-16,Rihanna,error
-17,Sia,error
-18,Linkin Park,error
+16,Rihanna,error,,,,,,,
+17,Sia,error,,,,,,,
+18,Linkin Park,error,,,,,,,
 19,19940403,1185304,2017-10-02T10:00:00,2018-01-05T20:00:00,Lana Del Rey,Lana Del Rey,Target Center,Minneapolis,United States
 19,19942902,1185304,,2018-01-07T20:00:00,Lana Del Rey,Lana Del Rey,Pepsi Center,Denver,United States
 19,19940417,1185304,2017-10-02T10:00:00,2018-01-09T20:00:00,Lana Del Rey,Lana Del Rey,Sprint Center,Kansas City,United States
@@ -349,14 +349,14 @@
 21,20749832,52,,2018-07-08T19:00:00,,The Killers,TRNSMT festival ,Glasgow,United Kingdom
 21,20706230,52,,2018-07-13T19:00:00,,The Killers,Macron Arena,Bolton,United Kingdom
 21,20860625,52,,2018-07-21T19:00:00,,The Killers,Lollapalooza (Paris),Paris,France
-22,The Weeknd,error
-23,Pink Floyd,error
-24,Sam Smith,error
-25,Calvin Harris,error
-26,Drake,error
-27,Nirvana,error
-28,The Rolling Stones,error
-29,Tame Impala,error
+22,The Weeknd,error,,,,,,,
+23,Pink Floyd,error,,,,,,,
+24,Sam Smith,error,,,,,,,
+25,Calvin Harris,error,,,,,,,
+26,Drake,error,,,,,,,
+27,Nirvana,error,,,,,,,
+28,The Rolling Stones,error,,,,,,,
+29,Tame Impala,error,,,,,,,
 30,17938890,128,2017-03-21T10:00:00,2018-02-01T19:00:00,,Metallica,Altice Arena,Lisbon,Portugal
 30,17938894,128,2017-03-22T09:00:00,2018-02-03T19:00:00,Metallica Madrid,Metallica,Wiznik Center,Madrid,Spain
 30,17938900,128,2017-03-22T09:00:00,2018-02-05T19:00:00,Metallica Madrid,Metallica,Wiznik Center,Madrid,Spain
@@ -381,8 +381,8 @@
 30,17939012,128,2017-03-24T08:00:51,2018-05-07T19:00:00,Metallica - WorldWired Tour,Metallica,Ericsson Globe,Stockholm,Sweden
 30,17939016,128,2017-03-21T06:55:00,2018-05-09T19:00:00,Metallica: WorldWired Tour,Metallica,HARTWALL ARENA,Helsinki,Finland
 30,17939022,128,2017-03-21T06:55:00,2018-05-11T19:00:00,Metallica: WorldWired Tour,Metallica,HARTWALL ARENA,Helsinki,Finland
-31,Led Zeppelin,error
-32,Selena Gomez,error
+31,Led Zeppelin,error,,,,,,,
+32,Selena Gomez,error,,,,,,,
 33,20093491,243545,,2018-01-11T19:00:00,,The xx,Trust's Arena,Auckland,New Zealand
 33,19493453,243545,2017-08-25T12:00:00,2018-01-13T19:00:00,,The xx,Sidney Myer Music Bowl,Melbourne,Australia
 33,20885337,243545,,2018-01-14T19:00:00,"The xx at The Forum Sunday 14th January, 2018  Fan pre-sale starts at 2pm AEDT on Tuesday 19th December To gain access to The xx fan pre-sale, please sign up at thexx.info/tour to receive your pre-sale code via email.  General on-sale starts at 12 noon AEDT on Thursday 21st December",The xx,Forum,Melbourne,Australia
@@ -451,7 +451,7 @@
 34,20449508,250,,2018-09-08T19:00:00,,Foo Fighters,Pepsi Live at Rogers Arena,Vancouver,Canada
 34,20449525,250,,2018-09-10T19:00:00,,Foo Fighters,Moda Center,Portland,United States
 34,20449547,250,,2018-09-12T19:00:00,,Foo Fighters,SAP Center,San Jose,United States
-35,Green Day,error
+35,Green Day,error,,,,,,,
 36,20309448,315,2017-11-20T15:55:00,2018-05-02T20:00:00,,U2,Bok Center,Tulsa,United States
 36,20309449,315,2017-11-20T15:55:00,2018-05-04T20:00:00,,U2,Scottrade Center,St Louis,United States
 36,20309450,315,2017-11-20T17:55:00,2018-05-07T20:00:00,,U2,SAP Center,San Jose,United States
@@ -526,8 +526,8 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 37,19371102,32666,2017-08-03T04:55:00,2018-08-16T19:30:00,,Katy Perry,Qudos Bank Arena,Sydney Olympic Park,Australia
 37,19588888,32666,2017-08-27T21:55:00,2018-08-20T20:00:00,Katy Perry Auckland,Katy Perry,Spark Arena,Auckland,New Zealand
 37,19648715,32666,2017-08-31T22:00:00,2018-08-21T19:30:00,Katy Perry Auckland,Katy Perry,Spark Arena,Auckland,New Zealand
-38,Daft Punk,error
-39,Fleetwood Mac,error
+38,Daft Punk,error,,,,,,,
+39,Fleetwood Mac,error,,,,,,,
 40,17532165,22741,,2018-01-14T00:00:00,,Lady Gaga,Joanne World Tour,Barcelona,Spain
 40,18070406,22741,,2018-01-16T19:00:00,,Lady Gaga,Palau Sant Jordi,Barcelona,Spain
 40,17532186,22741,,2018-01-18T00:00:00,,Lady Gaga,Joanne World Tour,Milan,Italy
@@ -546,8 +546,8 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 40,20107679,22741,2017-02-10T10:00:00,2018-02-20T19:00:00,,Lady Gaga,AccorHotels Arena,Paris,France
 40,17569342,22741,2017-02-10T10:00:00,2018-02-21T17:30:00,,Lady Gaga,Joanne World Tour,Paris,France
 40,17538158,22741,2017-02-08T08:00:36,2018-02-23T19:30:00,,Lady Gaga,Joanne World Tour,Berlin,Germany
-41,Michael Jackson,error
-42,Ariana Grande,error
+41,Michael Jackson,error,,,,,,,
+42,Ariana Grande,error,,,,,,,
 43,19958599,268257,,2018-02-09T19:00:00,,Major Lazer,Go Supersonic VH1 (Feb 9 - 11),Pune,India
 43,19958754,268257,,2018-03-03T19:00:00,,Major Lazer,Botanica Music Festival (March 3 - 4),San Antonio,United States
 44,20874781,143,2017-12-02T17:00:00,2018-04-20T15:00:00,2 Day Pass - Festival Pal Norte 2018,Muse,Parque Fundidora,Monterrey,Mexico
@@ -612,9 +612,9 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 47,20295408,6993460,,2018-05-08T19:00:00,,Kygo,The Anthem,Washington,United States
 47,20295414,6993460,2017-11-03T16:00:00,2018-05-11T19:00:00,,Kygo,Barclays Center,Brooklyn,United States
 47,20295422,6993460,2017-11-03T16:00:00,2018-05-12T19:00:00,,Kygo,TD Garden,Boston,United States
-48,Sufjan Stevens,error
-49,Oasis,error
-50,Avicii,error
+48,Sufjan Stevens,error,,,,,,,
+49,Oasis,error,,,,,,,
+50,Avicii,error,,,,,,,
 51,20162866,796,,2018-01-22T19:00:00,,Queens of the Stone Age,Save On Center,Victoria,Canada
 51,20162873,796,,2018-01-24T19:00:00,,Queens of the Stone Age,Pacific Coliseum,Vancouver,Canada
 51,20162886,796,,2018-01-25T19:00:00,,Queens of the Stone Age,Key Arena,Seattle,United States
@@ -655,7 +655,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 51,20565461,796,2017-11-27T00:00:00,2018-06-30T19:00:00,,Queens of the Stone Age,Finsbury Park,London,United Kingdom
 51,20379615,796,,2018-07-12T19:00:00,,Queens of the Stone Age,Mad Cool (12-14 July),Madrid,Spain
 51,20464205,796,,2018-07-13T19:00:00,,Queens of the Stone Age,NOS Alive,Lisboa,Portugal
-52,Adele,error
+52,Adele,error,,,,,,,
 53,20834389,384,2017-12-12T00:00:00,2018-07-07T13:00:00,The Cure,The Cure,Hyde Park,London,United Kingdom
 54,20716012,3235,,2018-03-01T19:00:00,,Arcade Fire,Okeechobee Festival,Okeechobee,United States
 54,19240299,3235,2017-07-26T08:00:00,2018-04-06T19:00:00,,Arcade Fire,3Arena,Dublin,Ireland
@@ -762,8 +762,8 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 57,19819457,26317,,2018-02-02T16:45:00,,David Guetta,"Westfalenhalle, Dortmund",Dortmund,Germany
 57,19819458,26317,2017-08-23T08:00:00,2018-02-03T17:00:00,,David Guetta,"Barclaycard Arena, Hamburg",Hamburg,Germany
 57,19819460,26317,2017-08-23T08:00:00,2018-02-04T17:00:00,,David Guetta,Festhalle Frankfurt,Frankfurt Am Main,Germany
-58,Justin Bieber,error
-59,Miley Cyrus,error
+58,Justin Bieber,error,,,,,,,
+59,Miley Cyrus,error,,,,,,,
 60,19271896,11178017,2017-07-18T09:00:00,2018-01-06T20:30:00,,Alt-J,Altice Arena,Lisbon,Portugal
 60,19719921,11178017,,2018-01-08T19:00:00,,Alt-J,St Jordi Club,Barcelona,Spain
 60,19719937,11178017,2017-08-18T08:04:16,2018-01-09T19:00:00,,Alt-J,WiZink Center,Madrid,Spain
@@ -828,7 +828,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 62,19174690,7,,2018-03-05T19:00:00,,Fall Out Boy,Red Hill Auditorium - Lic/AA ,Perth,Australia
 62,19173008,7,,2018-03-07T19:00:00,,Fall Out Boy,The Trusts Arena,Auckland,New Zealand
 62,20461867,7,,2018-03-27T19:00:00,,Fall Out Boy,Birmingham Arena ,Birmingham,United Kingdom
-62,20461869,7,,2018-03-28T19:00:00,,Fall Out Boy,Motorpoint Arena,Cardiff,Uk
+62,20461869,7,,2018-03-28T19:00:00,,Fall Out Boy,Motorpoint Arena,Cardiff,United Kingdom
 62,20461868,7,2017-11-24T08:45:00,2018-03-29T19:00:00,,Fall Out Boy,Manchester Arena,Manchester,United Kingdom
 62,20461870,7,,2018-03-31T19:00:00,,Fall Out Boy,The O2,London,United Kingdom
 62,20461872,7,,2018-04-04T19:00:00,,Fall Out Boy,afas live,Amsterdam-Zuidoost,Netherlands
@@ -841,11 +841,11 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 62,20857446,7,2017-12-02T04:00:00,2018-04-26T19:00:00,,Fall Out Boy,Zepp Osaka Bayside,Osaka,Japan
 62,20857449,7,,2018-04-28T19:00:00,,Fall Out Boy,Zepp Nagoya,Nagoya,Japan
 62,20857452,7,,2018-04-30T20:00:00,,Fall Out Boy, Zepp@BIGBOX,Singapore,Singapore
-63,Frank Sinatra,error
-64,System of a Down,error
-65,Frank Ocean,error
-66,Britney Spears,error
-67,The Smiths,error
+63,Frank Sinatra,error,,,,,,,
+64,System of a Down,error,,,,,,,
+65,Frank Ocean,error,,,,,,,
+66,Britney Spears,error,,,,,,,
+67,The Smiths,error,,,,,,,
 69,20807374,1337070,2017-11-20T16:15:49,2018-01-06T22:30:00,,The Chainsmokers,XS Nightclub,Las Vegas,United States
 69,20468557,1337070,,2018-01-07T19:00:00,,The Chainsmokers,College Football Championship @ Cenntenial Olympic Park,Atlanta,United States
 69,20807379,1337070,2017-11-20T16:45:44,2018-01-09T22:30:00,,The Chainsmokers,XS Nightclub,Las Vegas,United States
@@ -872,9 +872,9 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 69,20450366,1337070,,2018-05-19T19:00:00,,The Chainsmokers,Hangout Music Festival,Gulf Shores,United States
 69,20807381,1337070,2017-12-09T08:55:00,2018-06-24T16:00:00,,The Chainsmokers,RDS Arena,Dublin,Ireland
 69,20807384,1337070,,2018-07-06T19:00:00,,The Chainsmokers,Ruisrock Festival,Turku,Finland
-70,Bob Dylan,error
-71,The Strokes,error
-72,The White Stripes,error
+70,Bob Dylan,error,,,,,,,
+71,The Strokes,error,,,,,,,
+72,The White Stripes,error,,,,,,,
 73,19562453,346,2017-08-23T07:00:00,2018-01-09T20:00:00,Depeche Mode: Global Spirit Tour,Depeche Mode,Royal Arena,Copenhagen,Denmark
 73,18939916,346,2017-06-23T08:00:00,2018-01-11T19:30:00,Depeche Mode | Lass Rocken Package,Depeche Mode,Barclaycard Arena,Hamburg,Germany
 73,18939889,346,2017-06-23T08:00:00,2018-01-13T19:00:00,Depeche Mode - Global Spirit Tour,Depeche Mode,Ziggo Dome,Amsterdam,Netherlands
@@ -950,7 +950,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 74,20515173,22843,,2018-03-31T19:00:00,,Demi Lovato,VIP Experience - Tampa,Tampa,United States
 75,19757239,203,2017-09-14T08:00:00,2018-01-07T19:00:00,,Paramore,Sant Jordi Club,Barcelona,Spain
 75,19757242,203,,2018-01-09T19:00:00,,Paramore,Olympia,Paris,France
-75,19601645,203,2017-09-01T09:00:00,2018-01-11T19:00:00,,Paramore,Motorpoint Arena,Cardiff,Uk
+75,19601645,203,2017-09-01T09:00:00,2018-01-11T19:00:00,,Paramore,Motorpoint Arena,Cardiff,United Kingdom
 75,19602109,203,2017-08-30T09:00:10,2018-01-12T19:00:00,,Paramore,The O2 Arena,London,United Kingdom
 75,19602110,203,,2018-01-14T19:00:00,,Paramore,Genting Arena,Birmingham,United Kingdom
 75,19757238,203,2017-09-15T08:00:00,2018-01-16T19:00:00,,Paramore,afas live,Amsterdam-Zuidoost,Netherlands
@@ -965,10 +965,10 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 75,20589255,203,,2018-02-21T19:00:00,,Paramore,Zepp,Tokyo,Japan
 75,20437987,203,,2018-02-23T19:00:00,,Paramore,Blaisdell Concert Hall,Honolulu,United States
 75,18559608,203,,2018-04-06T12:00:00,,Paramore,PARAHOY! Deep Search (April 6-10),Miami,United States
-76,Childish Gambino,error
-77,R.E.M.,error
-78,Charlie Puth,error
-79,Tove Lo,error
+76,Childish Gambino,error,,,,,,,
+77,R.E.M.,error,,,,,,,
+78,Charlie Puth,error,,,,,,,
+79,Tove Lo,error,,,,,,,
 80,19671419,279327,,2018-02-14T19:00:00,,Bruno Mars,The Park Theatre,Las Vegas,United States
 80,19671441,279327,,2018-02-16T19:00:00,,Bruno Mars,The Park Theatre,Las Vegas,United States
 80,19671444,279327,,2018-02-17T19:00:00,,Bruno Mars,The Park Theatre,Las Vegas,United States
@@ -997,14 +997,14 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 80,20633541,279327,2017-12-01T00:00:00,2018-07-10T19:00:00,,Bruno Mars,Glasgow Green,Glasgow,United Kingdom
 80,20633548,279327,2017-12-04T09:00:00,2018-07-12T19:00:00,,Bruno Mars,Marlay Park,Dublin,Ireland
 80,20148327,279327,,2018-07-14T19:00:00,,Bruno Mars,BST Hyde Park,London,United Kingdom
-81,Elvis Presley,error
+81,Elvis Presley,error,,,,,,,
 82,20150229,388,2017-10-20T13:00:00,2018-01-19T19:00:00,,BECK,Alter Ego,Inglewood,United States
 82,20312350,388,,2018-02-24T12:00:32,,BECK,Sydney City Limits,Sydney,Australia
 82,20802221,388,,2018-02-26T19:00:00,,BECK,Royal Theatre,Canberra,Australia
 82,20802220,388,,2018-02-28T19:00:00,,BECK,Margaret Court Arena,Melbourne,Australia
 82,20312331,388,,2018-03-03T12:00:47,,BECK,Auckland City Limits,Western Springs,New Zealand
 82,20312392,388,2017-11-01T00:00:00,2018-05-27T19:00:00,,BECK,All Points East Festival,London,United Kingdom
-84,Kings of Leon,error
+84,Kings of Leon,error,,,,,,,
 85,17047069,26637,2016-12-16T07:55:00,2018-01-24T20:00:00,a-ha - an acoustic evening FRANKFURT - Tickets,Elton John,Festhalle Frankfurt,Frankfurt Am Main,Germany
 85,20873456,26637,2017-12-18T16:55:00,2018-01-30T20:00:00,,Elton John,The Theater at Madison Square Garden,New York,United States
 85,18821770,26637,,2018-02-09T19:30:00,,Elton John,Caesars Palace,Las Vegas,United States
@@ -1072,7 +1072,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 86,20853176,140,,2018-08-08T19:00:00,,Weezer,The Forum,Inglewood,United States
 86,20317837,140,,2018-08-11T19:00:00,,Weezer,Mattress Firm Amphitheatre ,Chula Vista,United States
 86,20317838,140,,2018-08-12T19:00:00,,Weezer,Ak-Chin Pavilion ,Phoenix,United States
-87,The Clash,error
+87,The Clash,error,,,,,,,
 88,20432075,145310,2017-11-16T09:00:00,2018-06-03T17:00:00,,Guns N' Roses,Olympiastadion,Berlin,Germany
 88,20432081,145310,2017-11-13T11:00:00,2018-06-06T17:00:00,,Guns N' Roses,Dyrskupladsen Odense,Odense C,Denmark
 88,20432123,145310,,2018-06-09T12:00:00,,Guns N' Roses,Download Festival,Derby,United Kingdom
@@ -1088,9 +1088,9 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 88,20432102,145310,2017-11-13T07:55:00,2018-07-16T19:00:00,,Guns N' Roses,Tallinn Song Festival Grounds,Tallinn,Estonia
 88,20432104,145310,,2018-07-19T19:00:00,,Guns N' Roses,Valle Hovin Stadion,Oslo,Norway
 88,20432105,145310,2017-11-13T08:55:00,2018-07-21T18:15:00,,Guns N' Roses,Ullevi,Goteborg,Sweden
-89,Blur,error
-90,Twenty One Pilots,error
-91,blink-182,error
+89,Blur,error,,,,,,,
+90,Twenty One Pilots,error,,,,,,,
+91,blink-182,error,,,,,,,
 92,20670433,37420,,2018-01-30T19:00:00,,MGMT,Huxley's,Berlin,Germany
 92,20670447,37420,2017-12-08T08:55:00,2018-02-02T20:30:29,,MGMT,Paradiso,Amsterdam,Netherlands
 92,20670459,37420,,2018-02-03T20:00:22,,MGMT,AB Main Hall,Brussels,Belgium
@@ -1099,7 +1099,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 92,20372281,37420,,2018-03-09T19:00:00,,MGMT,BUKU Music & Art Project,New Orleans,United States
 92,20409925,37420,,2018-07-12T14:00:00,,MGMT,Mad Cool Festival,Madrid,Spain
 92,20936516,37420,,2018-07-17T12:00:03,,MGMT,Milano Summer Festival,Milano,Italy
-93,Madonna,error
+93,Madonna,error,,,,,,,
 94,19899694,975190,2017-09-27T23:00:00,2018-01-04T19:30:00,Foster The People Melbourne,Foster the People,Forum Melbourne,Melbourne,Australia
 94,19899697,975190,,2018-01-05T20:15:00,Foster The People Sydney,Foster the People,Enmore Theatre,Sydney,Australia
 94,20098560,975190,2017-10-17T03:00:00,2018-01-10T19:00:00,Foster The People Tokyo,Foster the People,Studio Coast,Tokyo,Japan
@@ -1138,7 +1138,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 96,19848482,144274,,2018-04-19T19:30:07,,Bon Iver,Liquid Music presents TU Dance and Bon Iver at the Palace Theatre,Saint Paul,United States
 96,19848492,144274,,2018-04-20T20:00:08,,Bon Iver,Liquid Music presents TU Dance and Bon Iver at the Palace Theatre,Saint Paul,United States
 96,19848497,144274,,2018-04-21T20:00:54,,Bon Iver,Liquid Music presents TU Dance and Bon Iver at the Palace Theatre,Saint Paul,United States
-97,Black Sabbath,error
+97,Black Sabbath,error,,,,,,,
 98,20011430,1921,,2018-02-13T19:30:00,The Beach Boys,The Beach Boys,Ruth Eckerd Hall,Clearwater,United States
 98,20935400,1921,,2018-02-14T19:30:00,,The Beach Boys,Van Wezel Performing Arts Center,Sarasota,United States
 98,20300668,1921,,2018-02-15T19:00:00,,The Beach Boys,Sunrise Theatre,Fort Pierce,United States
@@ -1165,12 +1165,12 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 98,20417219,1921,,2018-06-24T19:00:00,,The Beach Boys,Hollinger Park,Timmins,Canada
 98,20905891,1921,2017-12-20T15:00:00,2018-08-20T18:00:00,,The Beach Boys,Ocean City Music Pier,Ocean City,United States
 98,20905118,1921,2017-12-20T15:00:00,2018-08-21T18:00:00,,The Beach Boys,Ocean City Music Pier,Ocean City,United States
-99,The Smashing Pumpkins,error
-100,Pearl Jam,error
-101,The Black Keys,error
+99,The Smashing Pumpkins,error,,,,,,,
+100,Pearl Jam,error,,,,,,,
+101,The Black Keys,error,,,,,,,
 102,20787812,252,,2018-03-16T19:00:00,,OneRepublic,WinStar World Casino and Resort,Thackerville,United States
-103,Wham!,error
-104,The Doors,error
+103,Wham!,error,,,,,,,
+104,The Doors,error,,,,,,,
 105,19009960,90,2017-06-30T08:00:00,2018-06-05T19:00:00,Rescheduled from 8 Nov 2017,Shakira,LANXESS Arena,Koln,Germany
 105,19002149,90,,2018-06-07T19:00:00,Rescheduled from 12 Nov 2017,Shakira,Sportpaleis,Merksem (Antwerpen),Belgium
 105,19002150,90,2017-06-30T08:00:00,2018-06-09T19:00:00,Rescheduled from 14 Nov 2017,Shakira,Ziggo Dome,Amsterdam,Netherlands
@@ -1261,10 +1261,10 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 107,20853375,417,,2018-08-08T19:00:00,,Pixies,The Forum,Inglewood,United States
 107,20319888,417,,2018-08-11T19:00:00,,Pixies,Mattress Firm Amphitheater,Chula Vista,United States
 107,20319890,417,,2018-08-12T19:00:00,,Pixies,Ak-Chin Pavilion,Phoenix,United States
-108,Stevie Wonder,error
-109,Johnny Cash,error
-110,Kelly Clarkson,error
-111,Justin Timberlake,error
+108,Stevie Wonder,error,,,,,,,
+109,Johnny Cash,error,,,,,,,
+110,Kelly Clarkson,error,,,,,,,
+111,Justin Timberlake,error,,,,,,,
 112,19560736,14816,,2018-01-01T19:00:00,,Fleet Foxes,Falls Festival,Byron Bay,Australia
 112,19898540,14816,,2018-01-03T19:00:00,,Fleet Foxes,The Palais Theatre,Melbourne,Australia
 112,19560741,14816,,2018-01-06T19:00:00,,Fleet Foxes,Falls Festival,Fremantle,Australia
@@ -1288,7 +1288,7 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 112,20473683,14816,,2018-06-30T19:00:00,,Fleet Foxes,"30 June - 7 July, Roskilde Festival",Roskilde,Denmark
 112,20743125,14816,,2018-07-04T19:00:00,,Fleet Foxes,Open'er Festival,Gdynia,Poland
 112,20821597,14816,,2018-07-10T19:00:00,,Fleet Foxes,Auditorio del Centro Kursaal,San Sebastian,Spain
-113,Joy Division,error
+113,Joy Division,error,,,,,,,
 114,20859609,7340,2017-12-16T17:00:00,2018-02-09T20:00:00,"Lineup: J Balvin, Luis Fonsi, Jowell Y Randy, Zion & Lennox, Karol G, Sebastian Yatra *Lineup subject to change",Luis Fonsi,Radio City Music Hall,New York,United States
 114,20270799,7340,,2018-03-09T21:00:00,Luis Fonsi Coahuila,Luis Fonsi,Coliseo Centenario,Torreon Centro,Mexico
 114,20891179,7340,,2018-03-10T21:00:00,Luis Fonsi Tijuana,Luis Fonsi,Plaza Monumental De Tijuana,Tijuana,Mexico
@@ -1398,8 +1398,8 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 118,20895766,596,,2018-07-04T19:00:00,,Franz Ferdinand,Ollesummer Festival,Tallinn,Estonia
 118,20752038,596,,2018-07-08T19:00:00,,Franz Ferdinand,TRNSMT Festival,Glasgow,United Kingdom
 118,20835648,596,,2018-07-15T19:00:00,,Franz Ferdinand,Musilac,Aix-Les-Bains,France
-119,New Order,error
-120,The Police,error
+119,New Order,error,,,,,,,
+120,The Police,error,,,,,,,
 121,20243019,3386497,,2018-01-26T19:00:00,,Martin Garrix,Martin Garrix @ X Games Aspen 2018,Aspen,United States
 121,20243029,3386497,2017-10-18T20:00:00,2018-01-27T19:00:00,,Martin Garrix,Martin Garrix @ Belly Up Aspen,Aspen,United States
 121,20541578,3386497,,2018-02-03T19:00:00,,Martin Garrix,Martin Garrix @ Don't Let Daddy Know Thailand,Bangkok,Thailand
@@ -1424,8 +1424,8 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 122,20817109,211217,,2018-03-17T19:00:00,,G-Eazy,DAR Constitution Hall,Washington,United States
 122,20817108,211217,,2018-03-18T19:00:00,,G-Eazy,Agganis,Boston,United States
 122,20817110,211217,,2018-03-20T19:00:00,,G-Eazy,Radio City Music Hall,New York,United States
-123,Shawn Mendes,error
-124,Future,error
+123,Shawn Mendes,error,,,,,,,
+124,Future,error,,,,,,,
 125,20476043,11504782,,2018-01-26T18:30:00,"Tyler, The Creator","Tyler, The Creator",Pacific Coliseum,Vancouver,Canada
 125,20476048,11504782,2017-11-17T10:00:00,2018-01-27T18:30:00,"Tyler, The Creator","Tyler, The Creator",Veterans Memorial Coliseum,Portland,United States
 125,20476052,11504782,2017-11-17T10:00:00,2018-01-29T19:30:00,"Tyler, The Creator","Tyler, The Creator",San Francisco Armory,San Francisco,United States
@@ -1490,8 +1490,8 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 126,20358941,7133,,2018-03-03T19:00:00,,St. Vincent,NorVa,Norfolk,United States
 126,20705525,7133,,2018-03-04T19:00:00,,St. Vincent,The Hippodrome,Baltimore,United States
 126,20450541,7133,,2018-05-19T19:00:00,,St. Vincent,Hangout Festival,Gulf Shores,United States
-127,Rage Against the Machine,error
-128,Creedence Clearwater Revival,error
+127,Rage Against the Machine,error,,,,,,,
+128,Creedence Clearwater Revival,error,,,,,,,
 129,20802488,12324703,,2018-03-26T19:00:00,,Kesha,Metro City,Northbridge,Australia
 129,20773324,12324703,2017-09-18T03:53:09,2018-03-29T19:00:00,Daily lineup and schedule TBA.,Kesha,Bluesfest Byron Bay (Mar 29-Apr 2),Byron Bay,Australia
 129,20802489,12324703,2017-12-13T21:55:00,2018-03-31T19:00:00,,Kesha,ICC Sydney Theatre,Darling Harbour,Australia
@@ -1529,10 +1529,10 @@ Global pop superstar KATY PERRY is bringing her tour to Sydney WITNESS: The Tour
 129,20806559,12324703,2017-12-15T17:00:00,2018-08-04T19:00:00,,Kesha,AmericanAirlines Arena,Miami,United States
 129,20806560,12324703,,2018-08-05T19:00:00,,Kesha,MIDFLORIDA Credit Union Amphitheatre,Tampa,United States
 130,20496906,36939,,2018-05-19T19:00:00,,Logic,Hangout Music Festival,Gulf Shores,United States
-131,Jimi Hendrix,error
-132,M83,error
-133,Aerosmith,error
-134,Simon & Garfunkel,error
+131,Jimi Hendrix,error,,,,,,,
+132,M83,error,,,,,,,
+133,Aerosmith,error,,,,,,,
+134,Simon & Garfunkel,error,,,,,,,
 135,20189990,1647,2017-10-18T20:00:00,2018-01-25T22:00:00,,LCD Soundsystem,Belly Up Aspen,Aspen,United States
 135,20186981,1647,,2018-01-26T22:00:00,,LCD Soundsystem,Belly Up,Aspen,United States
 135,20499628,1647,,2018-01-27T13:00:00,"with live music from LCD Soundsystem, Martin Garrix, Marshmello, Method Man & Redman",LCD Soundsystem,Buttermilk Mountain,Aspen,United States
@@ -1607,10 +1607,10 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 138,20678385,428629,,2018-06-05T19:00:00,,Khalid,Pier Six Pavilion ,Baltimore,United States
 138,20627596,428629,,2018-06-07T19:00:00,,Khalid,Red Hat Amphitheatre,Raleigh,United States
 138,20193453,428629,2017-10-20T09:00:00,2018-07-14T19:00:00,,Khalid,Hyde Park,London,United Kingdom
-139,Talking Heads,error
-140,OutKast,error
-141,Toto,error
-142,Foals,error
+139,Talking Heads,error,,,,,,,
+140,OutKast,error,,,,,,,
+141,Toto,error,,,,,,,
+142,Foals,error,,,,,,,
 143,20098453,26648,2017-10-20T10:00:00,2018-01-10T20:00:00,Marilyn Manson,Marilyn Manson,The Van Buren,Phoenix,United States
 143,20120561,26648,2017-07-14T17:00:00,2018-01-12T19:00:00,Marilyn Manson,Marilyn Manson,House of Blues Las Vegas,Las Vegas,United States
 143,20124875,26648,2017-07-14T17:00:00,2018-01-13T19:00:00,Marilyn Manson,Marilyn Manson,House of Blues Las Vegas,Las Vegas,United States
@@ -1644,8 +1644,8 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 143,20611417,26648,2017-11-13T08:55:00,2018-06-18T14:00:00,Download Festival Paris 2018 Monday,Marilyn Manson,BASE AERIENNE 217,Bretigny Sur Orge,France
 143,20462211,26648,2017-11-16T08:55:00,2018-06-21T20:00:00,Marilyn Manson Dijon,Marilyn Manson,Zenith de Dijon,Dijon,France
 143,20477506,26648,2017-11-15T10:15:00,2018-06-27T19:30:00,Marilyn Manson,Marilyn Manson,Campo Pequeno,Lisbon,Portugal
-144,Bon Jovi,error
-145,Cage the Elephant,error
+144,Bon Jovi,error,,,,,,,
+145,Cage the Elephant,error,,,,,,,
 146,19568768,2127,,2018-01-02T12:00:00,,The Kooks,Falls Festival,Byron Bay,Australia
 146,19899991,2127,,2018-01-03T19:00:00,,The Kooks,Festival Hall,Melbourne,Australia
 146,19899994,2127,2017-09-26T22:55:00,2018-01-05T19:00:00,,The Kooks,Hordern Pavilion,Sydney,Australia
@@ -1674,12 +1674,12 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 147,20209258,2228815,2017-10-25T23:00:00,2018-02-07T19:30:00,Mac DeMarco Melbourne,Mac DeMarco,Forum Melbourne,Melbourne,Australia
 147,20626680,2228815,2017-12-01T13:00:00,2018-02-14T20:00:00,Mac DeMarco,Mac DeMarco,The Republik,Honolulu,United States
 147,20313799,2228815,2017-11-06T17:00:00,2018-03-10T21:00:00,Mac DeMarco Guadalajara,Mac DeMarco,Teatro Estudio Cavaret,Zapopan,Mexico
-148,Hall & Oates,error
+148,Hall & Oates,error,,,,,,,
 149,20760166,271336,2017-12-09T16:00:00,2018-02-02T22:30:00,"DOORS AT 8PM, MUSIC AT 9PM.",Ellie Goulding,Club Nomadic,Prior Lake,United States
-150,Dire Straits,error
-151,John Lennon,error
-152,The Who,error
-153,Amy Winehouse,error
+150,Dire Straits,error,,,,,,,
+151,John Lennon,error,,,,,,,
+152,The Who,error,,,,,,,
+153,Amy Winehouse,error,,,,,,,
 154,20444987,1301,2017-11-24T21:00:06,2018-05-26T18:00:00,,Iron Maiden,SAKU SUURHALL,Tallinn,Estonia
 154,20441798,1301,2017-11-24T09:00:27,2018-05-28T19:00:00,Iron Maiden Helsinki,Iron Maiden,HARTWALL ARENA,Helsinki,Finland
 154,20590223,1301,2017-11-24T07:00:00,2018-05-29T19:00:00,,Iron Maiden,HARTWALL ARENA,Helsinki,Finland
@@ -1723,7 +1723,7 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 155,20295329,1105691,2017-11-03T09:55:00,2018-05-26T19:00:00,Rita Ora Hamburg,Rita Ora,Grosse Freiheit 36,Hamburg,Germany
 155,20294431,1105691,2017-11-03T09:55:00,2018-05-27T20:00:00,,Rita Ora,Vega,Vesterbro,Denmark
 155,20825773,1105691,2017-12-09T08:55:00,2018-06-24T16:00:00,Summer In The City - The Chainsmokers,Rita Ora,RDS Arena,Dublin,Ireland
-156,Panic! at the Disco,error
+156,Panic! at the Disco,error,,,,,,,
 157,20360308,2872341,2017-10-31T22:00:00,2018-02-24T12:00:00,,Vance Joy,Centennial Park,Sydney,Australia
 157,20369028,2872341,,2018-03-06T19:00:00,,Vance Joy,Stylus,Leeds,United Kingdom
 157,19532932,2872341,2017-08-18T09:00:00,2018-03-07T19:00:00,,Vance Joy,O2 Brixton Academy,Brixton,United Kingdom
@@ -1738,9 +1738,9 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 157,20369041,2872341,2017-11-10T09:00:00,2018-03-22T19:00:00,,Vance Joy,O2 ABC,Glasgow,United Kingdom
 157,20369027,2872341,,2018-03-24T19:00:00,,Vance Joy,O2 Academy,Bristol,United Kingdom
 157,20369025,2872341,2017-11-09T00:00:00,2018-03-25T19:00:00,,Vance Joy,O2 RITZ,Manchester,United Kingdom
-158,Marvin Gaye,error
-159,Nine Inch Nails,error
-160,Hozier,error
+158,Marvin Gaye,error,,,,,,,
+159,Nine Inch Nails,error,,,,,,,
+160,Hozier,error,,,,,,,
 161,20666462,529132,2017-11-22T10:00:00,2018-01-20T20:00:00,Calibash,J Balvin,STAPLES Center,Los Angeles,United States
 161,19796694,529132,2017-09-15T08:00:00,2018-01-26T20:00:00,J Balvin - Energia Tour,J Balvin,AFAS Live,Amsterdam Zuidoost,Netherlands
 161,19772379,529132,2017-09-13T08:00:00,2018-01-28T19:00:00,J Balvin,J Balvin,O2 Academy Brixton,London,United Kingdom
@@ -1754,7 +1754,7 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 162,19975377,2956,2017-09-29T15:40:00,2018-05-31T18:30:00,Bonobo,Bonobo,Alexandra Palace,London,United Kingdom
 162,19914673,2956,2017-09-29T00:00:00,2018-06-01T18:30:00,Bonobo,Bonobo,Alexandra Palace,London,United Kingdom
 162,20876799,2956,,2018-08-17T19:00:00,"Hamburg's indie, electronic and rock weekend",Bonobo,Alte Schleuse 23,Hamburg,Germany
-163,Slipknot,error
+163,Slipknot,error,,,,,,,
 164,19634160,691727,,2018-01-01T21:00:07,,DJ Snake,Field Day,Sydney Nsw,Australia
 164,19735449,691727,,2018-01-02T22:00:20,,DJ Snake,Bay Dreams Festival,Mount Maunganui,New Zealand
 164,20953446,691727,,2018-01-06T19:00:00,,DJ Snake,Seduction Nightclub,Phuket,Thailand
@@ -1803,12 +1803,12 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 166,20212060,145933,2017-10-25T00:00:00,2018-06-02T19:00:00,,The War on Drugs,Victoria Park,London,United Kingdom
 166,20541510,145933,,2018-06-04T19:00:00,,The War on Drugs,Forbidden Fruit Festival,Dublin,Ireland
 166,20837226,145933,,2018-07-28T19:00:00,,The War on Drugs,XPoNential Music Festival,Camden,United States
-167,Mumford & Sons,error
+167,Mumford & Sons,error,,,,,,,
 168,20805389,740,2017-12-15T08:55:00,2018-06-10T19:00:00,,Kasabian,Thetford Forest,Thetford,United Kingdom
 168,20805379,740,2017-12-05T08:00:00,2018-07-12T19:00:00,,Kasabian,Espacio Mad Cool,Madrid,Spain
 168,20805380,740,2017-04-07T07:55:00,2018-08-20T18:00:00,,Kasabian,Custom House Square Belfast,Belfast,Ireland
-169,My Chemical Romance,error
-170,Eagles,error
+169,My Chemical Romance,error,,,,,,,
+170,Eagles,error,,,,,,,
 171,19575736,251236,2017-05-18T14:00:00,2018-01-05T19:00:00,Katy Perry,Carly Rae Jepsen,Smoothie King Center,New Orleans,United States
 171,19575738,251236,2017-05-18T14:00:00,2018-01-07T19:00:00,Katy Perry,Carly Rae Jepsen,Toyota Center,Houston,United States
 171,19575740,251236,2017-05-18T14:00:00,2018-01-10T19:00:00,Katy Perry,Carly Rae Jepsen,AT&T Center,San Antonio,United States
@@ -1851,8 +1851,8 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 175,20860950,807,2017-12-15T10:00:00,2018-03-16T19:00:00,,Moby,The Echo,Los Angeles,United States
 175,20853496,807,2017-12-15T10:00:00,2018-03-20T21:00:00,Moby,Moby,Rough Trade NYC,Brooklyn,United States
 175,20853500,807,2017-12-15T10:00:00,2018-03-21T21:00:00,Moby,Moby,Rough Trade NYC,Brooklyn,United States
-176,Grimes,error
-177,Charli XCX,error
+176,Grimes,error,,,,,,,
+177,Charli XCX,error,,,,,,,
 178,20258599,511,2017-11-03T17:00:00,2018-02-26T19:30:00,,DJ Khaled,Viejas Arena at Aztec Bowl San Diego State University,San Diego,United States
 178,20259701,511,2017-11-03T17:00:00,2018-02-28T19:00:00,"*Cue the fan girl screams* 'cause Demi Lovato is coming to San Jose with DEE-JAY KHAAALLLEEDDD! (You'll understand this reference if you read it literally) and Kehlani. America's Grammy-nominated sweetheart truly needs no bio, but if you must get a quick overview, she probably captured your heart when she starred alongside the hunky Joe Jonas in ""Camp Rock"" (talk about a throwback) before launching her solo career with ""Heart Attack."" Lovato's since become a role model for her open struggle against an eating disorder, and a straight up bad b**ch -- Just watch her ""Project X""-esque music video for ""Sorry Not Sorry,"" the first single off the critically acclaimed ""Tell Me You Love Me"". Multi-platinum megastar DJ Khaled of We the Best, who's collaborated with everyone from Justin Bieber to Drake, along with hip-hop/R&B atist Kehlani (""SweetSexySavage"") join her for the perfect concert at the SAP Center.",DJ Khaled,SAP Center at San Jose,San Jose,United States
 178,20255215,511,2017-11-03T17:00:00,2018-03-02T19:30:00,,DJ Khaled,The Forum,Inglewood,United States
@@ -1880,14 +1880,14 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 179,20866373,5350473,,2018-03-12T19:30:00,Fifth Harmony Jakarta,Fifth Harmony,The Kasablanka,Tebet,Indonesia
 179,20582476,5350473,,2018-03-14T20:00:00,Fifth Harmony Singapore,Fifth Harmony,ZEPP@BIG BOX,Singapore,Singapore
 179,20384945,5350473,,2018-03-16T20:00:00,,Fifth Harmony,du Forum,Abu Dhabi,United Arab Emirates
-180,The Shins,error
-181,Beach House,error
+180,The Shins,error,,,,,,,
+181,Beach House,error,,,,,,,
 182,20819568,744,,2018-07-07T19:00:00,,Interpol,BST Hyde Park,London,United Kingdom
 183,20392649,57,,2018-03-24T19:00:00,,Korn,Download Festival Melbourne,Melbourne,Australia
 183,20711544,57,2017-12-12T04:00:00,2018-03-27T19:00:00,,Korn,Zepp Nagoya,Nagoya,Japan
 183,20711545,57,,2018-03-28T19:00:00,,Korn,Zepp Namba,Osaka,Japan
 183,20858858,57,,2018-03-31T19:00:00,,Korn,WARPED TOUR JAPAN (March 31 - April 1),Tokyo,Japan
-184,Neil Young,error
+184,Neil Young,error,,,,,,,
 185,20627438,9295,,2018-02-22T19:00:00,,Miguel,Roseland Theater,Portland,United States
 185,20627440,9295,,2018-02-23T19:00:00,,Miguel,Showbox SoDo,Seattle,United States
 185,20627441,9295,,2018-02-24T19:00:00,,Miguel,PNE Forum,Vancouver,Canada
@@ -1969,17 +1969,17 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 186,20703436,156,,2018-05-11T19:00:00,,Papa Roach,Brady Theatre,Tulsa,United States
 186,20703428,156,,2018-05-12T19:00:00,,Papa Roach,Revention,Houston,United States
 186,20703429,156,,2018-05-13T19:00:00,,Papa Roach,Concrete Street Pavillion,Corpus Christi,United States
-187,Christina Aguilera,error
-188,The Lumineers,error
-189,Aphex Twin,error
+187,Christina Aguilera,error,,,,,,,
+188,The Lumineers,error,,,,,,,
+189,Aphex Twin,error,,,,,,,
 190,20472718,1390751,,2018-01-07T16:00:00,,Bebe Rexha,AT&T Playoff Playlist Live!,Atlanta,United States
 191,20012436,4042462,,2018-01-14T19:30:00,SZA Sydney,SZA,Enmore Theatre,Sydney,Australia
 191,20478290,4042462,,2018-01-15T20:00:00,SZA,SZA,The Republik,Honolulu,United States
 191,20566346,4042462,,2018-01-18T20:00:00,SZA,SZA,The Republik,Honolulu,United States
 191,20939322,4042462,2017-07-07T14:00:00,2018-01-31T20:00:00,"This event was originally scheduled for Friday December 22nd @ 8pm and has now been rescheduled to Wednesday January 31st @ 8pm. All original tickets will be honored. This is an All Ages event. Please note that this show is now taking place at the Fillmore Philadelphia - 29 E Allen St, Philadelphia, PA 19123. All tickets originally purchased at the Theatre of Living Arts will be honored.",SZA,The Fillmore Philadelphia,Philadelphia,United States
 191,20496920,4042462,,2018-05-20T19:00:00,,SZA,Hangout Music Festival,Gulf Shores,United States
-192,Avril Lavigne,error
-193,Placebo,error
+192,Avril Lavigne,error,,,,,,,
+193,Placebo,error,,,,,,,
 194,17057929,2054,2016-12-16T07:55:00,2018-01-23T20:00:00,a-ha Stuttgart,a-ha,Hanns-Martin-Schleyer-Halle,Stuttgart,Germany
 194,17050659,2054,2016-12-16T07:55:00,2018-01-24T20:00:00,a-ha - an acoustic evening FRANKFURT - Tickets,a-ha,Festhalle Frankfurt,Frankfurt Am Main,Germany
 194,17046999,2054,,2018-01-26T20:00:00,A-HA HANNOVER - Tickets,a-ha,TUI Arena,Hannover,Germany
@@ -2020,13 +2020,13 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 195,20254211,1021,,2018-03-07T19:00:00,,Morrissey,Royal Concert Hall,Nottingham,United Kingdom
 195,20254219,1021,,2018-03-09T19:00:00,,Morrissey,Alexandra Palace,London,United Kingdom
 195,20407044,1021,2017-11-10T00:00:00,2018-03-10T19:00:00,,Morrissey,London Palladium,London,United Kingdom
-196,Flume,error
-197,Paul McCartney,error
+196,Flume,error,,,,,,,
+197,Paul McCartney,error,,,,,,,
 198,20922567,372911,2017-12-01T11:33:16,2018-01-08T22:30:00,French Montana,French Montana,Marquee Nightclub,Las Vegas,United States
 198,20922800,372911,2017-12-01T11:32:50,2018-01-13T22:30:00,French Montana,French Montana,Marquee Nightclub,Las Vegas,United States
 198,20666467,372911,2017-11-22T10:00:00,2018-01-20T20:00:00,Calibash,French Montana,STAPLES Center,Los Angeles,United States
 198,20764031,372911,,2018-07-06T19:00:00,"Surf, sand and summer sounds",French Montana,Ericeira Camping,Mafra,Portugal
-199,Vampire Weekend,error
+199,Vampire Weekend,error,,,,,,,
 200,20036205,101,2017-10-13T08:00:00,2018-03-11T19:00:00,,Thirty Seconds to Mars,LANXESS Arena,Koln,Germany
 200,20036199,101,2017-10-11T07:00:00,2018-03-12T19:00:00,,Thirty Seconds to Mars,St. Jakobshalle,Basel,Switzerland
 200,20036190,101,2017-10-11T07:55:00,2018-03-14T19:00:00,,Thirty Seconds to Mars,AccorHotels Arena,Paris,France
@@ -2035,7 +2035,7 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 200,20036220,101,,2018-03-18T19:00:00,,Thirty Seconds to Mars,Olympiahalle,Munich,Germany
 200,20036208,101,2017-10-11T07:00:00,2018-03-20T19:00:00,,Thirty Seconds to Mars,Ziggo Dome,Amsterdam,Netherlands
 200,20036200,101,,2018-03-21T19:00:00,,Thirty Seconds to Mars,Lotto Arena,Antwerp,Belgium
-200,20036183,101,2017-10-13T09:00:00,2018-03-23T19:00:00,,Thirty Seconds to Mars,Motorpoint Arena,Cardiff,Uk
+200,20036183,101,2017-10-13T09:00:00,2018-03-23T19:00:00,,Thirty Seconds to Mars,Motorpoint Arena,Cardiff,United Kingdom
 200,20036187,101,2017-10-11T07:55:00,2018-03-24T19:00:00,,Thirty Seconds to Mars,Manchester Arena,Manchester,United Kingdom
 200,20036188,101,2017-10-11T00:00:00,2018-03-25T19:00:00,,Thirty Seconds to Mars,The SSE Hydro,Glasgow,United Kingdom
 200,20036186,101,2017-10-11T00:00:00,2018-03-27T19:00:00,,Thirty Seconds to Mars,The O2,London,United Kingdom
@@ -2056,11 +2056,11 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 200,20036222,101,,2018-04-30T19:00:00,,Thirty Seconds to Mars,sports palace,Kiev,Ukraine
 200,20036194,101,2017-10-13T08:00:00,2018-05-02T19:00:00,,Thirty Seconds to Mars,Barclaycard Arena,Hamburg,Germany
 200,20036216,101,2017-10-11T07:00:00,2018-05-03T19:00:00,,Thirty Seconds to Mars,Mercedes-Benz Arena,Berlin,Germany
-201,Disturbed,error
+201,Disturbed,error,,,,,,,
 202,20783639,1232,2017-09-16T15:00:00,2018-02-24T19:00:44,,John Mayer,Dead & Company,New Orleans,United States
 202,19722833,1232,,2018-02-26T19:00:00,,John Mayer,Dead & Company,Sunrise,United States
 202,20783647,1232,2017-09-23T14:00:00,2018-02-27T19:00:00,,John Mayer,Dead & Company,Orlando,United States
-203,Of Monsters and Men,error
+203,Of Monsters and Men,error,,,,,,,
 204,20623379,2111475,2017-11-30T09:30:00,2018-07-06T19:00:00,Little Mix,Little Mix,The 1st Central County Ground,Hove,United Kingdom
 204,20623380,2111475,2017-11-30T09:25:00,2018-07-07T19:00:00,Little Mix - Hospitality,Little Mix,Liberty Stadium,Swansea,United Kingdom
 204,20623383,2111475,2017-11-30T09:25:00,2018-07-08T16:30:00,Little Mix,Little Mix,Colchester Community Stadium,Colchester,United Kingdom
@@ -2076,8 +2076,8 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 204,20623393,2111475,2017-11-30T09:30:00,2018-07-27T19:00:00,Little Mix - Hospitality Package,Little Mix,Falkirk Stadium,Falkirk,United Kingdom
 204,20623394,2111475,2017-11-30T09:30:00,2018-07-28T16:30:00,Little Mix - the Summer Hits Tour 2018 - Outdoors at the AECC,Little Mix,AECC BHGE Arena,Aberdeen,United Kingdom
 204,20623395,2111475,2017-11-30T09:15:00,2018-07-29T19:00:00,Little Mix,Little Mix,Bught Park,Inverness,United Kingdom
-205,Travi$ Scott,error
-206,The Velvet Underground,error
+205,Travi$ Scott,error,,,,,,,
+206,The Velvet Underground,error,,,,,,,
 207,19283177,1182086,2017-07-26T03:55:00,2018-04-24T19:00:00,Royal Blood Sydney,Royal Blood,Hordern Pavilion,Sydney,Australia
 207,19235170,1182086,2017-07-26T03:55:00,2018-05-01T20:00:00,Royal Blood Auckland,Royal Blood,Logan Campbell Centre,Auckland,New Zealand
 207,19235171,1182086,2017-07-26T03:55:00,2018-05-03T20:00:00,"On the cusp of their sold out Sydney show and headline slot at Splendour In The Grass, Frontier Touring and I OH YOU are delighted to announce that Royal Blood will be returning to Australia and New Zealand next April and May to play their biggest venues on our shores to date. The British rock duo will play six shows - including their first ever shows to Brisbane, Perth and Auckland crowds - in celebration of their acclaimed second album How Did We Get So Dark? (out now via Warner Music). Royal Blood have consistently sold out shows each time that they've toured our fine countries. Whether you've missed the chance to see their powerful live show in the past or want to go on the wild ride all over again, act quick to pick up your tickets to the duo's biggest AU & NZ headline tour next April and May!",Royal Blood,TSB Arena,Wellington,New Zealand
@@ -2100,11 +2100,11 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 207,20710684,1182086,2017-12-08T15:00:00,2018-06-14T20:30:00,"The Fillmore Is A General Admission Standing Room Only Venue Unless Otherwise Noted. Doors open at 7:30pm & show begins at 8:30pm! Ticket prices will increase the day of the show. All dates, acts, and ticket prices subject to change without notice. All tickets are subject to applicable service fees via all points of sale.",Royal Blood,The Fillmore Charlotte,Charlotte,United States
 207,20712996,1182086,2017-12-08T10:00:00,2018-06-15T20:00:00,Royal Blood,Royal Blood,The National,Richmond,United States
 207,20713519,1182086,2017-12-08T15:00:00,2018-07-11T19:00:00,,Royal Blood,Revolution Live,Fort Lauderdale,United States
-208,Soundgarden,error
+208,Soundgarden,error,,,,,,,
 209,20394091,292,,2018-03-24T19:00:00,,Limp Bizkit,Download Festival,Melbourne,Australia
-210,Disclosure,error
-211,Whitney Houston,error
-212,Modest Mouse,error
+210,Disclosure,error,,,,,,,
+211,Whitney Houston,error,,,,,,,
+212,Modest Mouse,error,,,,,,,
 213,20209253,17596,2017-10-25T23:00:00,2018-02-08T20:00:00,Running Times: TBC Please check the venue website closer to the event date.,Slowdive,Forum Melbourne,Melbourne,Australia
 213,20894816,17596,2017-11-24T09:00:00,2018-02-21T20:00:00,,Slowdive,Vega,Vesterbro,Denmark
 213,20876318,17596,,2018-02-28T21:00:00,,Slowdive,Dachstock,Berne,Switzerland
@@ -2112,7 +2112,7 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 213,20935419,17596,,2018-03-04T21:15:00,Slowdive MILAN - Tickets,Slowdive,Alcatraz,Milan,Italy
 213,20790293,17596,,2018-04-28T18:00:00,,Slowdive,Stubb's Barbeque,Austin,United States
 213,20836190,17596,2017-12-12T00:00:00,2018-07-07T13:00:00,The Cure,Slowdive,Hyde Park,London,United Kingdom
-214,Chris Brown,error
+214,Chris Brown,error,,,,,,,
 215,20372798,26640,2017-10-27T14:00:00,2018-01-11T20:00:00,,Billy Joel,Madison Square Garden,New York,United States
 215,20372790,26640,2017-10-27T14:00:00,2018-02-09T20:00:00,,Billy Joel,Amalie Arena,Tampa,United States
 215,20372788,26640,2017-10-27T14:45:00,2018-02-21T20:00:00,,Billy Joel,Madison Square Garden,New York,United States
@@ -2121,7 +2121,7 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 215,20372783,26640,2017-11-03T09:00:00,2018-06-30T20:00:00,,Billy Joel,Volksparkstadion,Hamburg,Germany
 216,20874257,26651,,2018-02-14T20:00:00,Dave Davies of The Kinks,The Kinks,Roxy Theatre-CA,West Hollywood,United States
 217,20618977,2639,2017-11-27T00:00:00,2018-07-08T19:00:00,,Eric Clapton,Hyde Park,London,United Kingdom
-218,A$AP Rocky,error
+218,A$AP Rocky,error,,,,,,,
 219,20496802,7221663,,2018-06-09T18:45:00,Hans Zimmer London,Hans Zimmer,London Royal Albert Hall,London,United Kingdom
 220,20383189,1487,2017-11-10T10:00:00,2018-03-22T20:00:00,SCORPIONS,Scorpions,ZENITH NANTES METROPOLE,Saint Herblain,France
 220,20383198,1487,2017-11-10T08:55:00,2018-03-26T20:00:00,Scorpions Limoges,Scorpions,ZENITH DE LIMOGES,Limoges,France
@@ -2197,8 +2197,8 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 223,20146196,786131,,2018-04-11T19:00:00,,WALK THE MOON,O2 Forum Kentish Town,London,United Kingdom
 223,20219671,786131,,2018-04-13T19:00:00,,WALK THE MOON,The Academy,Dublin,Ireland
 223,20146198,786131,,2018-04-14T19:00:00,,WALK THE MOON,O2 ABC,Glasgow,United Kingdom
-224,Nicki Minaj,error
-225,Banks,error
+224,Nicki Minaj,error,,,,,,,
+225,Banks,error,,,,,,,
 226,20062943,11969355,2017-10-10T10:00:00,2018-01-23T19:00:00,,NF,Iron City,Birmingham,United States
 226,20062920,11969355,2017-10-10T10:45:12,2018-01-24T19:00:00,,NF,Marathon Music Works,Nashville,United States
 226,20062935,11969355,,2018-01-26T19:00:00,,NF,The Tabernacle,Atlanta,United States
@@ -2266,7 +2266,7 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 226,20702320,11969355,,2018-05-09T19:00:00,,NF,Limelight2,Belfast,United Kingdom
 226,20702321,11969355,2017-12-08T09:00:00,2018-05-10T19:00:00,,NF,The Academy,Dublin,Ireland
 226,20642051,11969355,,2018-05-20T19:00:00,,NF,Hangout Music Festival,Gulf Shores,United States
-227,Electric Light Orchestra,error
+227,Electric Light Orchestra,error,,,,,,,
 228,19135097,118,,2018-02-07T19:00:00,,Rise Against,HBF Stadium,Mount Claremont,Australia
 228,19135100,118,,2018-02-09T19:00:00,,Rise Against,Thebarton Theatre,Adelaide,Australia
 228,19135101,118,,2018-02-10T19:00:00,,Rise Against,Margaret Court Arena,Melbourne,Australia
@@ -2281,10 +2281,10 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 228,20848552,118,,2018-06-21T19:00:00,,Rise Against,Graspop Metal Meeting (21-24 June),Dessel,Belgium
 228,20848527,118,,2018-06-22T19:00:00,,Rise Against,Hellfest (22-25 June),Clisson,France
 228,20387639,118,,2018-06-28T19:00:00,,Rise Against,Download Festival Madrid (June 28-30),Madrid,Spain
-229,Rammstein,error
-230,The Cranberries,error
-231,Prince,error
-232,Gwen Stefani,error
+229,Rammstein,error,,,,,,,
+230,The Cranberries,error,,,,,,,
+231,Prince,error,,,,,,,
+232,Gwen Stefani,error,,,,,,,
 233,20657564,193,,2018-03-10T19:00:00,,John Legend,Asia World Expo,Hong Kong,Hong Kong
 233,20657604,193,,2018-03-12T19:00:00,,John Legend,Ex Theatre Roppongi,Tokyo,Japan
 233,20657650,193,,2018-03-13T19:00:00,,John Legend,Ex Theatre Roppongi,Tokyo,Japan
@@ -2337,9 +2337,9 @@ Please visit https://communityfestival.london/ for more information.",Two Door C
 237,20836370,908,,2018-06-22T19:00:00,,Alice in Chains,Hellfest 2018 (June 22 - 24),Clisson,France
 237,20880171,908,,2018-07-08T19:00:00,,Alice in Chains,Les Eurockeennes 30 (July 5 - 8),Belfort,France
 237,20852609,908,2017-12-05T08:00:00,2018-07-13T19:00:00,,Alice in Chains,Mad Cool Festival 2018 (July 12 - 14),Madrid,Spain
-238,Portishead,error
-239,Blondie,error
-240,Nat King Cole,error
+238,Portishead,error,,,,,,,
+239,Blondie,error,,,,,,,
+240,Nat King Cole,error,,,,,,,
 241,20950441,5336498,2017-12-11T17:00:00,2018-04-07T13:00:00,Corona Capital 2018,Robin Schulz,Foro Alterno del Centro Cultural Universitario,Zapopan,Mexico
 241,20816872,5336498,,2018-06-01T15:30:00,"""The world's biggest club""",Robin Schulz,Commerzbank-Arena,Frankfurt Am Main,Germany
 241,20464843,5336498,,2018-07-20T19:00:00,"A city ruled by madness, love and pure happiness",Robin Schulz,Baal,Weeze,Germany
@@ -2375,8 +2375,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 242,20612132,2228811,,2018-06-12T19:00:00,,Father John Misty,Sentrum Scene,Oslo,Norway
 242,20642705,2228811,2017-11-10T10:55:00,2018-06-14T12:00:36,,Father John Misty,Bergenhus Festning,Bergen,Norway
 242,20844422,2228811,,2018-06-16T19:00:00,,Father John Misty,Rock The Garden Festival,Minneapolis,United States
-243,Kylie Minogue,error
-244,The 1975,error
+243,Kylie Minogue,error,,,,,,,
+244,The 1975,error,,,,,,,
 245,19751385,3213796,,2018-02-02T19:00:00,Set Time TBA. Ages 16+.,Odesza,Laneway Festival,Adelaide,Australia
 245,19751386,3213796,,2018-02-03T19:00:00,Set Time TBA. Ages 18+.,Odesza,Laneway Festival,Melbourne,Australia
 245,19751387,3213796,,2018-02-04T19:00:00,Set Time TBA. Ages 16+.,Odesza,Laneway Festival,Sydney,Australia
@@ -2403,8 +2403,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 245,20627923,3213796,,2018-06-29T12:00:15,,Odesza,Down The Rabbit Hole,Winssen,Netherlands
 245,20716747,3213796,,2018-06-29T12:00:30,Set Time TBA. All Ages.,Odesza,Garorock Festival,Coulau,France
 245,20716794,3213796,,2018-07-11T12:00:00,,Odesza,Dour Festival,Dour,Belgium
-246,Snoop Dogg,error
-247,Death Cab for Cutie,error
+246,Snoop Dogg,error,,,,,,,
+247,Death Cab for Cutie,error,,,,,,,
 248,19999580,2037479,2017-10-10T04:00:00,2018-02-02T18:15:00,Macklemore Brisbane,Macklemore,Riverstage Brisbane,Brisbane,Australia
 248,20013513,2037479,2017-10-08T23:55:00,2018-02-03T20:00:00,Macklemore Sydney,Macklemore,Hordern Pavilion,Sydney,Australia
 248,20064190,2037479,2017-10-09T00:00:00,2018-02-04T20:30:00,Macklemore Sydney,Macklemore,Hordern Pavilion,Sydney,Australia
@@ -2467,22 +2467,22 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 248,20807285,2037479,,2018-08-02T19:00:00,,Macklemore,Lakewood Amphitheater,Atlanta,United States
 248,20807287,2037479,,2018-08-04T19:00:00,,Macklemore,American Airlines Arena,Miami,United States
 248,20807280,2037479,,2018-08-05T19:00:00,,Macklemore,MIDFLORIDA Credit Union Amp,Tampa,United States
-249,Skrillex,error
-250,Audioslave,error
-251,Bing Crosby,error
-252,James Arthur,error
-253,Pitbull,error
-254,Dean Martin,error
+249,Skrillex,error,,,,,,,
+250,Audioslave,error,,,,,,,
+251,Bing Crosby,error,,,,,,,
+252,James Arthur,error,,,,,,,
+253,Pitbull,error,,,,,,,
+254,Dean Martin,error,,,,,,,
 255,20839604,229,,2018-05-23T19:00:00,,Yeah Yeah Yeahs,3Arena w/ Beck ,Dublin,Ireland
 255,20282516,229,,2018-05-25T19:00:00,,Yeah Yeah Yeahs,All Points East Festival,London,United Kingdom
 256,17398575,564,,2018-01-22T19:00:00,,Lynyrd Skynyrd,Southern Rock Cruise - Special Appearance on the Brilliance of the Seas in Jamaica,Montego Bay,Jamaica
 256,20899262,564,,2018-08-06T22:30:00,,Lynyrd Skynyrd,Sturgis 78th Bike Rally,Sturgis,United States
-257,Nick Cave & The Bad Seeds,error
-258,George Michael,error
-259,Big Sean,error
-260,Dr. Dre,error
-261,Daughter,error
-262,The Jackson 5,error
+257,Nick Cave & The Bad Seeds,error,,,,,,,
+258,George Michael,error,,,,,,,
+259,Big Sean,error,,,,,,,
+260,Dr. Dre,error,,,,,,,
+261,Daughter,error,,,,,,,
+262,The Jackson 5,error,,,,,,,
 263,20705837,50316,2017-12-05T16:55:00,2018-03-06T21:00:00,Phil Collins Monterrey,Phil Collins,Auditorio Citibanamex,Monterrey,Mexico
 263,20705742,50316,,2018-03-17T21:00:00,Phil Collins Montevideo,Phil Collins,Estadio Centenario,Montevideo,Uruguay
 263,20674691,50316,,2018-03-20T21:00:00,Phil Collins Buenos Aires,Phil Collins,Campo Argentino de Polo,Buenos Aires,Argentina
@@ -2539,8 +2539,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 266,20702937,183159,,2018-05-13T19:00:00,Angel Olsen (Solo),Angel Olsen, Centro Cultural Vila Flor,Guimarais,Portugal
 266,20702940,183159,,2018-05-14T19:00:00,Angel Olsen (Solo),Angel Olsen,ZDB at Teatro da Trindade,Lisbon,Portugal
 266,20765041,183159,,2018-05-15T19:00:00,,Angel Olsen,ZDB at Teatro De Trindade,Lisbon,Portugal
-267,Nina Simone,error
-268,The Prodigy,error
+267,Nina Simone,error,,,,,,,
+268,The Prodigy,error,,,,,,,
 269,20278623,432,2017-11-03T10:00:17,2018-06-05T19:00:00,,A Perfect Circle,Fryshuset,Stockholm,Sweden
 269,20278637,432,2017-11-03T10:00:17,2018-06-06T19:00:00,,A Perfect Circle,Spektrum,Oslo,Norway
 269,20278683,432,2017-11-03T09:00:16,2018-06-12T19:00:00,,A Perfect Circle,O2 Apollo Manchester,Manchester,United Kingdom
@@ -2554,7 +2554,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 270,20726891,25966,2017-12-05T10:00:00,2018-03-25T19:00:00,"Aretha Franklin, the reigning ""Queen of Soul"" and 18-time GRAMMY winner - known simply by her first name - celebrates her birthday at NJPAC! She is both a 20th and 21st century musical and cultural icon known the world over. The undisputed ""Queen of Soul"" has created an amazing legacy that spans six decades, from her first recording as a teenage gospel star. Her many classics include ""(You Make Me Feel Like) A Natural Woman,"" ""Chain of Fools,"" ""I Never Loved a Man (The Way I Love You)""; her own compositions ""Think,"" ""Daydreaming"" and ""Call Me""; her definitive versions of ""Respect"" and ""I Say a Little Prayer""; and ""I Knew You Were Waiting (For Me),"" her worldwide, chart-topping duet with George Michael. She is the recipient of the U.S.A.'s highest civilian honor - the Presidential Medal of Freedom. Aretha Franklin's powerful, distinctive, gospel-honed vocal style has earned her Rolling Stone magazine's No. 1 placement on the list of ""The Greatest Singers of All Time.""",Aretha Franklin,New Jersey Performing Arts Center,Newark,United States
 270,20894403,25966,2017-12-20T15:00:00,2018-06-02T19:30:00,,Aretha Franklin,Boch Center Wang Theatre,Boston,United States
 270,18994481,25966,2017-04-05T14:00:00,2018-06-28T20:00:00,"** As per doctor's orders, Aretha Franklin cannot make the trip to Toronto this week. This show will now take place on June 28, 2018. Tickets for the original date will be valid night of show.",Aretha Franklin,Sony Centre for the Performing Arts,Toronto,Canada
-271,M.I.A.,error
+271,M.I.A.,error,,,,,,,
 273,19911051,1631970,,2018-01-06T20:00:00,,Vince Staples,Enmore Theatre,Newtown,Australia
 273,19911021,1631970,2017-09-28T02:00:00,2018-01-09T19:30:00,,Vince Staples,Forum Melbourne,Melbourne,Australia
 273,19913634,1631970,,2018-01-13T19:00:00,,Vince Staples,The Powerstation,Gladstone,Australia
@@ -2591,7 +2591,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 274,18977548,5288921,2017-05-19T12:00:00,2018-02-03T20:00:00,,Van Morrison,The Colosseum at Ceasars Palace,Las Vegas,United States
 274,19920662,5288921,2017-09-15T17:00:00,2018-02-26T19:00:00,,Van Morrison,The Wiltern,Los Angeles,United States
 274,19920668,5288921,2017-09-29T17:00:00,2018-02-27T19:00:00,,Van Morrison,The Wiltern,Los Angeles,United States
-275,Beastie Boys,error
+275,Beastie Boys,error,,,,,,,
 276,20360888,23,,2018-02-23T19:00:00,,Nickelback,The Joint,Las Vegas,United States
 276,20360913,23,,2018-02-24T19:00:00,,Nickelback,The Joint,Las Vegas,United States
 276,20360931,23,,2018-02-27T19:00:00,,Nickelback,The Joint,Las Vegas,United States
@@ -2622,12 +2622,12 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 276,20714020,23,,2018-06-19T19:00:00,,Nickelback,FORUM ASSAGO,Assago,Italy
 276,20714025,23,,2018-06-21T19:00:00,,Nickelback,Clam Castle,Klam,Austria
 276,20714021,23,,2018-06-25T19:00:00,,Nickelback,Ziggodome,Amsterdam-Zuidoost,Netherlands
-277,Bob Marley & The Wailers,error
+277,Bob Marley & The Wailers,error,,,,,,,
 278,20720173,1206,,2018-02-21T22:30:04,,Duran Duran,Dubai Media City Amphitheatre,Dubai,United Arab Emirates
-279,Jay-Z,error
-280,Eurythmics,error
-282,Marina & the Diamonds,error
-283,ABBA,error
+279,Jay-Z,error,,,,,,,
+280,Eurythmics,error,,,,,,,
+282,Marina & the Diamonds,error,,,,,,,
+283,ABBA,error,,,,,,,
 284,20807750,13561817,,2018-03-02T19:00:00,,"Earth, Wind & Fire",River Spirit Casino - Margaritaville,Tulsa,United States
 284,20807755,13561817,,2018-03-04T19:00:00,,"Earth, Wind & Fire",Austin City Limits Live,Austin,United States
 284,20830740,13561817,2017-12-15T16:00:00,2018-03-06T20:00:00,,"Earth, Wind & Fire",Smart Financial Centre At Sugar Land,Sugar Land,United States
@@ -2650,8 +2650,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 284,20783020,13561817,2017-12-08T18:00:00,2018-05-12T20:00:00,,"Earth, Wind & Fire",Venetian Theatre at the Venetian Las Vegas,Las Vegas,United States
 284,20807942,13561817,2017-12-15T18:00:00,2018-05-15T19:00:00,,"Earth, Wind & Fire",City National Civic,San Jose,United States
 284,20807943,13561817,,2018-05-18T19:00:00,,"Earth, Wind & Fire",Harrah's Resort Southern California,Valley Center,United States
-285,Alicia Keys,error
-286,Birdy,error
+285,Alicia Keys,error,,,,,,,
+286,Birdy,error,,,,,,,
 287,19624559,788,,2018-01-14T19:00:00,,Iron & Wine,Eldborg,Reykjavik,Iceland
 287,19624645,788,,2018-01-16T19:00:00,,Iron & Wine,House of Culture,Helsinki,Finland
 287,19624652,788,,2018-01-18T19:00:00,,Iron & Wine,Nalen,Stockholm,Sweden
@@ -2695,8 +2695,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 288,20701303,98,,2018-06-06T19:00:00,,Jimmy Eat World,Rockefeller,Oslo,Norway
 288,20703542,98,,2018-06-11T19:00:00,,Jimmy Eat World,House of Blues,Boston,United States
 288,20703548,98,,2018-06-14T19:00:00,,Jimmy Eat World,Brooklyn Steel,Brooklyn,United States
-289,The Verve,error
-290,Cyndi Lauper,error
+289,The Verve,error,,,,,,,
+290,Cyndi Lauper,error,,,,,,,
 291,19996897,42,2017-10-06T12:00:00,2018-01-12T18:25:00,Avenged Sevenfold,Avenged Sevenfold,Bridgestone Arena,Nashville,United States
 291,19998980,42,2017-10-06T17:00:00,2018-01-14T18:25:00,"AVENGED SEVENFOLD, BREAKING BENJAMIN, BULLET FOR MY VALENTINE Produced by Frank Productions, NS2 and CMOORE LIVE",Avenged Sevenfold,Van Andel Arena,Grand Rapids,United States
 291,20000332,42,2017-10-06T14:00:00,2018-01-16T18:25:00,"Produced by Frank Productions, NS2 and CMOORE LIVE Details: Avenged Sevenfold, Breading Benjamin, Bullet For My Valentine",Avenged Sevenfold,The Santander Arena,Reading,United States
@@ -2761,11 +2761,11 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 292,20624455,32857,2017-11-27T22:00:00,2018-05-05T19:00:00,,Belle and Sebastian,Sydney Opera House,Sydney,Australia
 292,20624458,32857,,2018-05-07T19:00:00,,Belle and Sebastian,Tivoli,Brisbane Qld,Australia
 292,20842545,32857,2017-12-15T09:00:00,2018-05-25T19:00:00,Belle & Sebastian,Belle and Sebastian,SWG3 Galvanizers Yard,Glasgow,United Kingdom
-293,The Notorious B.I.G.,error
-294,Journey,error
-295,Sum 41,error
+293,The Notorious B.I.G.,error,,,,,,,
+294,Journey,error,,,,,,,
+295,Sum 41,error,,,,,,,
 297,20288052,1887201,2017-11-01T00:00:00,2018-05-25T12:00:21,LCD Soundsystem,Glass Animals,Victoria Park,London,United Kingdom
-298,Ella Fitzgerald,error
+298,Ella Fitzgerald,error,,,,,,,
 299,20773212,2561243,,2018-02-28T20:00:05,,ASAP Ferg ,Fillmore Philadelphia,Philadelphia,United States
 299,20772832,2561243,2017-12-08T15:00:00,2018-03-01T20:00:00,,ASAP Ferg ,The Fillmore Silver Spring,Silver Spring,United States
 299,20773031,2561243,2017-12-08T10:00:00,2018-03-02T20:00:00,,ASAP Ferg ,The NorVa,Norfolk,United States
@@ -2901,11 +2901,11 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 302,20788192,25900,2017-12-15T18:00:00,2018-09-26T21:00:00,,Jennifer Lopez,The AXIS at Planet Hollywood,Las Vegas,United States
 302,20786916,25900,2017-12-15T18:00:00,2018-09-28T21:00:00,,Jennifer Lopez,The AXIS at Planet Hollywood,Las Vegas,United States
 302,20788770,25900,2017-12-15T18:00:00,2018-09-29T21:00:00,,Jennifer Lopez,The AXIS at Planet Hollywood,Las Vegas,United States
-303,Air,error
+303,Air,error,,,,,,,
 304,20933847,1216,,2018-04-07T12:00:00,Phoenix Lights 2018,Gucci Mane,Festival Park at Wild Horse Pass,Chandler,United States
-305,Sonic Youth,error
-306,Jessie J,error
-307,Chance the Rapper,error
+305,Sonic Youth,error,,,,,,,
+306,Jessie J,error,,,,,,,
+307,Chance the Rapper,error,,,,,,,
 308,19840171,7011721,2017-09-20T09:00:00,2018-02-16T19:00:00,Alvvays,Alvvays,Trinity,Bristol,United Kingdom
 308,19838761,7011721,2017-09-20T08:55:00,2018-02-18T19:00:00,ALVVAYS,Alvvays,O2 ABC,Glasgow,United Kingdom
 308,19840174,7011721,2017-09-20T08:55:00,2018-02-19T19:30:00,Alvvays,Alvvays,Manchester Academy 2,Manchester,United Kingdom
@@ -2924,18 +2924,18 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 308,20460201,7011721,2017-11-17T17:00:00,2018-03-31T20:00:00,,Alvvays,The Palace Theatre,Calgary,Canada
 308,20460293,7011721,2017-11-15T18:00:01,2018-04-03T20:00:00,Alvvays Victoria,Alvvays,Capital Ballroom,Victoria,Canada
 308,20460504,7011721,2017-11-17T18:00:00,2018-04-04T20:00:00,Alvvays Vancouver,Alvvays,Commodore Ballroom,Vancouver,Canada
-309,Jack Johnson,error
+309,Jack Johnson,error,,,,,,,
 310,20441716,31673,2017-11-13T15:00:00,2018-01-14T19:00:00,"Flo Rida w/ special guest Macy Kate Sunday, January 14, 2018 Doors at 5:30pm Show starts at 7:00pm GENERAL ADMISSION ON FIELD",Flo Rida,Al Lang Stadium,St Petersburg,United States
 310,20933271,31673,2017-06-01T17:00:00,2018-01-31T07:00:00,"21 and older venue. Gates open at 3:30 daily. Additional inventory may come available at a later date. There is a delivery delay on this event, tickets will be available 7 days prior to the event. Main headliner starts approximately 7pm daily. Within 24 hours of the gates opeining each day (i.e. 3:30PM on Tuesday for Wednesdays Birds Nest, and so on), tickets will no longer be available via Ticketmaster. Tickets may still be available at the Birds Nest Ticket Trailer located at the main entrance of the Birds Nest or at the Birds Nest Ticket Sales Tents located throughout the TPC at the Waste Management Phoenix Open, provided tickets have not already sold-out. The Birds Nest Ticket Trailer opens daily at 10 AM.",Flo Rida,TPC Scottsdale,Scottsdale,United States
-311,Van Halen,error
+311,Van Halen,error,,,,,,,
 312,20193349,132147,,2018-01-26T19:30:00,,HAIM,Radio City Music Hall,New York,United States
-313,Leonard Cohen,error
+313,Leonard Cohen,error,,,,,,,
 314,20821059,2547,2017-12-12T14:46:00,2018-06-28T19:00:00,,Wiz Khalifa,Aerodrome Festival,Panensky Tynec,Czech Republic
 314,20645212,2547,,2018-06-29T19:00:00,,Wiz Khalifa,Tinderbox Festival,Odense,Denmark
 314,20645159,2547,,2018-07-06T19:00:00,,Wiz Khalifa,Les Ardentes 2018,Liege,Belgium
 314,20645192,2547,,2018-07-12T19:00:00,,Wiz Khalifa,Stavernfestivalen,Stavern,Norway
-315,J. Cole,error
-316,Destiny's Child,error
+315,J. Cole,error,,,,,,,
+316,Destiny's Child,error,,,,,,,
 317,20229135,869,,2018-01-11T19:00:00,,Spoon,Showbox,Seattle,United States
 317,20018608,869,2017-10-06T10:00:00,2018-01-12T19:00:00,,Spoon,Showbox,Seattle,United States
 317,20018609,869,2017-10-06T10:00:00,2018-01-13T19:00:00,,Spoon,McDonald Theatre,Eugene,United States
@@ -3053,12 +3053,12 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 320,20358434,4682,,2018-07-13T19:00:00,,The Wombats,Weezer / Pixies - DTE Energy Music Theatre,Clarkston,United States
 320,20358436,4682,,2018-07-14T19:00:00,,The Wombats,Weezer / Pixies - Budweiser Stage,Toronto,Canada
 320,20358438,4682,,2018-07-15T19:00:00,,The Wombats,Weezer / Pixies - Lakeview Amphitheater,Syracuse,United States
-321,Iggy Pop,error
-322,Bring Me the Horizon,error
-323,Empire of the Sun,error
-324,N*E*R*D,error
-326,A Tribe Called Quest,error
-327,Lily Allen,error
+321,Iggy Pop,error,,,,,,,
+322,Bring Me the Horizon,error,,,,,,,
+323,Empire of the Sun,error,,,,,,,
+324,N*E*R*D,error,,,,,,,
+326,A Tribe Called Quest,error,,,,,,,
+327,Lily Allen,error,,,,,,,
 328,20371993,276,,2018-02-01T20:30:30,Solo acoustic show.,Jason Mraz,Fallsview Casino Resort,Niagara Falls,Canada
 328,20371996,276,,2018-02-02T21:00:16,Solo acoustic show.,Jason Mraz,Fallsview Casino Resort,Niagara Falls,Canada
 328,20762007,276,2017-07-17T14:00:00,2018-03-08T20:00:00,Ticket Limit 8,Jason Mraz,Duke Energy Center for the Performing Arts,Raleigh,United States
@@ -3073,9 +3073,9 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 328,20760998,276,2017-12-08T16:00:00,2018-03-24T20:00:00,Doors 7:00 pm,Jason Mraz,Shreveport Municipal Memorial Auditorium,Shreveport,United States
 328,20761919,276,2017-12-08T16:00:00,2018-03-26T20:00:00,,Jason Mraz,American Bank Center Selena Auditorium,Corpus Christi,United States
 328,20761630,276,2017-12-15T16:00:00,2018-03-31T20:00:00,,Jason Mraz,Robinson Performance Hall,Little Rock,United States
-329,Andy Williams,error
-330,Bloc Party,error
-331,Lou Reed,error
+329,Andy Williams,error,,,,,,,
+330,Bloc Party,error,,,,,,,
+331,Lou Reed,error,,,,,,,
 332,19827160,2982018,,2018-02-01T19:00:00,,Galantis,Ottakringer Brauerei,Wien,Austria
 332,19827162,2982018,,2018-02-03T19:00:00,,Galantis, Halle 622 ,Zurich,Switzerland
 332,19827163,2982018,,2018-02-04T19:00:00,,Galantis,Mistubishi Electric Hall ,Dusseldorf,Germany
@@ -3090,10 +3090,10 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 332,20503144,2982018,,2018-05-28T19:00:00,,Galantis,Hangout Festival 2018,Gulf Shores,United States
 332,20675481,2982018,2017-12-07T18:55:00,2018-06-21T19:00:00,,Galantis,Electric Forest,Rothbury,United States
 333,20290400,1498823,2017-10-30T20:00:00,2018-03-12T20:00:00,"He may be only 23, but Archy Marshall - who hails from London and performs under the moniker King Krule - already has the makings of an iconoclast. With a willingness to experiment and cross-pollinate genres, Marshall is redefining what it means to make punk music - or soul, R&B, jazz, hip hop, darkwave, slacker beat poetry, or indie rock, for that matter. Alongside his sublime guitar playing, his distinctive baritone voice adds another layer to his cult underground status, forged, along with his undisputed creative genius, with the critically acclaimed, statement-making debut album 6 Feet Beneath the Moon. After performing here in 2014 and living up to the hype, King Krule returns to New Zealand for his first headline show, joining the Festival Playground line-up for his Auckland Arts Festival debut with songs from his latest album, The Ooz. 2hrs approx. This is a rain, hail or shine outdoor standing event.",King Krule,Festival Playground Music Arena,Auckland,New Zealand
-334,Ramones,error
+334,Ramones,error,,,,,,,
 335,20671495,1443295,2017-11-30T13:30:45,2018-02-03T22:30:00,Alesso,Alesso,XS Nightclub,Las Vegas,United States
-336,Fergie,error
-337,Bee Gees,error
+336,Fergie,error,,,,,,,
+337,Bee Gees,error,,,,,,,
 338,20417614,28,2017-11-13T15:00:00,2018-04-20T18:00:00,,Three Days Grace,Amalie Arena,Tampa,United States
 338,20419551,28,2017-11-13T15:00:00,2018-04-21T11:00:00,"101.1 WJRRs Earthday Birthday 25 will take place on Saturday, April 21st, 2018, at the Central Florida Fairgrounds featuring Shinedown, Three Days Grace, Seether, Starset, Fozzy, 10 Years, Powerman 5000 and more to be announced! ! This year's music festival marks the 25th anniversary of the show. Earthday Birthday is one of the largest locally-produced annual rock festivals in the state and draws upwards of 15,000 music lovers from around the globe! WJRRs Earthday Birthday festival will feature 3 stages of music including the JRR Unplugged Acoustic Stage and Chill Zone, special VIP viewing areas, plus other attractions including The Mels Bad Girls Club Art Walk and Charity Row featuring local artists and supporting Central Florida charities, the EDBD 25 Vendor Village, helicopter rides and more!",Three Days Grace,Central Florida Fairgrounds,Orlando,United States
 338,20663715,28,2017-11-08T15:00:00,2018-05-18T19:00:00,,Three Days Grace,Mapfre Stadium,Columbus,United States
@@ -3128,9 +3128,9 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 341,20860265,21261,,2018-07-21T12:00:12,,Kaleo,Lollapalooza Paris,Paris,France
 341,20861762,21261,,2018-07-22T00:00:31,,Kaleo,Lollapalooza Paris ,Paris,France
 341,20909071,21261,,2018-08-08T19:00:00,,Kaleo,Stars in Town,Schaffhausen,Switzerland
-342,Young Thug,error
-343,Otis Redding,error
-344,Johann Sebastian Bach,error
+342,Young Thug,error,,,,,,,
+343,Otis Redding,error,,,,,,,
+344,Johann Sebastian Bach,error,,,,,,,
 345,20463017,157014,2017-11-17T09:00:00,2018-02-15T19:00:00,FOUR TET (LIVE),Four Tet,Old Granada Studios,Manchester,United Kingdom
 345,20463025,157014,2017-11-17T09:00:00,2018-02-16T19:00:00,Four Tet (Live),Four Tet,Barrowland Ballroom,Glasgow,United Kingdom
 345,20839115,157014,2017-10-20T00:00:00,2018-02-19T19:30:00,,Four Tet,Village Underground,London,United Kingdom
@@ -3142,11 +3142,11 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 345,20174487,157014,2017-10-20T12:00:00,2018-03-16T20:00:00,Four Tet,Four Tet,The Masonic Lodge at Hollywood Forever,Los Angeles,United States
 345,20174489,157014,2017-10-20T12:00:00,2018-03-17T20:00:00,Four Tet,Four Tet,The Masonic Lodge at Hollywood Forever,Los Angeles,United States
 345,20876785,157014,,2018-06-08T19:00:00,Turn off the mainstream and see what's really out there,Four Tet,Safaripark Beekse Bergen,Hilvarenbeek,Netherlands
-346,Ben Howard,error
-347,2Pac,error
-348,Miles Davis,error
+346,Ben Howard,error,,,,,,,
+347,2Pac,error,,,,,,,
+348,Miles Davis,error,,,,,,,
 349,20741978,45,2017-12-05T08:00:00,2018-07-12T19:00:00,Madrid's new megastar,Snow Patrol,Espacio Mad Cool,Madrid,Spain
-350,Chuck Berry,error
+350,Chuck Berry,error,,,,,,,
 351,19904368,7076509,2017-09-28T02:00:00,2018-01-04T20:30:00,,Run The Jewels,Festival Hall Melbourne,West Melbourne,Australia
 351,19904373,7076509,2017-09-28T02:00:00,2018-01-05T20:00:00,,Run The Jewels,Big Top Luna Park Sydney,Milsons Point,Australia
 351,20021804,7076509,2017-06-20T15:00:00,2018-03-01T19:00:00,,Run The Jewels,BMO Harris Bradley Center,Milwaukee,United States
@@ -3197,13 +3197,13 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 352,20617970,1172,,2018-05-18T12:00:52,,Stone Temple Pilots,Rock on the Range,Columbus,United States
 352,20808964,1172,,2018-05-19T12:30:03,,Stone Temple Pilots,MMRBQ 2018 Music Festival,Camden,United States
 352,20843870,1172,,2018-05-25T19:00:00,,Stone Temple Pilots,Rocklahoma,Pryor,United States
-353,Feist,error
+353,Feist,error,,,,,,,
 354,20969692,26024,2017-12-19T09:55:00,2018-06-16T20:30:00,,The Chemical Brothers,Futurshow Station -Unipol Arena,Casalecchio Di Reno,Italy
 354,20969694,26024,,2018-07-12T19:00:00,,The Chemical Brothers,Mount Cobetas,Bilbao,Spain
 354,20969695,26024,,2018-07-19T22:30:00,,The Chemical Brothers,Ippodromo Le Capannelle,Rome,Italy
 354,20969696,26024,2017-12-19T09:55:00,2018-07-20T21:00:00,,The Chemical Brothers,Ippodromo del Galoppo,Milan Mi,Italy
 354,20969697,26024,2017-08-10T09:00:00,2018-07-28T12:00:00,,The Chemical Brothers,Ciudad Deportiva Guillermo Amor,Benidorm,Spain
-355,Louis Armstrong,error
+355,Louis Armstrong,error,,,,,,,
 356,20641717,5423,,2018-03-28T20:00:00,,Yo La Tengo,First Avenue,Minneapolis,United States
 356,20637762,5423,,2018-03-29T20:00:00,,Yo La Tengo,Thalia Hall,Chicago,United States
 356,20641270,5423,2017-12-01T16:00:01,2018-03-30T20:00:00,,Yo La Tengo,Thalia Hall,Chicago,United States
@@ -3294,12 +3294,12 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 358,20545189,625,,2018-07-08T19:00:00,,Ozzy Osbourne,Live Parl,Rishon Le Zion,Israel
 359,19329467,30,,2018-02-09T17:30:00,,50 Cent,"The Crescent, Parramatta Park",Sydney,Australia
 359,19329469,30,2017-07-28T03:55:00,2018-02-10T17:00:00,50 Cent Melbourne,50 Cent,Melbourne Showgrounds,Melbourne,Australia
-360,Kid Cudi,error
-361,No Doubt,error
+360,Kid Cudi,error,,,,,,,
+361,No Doubt,error,,,,,,,
 362,20846675,4888013,,2018-07-08T19:00:00,,CHVRCHES,TRNSMT Festival,Glasgow,United Kingdom
-363,Elliott Smith,error
-364,Brenda Lee,error
-365,Macklemore & Ryan Lewis,error
+363,Elliott Smith,error,,,,,,,
+364,Brenda Lee,error,,,,,,,
+365,Macklemore & Ryan Lewis,error,,,,,,,
 366,20701462,27999,2017-12-08T09:00:00,2018-04-02T19:00:00,,Norah Jones,LA SEINE MUSICALE,Boulogne-Billancourt,France
 366,20701464,27999,2017-12-08T08:55:00,2018-04-03T19:00:00,,Norah Jones,Paradiso,Amsterdam,Netherlands
 366,20701473,27999,,2018-04-05T19:00:00,,Norah Jones,Liceu,Barcelona,Spain
@@ -3329,10 +3329,10 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 368,20925864,1624,,2018-05-25T19:00:00,,Diplo,Summer Camp (May 25- 27),Chillicothe,United States
 368,20643466,1624,,2018-06-14T19:00:00,,Diplo,"Sonar Music Festival (June 14,15,16)",Barcelona,Spain
 368,20871543,1624,,2018-07-21T19:00:00,,Diplo,Lollapalooza Paris (July 21 - 22),Paris,France
-369,Meghan Trainor,error
-370,Boards of Canada,error
-371,Crystal Castles,error
-372,Paul Simon,error
+369,Meghan Trainor,error,,,,,,,
+370,Boards of Canada,error,,,,,,,
+371,Crystal Castles,error,,,,,,,
+372,Paul Simon,error,,,,,,,
 373,20886443,5039947,2017-12-08T15:00:00,2018-02-17T19:30:00,,Ty Dolla $ign,Purdue University,West Lafayette,United States
 373,20749802,5039947,,2018-02-21T19:00:00,,Ty Dolla $ign,The Observatory,Santa Ana,United States
 373,20749800,5039947,,2018-02-22T19:00:00,,Ty Dolla $ign,Fremont Theater,San Luis Obispo,United States
@@ -3398,7 +3398,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 375,20765803,26695,,2018-08-24T17:00:59,,In Flames,Reload Festival,Sulingen,Germany
 376,20210255,39399,2017-11-01T00:00:00,2018-05-25T12:00:21,,Lykke Li,All Points East Festival,London,United Kingdom
 376,20749392,39399,,2018-08-09T12:00:20,,Lykke Li,"Way Out West Festival - (August 9th - 11th, Single Day TBD)",Gothenburg,Sweden
-377,Keane,error
+377,Keane,error,,,,,,,
 378,20629073,252146,,2018-03-01T12:00:00,,Local Natives,Okeechobee Music and Arts Festival,Okeechobee,United States
 378,20631371,252146,,2018-03-02T12:00:15,,Local Natives,Okeechobee Music and Arts Festival,Okeechobee,United States
 378,20631390,252146,,2018-03-03T12:00:12,,Local Natives,Okeechobee Music and Arts Festival,Okeechobee,United States
@@ -3418,9 +3418,9 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 379,20410417,1313,,2018-03-02T20:00:00,"Mogwai is renowned for transporting listeners deep into a gripping cacophony of drums, bass and guitars. Hailing from Scotland this troupe of doom rockers returns to Perth Festival to take you full throttle into an abyss where cinematic instrumentals prevail and nuances of post-rock frailty infiltrate.",Mogwai,Chevron Gardens,Perth,Australia
 379,20399614,1313,,2018-03-04T20:00:00,Mogwai Sydney,Mogwai,Enmore Theatre,Sydney,Australia
 379,20399243,1313,2017-11-13T22:00:00,2018-03-08T19:30:00,Mogwai Melbourne,Mogwai,Forum Melbourne,Melbourne,Australia
-380,Wilco,error
-381,George Harrison,error
-382,Mark Ronson,error
+380,Wilco,error,,,,,,,
+381,George Harrison,error,,,,,,,
+382,Mark Ronson,error,,,,,,,
 383,18904027,83,,2018-01-21T19:00:00,,Stone Sour,ShipRocked 2018 (Jan. 21-25),Port Canaveral,United States
 383,20448343,83,2017-11-17T18:00:00,2018-01-27T19:00:00,,Stone Sour,Abbotsford Centre,Abbotsford,Canada
 383,20448351,83,,2018-01-29T19:00:00,,Stone Sour,Encana Events Centre,Dawson Creek,Canada
@@ -3558,7 +3558,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 386,20638755,1927776,,2018-07-12T19:00:00,,Wolf Alice,NOS Alive,Lisbon,Portugal
 386,20805464,1927776,,2018-07-18T19:00:00,,Wolf Alice,Electric Castle,Luncani,Romania
 386,20833224,1927776,,2018-08-09T19:00:00,,Wolf Alice,Oya Festival,Oslo,Norway
-387,Jamie xx,error
+387,Jamie xx,error,,,,,,,
 388,20209999,65,,2018-01-16T19:00:00,,3 Doors Down,Northern Quest Resort & Casino,Spokane,United States
 388,20210000,65,,2018-01-17T19:00:00,,3 Doors Down,Elsinore Theatre,Salem,United States
 388,20210001,65,,2018-01-19T19:00:00,,3 Doors Down,Chumash Casino Resort & Spa,Santa Ynez,United States
@@ -3577,7 +3577,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 388,20210015,65,,2018-02-09T19:00:00,,3 Doors Down,Hard Rock Live,Northfield,United States
 388,20210118,65,,2018-02-10T19:00:00,,3 Doors Down,Rialto Square Theater,Joliet,United States
 388,20210120,65,,2018-02-11T19:00:00,,3 Doors Down,Motorcity Casino Hotel,Detroit,United States
-389,One Direction,error
+389,One Direction,error,,,,,,,
 390,20023535,151535,2017-10-04T07:55:00,2018-02-07T18:00:00,Kendrick Lamar - Damn. Early Entry Package,James Blake,3Arena,Dublin,Ireland
 390,19998670,151535,2017-10-04T00:00:00,2018-02-09T19:30:00,Kendrick Lamar - The DAMN. Tour,James Blake,Genting Arena,Birmingham,United Kingdom
 390,19998676,151535,2017-10-04T00:00:00,2018-02-10T19:30:00,Kendrick Lamar - The DAMN. Tour,James Blake,Manchester Arena,Manchester,United Kingdom
@@ -3628,7 +3628,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 391,20361808,996729,,2018-04-25T00:00:00,,AWOLNATION,Academy,Dublin,Ireland
 391,20361813,996729,,2018-04-27T00:00:00,,AWOLNATION,Glav Club,Moscow,Russian Federation
 391,20497305,996729,,2018-05-20T19:00:00,,AWOLNATION,Hangout Music Festival,Gulf Shores,United States
-392,Jefferson Airplane,error
+392,Jefferson Airplane,error,,,,,,,
 393,20399595,726090,,2018-02-28T19:00:42,,Perfume Genius,Perth Festival,Perth,Australia
 393,20358119,726090,,2018-03-02T19:00:00,,Perfume Genius,Factory Theater,Lewisham,Australia
 393,20542323,726090,,2018-03-06T19:00:00,,Perfume Genius,The Zoo,Brisbane,Australia
@@ -3646,7 +3646,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 394,20718731,319393,2017-11-16T11:12:00,2018-03-03T19:00:00,,Washed Out,McDowell Mountain Music Festival,Phoenix,United States
 394,20632258,319393,,2018-03-04T19:00:00,,Washed Out,Air and Style Festival,Los Angeles,United States
 394,20679516,319393,,2018-06-21T19:00:00,,Washed Out,Electric Forrest,Rothbury,United States
-395,Kiss,error
+395,Kiss,error,,,,,,,
 396,19676515,1432,2017-09-06T21:55:00,2018-02-14T20:00:00,Robbie Williams Auckland,Robbie Williams,Spark Arena,Auckland,New Zealand
 396,19671633,1432,2017-09-03T21:55:00,2018-02-17T19:30:00,Robbie Williams Dunedin,Robbie Williams,Forsyth Barr Stadium,Dunedin,New Zealand
 396,20779972,1432,2017-12-08T00:55:00,2018-02-22T16:00:00,"Running Times: 4:00pm - Gates 6:15pm - Sheppard 7:45pm - Robbie Williams 10:00pm - Finish *Times are approximate and subject to change This ticket is an all-inclusive concert and hospitality package. The Concert & Dining Package area is positioned away from the stage in the winery restaurant, where patrons can enjoy an exclusive and relaxed dining setting whilst enjoying the concert. It's ideal for couples or groups who want to enjoy delicious gourmet food, premium wines, private toilets and to experience the concert in a seated sectioned off area. Enjoy the day in style! Prohibited Items: Strictly no BYO alcohol or non-alcoholic drinks (only exception is sealed bottled water). Eskis, cooler bags & backpacks larger than cabin size 26 litres are not allowed. Shopping trolleys & push carts. Large oversized chairs, reclining chairs, air beds, deck chairs. Carry bags for camping chairs. No umbrellas (even if it's raining). Tables, glass, metal cutlery, tents or sunshades.",Robbie Williams,Rochford Wines,Coldstream,Australia
@@ -3657,7 +3657,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 396,19672428,1432,2017-09-07T01:55:00,2018-03-03T14:00:00,"Running Times: 3:00pm - Gates *Times are approximate and subject to change Concert & Dining: Experience the ultimate entertainer with the ultimate day out. Our rustic Barrel Hall will be transformed into the greatest Robbie warm up party. Be treated like a VIP with canapes, a three-course meal, premium drinks package and reserved gold class seating. Prohibited Items: Strictly no BYO alcohol or non-alcoholic drinks (only exception is sealed bottled water). Eskis, cooler bags & backpacks larger than cabin size 26 litres are not allowed. Shopping trolleys & push carts. Large oversized chairs, reclining chairs, air beds, deck chairs. Carry bags for camping chairs. No umbrellas (even if it's raining). Tables, glass, metal cutlery, tents or sunshades.",Robbie Williams,Mt Duneed Estate,Waurn Ponds,Australia
 396,19411366,1432,2017-08-06T23:25:00,2018-03-04T19:00:00,Robbie Williams Adelaide,Robbie Williams,Adelaide Street Circuit,Adelaide,Australia
 396,19723494,1432,2017-09-07T01:55:00,2018-03-07T19:30:00,Robbie Williams Perth,Robbie Williams,Perth Arena,Perth,Australia
-397,Rae Sremmurd,error
+397,Rae Sremmurd,error,,,,,,,
 398,19990120,1137675,,2018-01-03T19:00:00,,Cigarettes After Sex,Max Watt's,Paddington,Australia
 398,19486759,1137675,,2018-01-04T19:00:00,,Cigarettes After Sex,The Zoo,Brisbane,Australia
 398,19486763,1137675,,2018-01-06T19:00:00,,Cigarettes After Sex,Corner Hotel,Richmond,Australia
@@ -3719,8 +3719,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 401,20364750,1965,2017-11-06T15:00:00,2018-04-27T11:00:15,,Five Finger Death Punch,Monster Energy Welcome to Rockville,Jacksonville,United States
 401,20784263,1965,,2018-04-28T12:00:24,,Five Finger Death Punch,Monster Energy Fort Rock Festival,Sunrise,United States
 401,20784299,1965,,2018-05-05T11:00:11,,Five Finger Death Punch,Carolina Rebellion,Concord,United States
-402,Brand New,error
-403,Nick Jonas,error
+402,Brand New,error,,,,,,,
+403,Nick Jonas,error,,,,,,,
 404,20337207,260345,,2018-03-03T19:00:00,,PHANTOGRAM,Air + Style Los Angeles,Los Angeles,United States
 404,20337210,260345,,2018-03-04T19:00:00,,PHANTOGRAM,Air + Style Los Angeles,Los Angeles,United States
 404,20943064,260345,,2018-05-18T19:00:00,,PHANTOGRAM,Grizzly Festival,Fresno,United States
@@ -3792,12 +3792,12 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 407,20767904,50320,,2018-07-24T19:00:00,,Judas Priest,Budapest Arena,Budapest,Hungary
 407,20881837,50320,,2018-07-26T19:00:00,,Judas Priest,Metal Days Festival,Tolmin,Slovenia
 407,20652165,50320,,2018-07-28T19:00:00,,Judas Priest,Stadthalle,Vienna,Austria
-407,20737631,50320,2017-12-09T07:00:00,2018-08-06T19:00:00,,Judas Priest,013,Tilburg,Netherlands
+407,20737631,50320,2017-12-09T07:00:00,2018-08-06T19:00:00,,Judas Priest,13,Tilburg,Netherlands
 407,20405972,50320,,2018-08-10T19:00:00,,Judas Priest,BLOODSTOCK FESTIVAL,Catton Hall,United Kingdom
 408,20926945,169016,2017-12-20T21:00:00,2018-02-15T22:00:00,,Deadmau5,Belly Up Aspen,Aspen,United States
 408,20926946,169016,2017-12-20T21:00:00,2018-02-16T22:00:00,,Deadmau5,Belly Up Aspen,Aspen,United States
-409,BTS,error
-410,Mastodon,error
+409,BTS,error,,,,,,,
+410,Mastodon,error,,,,,,,
 411,20212818,1005362,,2018-02-06T19:00:00,,Grouplove,The Republik,Honolulu,United States
 411,20138872,1005362,,2018-02-09T20:00:03,,Grouplove,Triffid,Brisbane,Australia
 411,20703749,1005362,,2018-02-10T19:00:00,,Grouplove,Party In The Paddock,White Hills,Australia
@@ -3806,11 +3806,11 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 411,19793974,1005362,,2018-02-16T19:00:00,,Grouplove,Mountain Sounds,Kariong,Australia
 411,19793995,1005362,,2018-02-17T19:00:00,,Grouplove,Mountain Sounds,Kariong,Australia
 411,20460803,1005362,,2018-05-19T19:00:53,,Grouplove,Hangout Fest,Gulf Shores,United States
-412,Max Richter,error
-413,Tom Waits,error
-414,Usher,error
-415,The Flaming Lips,error
-416,Metronomy,error
+412,Max Richter,error,,,,,,,
+413,Tom Waits,error,,,,,,,
+414,Usher,error,,,,,,,
+415,The Flaming Lips,error,,,,,,,
+416,Metronomy,error,,,,,,,
 417,20640949,13119,,2018-02-09T20:00:00,,Ludovico Einaudi,Dubai Opera House,Dubai,United Arab Emirates
 417,20504839,13119,2017-11-20T08:55:00,2018-04-04T19:30:00,Ludovico Einaudi,Ludovico Einaudi,Annexet,Stockholm,Sweden
 417,20475686,13119,,2018-04-05T19:00:00,Ludovico Einaudi,Ludovico Einaudi,Folketeatret,Oslo,Norway
@@ -3820,8 +3820,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 417,20499323,13119,2017-10-04T16:06:16,2018-05-07T20:00:00,,Ludovico Einaudi,Arena Leipzig,Leipzig,Germany
 417,20484726,13119,2017-10-04T16:06:16,2018-05-08T20:00:00,Ludovico Einaudi Frankfurt am Main,Ludovico Einaudi,Festhalle,Frankfurt,Germany
 417,20488011,13119,2017-10-03T10:58:52,2018-05-09T20:00:00,Ludovico Einaudi Hamburg,Ludovico Einaudi,Barclaycard Arena,Hamburg,Germany
-418,The Animals,error
-419,ScHoolboy Q,error
+418,The Animals,error,,,,,,,
+419,ScHoolboy Q,error,,,,,,,
 420,20874474,1826,,2018-06-19T20:00:00,,Sting,Ancient Theatre Plovdiv,Plovdiv,Bulgaria
 420,20874475,1826,,2018-06-20T20:00:00,,Sting,Ancient Theatre Plovdiv,Plovdiv,Bulgaria
 420,20860513,1826,,2018-06-27T20:00:00,"Gordon Matthew Thomas Sumner, CBE (born 2 October 1951), better known by his stage name Sting, is an English musician, singer, songwriter and actor. He was the principal songwriter, lead singer, and bassist for the new wave rock band the Police from 1977 to 1986, and also launched a solo career in 1985",Sting,Steinbruch St. Margarethen,Sankt Margarethen Im Burgenland,Austria
@@ -3875,13 +3875,13 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 422,19362309,1135768,,2018-02-10T19:00:00,,Unknown Mortal Orchestra,Tuki Festival,Wanaka,New Zealand
 422,20843397,1135768,,2018-06-08T19:00:00,,Unknown Mortal Orchestra,Best Kept Secret Festival (June 8-10),Hilvarenbeek,Netherlands
 422,20768460,1135768,,2018-08-10T19:00:00,,Unknown Mortal Orchestra,Haven (August 10-11),Copenhagen,Denmark
-423,Pantera,error
-424,Jaden Smith,error
+423,Pantera,error,,,,,,,
+424,Jaden Smith,error,,,,,,,
 425,20817210,1627,2017-12-12T00:00:00,2018-06-14T17:30:00,Live at Chelsea - Kaiser Chiefs,Kaiser Chiefs,The Royal Hospital Chelsea,London,United Kingdom
 425,20763745,1627,2017-08-04T07:55:00,2018-07-20T11:00:00,Penn Festival - Pre-pitched accommodation,Kaiser Chiefs,The Big Park,Winchmore Hill,United Kingdom
 425,20652447,1627,2017-08-28T09:00:00,2018-08-26T10:00:00,Victorious Festival 2018,Kaiser Chiefs,Southsea Seafront,Portsmouth,United Kingdom
-426,John Williams,error
-427,Pavement,error
+426,John Williams,error,,,,,,,
+427,Pavement,error,,,,,,,
 428,20834750,8805319,,2018-01-20T18:00:00,,Jax Jones,The Watering Hole,Perranporth,United Kingdom
 428,20834758,8805319,,2018-01-31T22:00:00,,Jax Jones,Asylum,Hull,United Kingdom
 428,20457636,8805319,,2018-04-09T12:00:00,The greatest show on snow,Jax Jones,Mayrhofen,Mairhofen,Austria
@@ -3889,7 +3889,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 428,20530750,8805319,2017-05-31T08:00:00,2018-05-27T10:30:00,,Jax Jones,Damyns Hall Aerodrome Ltd,Upminster,United Kingdom
 429,20680365,332,,2018-02-11T12:00:01,,Nas,Queen Mary,Long Beach,United States
 430,20666207,442101,2017-12-01T09:00:47,2018-06-03T16:00:59,,Courtney Barnett,All Points East,London,United Kingdom
-431,Faith No More,error
+431,Faith No More,error,,,,,,,
 432,20920072,954,2017-12-18T14:12:15,2018-06-15T23:59:00,,Jamiroquai,MMArena,Le Mans,France
 432,20852517,954,2017-12-05T09:00:00,2018-07-08T13:00:00,MAIN SQUARE FESTIVAL 2018 - PASS 1 JOUR DIMANCHE,Jamiroquai,LA CITADELLE,Arras,France
 432,20858462,954,2017-12-15T08:55:00,2018-07-10T19:00:00,Jamiroquai,Jamiroquai,Piazza Sordello,Mantua,Italy
@@ -3926,15 +3926,15 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 435,20806725,6643498,,2018-06-10T19:00:59,,X Ambassadors,Laurelive,Cleveland,United States
 436,20722723,26653,2017-12-05T10:00:00,2018-02-16T21:00:00,Cream Classical Ibiza,Cream,Liverpool Cathedral,Liverpool,United Kingdom
 436,20722728,26653,2017-12-05T10:00:00,2018-02-17T21:00:00,Cream Classical Ibiza,Cream,Liverpool Cathedral,Liverpool,United Kingdom
-437,Ariel Pink,error
+437,Ariel Pink,error,,,,,,,
 438,20930352,3085,,2018-02-17T22:00:00,,Charlotte Gainsbourg,Salle du Lignon,Le Lignon - Geneve,Switzerland
-439,Iggy Azalea,error
-440,Brian Eno,error
-441,PJ Harvey,error
-442,Bill Withers,error
-443,Animal Collective,error
-444,Hot Chip,error
-445,Machine Gun Kelly,error
+439,Iggy Azalea,error,,,,,,,
+440,Brian Eno,error,,,,,,,
+441,PJ Harvey,error,,,,,,,
+442,Bill Withers,error,,,,,,,
+443,Animal Collective,error,,,,,,,
+444,Hot Chip,error,,,,,,,
+445,Machine Gun Kelly,error,,,,,,,
 446,20508952,28472,2017-12-01T20:23:00,2018-02-09T20:00:00,"Ticketmaster receives an allotment for this event. For expanded inventory options please visit http://www.themahaffey.com. No cameras, audio, or video recording allowed.",Tony Bennett,The Mahaffey Theater,St Petersburg,United States
 446,20932363,28472,,2018-02-10T20:00:00,,Tony Bennett,Van Wezel Performing Arts Center,Sarasota,United States
 446,20859841,28472,,2018-02-12T19:30:00,,Tony Bennett,Barbara B. Mann Performing Arts Hall,Fort Myers,United States
@@ -3946,8 +3946,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 446,20464258,28472,2017-11-17T15:00:00,2018-04-13T19:30:00,,Tony Bennett,BOSTON OPERA HOUSE,Boston,United States
 446,20476263,28472,2017-11-17T10:00:00,2018-04-26T20:00:00,Tony Bennett,Tony Bennett,Winspear Opera House,Dallas,United States
 446,20819478,28472,2017-12-15T17:00:00,2018-05-10T19:30:00,,Tony Bennett,State Theatre,Minneapolis,United States
-447,Tom Odell,error
-448,James Brown,error
+447,Tom Odell,error,,,,,,,
+448,James Brown,error,,,,,,,
 449,19439881,50292,2017-08-11T17:00:00,2018-01-24T19:00:00,"All patrons must be 18 years or older to enter the venue. Up Close and Personal Package includes: 2 tickets at a premium table Prix fixe dinner for 2 2 VIP lanyards Priority access into Music Hall Bottle of champagne or wine Gourmet Treat Limited edition art and photo package Carlos Live DVD The Intimate Package includes: 2 tickets at a VIP table 2 VIP lanyards Priority access into Music Hall Bottle of champagne or wine Gourmet Treat Limited edition poster Carlos Live DVD. For more information, please visit www.houseofblues.com/promo/lvsantana/",Santana,House of Blues Las Vegas,Las Vegas,United States
 449,19439916,50292,2017-08-11T17:00:00,2018-01-26T19:00:00,"All patrons must be 18 years or older to enter the venue. Up Close and Personal Package includes: 2 tickets at a premium table Prix fixe dinner for 2 2 VIP lanyards Priority access into Music Hall Bottle of champagne or wine Gourmet Treat Limited edition art and photo package Carlos Live DVD The Intimate Package includes: 2 tickets at a VIP table 2 VIP lanyards Priority access into Music Hall Bottle of champagne or wine Gourmet Treat Limited edition poster Carlos Live DVD. For more information, please visit www.houseofblues.com/promo/lvsantana/",Santana,House of Blues Las Vegas,Las Vegas,United States
 449,19439943,50292,2017-08-11T17:00:00,2018-01-27T19:00:00,"All patrons must be 18 years or older to enter the venue. Up Close and Personal Package includes: 2 tickets at a premium table Prix fixe dinner for 2 2 VIP lanyards Priority access into Music Hall Bottle of champagne or wine Gourmet Treat Limited edition art and photo package Carlos Live DVD The Intimate Package includes: 2 tickets at a VIP table 2 VIP lanyards Priority access into Music Hall Bottle of champagne or wine Gourmet Treat Limited edition poster Carlos Live DVD. For more information, please visit www.houseofblues.com/promo/lvsantana/",Santana,House of Blues Las Vegas,Las Vegas,United States
@@ -3977,7 +3977,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 449,20712500,50292,2017-12-01T14:35:03,2018-07-03T20:00:00,Santana,Santana,POLO CLUB DE LA PLAINE DE L'AIN,St Vulbas,France
 449,20814833,50292,2017-12-11T09:00:00,2018-07-07T20:00:00,SANTANA,Santana,AccorHotels Arena,Paris,France
 449,20623381,50292,2017-11-27T00:00:00,2018-07-08T19:00:00,British Summer Time - Eric Clapton,Santana,Hyde Park,London,United Kingdom
-450,Genesis,error
+450,Genesis,error,,,,,,,
 451,20818318,2917891,2017-12-13T09:55:00,2018-01-31T20:00:00,George Ezra,George Ezra,Shoreditch Town Hall,London,United Kingdom
 451,20219047,2917891,2017-10-29T19:55:00,2018-03-03T11:00:00,Auckland City Limits,George Ezra,Western Springs Stadium,Auckland,New Zealand
 451,19329474,2917891,,2018-03-06T20:15:00,George Ezra Sydney,George Ezra,Enmore Theatre,Sydney,Australia
@@ -4032,9 +4032,9 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 453,20807112,2575,2017-12-11T08:45:00,2018-09-02T19:00:00,"Grandslam Summer Tour 2018: Simple Minds, The Pretenders & KT Tunstall",Simple Minds,Taunton Racecourse,Somerset,United Kingdom
 453,20807114,2575,2017-12-11T08:45:00,2018-09-08T19:00:00,"Grandslam Summer Tour 2018: Simple Minds, The Pretenders & KT Tunstall",Simple Minds,Northern Meeting Park,Inverness,United Kingdom
 453,20807116,2575,2017-12-11T08:45:00,2018-09-09T19:00:00,"Grandslam Summer Tour 2018: Simple Minds, The Pretenders & KT Tunstall",Simple Minds,SLESSOR GARDENS,Dundee,United Kingdom
-454,Pentatonix,error
-455,Sampha,error
-456,Nelly Furtado,error
+454,Pentatonix,error,,,,,,,
+455,Sampha,error,,,,,,,
+456,Nelly Furtado,error,,,,,,,
 457,20789441,30014,2017-12-08T15:51:31,2018-06-06T20:00:00,DEERHUNTER + guest,Deerhunter,Aeronef,Lille,France
 457,20883649,30014,,2018-06-08T19:00:00,Turn off the mainstream and see what's really out there,Deerhunter,Safaripark Beekse Bergen,Hilvarenbeek,Netherlands
 457,20799973,30014,2017-12-08T09:00:00,2018-06-14T20:30:00,,Deerhunter,Rock School Barbey,Bordeaux,France
@@ -4078,12 +4078,12 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 458,20628487,173766,,2018-02-03T19:00:00,,Passion Pit,Belasco Theater,Los Angeles,United States
 458,20629236,173766,,2018-02-03T20:00:00,,Passion Pit,Belasco Theater - VIP,Los Angeles,United States
 459,20850173,1117,,2018-03-24T19:00:00,"Introducing Houston's newest music festival - In Bloom. Join us in Eleanor Tinsley Park on March 24-25, 2018 for a diverse lineup of more than 50 artists on 4 stages, the best food in the South, activities and more.",Broken Social Scene,Eleanor Tinsley Park,Houston,United States
-460,DJ Shadow,error
-461,Damien Rice,error
-462,Ludwig van Beethoven,error
-463,Joey Bada$$,error
-464,Rush,error
-465,Kodaline,error
+460,DJ Shadow,error,,,,,,,
+461,Damien Rice,error,,,,,,,
+462,Ludwig van Beethoven,error,,,,,,,
+463,Joey Bada$$,error,,,,,,,
+464,Rush,error,,,,,,,
+465,Kodaline,error,,,,,,,
 466,20904096,6442,2017-12-20T09:00:00,2018-07-28T20:00:00,Caribou,Caribou,Festival Big Top,Galway,Ireland
 467,19927059,1201,2017-09-29T07:55:00,2018-01-24T19:00:00,Stereophonics,Stereophonics,Ancienne Belgique,Brussels,Belgium
 467,19927154,1201,2017-09-28T07:55:00,2018-01-26T20:00:00,Stereophonics,Stereophonics,l'Olympia,Paris,France
@@ -4113,7 +4113,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 467,20329165,1201,2017-11-03T09:55:00,2018-06-02T16:30:00,Stereophonics,Stereophonics,Racecourse Ground,Wrexham,United Kingdom
 467,20329167,1201,2017-11-06T09:55:00,2018-06-09T17:00:00,Stereophonics,Stereophonics,Cardiff City Stadium,Cardiff,United Kingdom
 467,20874193,1201,,2018-07-22T19:00:00,LOLLAPALOOZA PARIS - PASS 2 JOURS,Stereophonics,HIPPODROME DE LONGCHAMP,Paris,France
-468,TV on the Radio,error
+468,TV on the Radio,error,,,,,,,
 469,18858793,2734,2017-06-13T14:00:00,2018-03-09T20:30:00,,Nightwish,The Tabernacle,Atlanta,United States
 469,18858805,2734,,2018-03-10T19:00:00,,Nightwish,The Fillmore,Charlotte,United States
 469,18858813,2734,2017-06-13T10:00:00,2018-03-12T20:00:00,,Nightwish,The NorVa,Norfolk,United States
@@ -4152,8 +4152,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 470,20741616,61,,2018-07-20T19:00:00,,Goo Goo Dolls,Mares Vivas Festival,Vila Nova De Gaia,Portugal
 470,20815348,61,,2018-08-08T19:00:00,,Goo Goo Dolls,Grona Lund,Stockholm,Sweden
 470,20815535,61,,2018-08-10T19:00:00,,Goo Goo Dolls,Furuviksparken,Gavle,Sweden
-471,Pet Shop Boys,error
-472,King Gizzard & The Lizard Wizard,error
+471,Pet Shop Boys,error,,,,,,,
+472,King Gizzard & The Lizard Wizard,error,,,,,,,
 473,20085278,296339,,2018-03-09T19:00:00,,Mount Kimbie,Twilight at Taronga,Sydney,Australia
 473,20085285,296339,,2018-03-10T19:00:00,,Mount Kimbie,Pitch Festival,Lardner,Australia
 473,20085288,296339,,2018-03-11T19:00:00,,Mount Kimbie,Unknown Venue,Adelaide,Australia
@@ -4161,8 +4161,8 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 474,19995230,1033921,,2018-03-17T19:00:00,,MAC MILLER,Lollapalooza Argentina,Buenos Aires,Argentina
 474,19995231,1033921,,2018-03-18T19:00:00,,MAC MILLER,Lollapalooza Chile,Santiago,Chile
 474,19995225,1033921,,2018-03-25T19:00:00,,MAC MILLER,Lollapalooza Brasil,Sao Paulo,Brazil
-475,Wolfgang Amadeus Mozart,error
-476,Slayer,error
+475,Wolfgang Amadeus Mozart,error,,,,,,,
+476,Slayer,error,,,,,,,
 477,20957904,5035831,,2018-01-04T20:40:15,,Kaytranada,Mount Maunganui,Tauranga,New Zealand
 477,20057964,5035831,2017-10-04T21:00:00,2018-01-05T19:00:00,,Kaytranada,The Powerstation,Auckland,New Zealand
 477,19701339,5035831,,2018-01-06T19:00:00,,Kaytranada,FOMO,Brisbane,Australia
@@ -4189,7 +4189,7 @@ w/ Queens of the Stone Age, The National, and more",Father John Misty,Northside 
 480,19767552,585475,2017-09-13T07:55:00,2018-03-23T19:00:00,Sigrid,SIGRID,The Academy,Dublin,Ireland
 480,19764489,585475,2017-09-13T08:00:00,2018-03-24T19:30:00,Sigrid,SIGRID,Manchester Academy 2,Manchester,United Kingdom
 480,20176457,585475,,2018-06-20T20:00:51,,SIGRID,OverOslo,Oslo,Norway
-481,The Fray,error
+481,The Fray,error,,,,,,,
 482,20561793,349189,2017-11-20T21:39:58,2018-01-24T22:00:24,,Toro Y Moi,Flash (DJ Set),Washington Dc,United States
 482,20631660,349189,2017-12-01T10:00:00,2018-01-25T20:00:03,,Toro Y Moi,Coda (DJ Set),Philadelphia,United States
 482,20785859,349189,,2018-01-26T21:00:39,,Toro Y Moi,American Museum of Natural History (DJ Set),New York,United States
@@ -4307,7 +4307,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 486,20599556,9430,2017-12-01T10:00:00,2018-05-30T19:00:00,Echo & the Bunnymen - VIP Package,Echo & The Bunnymen,Sage Gateshead,Gateshead,United Kingdom
 486,20599557,9430,2017-11-29T00:00:00,2018-06-01T18:45:00,Echo And The Bunnymen,Echo & The Bunnymen,Royal Albert Hall,London,United Kingdom
 487,20410206,367257,,2018-03-16T19:00:00,"Sonic innovation, intellectual discussion and great parties",Danny Brown,Harpa,Reykjavik,Iceland
-488,Beach Fossils,error
+488,Beach Fossils,error,,,,,,,
 489,20140296,171,2017-10-06T17:00:00,2018-01-12T18:25:00,,Bullet for My Valentine,Bridgestone Arena,Nashville,United States
 489,20139510,171,2017-10-06T17:00:00,2018-01-14T18:25:00,,Bullet for My Valentine,Van Andel Arena,Grand Rapids,United States
 489,20143204,171,2017-10-06T14:00:00,2018-01-16T18:25:00,,Bullet for My Valentine,The Santander Arena,Reading,United States
@@ -4338,7 +4338,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 489,20466721,171,,2018-06-22T19:00:00,,Bullet for My Valentine,Graspop Metal Meeting,Dessel,Belgium
 489,20656206,171,,2018-06-26T19:00:00,,Bullet for My Valentine,Impact Festival,Krakow,Poland
 489,20358568,171,,2018-06-28T19:00:41,,Bullet for My Valentine,Download Festival Madrid 28-30 June 2018,Madrid,Spain
-490,Tom Petty and The Heartbreakers,error
+490,Tom Petty and The Heartbreakers,error,,,,,,,
 491,20897486,2089405,2017-12-19T10:00:00,2018-03-29T19:00:00,BadBadNotGood,BADBADNOTGOOD,London Music Hall,London,Canada
 491,20900598,2089405,2017-12-22T15:00:00,2018-03-30T19:00:00,All Ages Event Doors - 7:00pm,BADBADNOTGOOD,The Danforth Music Hall,Toronto,Canada
 491,20900611,2089405,2017-12-22T15:00:00,2018-03-31T19:00:00,All Ages Event Doors - 7:00pm,BADBADNOTGOOD,The Danforth Music Hall,Toronto,Canada
@@ -4346,9 +4346,9 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 491,20894362,2089405,2017-12-22T10:00:00,2018-04-06T20:00:00,BadBadNotGood,BADBADNOTGOOD,Union Hall,Edmonton,Canada
 491,20904840,2089405,2017-12-22T18:00:00,2018-04-07T20:00:00,BadBadNotGood Vancouver,BADBADNOTGOOD,Commodore Ballroom,Vancouver,Canada
 491,20934868,2089405,,2018-04-08T19:00:00,,BADBADNOTGOOD,Capital Ballroom,Victoria,Canada
-492,My Bloody Valentine,error
-493,Tom Petty,error
-494,Kate Bush,error
+492,My Bloody Valentine,error,,,,,,,
+493,Tom Petty,error,,,,,,,
+494,Kate Bush,error,,,,,,,
 495,20568895,1670031,,2018-01-06T19:00:00,,Lost Frequencies,Storyland,Santa Marta,Colombia
 495,20208566,1670031,,2018-02-01T19:00:00,,Lost Frequencies,Snowattack,Les Orres,France
 495,20912238,1670031,,2018-02-02T19:00:00,,Lost Frequencies,Egg Club,London,United Kingdom
@@ -4393,8 +4393,8 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 496,20577857,1601,,2018-07-14T19:00:00,,Black Rebel Motorcycle Club,Mad Cool Festival,Madrid,Spain
 496,20860619,1601,,2018-07-21T09:00:16,,Black Rebel Motorcycle Club,Lollapalooza Paris,Paris,France
 496,20874194,1601,,2018-07-22T19:00:00,LOLLAPALOOZA PARIS - PASS 2 JOURS,Black Rebel Motorcycle Club,HIPPODROME DE LONGCHAMP,Paris,France
-497,Glee Cast,error
-498,Regina Spektor,error
+497,Glee Cast,error,,,,,,,
+498,Regina Spektor,error,,,,,,,
 499,19996898,64,2017-10-06T12:00:00,2018-01-12T18:25:00,Avenged Sevenfold,Breaking Benjamin,Bridgestone Arena,Nashville,United States
 499,19998981,64,2017-10-06T17:00:00,2018-01-14T18:25:00,"AVENGED SEVENFOLD, BREAKING BENJAMIN, BULLET FOR MY VALENTINE Produced by Frank Productions, NS2 and CMOORE LIVE",Breaking Benjamin,Van Andel Arena,Grand Rapids,United States
 499,20000333,64,2017-10-06T14:00:00,2018-01-16T18:25:00,"Produced by Frank Productions, NS2 and CMOORE LIVE Details: Avenged Sevenfold, Breading Benjamin, Bullet For My Valentine",Breaking Benjamin,The Santander Arena,Reading,United States
@@ -4418,8 +4418,8 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 499,20388212,64,2017-11-06T15:00:00,2018-04-27T19:00:00,,Breaking Benjamin,Metropolitan Park,Jacksonville,United States
 499,20789810,64,2017-12-07T16:55:00,2018-04-28T19:00:00,Fort Rock,Breaking Benjamin,Markham Park,Sunrise,United States
 499,20663714,64,2017-11-08T15:00:00,2018-05-18T19:00:00,,Breaking Benjamin,Mapfre Stadium,Columbus,United States
-500,Burial,error
-501,Broken Bells,error
+500,Burial,error,,,,,,,
+501,Broken Bells,error,,,,,,,
 502,19841286,24169,2017-09-22T09:00:00,2018-01-31T21:00:00,Rod Stewart Milano,Rod Stewart,Mediolanum Forum,Assago,Italy
 502,19990911,24169,,2018-02-02T20:00:00,"Sir Roderick David Stewart, CBE (born 10 January 1945) is a British rock singer and songwriter. Born and raised in London, he is of Scottish and English ancestry. Stewart is one of the best-selling music artists of all time, having sold over 100 million records worldwide. He has had six consecutive number one albums in the UK and his tally of 62 UK hit singles includes 31 that reached the top ten, six of which gained the #1 position. Stewart has had 16 top ten singles in the US, with four reaching #1 on the Billboard Hot 100. He was knighted in the 2016 Birthday Honours for services to music and charity.With his distinctive raspy singing voice, Stewart came to prominence in the late 1960s and the early 1970s with The Jeff Beck Group, and then with Faces, though his music career had begun in 1962 when he took up busking with a harmonica. In October 1963, he joined the Dimensions as a harmonica player and part-time vocalist. In 1964, Stewart joined Long John Baldry and the All Stars, and in August, Stewart signed a solo contract, releasing his first single, `Good Morning Little Schoolgirl`, in October. He maintained a solo career alongside a group career, releasing his debut solo album, An Old Raincoat Won`t Ever Let You Down in 1969. Stewart`s early albums were a fusion of rock, folk music, soul music, and R&B.From the late 1970s through the 1990s, Stewart`s music often took on a new wave or soft rock/middle-of-the-road quality, and in the early 2000s, he released a series of successful albums interpreting the Great American Songbook. In 1994, Stewart staged the largest free rock concert in history when he performed in front of 3.5 million people in Rio de Janeiro. In 2008, Billboard magazine ranked him the 17th most successful artist on the `Billboard Hot 100 All-Time Top Artists`. A Grammy and Brit Award recipient, he was voted at #33 in Q Magazine`s list of the Top 100 Greatest Singers of all time,[9] and #59 on Rolling Stone 100 Greatest Singers of all time. As a solo artist, Stewart was inducted into the US Rock and Roll Hall of Fame in 1994, the UK Music Hall of Fame in 2006, and was inducted a second time into the US Rock and Roll Hall of Fame in 2012 as a member of Faces.[",Rod Stewart,Arena Zagreb,Zagreb,Croatia
 502,20067716,24169,2017-10-14T14:00:00,2018-02-09T20:00:00,,Rod Stewart,Choctaw Grand Theater,Durant,United States
@@ -4445,7 +4445,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 502,20313504,24169,,2018-06-23T19:30:00,Rod Stewart,Rod Stewart,Caesars Palace,Las Vegas,United States
 502,20548172,24169,,2018-06-29T19:30:00,Rod Stewart,Rod Stewart,Caesars Palace,Las Vegas,United States
 502,20548173,24169,,2018-06-30T19:30:00,Rod Stewart,Rod Stewart,Caesars Palace,Las Vegas,United States
-503,Jeff Buckley,error
+503,Jeff Buckley,error,,,,,,,
 504,19770306,2067,2017-09-15T14:00:01,2018-04-13T20:00:00,,INXS,Magic Bag,Detroit,United States
 506,19884217,3552002,2017-09-29T10:00:00,2018-01-16T21:00:00,Yung Lean & Sad Boys,Yung Lean,Fonda Theatre,Los Angeles,United States
 506,19882492,3552002,2017-09-27T17:00:01,2018-01-17T20:00:00,,Yung Lean,Observatory North Park,San Diego,United States
@@ -4465,9 +4465,9 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 506,19891606,3552002,2017-09-29T10:00:00,2018-02-09T19:00:00,Yung Lean & Sad Boys,Yung Lean,Rock & Roll Hotel,Washington,United States
 506,19891611,3552002,2017-09-28T10:00:00,2018-02-10T20:00:00,YUNG LEAN & SAD BOYS - STRANGER TOUR,Yung Lean,Spirit Hall,Pittsburgh,United States
 506,20904557,3552002,,2018-05-31T21:00:00,,Yung Lean,Campus,Umea,Sweden
-507,Spice Girls,error
-508,The Last Shadow Puppets,error
-510,Chris Rea,error
+507,Spice Girls,error,,,,,,,
+508,The Last Shadow Puppets,error,,,,,,,
+510,Chris Rea,error,,,,,,,
 511,18903412,1025408,,2018-01-31T19:00:00,,The Head and the Heart,Avetts at the Beach,Maya,Mexico
 511,18903416,1025408,,2018-02-01T19:00:00,,The Head and the Heart,Avetts at the Beach,Maya,Mexico
 511,18903418,1025408,,2018-02-02T19:00:00,,The Head and the Heart,Avetts at the Beach,Maya,Mexico
@@ -4476,7 +4476,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 511,20415560,1025408,,2018-03-23T19:00:00,,The Head and the Heart,Innings Festival ,Tempe,United States
 511,20415561,1025408,,2018-03-24T19:00:00,,The Head and the Heart,Innings Festival,Tempe,United States
 511,20415563,1025408,,2018-03-25T19:00:00,,The Head and the Heart,Innings Festival ,Tempe,United States
-512,Bright Eyes,error
+512,Bright Eyes,error,,,,,,,
 513,19413157,26639,,2018-01-20T15:00:35,,Alanis Morissette,Gibbston Valley Winery,Queenstown,New Zealand
 513,19590004,26639,2017-08-24T00:00:00,2018-01-22T20:00:00,Alanis Morissette Melbourne,Alanis Morissette,Palais Theatre,St Kilda,Australia
 513,19384116,26639,2017-08-06T23:00:00,2018-01-23T20:00:00,Alanis Morissette Melbourne,Alanis Morissette,Palais Theatre,St Kilda,Australia
@@ -4488,7 +4488,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 513,20879719,26639,2017-12-18T08:55:00,2018-07-04T20:00:00,Alanis Morissette,Alanis Morissette,Live At The Marquee,Cork,Ireland
 513,20886239,26639,2017-12-18T08:55:00,2018-07-05T18:30:00,Alanis Morissette,Alanis Morissette,Iveagh Gardens,Dublin,Ireland
 513,20891028,26639,2017-12-21T09:00:00,2018-07-18T19:00:00,An evening with Alanis Morisette BONN - Tickets,Alanis Morissette,Kunst!Rasen Bonn/Gronau,Bonn,Germany
-514,Martin Solveig,error
+514,Martin Solveig,error,,,,,,,
 516,20215839,27969,2017-10-27T15:00:00,2018-01-12T20:00:00,AGE 18+ ADMITTED W/ 21+ DOORS OPEN AT 7PM The venue reserves the right to implement security procedures designed to protect the experience for all of our customers.,The Temptations,Horseshoe Casino's Bluesville,Robinsonville,United States
 516,19764570,27969,2017-09-15T15:00:00,2018-01-14T20:00:00,"MUST BE 21 YEARS OR OLDER TO ATTEND ALL SHOWS AT THE VENUE Make sure to select our VIP Suite Package for inclusive food, drinks, private seating and restrooms. FREE TRANSPORTATION FROM DOWNTOWN CHICAGO FOR ALL SHOWS! The venue reserves the right to implement security procedures designed to protect the experience for all of our customers.",The Temptations,The Venue at Horseshoe Casino,Hammond,United States
 516,19323114,27969,,2018-01-19T20:00:00,,The Temptations,Cerritos Center,Cerritos,United States
@@ -4549,7 +4549,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 518,20026745,9882704,2017-10-13T14:00:00,2018-04-16T19:00:00,,Bleachers,Capital One Arena,Washington,United States
 518,20142216,9882704,2017-10-10T13:55:00,2018-04-17T19:30:00,,Bleachers,Capital One Arena,Washington,United States
 518,20451495,9882704,,2018-05-19T19:00:00,,Bleachers,Hangout Music Fest,Gulf Shores,United States
-519,Enrique Iglesias,error
+519,Enrique Iglesias,error,,,,,,,
 520,20557017,1466,,2018-03-09T20:00:47,Pre-sale password: KANSASBAND,Kansas,The Borgata,Atlantic City,United States
 520,20706950,1466,2017-12-08T16:00:00,2018-03-10T20:00:00,,Kansas,The Event Center at Hollywood Casino,Charles Town,United States
 520,20618659,1466,,2018-03-16T20:00:39,,Kansas,Beau Rivage Resort & Casino,Biloxi,United States
@@ -4565,8 +4565,8 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 520,20557078,1466,,2018-07-20T20:00:47,KANSAS is bringing a night of classic hits to Deadwood Mountain Grand Events Center of July 20!  Pre-sale password is KANSASBAND.,Kansas,Deadwood Mountain Grand Event Center,Deadwood,United States
 520,20809863,1466,,2018-08-04T19:30:38,,Kansas,Scotts Bluff County Fair,Mitchell,United States
 520,20618680,1466,,2018-08-12T18:00:22,,Kansas,Calvin Gilmore Theater,Myrtle Beach,United States
-521,The Cardigans,error
-522,fun.,error
+521,The Cardigans,error,,,,,,,
+522,fun.,error,,,,,,,
 523,20221807,2257295,,2018-02-01T19:00:23,,Rhye,Fronton,Mexico City,Mexico
 523,20221811,2257295,,2018-02-02T19:00:00,,Rhye,C3 Stage,Guadalajara,Mexico
 523,20221825,2257295,,2018-02-22T19:00:00,,Rhye,The Ground,Miami,United States
@@ -4602,9 +4602,9 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 524,19694657,4116,2017-09-07T00:00:00,2018-03-04T18:30:00,Elbow,Elbow,Manchester Arena,Manchester,United Kingdom
 524,19694658,4116,2017-09-04T09:00:00,2018-03-06T18:00:00,Elbow,Elbow,First Direct Arena,Leeds,United Kingdom
 524,19694780,4116,2017-09-07T00:00:00,2018-03-07T19:00:00,Elbow,Elbow,The O2,London,United Kingdom
-525,[unknown],error
-526,Seether,error
-527,Perry Como,error
+525,[unknown],error,,,,,,,
+526,Seether,error,,,,,,,
+527,Perry Como,error,,,,,,,
 529,20422237,35715,2017-11-15T21:00:00,2018-01-01T21:30:00,,Emancipator,Belly Up Aspen,Aspen,United States
 529,20297341,35715,,2018-01-30T20:30:00,,Emancipator,Higher Ground,Burlington,United States
 529,20310807,35715,2017-10-27T14:00:00,2018-01-31T20:00:00,,Emancipator,Paradise Rock Club,Boston,United States
@@ -4631,12 +4631,12 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 529,20310888,35715,,2018-03-29T20:00:39,,Emancipator,Venue,Vancouver,Canada
 529,20298804,35715,,2018-03-30T21:00:00,,Emancipator,Showbox at the Market,Seattle,United States
 529,20310895,35715,,2018-03-31T18:30:00,,Emancipator,Crystal Ballroom,Portland,United States
-530,Edward Sharpe & The Magnetic Zeros,error
-531,Cat Power,error
-532,Death Grips,error
-533,Chromatics,error
-534,Miike Snow,error
-535,Pulp,error
+530,Edward Sharpe & The Magnetic Zeros,error,,,,,,,
+531,Cat Power,error,,,,,,,
+532,Death Grips,error,,,,,,,
+533,Chromatics,error,,,,,,,
+534,Miike Snow,error,,,,,,,
+535,Pulp,error,,,,,,,
 536,20831047,754,2017-10-06T09:00:00,2018-03-22T19:00:00,The Fratellis,The Fratellis,Liverpool Olympia,Liverpool,United Kingdom
 536,19999128,754,2017-10-06T00:00:00,2018-03-23T19:30:00,The Magic Gang,The Fratellis,Manchester Academy,Manchester,United Kingdom
 536,19998705,754,2017-10-04T08:55:00,2018-03-24T19:00:00,The Fratellis,The Fratellis,O2 Forum Kentish Town,London,United Kingdom
@@ -4677,29 +4677,29 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 537,20568175,20937,,2018-03-18T20:00:18,,Yann Tiersen,"Acoustic, le festival",Le Poire-Sur-Vie,France
 537,17477488,20937,2017-02-03T10:00:00,2018-06-17T18:30:00,,Yann Tiersen,The Lincoln Theatre,Washington,United States
 537,17478890,20937,2017-02-03T10:00:00,2018-06-20T20:00:00,,Yann Tiersen,The Theatre at Ace Hotel,Los Angeles,United States
-538,Steely Dan,error
-539,Chet Faker,error
+538,Steely Dan,error,,,,,,,
+539,Chet Faker,error,,,,,,,
 540,20075215,1018,,2018-01-20T12:00:00,,Fatboy Slim,St Kilda Foreshore,St Kilda,Australia
 540,20836814,1018,2017-12-13T00:00:00,2018-02-23T21:00:00,Fatboy Slim,Fatboy Slim,Albert Hall,Manchester,United Kingdom
 540,20000253,1018,2017-10-06T07:55:00,2018-02-24T18:30:00,Fatboy Slim,Fatboy Slim,Alexandra Palace,London,United Kingdom
 540,20244319,1018,,2018-03-17T19:00:00,Alpine fun and frolics,Fatboy Slim,Avoriaz Ski Resort,Avoriaz,France
 540,20762490,1018,2017-12-05T10:36:00,2018-03-24T19:00:00,FREAK POWER,Fatboy Slim,The Borderline,London,United Kingdom
-541,Ray Charles,error
-542,Alabama Shakes,error
-543,Leona Lewis,error
+541,Ray Charles,error,,,,,,,
+542,Alabama Shakes,error,,,,,,,
+543,Leona Lewis,error,,,,,,,
 544,20874255,1021286,2017-12-15T12:00:00,2018-02-14T20:30:00,Erykah Badu,Thundercat,San Francisco Armory,San Francisco,United States
 544,20243225,1021286,2017-10-29T22:00:00,2018-02-24T12:00:00,Sydney City Limits,Thundercat,Centennial Park,Sydney,Australia
 544,20219048,1021286,2017-10-29T19:55:00,2018-03-03T11:00:00,Auckland City Limits,Thundercat,Western Springs Stadium,Auckland,New Zealand
 544,20826129,1021286,2017-11-08T09:00:00,2018-06-02T19:00:00,,Thundercat,Royal Hospital Kilmainham,Dublin,Ireland
 544,20812324,1021286,2017-11-27T09:00:00,2018-06-04T14:00:00,Forbidden Fruit - Monday Ticket,Thundercat,Royal Hospital Kilmainham,Dublin,Ireland
-545,Bombay Bicycle Club,error
+545,Bombay Bicycle Club,error,,,,,,,
 546,20907878,5760,,2018-05-18T19:30:00,THE JESUS AND MARY CHAIN WARSZAWA - Tickets,The Jesus and Mary Chain,Klub Proxima,Warsaw,Poland
 546,20653266,5760,,2018-05-21T20:30:00,,The Jesus and Mary Chain,Fri-Son,Fribourg,Switzerland
 546,20764966,5760,,2018-05-23T22:00:00,The Jesus and Mary Chain CIAMPINO - Tickets,The Jesus and Mary Chain,Orion,Ciampino,Italy
 546,20420786,5760,,2018-05-28T21:30:00,,The Jesus and Mary Chain,Coliseu de Lisboa,Lisboa,Portugal
 547,20895721,1942640,,2018-01-06T21:00:00,,2 Chainz,Yakima Valley Sundome,Yakima,United States
-548,Boston,error
-549,Bibio,error
+548,Boston,error,,,,,,,
+549,Bibio,error,,,,,,,
 550,20106405,863,2017-10-13T16:00:00,2018-03-01T20:00:00,,Alice Cooper,The Colosseum at Caesars Windsor,Windsor,Canada
 550,20106406,863,2017-10-14T16:00:00,2018-03-02T21:00:00,,Alice Cooper,Casino Rama Resort,Rama,Canada
 550,20106407,863,2017-10-13T14:00:00,2018-03-04T20:00:00,,Alice Cooper,The Modell Lyric,Baltimore,United States
@@ -4722,12 +4722,12 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 550,20106426,863,2017-10-13T14:00:00,2018-03-29T19:30:00,,Alice Cooper,Murat Theatre at Old National Centre,Indianapolis,United States
 551,20778320,1262735,,2018-01-13T22:00:20,,R3hab,R3HAB & Skytech | Harbour Event Centre,Vancouver,Canada
 551,20968593,1262735,,2018-01-19T19:00:00,,R3hab,R3hab at OMNIA San Diego,San Diego,United States
-551,20968632,1262735,,2018-01-20T19:00:00,,R3hab,R3hab | Winter Sessions - Venu	,Buffalo,United States
+551,20968632,1262735,,2018-01-20T19:00:00,,R3hab,"R3hab | Winter Sessions - Venu	",Buffalo,United States
 551,20898144,1262735,,2018-01-27T22:00:40,,R3hab,Groove Cruise Miami,Miami,United States
 551,20778291,1262735,,2018-02-03T19:00:00,,R3hab,Shrine Foxwoods,New London,United States
 551,20581276,1262735,,2018-02-24T22:59:01,,R3hab,EDC Mexico 2018,Mexico,Mexico
-552,The Pogues,error
-553,Rudimental,error
+552,The Pogues,error,,,,,,,
+553,Rudimental,error,,,,,,,
 554,20899079,1505,,2018-04-13T19:00:00,,Lenny Kravitz,CDMX Arena ,Ciudad De Mexico,Mexico
 554,20899080,1505,,2018-04-15T19:00:00,,Lenny Kravitz,MTY Arena,Monterrey,Mexico
 554,20899081,1505,,2018-04-18T19:00:00,,Lenny Kravitz,GDL Arena,Guadalajara,Mexico
@@ -4748,8 +4748,8 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 554,20804972,1505,2017-12-15T09:00:00,2018-07-16T19:00:00,,Lenny Kravitz,Arena di Verona,Verona Vr,Italy
 554,20804982,1505,,2018-07-18T19:00:00,,Lenny Kravitz,Lucca Summer Festival,Lucca,Italy
 554,20804979,1505,,2018-07-21T19:00:00,,Lenny Kravitz,Stuttgart Jazzopen Festival,Stuttgart,Germany
-555,Moderat,error
-556,Troye Sivan,error
+555,Moderat,error,,,,,,,
+556,Troye Sivan,error,,,,,,,
 557,20508964,659,,2018-01-31T19:00:00,"With the colossal RNB Fridays Live wrapping up after a second successful year of multiple sold out shows, leaving fans and critics thrilled, Illusive Presents and Frontier Touring have joined forces to keep the party going in 2018 with TLC & Boyz II Men.",TLC,"Royal Theatre, National Convention Centre",City,Australia
 557,20805974,659,,2018-02-01T19:00:00,"With the colossal RNB Fridays Live wrapping up after a second successful year of multiple sold out shows, leaving fans and critics thrilled, Illusive Presents and Frontier Touring have joined forces to keep the party going in 2018 with TLC & Boyz II Men.",TLC,"Royal Theatre, National Convention Centre",City,Australia
 557,20508517,659,2017-11-24T03:00:00,2018-02-03T16:00:00,"Running Times: Gates - 4:00pm *Times are approximate and subject to change Prohibited Items: Strictly no BYO alcohol or non-alcoholic drinks (only exception is sealed bottled water). Eskis, cooler bags & backpacks larger than cabin size 26 litres are not allowed. Shopping trolleys & push carts. Large oversized chairs, reclining chairs, air beds, deck chairs. Carry bags for camping chairs. No umbrellas (even if it's raining). Tables, glass, metal cutlery, tents or sunshades. No chairs or rugs permitted in the Front General Admission section. Children's Policy: All patrons must hold a valid ticket regardless of age.",TLC,Bimbadgen,Pokolbin,Australia
@@ -4764,7 +4764,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 558,20153816,962,,2018-02-24T19:00:00,,Smash Mouth,ROCK2K,Miami,United States
 559,19733551,669,2017-09-08T10:00:00,2018-09-14T19:00:00,,Garbage,O2 Academy Brixton,London,United Kingdom
 560,19827194,695,2017-09-22T09:00:00,2018-03-12T19:00:00,,All Time Low,SECC,Glasgow,United Kingdom
-560,19827195,695,2017-09-22T09:00:00,2018-03-14T19:00:00,,All Time Low,Motorpoint Arena,Cardiff,Uk
+560,19827195,695,2017-09-22T09:00:00,2018-03-14T19:00:00,,All Time Low,Motorpoint Arena,Cardiff,United Kingdom
 560,19827196,695,,2018-03-15T19:00:00,,All Time Low,Genting Arena,Birmingham,United Kingdom
 560,19827197,695,2017-09-21T08:45:00,2018-03-16T19:00:00,,All Time Low,Manchester Arena,Manchester,United Kingdom
 560,19827198,695,,2018-03-17T19:00:00,,All Time Low,Alexandra Palace,London,United Kingdom
@@ -4795,17 +4795,17 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 564,20826146,102869,2017-09-05T08:00:00,2018-03-23T09:00:00,For More information and speaker details visit WWW.ILOVEOFFSET.COM,Offset,Bord Gais Energy Theatre,Dublin,Ireland
 564,20826082,102869,2018-03-01T09:00:00,2018-03-24T09:00:00,For More information and speaker details visit WWW.ILOVEOFFSET.COM,Offset,Bord Gais Energy Theatre,Dublin,Ireland
 564,20826255,102869,2018-03-01T09:00:00,2018-03-25T09:00:00,For More information and speaker details visit WWW.ILOVEOFFSET.COM,Offset,Bord Gais Energy Theatre,Dublin,Ireland
-565,Melanie Martinez,error
-566,The Kills,error
-567,Sam Cooke,error
-568,Cocteau Twins,error
-569,Purity Ring,error
-570,The Stone Roses,error
+565,Melanie Martinez,error,,,,,,,
+566,The Kills,error,,,,,,,
+567,Sam Cooke,error,,,,,,,
+568,Cocteau Twins,error,,,,,,,
+569,Purity Ring,error,,,,,,,
+570,The Stone Roses,error,,,,,,,
 571,20819452,332363,,2018-02-13T19:00:00,,Whitney,Whitney - A Valentines Day Special at Thalia Hall,Chicago,United States
 571,20467216,332363,,2018-02-14T19:00:00,,Whitney,Whitney - A Valentines Day Special at Thalia Hall ,Chicago,United States
 571,20467218,332363,,2018-02-15T19:00:00,,Whitney,Whitney - A Valentines Day Special at Thalia Hall,Chicago,United States
-572,Mike Posner,error
-573,The Ronettes,error
+572,Mike Posner,error,,,,,,,
+573,The Ronettes,error,,,,,,,
 574,20873785,50,,2018-03-22T19:00:00,,Sean Paul,King's Theatre,Brooklyn,United States
 574,20873787,50,,2018-03-23T19:00:00,,Sean Paul,Foxwoods Casino,New London,United States
 574,20873786,50,,2018-03-24T19:00:00,,Sean Paul,Club Lido,Boston,United States
@@ -4813,10 +4813,10 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 574,20873784,50,,2018-04-20T19:00:00,,Sean Paul,Universal- Grad Bash,Orlando,United States
 574,20873788,50,,2018-04-27T19:00:00,,Sean Paul,Universal- Grad Bash,Orlando,United States
 574,20873789,50,,2018-04-28T19:00:00,,Sean Paul,Universal- Grad Bash,Orlando,United States
-575,DIIV,error
-576,Kavinsky,error
-577,Neutral Milk Hotel,error
-578,*NSYNC,error
+575,DIIV,error,,,,,,,
+576,Kavinsky,error,,,,,,,
+577,Neutral Milk Hotel,error,,,,,,,
+578,*NSYNC,error,,,,,,,
 579,20215417,462,,2018-01-05T19:00:00,Check ticket link to conform times and details,Skillet,Winter Jam,Charleston,United States
 579,20215390,462,,2018-01-06T18:00:18,See ticket link to confirm times and details,Skillet,Winter Jam,Louisville,United States
 579,20215380,462,,2018-01-07T18:00:03,See ticket link to confirm times and details,Skillet,Winter Jam,Grand Rapids,United States
@@ -4905,13 +4905,13 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 580,20849189,210,,2018-05-25T12:00:00,,Trivium,Rocklahoma (May 25-27),Pryor,United States
 581,20289499,5385,2017-11-01T00:00:00,2018-05-27T19:00:00,Bjork,Flying Lotus,Victoria Park,London,United Kingdom
 582,20836189,379,2017-12-12T00:00:00,2018-07-07T13:00:00,The Cure,Goldfrapp,Hyde Park,London,United Kingdom
-583,A$AP Mob,error
+583,A$AP Mob,error,,,,,,,
 584,19470218,911,,2018-02-17T19:00:00,The legendary trance brand's Dutch home,Armin Van Buuren,Jaarbeurs,Utrecht,Netherlands
 584,20862501,911,2017-12-14T11:55:00,2018-06-02T12:00:00,An EDM party so huge it needs three cities,Armin Van Buuren,Olympisch Stadion,Amsterdam,Netherlands
 584,20507667,911,,2018-07-11T19:00:00,Epic EDM and spectacular stages,Armin Van Buuren,Flugplatz Neustadt-Glewe,Neustadt-Glewe,Germany
 584,20910406,911,,2018-07-20T19:00:00,"A city ruled by madness, love and pure happiness",Armin Van Buuren,Baal,Weeze,Germany
-585,Ryan Adams,error
-586,Beirut,error
+585,Ryan Adams,error,,,,,,,
+586,Beirut,error,,,,,,,
 587,20419282,1091,2017-11-17T15:00:00,2018-04-04T20:00:00,"MotorCity Casino Hotel welcomes Ann Wilson of Heart to Sound Board on Wednesday, April 4, 2018 at 8PM. Tickets are $52, $42 and $40 and go on-sale Friday, November 17, 2017 via Ticketmaster",Heart,Sound Board at MotorCity Casino Hotel,Detroit,United States
 588,20663663,310,,2018-03-24T19:00:55,,Good Charlotte,Download Festival ,Melbourne,Australia
 588,20664470,310,,2018-03-26T19:00:00,,Good Charlotte,Hordern Pavillion ,Sydney,Australia
@@ -4926,10 +4926,10 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 588,20767864,310,,2018-06-02T12:00:40,,Good Charlotte,Rock im Park ,Nuremberg,Germany
 588,20767877,310,,2018-06-03T12:00:10,,Good Charlotte,Rock im Park ,Nuremberg,Germany
 588,20767851,310,,2018-06-03T12:00:29,,Good Charlotte,Rock Am Ring ,Nuremberg,Germany
-589,Pharrell Williams,error
-590,Die Antwoord,error
-591,Sharon Van Etten,error
-592,Band Aid,error
+589,Pharrell Williams,error,,,,,,,
+590,Die Antwoord,error,,,,,,,
+591,Sharon Van Etten,error,,,,,,,
+592,Band Aid,error,,,,,,,
 593,17797647,9139221,,2018-02-02T21:00:00,The Vamps,The Vamps,Kirstenbosch Botanical Gardens,Cape Town,South Africa
 593,18967578,9139221,,2018-02-03T07:30:00,The Vamps Johannesburg,The Vamps,Ticketpro Dome,Johannesburg,South Africa
 593,20061217,9139221,2017-11-01T17:00:38,2018-04-14T18:30:00,The Vamps,The Vamps,FlyDSA Arena,Sheffield,United Kingdom
@@ -4955,7 +4955,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 593,20550995,9139221,,2018-05-25T21:00:00,The Vamps Barcelona,The Vamps,Sala Razzmatazz,Barcelona,Spain
 593,20390836,9139221,,2018-05-31T19:00:00,The Vamps,The Vamps,Parkteatret Scene,Oslo,Norway
 593,20463835,9139221,2017-11-17T08:00:00,2018-08-25T12:05:59,Summer Saturday Live - The Vamps,The Vamps,Newmarket Racecourses,Newmarket,United Kingdom
-594,John Coltrane,error
+594,John Coltrane,error,,,,,,,
 595,19300477,119,,2018-02-23T21:30:00,James Blunt Corrientes,James Blunt,Club Juventus,Corrientes,Argentina
 595,19709753,119,,2018-02-24T21:00:00,James Blunt Buenos Aires,James Blunt,Stadium Luna Park,Buenos Aires,Argentina
 595,20625202,119,,2018-03-01T21:30:00,,James Blunt,Gran Arena Monticello,Rancagua,Chile
@@ -4985,8 +4985,8 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 595,20404879,119,,2018-08-18T20:00:00,,James Blunt,Schlossplatz,Coburg,Germany
 595,20674486,119,,2018-09-02T18:30:00,James Blunt Berlin,James Blunt,IFA Sommergarten,Berlin,Germany
 595,20875834,119,2017-12-15T09:00:00,2018-09-15T11:30:00,James Blunt,James Blunt,Bath Racecourse,Bath,United Kingdom
-596,Solange,error
-597,The Knife,error
+596,Solange,error,,,,,,,
+597,The Knife,error,,,,,,,
 598,20870985,1101378,,2018-07-27T19:00:00,,Icona Pop,Queens of Pop - Sofiero Slott,Helsingborg,Sweden
 598,20870993,1101378,,2018-08-03T19:00:00,,Icona Pop,Queens of Pop - Botaniska Tradgarden,Uppsala,Sweden
 599,20967111,4746,2017-12-27T16:17:38,2018-01-25T20:00:00,"Classic Albums; Tom Petty, Pretenders",The Pretenders,Reggies Music Joint,Chicago,United States
@@ -5008,20 +5008,20 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 600,20144357,455,2017-10-14T01:00:00,2018-03-06T19:00:00,,Jet,Diamond Hall,Nagoya-Shi,Japan
 600,20072535,455,2017-10-14T01:00:00,2018-03-07T19:00:00,Jet Tokyo,Jet,Studio Coast,Tokyo,Japan
 600,20072471,455,2017-10-14T01:00:00,2018-03-08T19:00:00,Jet Osaka,Jet,Namba Hatch,Osaka,Japan
-601,Men at Work,error
+601,Men at Work,error,,,,,,,
 602,20850981,687,,2018-06-20T19:00:00,,Opeth,Tons of rock,Halden,Norway
-603,Roy Orbison,error
-604,Nick Drake,error
-605,The Raconteurs,error
-606,Sublime,error
+603,Roy Orbison,error,,,,,,,
+604,Nick Drake,error,,,,,,,
+605,The Raconteurs,error,,,,,,,
+606,Sublime,error,,,,,,,
 607,17711770,559,2017-07-17T14:00:00,2018-01-26T19:30:00,,Dido,Wilson Theater at Vogel Hall,Milwaukee,United States
 607,19093660,559,2017-07-17T15:00:00,2018-01-27T19:30:00,,Dido,Wilson Theater at Vogel Hall,Milwaukee,United States
 607,17711777,559,2017-07-17T14:00:00,2018-01-28T14:30:00,,Dido,Wilson Theater at Vogel Hall,Milwaukee,United States
 607,17711784,559,2017-07-17T14:00:00,2018-01-31T19:30:00,,Dido,Wilson Theater at Vogel Hall,Milwaukee,United States
 607,17711793,559,2017-07-17T14:00:00,2018-02-02T19:30:00,,Dido,Wilson Theater at Vogel Hall,Milwaukee,United States
 607,17711806,559,2017-07-17T14:00:00,2018-02-04T14:30:00,,Dido,Wilson Theater at Vogel Hall,Milwaukee,United States
-608,Gnarls Barkley,error
-609,Owl City,error
+608,Gnarls Barkley,error,,,,,,,
+609,Owl City,error,,,,,,,
 610,20547595,8097688,,2018-03-21T19:00:00,,Goldlink,Studio,Auckland,New Zealand
 610,20547732,8097688,,2018-03-22T19:00:00,,Goldlink,Enmore Theatre,Newtown,Australia
 610,20547733,8097688,,2018-03-23T19:00:00,,Goldlink,170 Russell,Melbourne,Australia
@@ -5030,7 +5030,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 610,20547735,8097688,,2018-03-29T19:00:00,,Goldlink,Villa,Perth,Australia
 610,20547736,8097688,,2018-03-31T19:00:00,,Goldlink,Brightside Car Park,Brisbane,Australia
 610,20708002,8097688,,2018-07-13T19:00:00,,Goldlink,Woo Hah!,Hilvarenbeek,Netherlands
-611,The Pussycat Dolls,error
+611,The Pussycat Dolls,error,,,,,,,
 612,19904016,230,2017-09-29T10:00:00,2018-01-04T19:00:00,,Shinedown,Smith & Myers LIVE at The Majestic Theatre,Madison,United States
 612,19904018,230,2017-09-29T10:00:00,2018-01-05T19:00:00,,Shinedown,Smith & Myers LIVE at Green Bay Distillery,Ashwaubenon,United States
 612,19903582,230,2017-09-29T10:00:00,2018-01-06T19:00:00,,Shinedown,Smith & Myers LIVE at The Forge,Joliet,United States
@@ -5053,15 +5053,15 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 612,20906992,230,,2018-06-16T19:00:00,,Shinedown,Firenze Rocks ,Firenze,Italy
 612,20846479,230,,2018-06-22T19:00:00,,Shinedown,HellFest ,Clisson,France
 612,20894818,230,,2018-06-28T19:00:00,,Shinedown,Download Festival (Madrid) ,Madrid,Spain
-613,The All-American Rejects,error
+613,The All-American Rejects,error,,,,,,,
 614,20243230,6227,2017-08-29T00:00:00,2018-01-16T19:45:00,"WARNING: Nudity, course language, haze and strobe lighting. Recommended age 16+ Running Times*: 75 minutes (no interval) *Please note, all times are approximate and subject to change. Lockouts Apply: Late comers will be let in at a suitable break in the performance. This is a licensed venue - Persons under 18 years must be accompanied by an adult.",Gotye,Magic Mirrors Spiegeltent,Sydney,Australia
 614,20243120,6227,2017-08-29T00:00:00,2018-01-17T17:30:00,"Running Times: Duration - 1 hour (no interval) Please note, all times are approximate and are subject to change. The show that laughs in the face of science Strap on your safety goggles boys and girls, science's biggest, best and most volatile live show is coming to Sydney! Join the Brainiacs for an action-packed hour of incredible experiments and explosive high energy entertainment. Delving fearlessly into the mysteries of science, expect exploding dustbins, combusting microwaves and loads of live daredevil stunts. Based on the multi-award winning TV show, Brainiac Live is sure to be a jaw-dropping, mind-blowing experience for the whole family. Watch from the safety of your seat and don't try this at home! Presented by Sydney Opera House & Live Nation in association with Dan Colman Creative FOR AGES 6+",Gotye,Sydney Opera House,Sydney,Australia
 615,20024023,26085,2017-08-25T17:00:00,2018-02-17T20:00:00,"All Ages Event Doors 7:00pm / Show 8:00pm FLOOR tickets are Standing Room Only. Main (100s) and Gallery (200s) Level Tickets are reserved seating and DO NOT include access to the FLOOR. GALLERY GA tickets are standing room only in the GALLERY level and DO NOT include access to the FLOOR. No refunds or exchanges. Live Entertainment Tax is included in the purchase of each ticket. Non-professional cameras allowed, no detachable lenses. Audio/video recorders, tablets/ipads, and selfie sticks are not allowed. Guests accept all customary risks associated with live events. No outside Food and Beverage allowed into the venue. Due to security requirements, backpacks, wallet chains, spiked accessories, and bags/purses larger than 8.5"" x 11"" will not be allowed in the venue. Guest and bags/purchases are subject to inspection.",CAKE,The Cosmopolitan of Las Vegas,Las Vegas,United States
 616,20637771,1877245,2017-12-01T12:00:00,2018-01-25T21:00:00,JP Cooper,JP Cooper,Rough Trade NYC,Brooklyn,United States
 616,20866594,1877245,2017-12-06T04:00:00,2018-04-24T19:00:00,JP Cooper Tokyo,JP Cooper,Liquid Room,Shibuya,Japan
 616,20826488,1877245,2017-12-09T08:55:00,2018-06-23T19:00:00,Summer In The City - Picture This,JP Cooper,RDS Arena,Dublin,Ireland
-617,Blood Orange,error
-618,UNKLE,error
+617,Blood Orange,error,,,,,,,
+618,UNKLE,error,,,,,,,
 619,19287660,62526,2017-07-27T07:55:00,2018-03-08T21:00:00,Parov Stelar MILAN - Tickets,Parov Stelar,Alcatraz,Milan,Italy
 619,19448446,62526,2017-07-27T08:00:00,2018-03-10T20:00:00,Parov Stelar Prague,Parov Stelar,Tipsport Arena,Prague,Czech Republic
 619,20497578,62526,2017-07-25T09:00:05,2018-03-16T20:00:00,Parov Stelar Lingen (Ems),Parov Stelar,EmslandArena,Lingen,Germany
@@ -5123,27 +5123,27 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 622,19826407,21514,2017-09-20T07:55:00,2018-03-16T18:00:00,40 Years of Disco,Boney M.,"SSE Arena, Wembley",London,United Kingdom
 622,20827068,21514,2017-09-20T07:55:00,2018-03-17T18:00:00,40 Years of Disco,Boney M.,Genting Arena,Birmingham,United Kingdom
 622,20814120,21514,2017-09-20T07:55:00,2018-03-18T18:00:00,40 Years of Disco,Boney M.,Liverpool Echo Arena,Liverpool,United Kingdom
-623,Tegan and Sara,error
-624,Agnes Obel,error
-625,Wolfmother,error
+623,Tegan and Sara,error,,,,,,,
+624,Agnes Obel,error,,,,,,,
+625,Wolfmother,error,,,,,,,
 626,20236479,933590,2017-10-26T17:00:00,2018-03-23T19:00:00,,Young the Giant,Innings Festival ,Tempe,United States
-627,Al Green,error
-628,Dirty Projectors,error
-629,FKA twigs,error
-630,Christina Perri,error
-631,Sade,error
-632,Electric Guest,error
-633,Billie Holiday,error
+627,Al Green,error,,,,,,,
+628,Dirty Projectors,error,,,,,,,
+629,FKA twigs,error,,,,,,,
+630,Christina Perri,error,,,,,,,
+631,Sade,error,,,,,,,
+632,Electric Guest,error,,,,,,,
+633,Billie Holiday,error,,,,,,,
 634,20747158,1002224,2017-12-08T12:13:00,2018-02-20T20:00:00,,James Vincent Mc Morrow,FFT Juta,Dusseldorf,Germany
 634,20747160,1002224,2017-12-08T12:14:00,2018-02-21T20:00:00,,James Vincent Mc Morrow,FFT Juta,Dusseldorf,Germany
 634,20747162,1002224,,2018-02-22T20:00:00,,James Vincent Mc Morrow,Kulturzentrum Schlachthof,Bremen,Germany
 634,20747163,1002224,,2018-02-23T20:00:00,,James Vincent Mc Morrow,Ut Connewitz,Leipzig,Germany
 634,20747165,1002224,,2018-02-25T20:00:15,,James Vincent Mc Morrow,Schauburg Dresden - Filmkultur & Mehr,Dresden,Germany
 634,20747168,1002224,,2018-02-28T20:00:14,,James Vincent Mc Morrow,E-Werk Kulturzentrum,Erlangen,Germany
-635,Joni Mitchell,error
+635,Joni Mitchell,error,,,,,,,
 636,20950443,2088677,2017-12-11T17:00:00,2018-04-07T13:00:00,Corona Capital 2018,SNAKEHIPS,Foro Alterno del Centro Cultural Universitario,Zapopan,Mexico
-637,Carpenters,error
-638,The Mamas & the Papas,error
+637,Carpenters,error,,,,,,,
+638,The Mamas & the Papas,error,,,,,,,
 639,20341279,13945,,2018-01-19T20:00:00,,America,THE ORPHEUM THEATRE,Sioux City,United States
 639,20341281,13945,,2018-01-20T20:00:00,,America,Gillioz Theatre,Springfield,United States
 639,19334077,13945,2017-09-08T14:30:00,2018-01-25T19:30:00,,America,The Peabody Daytona Beach,Daytona Beach,United States
@@ -5230,8 +5230,8 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 641,20388217,43,2017-11-06T15:00:00,2018-04-27T19:00:00,,Hollywood Undead,Metropolitan Park,Jacksonville,United States
 641,20789812,43,2017-12-07T16:55:00,2018-04-28T19:00:00,Fort Rock,Hollywood Undead,Markham Park,Sunrise,United States
 641,20852489,43,2017-11-13T08:55:00,2018-06-16T12:30:00,DOWNLOAD FESTIVAL 2018 - PASS SAMEDI,Hollywood Undead,BASE AERIENNE 217,Bretigny Sur Orge,France
-642,Roxette,error
-643,Yellowcard,error
+642,Roxette,error,,,,,,,
+643,Yellowcard,error,,,,,,,
 644,20009032,2831623,,2018-01-27T19:00:00,,Moses Sumney,St Jerome's Laneway Festival ,Singapore,Singapore
 644,20009612,2831623,,2018-01-29T19:00:00,,Moses Sumney,St Jerome's Laneway Festival,Auckland,New Zealand
 644,20210591,2831623,,2018-02-01T19:30:00,,Moses Sumney,Melbourne Recital Centre,Southbank,Australia
@@ -5242,15 +5242,15 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 644,20009661,2831623,,2018-02-10T19:00:00,,Moses Sumney,St Jerome's Music Festival,Brisbane,Australia
 644,20009757,2831623,,2018-02-11T19:00:00,,Moses Sumney,St Jerome's Laneway Festival,Fremantle,Australia
 644,20773821,2831623,,2018-08-10T19:00:00,,Moses Sumney,HAVEN Festival,Copenhagen,Denmark
-645,Mazzy Star,error
+645,Mazzy Star,error,,,,,,,
 646,19944618,1222869,2017-09-27T00:00:00,2018-01-26T21:00:00,Car Seat Headrest,car seat headrest,Rialto Bozeman,Bozeman,United States
 646,20243222,1222869,2017-10-29T22:00:00,2018-02-24T12:00:00,Sydney City Limits,car seat headrest,Centennial Park,Sydney,Australia
 646,20551084,1222869,2017-11-20T01:00:00,2018-02-25T19:30:00,Car Seat Headrest Perth,car seat headrest,Rosemount Hotel,Perth Wa,Australia
 646,20551277,1222869,,2018-02-28T20:00:00,Car Seat Headrest Melbourne,car seat headrest,The Croxton Bandroom,Thornbury,Australia
 646,20551247,1222869,,2018-03-01T20:00:00,Car Seat Headrest Brisbane,car seat headrest,The Triffid,Brisbane,Australia
 646,20219051,1222869,2017-10-29T19:55:00,2018-03-03T11:00:00,Auckland City Limits,car seat headrest,Western Springs Stadium,Auckland,New Zealand
-647,Dream Theater,error
-648,Bobby Helms,error
+647,Dream Theater,error,,,,,,,
+648,Bobby Helms,error,,,,,,,
 649,17968293,26037,,2018-01-11T20:00:00,,Philip Glass,Joseph Meyerhoff Symphony Hall,Baltimore,United States
 649,17968359,26037,,2018-01-14T15:00:00,,Philip Glass,Joseph Meyerhoff Symphony Hall,Baltimore,United States
 649,18781773,26037,,2018-02-16T20:00:00,,Philip Glass,Stern Auditorium / Perelman Stage at Carnegie Hall,New York,United States
@@ -5263,17 +5263,17 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 650,20462389,1100,,2018-01-17T20:00:00,Craig David Presents TS5,Craig David,Roxy Theatre-CA,West Hollywood,United States
 650,20507892,1100,2017-11-13T16:18:41,2018-01-18T22:30:00,Craig David,Craig David,TAO Nightclub,Las Vegas,United States
 650,20462394,1100,,2018-01-19T21:00:00,Craig David Presents TS5,Craig David,Slim's,San Francisco,United States
-650,20927361,1100,,2018-01-27T20:00:00,Craig David Kingston upon Thames,Craig David,Hippodrome Kingston,Kingston Upon Thames,United Kingdom Of Great Britain And Northern Ireland
+650,20927361,1100,,2018-01-27T20:00:00,Craig David Kingston upon Thames,Craig David,Hippodrome Kingston,Kingston Upon Thames,United Kingdom
 650,20837755,1100,2017-12-13T00:00:00,2018-06-15T16:15:42,Craig David,Craig David,Aintree Racecourse,Liverpool,United Kingdom
 650,20840564,1100,2017-12-15T08:00:00,2018-07-20T15:35:33,Newmarket Nights - Craig David,Craig David,Newmarket Racecourses,Newmarket,United Kingdom
 651,20628691,943,,2018-01-12T19:00:00,,The Horrors,Rockaway Beach Festival 2018,Bognor Regis,United Kingdom
 651,20628724,943,,2018-03-22T19:00:00,,The Horrors,Rock the Pistes 2018,Avoriaz,France
 651,20667155,943,,2018-05-05T12:00:00,Live At Leeds 2018,The Horrors,Live at Leeds,Leeds,United Kingdom
 651,20668359,943,,2018-08-12T21:00:03,,The Horrors,Boardmasters Festival 2018,Newquay,United Kingdom
-652,Peter Bjorn and John,error
+652,Peter Bjorn and John,error,,,,,,,
 653,20712944,147924,2017-12-08T10:00:00,2018-04-14T19:00:00,John Prine,Kurt Vile,Merriam Theater,Philadelphia,United States
-654,The Temper Trap,error
-655,Sara Bareilles,error
+654,The Temper Trap,error,,,,,,,
+655,Sara Bareilles,error,,,,,,,
 656,20633383,1236,2017-11-30T10:00:00,2018-01-27T19:00:00,Bedlam Presents: Sub Focus (DJ set) & Pendulum (DJ set),Pendulum,O2 Academy Bournemouth,Bournemouth,United Kingdom
 656,20171329,1236,2017-10-16T10:00:00,2018-03-23T20:00:00,S.PRI NOIR & SNEAZZY,Pendulum,Le Bikini,Ramonville-St-Agne,France
 657,19837087,10802663,,2018-01-19T21:00:00,STRFKR,STRFKR,The Catalyst,Santa Cruz,United States
@@ -5322,10 +5322,10 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 658,19803369,2720,,2018-03-31T20:00:00,Bonnie Tyler Mainz,Bonnie Tyler,Rheingoldhalle,Mainz,Germany
 658,19803371,2720,,2018-04-03T20:00:00,"Bonnie Tyleris a Welsh singer, known for her distinctive husky voice. Tyler came to prominence with the release of her 1977 album The World Starts Tonight and its singles `Lost in France` and `More Than a Lover`. Her 1978 single `It`s a Heartache` reached number four on the UK Singles Chart, and number three on the US Billboard Hot 100.In the 1980s, Tyler ventured into rock music with songwriter and producer Jim Steinman. He wrote Tyler`s biggest hit `Total Eclipse of the Heart`, the lead single from her 1983 UK chart topping album Faster Than the Speed of Night. Steinman also wrote Tyler`s other major 1980s hit `Holding Out for a Hero`. She had success in mainland Europe during the 1990s with Dieter Bohlen, who wrote and produced her hit `Bitterblue`. In 2003, Tyler re-recorded `Total Eclipse of the Heart` with singer Kareen Antonn. Their bilingual duet topped the French charts.Her latest album Rocks and Honey was released in 2013 and features the single `Believe in Me` which she performed representing the United Kingdom at the Eurovision Song Contest 2013. Both `It`s a Heartache` and `Total Eclipse of the Heart` are among the best-selling singles of all time, with sales in excess of six million each. Her work has earned her three Grammy Award nominations and three Brit Award nominations, among other accolades.",Bonnie Tyler,Liederhalle Beethovensaal,Stuttgart,Germany
 658,19801920,2720,,2018-04-08T19:00:00,Bonnie Tyler - 40 Years It's A Heartache Tour 2018 BREGENZ - Tickets,Bonnie Tyler,Festspiel- und Kongresshaus,Bregenz,Austria
-659,The Human League,error
-660,Michael Kiwanuka,error
-661,Metric,error
-662,Dolly Parton,error
+659,The Human League,error,,,,,,,
+660,Michael Kiwanuka,error,,,,,,,
+661,Metric,error,,,,,,,
+662,Dolly Parton,error,,,,,,,
 663,20276914,26663,,2018-02-24T19:00:00,,The Libertines,Sydney City Limits Music Festival,Sydney,Australia
 663,20469393,26663,,2018-02-28T19:00:00,,The Libertines,Forum Theatre,Melbourne,Australia
 663,20469397,26663,,2018-03-01T19:00:00,,The Libertines,Tivoli,Brisbane Qld,Australia
@@ -5482,7 +5482,7 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 669,19929963,2120,,2018-05-03T19:00:00,,Machine Head,Rockefeller,Oslo,Norway
 669,19929970,2120,,2018-05-05T19:00:00,,Machine Head,Grosse Freiheit,Hamburg,Germany
 669,19929975,2120,,2018-05-06T19:00:00,,Machine Head,Oosterpoort,Groningen,Netherlands
-669,19930011,2120,2017-09-29T08:00:00,2018-05-07T19:00:00,,Machine Head,013,Tilburg,Netherlands
+669,19930011,2120,2017-09-29T08:00:00,2018-05-07T19:00:00,,Machine Head,13,Tilburg,Netherlands
 669,19930015,2120,2017-09-29T08:00:00,2018-05-09T19:00:00,,Machine Head,Capitol,Hannover,Germany
 669,19930018,2120,2017-09-29T09:00:04,2018-05-10T19:00:00,,Machine Head,Schlachthof,Wiesbaden,Germany
 669,19930025,2120,,2018-05-11T19:00:00,,Machine Head,AB,Brussels,Belgium
@@ -5497,24 +5497,24 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 669,19930113,2120,,2018-05-23T19:00:00,,Machine Head,Academy,Glasgow,United Kingdom
 669,19930117,2120,2017-09-29T10:00:00,2018-05-25T19:00:00,,Machine Head,Academy,Manchester,United Kingdom
 669,20920924,2120,2017-11-10T09:00:00,2018-05-26T19:00:00,,Machine Head,Manchester Academy,Manchester,United Kingdom
-670,Eels,error
+670,Eels,error,,,,,,,
 671,20809584,14784,,2018-05-19T19:00:00,,GHOST, 93.3 WMMR Philadelphia MMR*B*Q Festival 2018,Camden,United States
 672,18936037,37982,,2018-01-11T19:30:00,,The Doobie Brothers,UT Tyler Cowan Fine & Performing Arts Center,Tyler,United States
 673,20854055,43221,,2018-04-21T19:00:00,,The Tallest Man on Earth,Bluebird Music Festival ,Boulder,United States
-674,Foxygen,error
+674,Foxygen,error,,,,,,,
 675,20478464,649,2017-10-18T18:30:00,2018-01-27T23:00:00,R Kelly at Highline Ballroom 1/27,R. Kelly,Highline Ballroom,New York,United States
 675,20410824,649,2017-11-11T15:00:00,2018-02-21T19:30:00,,R. Kelly,Little Caesars Arena,Detroit,United States
-676,Stromae,error
-677,The Cars,error
-678,Laura Marling,error
-679,Vince Guaraldi Trio,error
+676,Stromae,error,,,,,,,
+677,The Cars,error,,,,,,,
+678,Laura Marling,error,,,,,,,
+679,Vince Guaraldi Trio,error,,,,,,,
 680,20853832,197,,2018-06-14T19:00:00,,Billy Talent,Nova Rock,Nickelsdorf,Austria
 680,20656457,197,,2018-06-22T12:00:00,,Billy Talent,Hurricane Festiavl,Scheessel,Germany
 680,20656475,197,,2018-06-22T12:00:05,,Billy Talent,Southside Festival,Neuhausen Ob Eck,Germany
-681,Etta James,error
-682,Tracy Chapman,error
-683,John Denver,error
-684,Soft Cell,error
+681,Etta James,error,,,,,,,
+682,Tracy Chapman,error,,,,,,,
+683,John Denver,error,,,,,,,
+684,Soft Cell,error,,,,,,,
 685,15437817,2916,,2018-02-08T20:00:00,Ennio Morricone Vienna,Ennio Morricone,Wiener Stadthalle,Vienna,Austria
 685,20332368,2916,2017-10-27T10:00:00,2018-03-02T21:00:00,Ennio Morricone Florence,Ennio Morricone,Nelson Mandela Forum,Florence,Italy
 685,20332369,2916,2017-10-27T10:00:00,2018-03-04T21:00:00,Ennio Morricone Turin,Ennio Morricone,Pala Alpitour,Turin To,Italy
@@ -5604,15 +5604,15 @@ VIP Tickets: http://vipnation.eu/foreigner",Foreigner,UK Tour 2018,London,United
 691,20396482,2761,,2018-03-24T19:00:00,,Gojira,Download Melbourne,Melbourne,Australia
 691,20568690,2761,,2018-05-05T19:00:00,,Gojira,Hell and Heaven Festival,Mexico,Mexico
 691,20705551,2761,,2018-07-07T19:00:00,,Gojira,Main Square Festival,Arras,France
-692,Capital Cities,error
-693,Fiona Apple,error
+692,Capital Cities,error,,,,,,,
+693,Fiona Apple,error,,,,,,,
 694,20401580,1588976,2017-09-05T00:00:00,2018-01-06T11:00:47,,ZHU,FOMO Festival,Brisbane,Australia
 694,20401568,1588976,2017-09-05T00:30:00,2018-01-07T11:00:14,,ZHU,FOMO Festival,Adelaide,Australia
 694,20917178,1588976,2017-12-20T15:38:00,2018-01-12T22:00:04,All black attire is required or entry will be denied,ZHU,Blacklizt Melbourne,Melbourne,Australia
 694,20662275,1588976,,2018-01-13T11:00:02,,ZHU,FOMO Festival,Sydney,Australia
 694,20770504,1588976,2017-12-07T18:55:00,2018-06-21T00:01:46,,ZHU,Electric Forest (Weekend 1),Rothbury,United States
 694,20770516,1588976,2017-12-07T18:55:00,2018-06-28T00:01:47,,ZHU,Electric Forest (Weekend 2),Rothbury,United States
-695,The Naked and Famous,error
+695,The Naked and Famous,error,,,,,,,
 696,20243219,4429,2017-10-29T22:00:00,2018-02-24T12:00:00,Sydney City Limits,The Avalanches,Centennial Park,Sydney,Australia
 696,20219050,4429,2017-10-29T19:55:00,2018-03-03T11:00:00,Auckland City Limits,The Avalanches,Western Springs Stadium,Auckland,New Zealand
 696,20466475,4429,2017-11-16T22:55:00,2018-03-07T19:00:00,The Avalanches Brisbane,The Avalanches,The Tivoli,Brisbane,Australia
@@ -5651,15 +5651,15 @@ Though Baths represents the next evolution in Wiesenfeld's oeuvre -- which also 
 697,20446651,337140,2017-11-17T10:00:00,2018-05-02T20:00:00,BATHS,Baths,Crescent Ballroom,Phoenix,United States
 697,20479606,337140,2017-11-17T10:00:00,2018-05-03T21:00:00,Baths,Baths,Belly Up,Solana Beach,United States
 697,20446655,337140,2017-11-17T12:00:00,2018-05-05T21:00:00,Baths,Baths,The Independent,San Francisco,United States
-698,The Brian Jonestown Massacre,error
-699,Simple Plan,error
+698,The Brian Jonestown Massacre,error,,,,,,,
+699,Simple Plan,error,,,,,,,
 700,20841592,6107,,2018-03-24T19:00:00,,Explosions in the Sky,In Bloom Music Festival,Houston,United States
 700,20841598,6107,,2018-03-25T19:00:00,,Explosions in the Sky,In Bloom Music Festival ,Houston,United States
 701,19558710,1039297,,2018-01-13T07:00:00,,Earl Sweatshirt,Sidney Myer Music Bowl,Melbourne,Australia
 701,20821137,1039297,,2018-01-14T20:00:00,EARL SWEATSHIRT (USA),Earl Sweatshirt,"170 RUSSELL, MELBOURNE",Melbourne,Australia
 701,19558721,1039297,,2018-01-17T19:00:00,,Earl Sweatshirt,Riverstage,Brisbane,Australia
 701,19558736,1039297,2017-08-25T12:00:00,2018-01-20T19:00:00,,Earl Sweatshirt,The Domain,Sydney Nsw,Australia
-702,The Paper Kites,error
+702,The Paper Kites,error,,,,,,,
 703,19568922,10818918,2017-08-25T10:00:42,2018-01-06T19:00:00,,Tennis,Ogden Theater,Denver,United States
 703,19568923,10818918,2017-08-25T10:00:52,2018-01-10T19:00:00,,Tennis,The Waiting Room,Omaha,United States
 703,19568930,10818918,2017-08-25T10:00:34,2018-01-11T19:00:00,,Tennis,Fine Line Music Cafe,Minneapolis,United States
@@ -5681,7 +5681,7 @@ Though Baths represents the next evolution in Wiesenfeld's oeuvre -- which also 
 703,19569028,10818918,2017-08-25T10:00:29,2018-02-02T19:00:00,,Tennis,Paper Tiger,San Antonio,United States
 703,19569030,10818918,2017-09-01T15:00:00,2018-02-03T19:00:00,,Tennis,Emo's Austin,Austin,United States
 703,20771833,10818918,2017-12-11T11:00:42,2018-04-07T13:00:03,,Tennis,Corona Capital Guadalajara,Zapopan,Mexico
-704,AFI,error
+704,AFI,error,,,,,,,
 705,19862550,45836,2017-08-27T10:00:00,2018-03-01T20:00:00,,Jethro Tull,Aalborg Kongres & Kultur Center,Aalborg,Denmark
 705,19954369,45836,2017-04-29T06:00:00,2018-03-05T19:00:00,,Jethro Tull,FINLANDIA-TALO,Helsinki,Finland
 705,19497574,45836,2017-08-30T00:00:00,2018-04-03T18:30:00,Jethro Tull - 50th Anniversary Tour,Jethro Tull,O2 Apollo Manchester,Manchester,United Kingdom
@@ -5748,7 +5748,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 706,20703833,8307998,,2018-05-04T19:00:00,,KEVIN MORBY,The Mill,Iowa City,United States
 706,20703827,8307998,,2018-05-05T19:00:00,,KEVIN MORBY,Record Bar,Kansas City,United States
 706,20892426,8307998,,2018-08-10T19:00:00,,KEVIN MORBY,Haven,Copenhagen,Denmark
-707,Ice Cube,error
+707,Ice Cube,error,,,,,,,
 708,20507865,1050800,,2018-02-27T19:00:00,,The Vaccines,Zenith with Franz Ferdinand,Paris,France
 708,20507887,1050800,,2018-02-28T19:00:00,,The Vaccines,Forest National with Franz Ferdinand,Forest,Belgium
 708,20565864,1050800,,2018-04-03T19:00:00,,The Vaccines,Bristol Academy,Bristol,United Kingdom
@@ -5762,17 +5762,17 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 708,20335662,1050800,,2018-04-14T19:00:38,,The Vaccines,Alexandra Palace,London,United Kingdom
 708,20716744,1050800,,2018-07-01T19:00:00,,The Vaccines,Community Festival,Finsbury Park,United Kingdom
 709,20050004,3175,2017-10-06T19:00:00,2018-01-26T18:30:00,,The Bangles,Honda Center,Anaheim,United States
-711,Silversun Pickups,error
-712,T. Rex,error
+711,Silversun Pickups,error,,,,,,,
+712,T. Rex,error,,,,,,,
 713,20511525,41187,,2018-01-01T19:00:00,,Duke Dumont,Stereo Live,Houston,United States
 713,20671142,41187,2017-11-20T17:18:18,2018-01-20T22:30:00,Duke Dumont,Duke Dumont,Intrigue Nightclub,Las Vegas,United States
-714,White Lies,error
-715,Dio,error
-716,Devo,error
-717,NAV,error
-718,Enya,error
-719,Burl Ives,error
-720,Steppenwolf,error
+714,White Lies,error,,,,,,,
+715,Dio,error,,,,,,,
+716,Devo,error,,,,,,,
+717,NAV,error,,,,,,,
+718,Enya,error,,,,,,,
+719,Burl Ives,error,,,,,,,
+720,Steppenwolf,error,,,,,,,
 721,20023265,79,2017-10-09T14:00:00,2018-01-14T19:00:00,,Nelly,Boardwalk Hall,Atlantic City,United States
 721,20854148,79,,2018-02-03T20:00:00,,Nelly,Fantasy Springs Resort Casino,Indio,United States
 721,20961687,79,,2018-03-08T20:00:00,Nelly Vancouver,Nelly,Harbour Event Centre,Vancouver,Canada
@@ -5785,7 +5785,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 721,20822784,79,,2018-03-27T20:00:00,,Nelly,The Music Hall,Oshawa,Canada
 721,20761394,79,2017-12-08T10:00:00,2018-06-14T20:00:00,Nelly,Nelly,TIPPECANOE COUNTY AMPHITHEATER,West Lafayette,United States
 721,20819692,79,2017-12-12T00:00:00,2018-06-16T18:00:00,TAILGATE N' TALLBOYS- SATURDAY JUNE 16TH 2018,Nelly,Peoria Riverfront,Peoria,United States
-722,Honne,error
+722,Honne,error,,,,,,,
 723,19851807,652774,2017-09-20T09:00:00,2018-04-19T20:30:00,SOHN,Sohn,Rotterdamse Schouwburg,Rotterdam,Netherlands
 723,19853947,652774,,2018-05-01T20:00:00,,Sohn,Kaufleuten,Zurich,Switzerland
 723,19832969,652774,,2018-05-04T20:00:00,Sohn LINZ - Tickets,Sohn,Posthof,Linz,Austria
@@ -5805,7 +5805,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 724,19817773,15467,,2018-03-01T19:00:00,,Death From Above 1979,Botanique -Orangerie,Brussels,Belgium
 724,19817774,15467,2017-09-20T08:00:00,2018-03-02T19:00:00,,Death From Above 1979,Sporthalle,Hamburg,Germany
 724,19817776,15467,,2018-03-05T19:00:00,,Death From Above 1979,Rockhal,Roeser,Luxembourg
-724,19817777,15467,2017-09-22T09:00:00,2018-03-07T19:00:00,,Death From Above 1979,013,Tilburg,Netherlands
+724,19817777,15467,2017-09-22T09:00:00,2018-03-07T19:00:00,,Death From Above 1979,13,Tilburg,Netherlands
 724,19817754,15467,,2018-03-09T19:00:00,,Death From Above 1979,Brixton Academy,London,United Kingdom
 724,19816627,15467,,2018-03-10T19:00:00,,Death From Above 1979,02 Academy,Newcastle,United Kingdom
 724,19817755,15467,,2018-03-12T19:00:00,,Death From Above 1979,O2 Academy 2,Birmingham,United Kingdom
@@ -5893,7 +5893,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 728,20444140,1641,,2018-08-16T19:00:00,Facebook event: https://www.facebook.com/events/339450306505331/,Sepultura,Sabaton Open Air Festival,Falun,Sweden
 728,20669775,1641,,2018-08-17T19:00:00,,Sepultura,PStereo Festival,Trondheim,Norway
 728,20568284,1641,,2018-08-24T13:00:28,Facebook event: https://www.facebook.com/events/164215370820480/,Sepultura,Reload Festival,Sulingen,Germany
-729,Steve Miller Band,error
+729,Steve Miller Band,error,,,,,,,
 730,20518704,5211,2017-11-22T09:15:00,2018-04-23T18:00:00,Manic Street Preachers,Manic Street Preachers,Metro Radio Arena,Newcastle Upon Tyne,United Kingdom
 730,20518708,5211,2017-11-22T00:00:00,2018-04-25T18:30:00,Manic Street Preachers,Manic Street Preachers,The SSE Hydro,Glasgow,United Kingdom
 730,20518713,5211,2017-11-22T00:00:00,2018-04-27T18:00:00,Manic Street Preachers,Manic Street Preachers,Arena Birmingham,Birmingham,United Kingdom
@@ -5983,7 +5983,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 734,20277500,1835,,2018-03-05T20:00:00,,Andrew Bird,The Egg- Kitty Carlisle Hart Theatre,Albany,United States
 734,20277506,1835,,2018-03-06T20:00:00,,Andrew Bird,The Music Hall,Portsmouth,United States
 734,20277504,1835,2017-11-03T14:00:00,2018-03-07T20:00:00,,Andrew Bird,Ulster Performing Arts Center,Kingston,United States
-735,Dusty Springfield,error
+735,Dusty Springfield,error,,,,,,,
 736,20569441,155,,2018-02-04T19:00:00,,The Used,Fryshuset,Stockholm,Sweden
 736,20569448,155,,2018-02-07T19:00:00,,The Used,Zeche,Bochum,Germany
 736,20569451,155,,2018-02-08T19:00:00,,The Used,KOMPLEX 457,Zurich,Switzerland
@@ -6012,9 +6012,9 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 738,19885970,34425,2017-09-27T07:55:00,2018-03-21T18:00:00,Paloma Faith,Paloma Faith,Genting Arena,Birmingham,United Kingdom
 738,19940565,34425,2017-09-27T09:00:10,2018-03-23T20:00:00,Paloma Faith - VIP Package,Paloma Faith,"The SSE Arena, Belfast",Belfast,Ireland
 738,19940569,34425,2017-09-27T07:55:00,2018-03-24T20:00:00,Paloma Faith - VIP Package,Paloma Faith,3Arena,Dublin,Ireland
-739,Fugees,error
-740,Duke Ellington,error
-742,Chet Baker,error
+739,Fugees,error,,,,,,,
+740,Duke Ellington,error,,,,,,,
+742,Chet Baker,error,,,,,,,
 743,20098200,2039,2017-10-20T10:00:41,2018-02-10T19:00:00,,Seal,Usher Hall,Edinburgh,United Kingdom
 743,20098252,2039,2017-10-20T10:00:44,2018-02-11T19:00:00,,Seal,Royal Concert Hall,Glasgow,United Kingdom
 743,20098275,2039,2017-10-20T10:00:00,2018-02-13T19:00:00,,Seal,The Sage,Gateshead,United Kingdom
@@ -6059,12 +6059,12 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 744,20710731,1448,2017-12-08T17:00:00,2018-07-24T19:00:00,with Whitesnake and Jason Bonham's Led Zeppelin Evening,Whitesnake,Pepsi Center,Denver,United States
 744,20774092,1448,2017-12-08T10:00:00,2018-07-25T19:00:00,Get ready to rock when Foreigner brings their Juke Box Heroes Tour with special guests Whitesnake and Jason Bonham's Led Zeppelin Evening to USANA Amphitheatre July 25th!,Whitesnake,USANA Amphitheatre,West Valley City,United States
 744,20713610,1448,2017-12-08T18:00:00,2018-07-27T19:00:00,,Whitesnake,White River Amphitheatre,Auburn,United States
-744,20711040,1448,2017-12-08T18:00:00,2018-07-28T19:00:00,- A PREMIUM SEAT IN ONE OF OUR LUXURY BOXES - EXCLUSIVE VIP PARKING - TABLE SIDE BEVERAGE AND FOOD SERVICE - ACCESS TO OUR EXCLUSIVE VIP AREAS - LIGHT BUFFET SERVICE PRE-CONCERT,Whitesnake,Sunlight Supply Amphitheater,Ridgefield,United States
+744,20711040,1448,2017-12-08T18:00:00,2018-07-28T19:00:00,#NAME?,Whitesnake,Sunlight Supply Amphitheater,Ridgefield,United States
 744,20710492,1448,2017-12-08T18:00:00,2018-07-31T19:00:00,Rain or shine. Every ticket includes parking in the unpaved lots. Upgrades are available for preferred parking in the paved lots and closer to the venue entrance.,Whitesnake,Mattress Firm Amphitheatre,Chula Vista,United States
 744,20711205,1448,2017-12-08T18:00:00,2018-08-01T19:00:00,,Whitesnake,FivePoint Amphitheatre,Irvine,United States
-745,Siouxsie and the Banshees,error
-746,Zero 7,error
-747,Supergrass,error
+745,Siouxsie and the Banshees,error,,,,,,,
+746,Zero 7,error,,,,,,,
+747,Supergrass,error,,,,,,,
 748,20223443,2216,2017-10-25T10:00:29,2018-04-27T19:00:00,,Biffy Clyro,Forum Theatre,Melbourne,Australia
 748,20223465,2216,2017-10-25T10:00:39,2018-04-29T19:00:00,,Biffy Clyro,Eatons Hill Hotel,Boondall,Australia
 748,20223508,2216,2017-10-25T10:00:28,2018-04-30T19:00:00,,Biffy Clyro,Enmore Theatre,Newtown,Australia
@@ -6084,11 +6084,11 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 752,20636981,1017801,,2018-01-19T19:00:00,,Tricky (Adrian Thaws),Babylon,Istanbul,Turkey
 752,20668435,1017801,,2018-01-23T20:00:00,Tricky WIEN - Tickets,Tricky (Adrian Thaws),WUK,Vienna,Austria
 752,20907419,1017801,2017-12-19T18:00:00,2018-02-08T20:00:00,Tricky / Concrete Knives / Wire,Tricky (Adrian Thaws),LA VAPEUR,Dijon,France
-753,Mika,error
-754,Claude Debussy,error
-755,Isaiah Rashad,error
+753,Mika,error,,,,,,,
+754,Claude Debussy,error,,,,,,,
+755,Isaiah Rashad,error,,,,,,,
 756,20666468,2467277,2017-11-22T10:00:00,2018-01-20T20:00:00,Calibash,Becky G,STAPLES Center,Los Angeles,United States
-757,Flight Facilities,error
+757,Flight Facilities,error,,,,,,,
 758,20819214,2018,2017-09-29T13:00:00,2018-03-28T19:00:00,Digitalism,Digitalism,U Street Music Hall,Washington,United States
 758,19977803,2018,2017-09-29T13:00:00,2018-03-29T21:00:00,Digitalism,Digitalism,Good Room,New York,United States
 758,19976963,2018,2017-09-29T13:00:01,2018-03-30T23:00:00,Digitalism,Digitalism,Coda,Philadelphia,United States
@@ -6130,19 +6130,19 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 759,20541677,1308,2017-11-20T10:00:00,2018-12-18T19:00:00,In 2018 Within Temptation returns to the stage for a brand new tour!,Within Temptation,European Tour 2018,Frankfurt,Germany
 759,20596162,1308,2017-11-24T09:00:00,2018-12-21T19:00:00,,Within Temptation,European Tour 2018,Tilburg,Netherlands
 759,20541688,1308,2017-11-20T10:00:00,2018-12-22T19:00:00,In 2018 Within Temptation returns to the stage for a brand new tour!,Within Temptation,European Tour 2018,Tilburg,Netherlands
-760,Alphaville,error
-761,Thin Lizzy,error
-762,Sleeping at Last,error
-763,Jasmine Thompson,error
+760,Alphaville,error,,,,,,,
+761,Thin Lizzy,error,,,,,,,
+762,Sleeping at Last,error,,,,,,,
+763,Jasmine Thompson,error,,,,,,,
 764,20150613,23093,,2018-01-20T19:00:00,,Saint Motel,Late Night with Saint Motel at The Wiltern,Los Angeles,United States
-765,The Supremes,error
-766,Robyn,error
-767,Benjamin Francis Leftwich,error
-768,The Drums,error
+765,The Supremes,error,,,,,,,
+766,Robyn,error,,,,,,,
+767,Benjamin Francis Leftwich,error,,,,,,,
+768,The Drums,error,,,,,,,
 769,20653208,26322,,2018-02-02T18:30:00,,Kraftwerk,Albertinum,Dresden,Germany
 769,20961940,26322,,2018-02-13T19:00:00,Kraftwerk Moscow,Kraftwerk,The State Kremlin Palace,Moscow,Russian Federation
 769,20650767,26322,2017-12-04T07:00:00,2018-02-15T22:30:00,Kraftwerk: 3-D Concert,Kraftwerk,FINLANDIA-TALO,Helsinki,Finland
-770,Cass McCombs,error
+770,Cass McCombs,error,,,,,,,
 771,20807660,904,2017-12-15T18:00:00,2018-02-16T19:00:00,,Theory of a Deadman,The Fillmore,San Francisco,United States
 771,20807661,904,,2018-02-17T19:00:00,,Theory of a Deadman,Harrah's Lake Taho,Stateline,United States
 771,20807662,904,,2018-02-18T19:00:00,,Theory of a Deadman,House of Blues,Las Vegas,United States
@@ -6171,11 +6171,11 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 772,20843976,1227,,2018-01-19T20:00:00,,Kaskade,Park City Live,Park City,United States
 772,20843998,1227,,2018-02-02T22:00:26,,Kaskade,Lumber Exchange Building,Minneapolis,United States
 772,20641000,1227,2017-12-01T10:00:00,2018-02-17T17:00:00,"Crush Arizona 2018, Kaskade, Carnage, Getter, Crankdat, Grandtheft, Volac, Gerry Gonza",Kaskade,Rawhide Event Center,Phoenix,United States
-773,Azealia Banks,error
-774,P.O.D.,error
+773,Azealia Banks,error,,,,,,,
+774,P.O.D.,error,,,,,,,
 775,20244573,71,2017-10-27T00:55:00,2018-01-17T19:30:00,"Rapper, producer, songwriter and one of the most socially conscious superstars of the 21st century, LUPE FIASCO will be bring his subversive hip hop movement to Australian and New Zealand stages in January 2018!",Lupe Fiasco,Metro City,Northbridge,Australia
-776,The Cinematic Orchestra,error
-777,Porcupine Tree,error
+776,The Cinematic Orchestra,error,,,,,,,
+777,Porcupine Tree,error,,,,,,,
 778,20332010,2409,2017-11-06T00:55:00,2018-05-16T20:00:00,Europe Perth,Europe,Perth Concert Hall,Perth,Australia
 778,20331668,2409,2017-11-05T22:25:00,2018-05-18T20:00:00,"It's been 30 years since we first heard the signature keyboard intro for 'that' song... 'The Final Countdown' and were introduced to the five, Swedish rockers led by frontman Joey Tempest, called EUROPE. In May 2018 for the first time ever Australia will be part of EUROPE'S world tour. With their new album release 'Walk the Earth' receiving rave reviews in the music press, the band are eagerly looking forward to bringing their celebrated live show which takes the audience on a career spanning musical journey, for one Adelaide show at Thebarton Theatre on Friday May 18. Running Times: Doors - 7:00pm Start - 8:00pm Europe - 9:00pm Finish - 10:45pm Please note, these times are approximate and subject to change.",Europe,Thebarton Theatre,Adelaide,Australia
 778,20331991,2409,2017-11-05T21:55:00,2018-05-19T19:00:00,Europe Melbourne,Europe,Palais Theatre,St Kilda,Australia
@@ -6189,7 +6189,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 778,20505424,2409,2017-11-24T09:00:00,2018-09-22T19:00:00,Europe - Tour the Earth 2018,Europe,Portsmouth Pyramids,Portsmouth,United Kingdom
 778,20505425,2409,2017-11-23T00:00:00,2018-09-23T19:00:00,Europe - Tour the Earth 2018,Europe,Royal Albert Hall,London,United Kingdom
 778,20505426,2409,2017-11-23T08:55:00,2018-09-24T19:00:00,Europe - Tour the Earth 2018,Europe,Brighton Dome,Brighton,United Kingdom
-778,20572325,2409,2017-11-25T07:55:00,2018-09-26T19:00:00,,Europe,013,Tilburg,Netherlands
+778,20572325,2409,2017-11-25T07:55:00,2018-09-26T19:00:00,,Europe,13,Tilburg,Netherlands
 778,20651003,2409,2017-12-01T09:00:00,2018-09-27T19:30:00,EUROPE,Europe,Le Trianon,Paris,France
 779,20582527,506219,,2018-03-28T18:30:00,Red Velvet Tokyo,Red Velvet,Musashino Forest Sport Plaza,Tokyo,Japan
 779,20582474,506219,,2018-03-29T18:30:00,Red Velvet Tokyo,Red Velvet,Musashino Forest Sport Plaza,Tokyo,Japan
@@ -6215,11 +6215,11 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 781,20432722,26089,,2018-04-24T19:00:00,,Godspeed You! Black Emperor,Batschkapp,Frankfurt,Germany
 782,20835020,5203,2017-06-16T08:55:00,2018-03-23T19:00:00,,Dinosaur Jr.,Dinosaur Jr. @ Roundhouse,London,United Kingdom
 782,20835027,5203,,2018-03-24T19:00:00,,Dinosaur Jr.,Manchester Albert Hall,Manchester,United Kingdom
-783,Staind,error
-784,Devendra Banhart,error
-785,Roxy Music,error
-786,Bloodhound Gang,error
-787,The Allman Brothers Band,error
+783,Staind,error,,,,,,,
+784,Devendra Banhart,error,,,,,,,
+785,Roxy Music,error,,,,,,,
+786,Bloodhound Gang,error,,,,,,,
+787,The Allman Brothers Band,error,,,,,,,
 788,19936856,7706070,2017-09-22T08:00:00,2018-02-12T20:00:06,,RY X,Tempodrom,Berlin,Germany
 788,19936871,7706070,,2018-02-14T20:00:00,,RY X,Theaterhaus Stuttgart,Stuttgart,Germany
 788,19936882,7706070,,2018-02-16T20:00:35,,RY X,Alte Kongresshalle,Munchen,Germany
@@ -6230,7 +6230,7 @@ Ian Anderson will be accompanied by Tull band musicians David Goodier (bass), Jo
 788,20705817,7706070,,2018-07-13T19:00:00,,RY X,Sacred Grounds Festival,Brussow,Germany
 789,20160106,297,2017-10-20T17:00:01,2018-01-01T20:00:00,,Third Eye Blind,Observatory North Park,San Diego,United States
 789,20894840,297,2017-12-19T11:00:00,2018-02-10T20:00:00,Third Eye Blind,Third Eye Blind,Xcite Center at Parx Casino,Bensalem,United States
-790,Primal Scream,error
+790,Primal Scream,error,,,,,,,
 791,19140113,2962193,,2018-04-04T19:00:00,"Echosmith is bringing the ""Inside A Dream"" Tour to San Francisco, California! 
 
 VIP Tickets: https://wbr.ec/chosmith_vip
@@ -6319,8 +6319,8 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 
 VIP Tickets: https://wbr.ec/chosmith_vip
 ",Echosmith,The Fonda Theatre,Los Angeles,United States
-792,The Stooges,error
-793,MF DOOM,error
+792,The Stooges,error,,,,,,,
+793,MF DOOM,error,,,,,,,
 794,20143888,50291,2017-10-20T17:00:00,2018-01-17T20:00:00,"For additional VIP Banquette questions and information, group tickets of 9 or more, please call 844.355.4VIP or email premium@parktheaterlv.com",Cher,Park Theater,Las Vegas,United States
 794,20142034,50291,2017-10-20T17:00:00,2018-01-19T20:00:00,"For additional VIP Banquette questions and information, group tickets of 9 or more, please call 844.355.4VIP or email premium@parktheaterlv.com",Cher,Park Theater,Las Vegas,United States
 794,20144468,50291,2017-10-20T17:00:00,2018-01-20T20:00:00,"For additional VIP Banquette questions and information, group tickets of 9 or more, please call 844.355.4VIP or email premium@parktheaterlv.com",Cher,Park Theater,Las Vegas,United States
@@ -6345,13 +6345,13 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 794,20144494,50291,2017-10-20T17:00:00,2018-05-16T20:00:00,"For additional VIP Banquette questions and information, group tickets of 9 or more, please call 844.355.4VIP or email premium@parktheaterlv.com",Cher,Park Theater,Las Vegas,United States
 794,20143401,50291,2017-10-20T17:00:00,2018-05-18T20:00:00,"For additional VIP Banquette questions and information, group tickets of 9 or more, please call 844.355.4VIP or email premium@parktheaterlv.com",Cher,Park Theater,Las Vegas,United States
 794,20146675,50291,2017-10-20T17:00:00,2018-05-19T20:00:00,"For additional VIP Banquette questions and information, group tickets of 9 or more, please call 844.355.4VIP or email premium@parktheaterlv.com",Cher,Park Theater,Las Vegas,United States
-795,Rob Zombie,error
-796,The Byrds,error
-797,Timbaland,error
-798,Catfish and The Bottlemen,error
-799,BROODS,error
+795,Rob Zombie,error,,,,,,,
+796,The Byrds,error,,,,,,,
+797,Timbaland,error,,,,,,,
+798,Catfish and The Bottlemen,error,,,,,,,
+799,BROODS,error,,,,,,,
 800,20501009,3538,,2018-03-02T19:00:00,,Dr. Dog,McDowell Mountain Music Fest,Phoenix,United States
-801,Madvillain,error
+801,Madvillain,error,,,,,,,
 802,20473935,1574,,2018-03-24T19:00:00,,Amon Amarth,Download Melbourne,Melbourne,Australia
 802,20664465,1574,,2018-03-25T19:00:00,,Amon Amarth,Roundhouse,Sydney,Australia
 802,20664471,1574,,2018-03-27T19:00:00,,Amon Amarth,Tivoli,Brisbane Qld,Australia
@@ -6361,7 +6361,7 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 803,20965123,5782638,2017-10-20T12:00:00,2018-02-16T21:00:00,Homeshake,HOMESHAKE,Market Hotel,Brooklyn,United States
 803,20367171,5782638,,2018-02-17T19:00:00,Joyner Lucas / Dizzy Wright: The 508 / Still Movin' Tour,HOMESHAKE,Union Stage,Washington,United States
 803,20255776,5782638,2017-11-03T10:00:00,2018-02-18T20:30:00,Homeshake,HOMESHAKE,First Unitarian Church,Philadelphia,United States
-804,Talk Talk,error
+804,Talk Talk,error,,,,,,,
 805,20571897,31491,2017-11-24T08:55:00,2018-05-29T20:30:00,,Patti Smith,De Duif,Amsterdam,Netherlands
 805,20572312,31491,2017-11-24T08:55:00,2018-05-30T20:30:00,,Patti Smith,De Duif,Amsterdam,Netherlands
 805,20674871,31491,,2018-06-02T19:00:00,Patti Smith Brighton,Patti Smith,Brighton Dome,Brighton,United Kingdom
@@ -6390,12 +6390,12 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 806,20316155,2210,,2018-04-06T19:00:00,,Apocalyptica,Palacio de Congresos,Santiago De Compostela,Spain
 806,20316153,2210,,2018-04-09T19:00:00,,Apocalyptica,Teatro Nuevo Alcala,Madrid,Spain
 806,20326654,2210,,2018-04-10T19:00:00,,Apocalyptica,Teatre Tivoli,Barcelona,Spain
-808,Def Leppard,error
-809,Novo Amor,error
-810,Bush,error
-811,The Pretty Reckless,error
-812,Eartha Kitt,error
-813,Santigold,error
+808,Def Leppard,error,,,,,,,
+809,Novo Amor,error,,,,,,,
+810,Bush,error,,,,,,,
+811,The Pretty Reckless,error,,,,,,,
+812,Eartha Kitt,error,,,,,,,
+813,Santigold,error,,,,,,,
 814,20369431,6088,2017-11-08T09:00:00,2018-02-01T19:30:00,Nightmares on Wax,Nightmares on Wax,Concorde 2,Brighton,United Kingdom
 814,20392564,6088,2017-11-10T10:00:00,2018-02-02T19:30:00,Nightmares on Wax,Nightmares on Wax,Koko,London,United Kingdom
 814,20369452,6088,2017-11-08T10:00:00,2018-02-03T23:00:00,Nightmares On Wax (DJ),Nightmares on Wax,HEADROW HOUSE,Leeds,United Kingdom
@@ -6444,7 +6444,7 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 815,20806704,20003,,2018-04-26T19:00:00,,Chelsea Wolfe,Hard Rock Live,Orlando,United States
 815,20807151,20003,,2018-04-28T19:00:00,,Chelsea Wolfe,Levitation Festival 2018,Austin,United States
 815,20470026,20003,,2018-07-04T19:00:00,Chelsea Wolfe will play on July 4th or 5th to be announced ,Chelsea Wolfe,Roskilde Festival ,Roskilde,Denmark
-816,Jack White,error
+816,Jack White,error,,,,,,,
 818,19991163,1715300,2017-10-04T08:00:00,2018-01-24T20:00:00,,Jake Bugg,Kulturkirken Jakob,Oslo,Norway
 818,20010877,1715300,,2018-01-25T19:00:00,Jake Bugg - Solo Acoustic Tour,Jake Bugg,Nalen,Stockholm,Sweden
 818,19997857,1715300,2017-10-06T09:00:00,2018-01-28T20:00:00,Jake Bugg,Jake Bugg,Gruenspan,Hamburg,Germany
@@ -6507,7 +6507,7 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 820,20410014,14641426,,2018-05-08T19:00:00,Live 2018,Morcheeba,Docks,Hamburg,Germany
 820,20410015,14641426,,2018-05-09T19:00:00,Live 2018,Morcheeba,Gibson,Frankfurt,Germany
 820,20433447,14641426,,2018-05-10T19:00:00,Live 2018,Morcheeba,Muffathalle,Munchen,Germany
-821,Fugazi,error
+821,Fugazi,error,,,,,,,
 822,20036209,467,2017-10-09T12:05:43,2018-01-31T19:00:00,,Dropkick Murphys,Wiener Stadthalle,Vienna,Austria
 822,20544315,467,,2018-02-02T19:00:00,,Dropkick Murphys,Winter Days of Metal,Bohinjska Bistrica,Slovenia
 822,20036206,467,2017-10-11T08:00:00,2018-02-03T19:00:00,,Dropkick Murphys,Maimarkthalle,Mannheim,Germany
@@ -6541,15 +6541,15 @@ VIP Tickets: https://wbr.ec/chosmith_vip
 822,20717171,467,,2018-03-17T12:00:00,,Dropkick Murphys,House of Blues,Boston,United States
 822,20717168,467,,2018-03-18T19:00:00,,Dropkick Murphys,House of Blues,Boston,United States
 822,20783897,467,,2018-08-09T19:00:00,,Dropkick Murphys,Freiburg Messe Outdoor,Freiburg,Germany
-823,J Dilla,error
-824,Chris Isaak,error
-825,Cypress Hill,error
-826,SBTRKT,error
+823,J Dilla,error,,,,,,,
+824,Chris Isaak,error,,,,,,,
+825,Cypress Hill,error,,,,,,,
+826,SBTRKT,error,,,,,,,
 827,20727309,770804,,2018-03-09T14:00:59,,Porter Robinson,Virtual Self at BUKU Music + Art Project,New Orleans,United States
 827,20893418,770804,,2018-03-23T16:00:53,,Porter Robinson,Virtual Self at Ultra Music Festival,Miami,United States
 828,20851489,2954,,2018-01-01T21:00:55,"Following Sold out shows featuring Faithless & Basement Jaxx, we are back with a New Years Day treat!!  We are absolutely elated to welcome GROOVE ARMADA for an extended New Years Day Set.  ",Groove Armada,"Groove Armada NYD Special - The Arch, Brighton ",Brighton,United Kingdom
-829,Shakin' Stevens,error
-830,Bill Evans,error
+829,Shakin' Stevens,error,,,,,,,
+830,Bill Evans,error,,,,,,,
 831,19508991,628,2017-08-19T17:00:00,2018-03-07T20:00:00,,Lionel Richie,The AXIS at Planet Hollywood,Las Vegas,United States
 831,19508996,628,2017-08-19T17:00:00,2018-03-09T20:00:00,,Lionel Richie,The AXIS at Planet Hollywood,Las Vegas,United States
 831,19509060,628,2017-08-19T17:00:00,2018-03-10T20:00:00,,Lionel Richie,The AXIS at Planet Hollywood,Las Vegas,United States
@@ -6603,7 +6603,7 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 834,19853083,32777,2017-09-20T08:45:00,2018-02-13T19:30:00,Natalie Imbruglia Glasgow,Natalie Imbruglia,Oran Mor,Glasgow,United Kingdom
 834,19838920,32777,2017-09-20T08:45:00,2018-02-15T19:31:00,Natalie Imbruglia,Natalie Imbruglia,Edinburgh Queens Hall,Edinburgh,United Kingdom
 834,19838921,32777,2017-09-20T08:16:00,2018-02-16T19:31:00,Natalie Imbruglia,Natalie Imbruglia,RNCM Theatre,Manchester,United Kingdom
-835,Stereolab,error
+835,Stereolab,error,,,,,,,
 836,20736970,33713,2017-12-08T16:00:00,2018-02-16T20:00:00,,The Commodores,Mystic Lake Casino Hotel,Prior Lake,United States
 836,20712695,33713,2017-12-08T11:00:00,2018-02-17T20:00:00,The Commodores,The Commodores,Xcite Center at Parx Casino,Bensalem,United States
 836,20182985,33713,,2018-03-03T19:00:00,,The Commodores,Wheeler House,Aspen,United States
@@ -6682,7 +6682,7 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 838,20543733,315471,2017-11-22T12:00:00,2018-04-06T19:00:00,,Bahamas,The Grand Social,Lower Liffey Street,Ireland
 838,20256541,315471,2017-11-03T10:00:00,2018-05-03T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,Sinclair,Boston,United States
 838,20256539,315471,2017-11-03T10:00:00,2018-05-05T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,Mr Smalls,Millvale,United States
-838,20256543,315471,2017-11-03T10:00:00,2018-05-06T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,9:30,Washington,United States
+838,20256543,315471,2017-11-03T10:00:00,2018-05-06T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,09:30,Washington,United States
 838,20256547,315471,2017-11-03T10:00:00,2018-05-08T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,Cat's Cradle,Carrboro,United States
 838,20256545,315471,2017-11-03T10:00:00,2018-05-09T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,Terminal West,Atlanta,United States
 838,20257335,315471,2017-11-03T10:00:00,2018-05-11T19:00:00,Each ticket purchase receives a code to digitally download Bahamas' new album Earthtones when it comes out January 19.,Bahamas,Cannery,Nashville,United States
@@ -6692,16 +6692,16 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 838,20809300,315471,2017-12-15T10:00:00,2018-05-17T20:00:00,,Bahamas,The Culture Room,Fort Lauderdale,United States
 838,20809301,315471,2017-12-15T10:00:00,2018-05-18T20:00:00,,Bahamas,The Orpheum,Tampa,United States
 838,20496912,315471,,2018-05-19T19:00:00,,Bahamas,Hangout Music Festival,Gulf Shores,United States
-839,Tinashe,error
+839,Tinashe,error,,,,,,,
 840,20702822,270,2017-12-08T12:00:00,2018-04-28T11:00:00,,Godsmack,Fort Rock Festival ,Sunrise,United States
 840,20709312,270,,2018-05-05T12:00:00,,Godsmack,Monster Energy's Carolina Rebellion,Concord,United States
 840,20614325,270,,2018-05-18T11:00:00,,Godsmack,Rock on the Range,Columbus,United States
 840,20843124,270,,2018-05-25T12:00:58,,Godsmack,Rocklahoma,Pryor,United States
-841,Idina Menzel,error
+841,Idina Menzel,error,,,,,,,
 842,20783465,6257,,2018-03-21T21:00:00,Volbeat Buenos Aires,Volbeat,Teatro Vorterix,Buenos Aires,Argentina
 842,20873935,6257,,2018-06-02T19:00:00,Trondheim Rocks,Volbeat,Dahls Arena,Trondheim,Norway
 842,20873960,6257,,2018-06-15T19:00:00,Firenze Rocks,Volbeat,Visarno Arena,Florence,Italy
-843,She & Him,error
+843,She & Him,error,,,,,,,
 844,20645478,3506,,2018-03-01T20:00:13,,Herbie Hancock,McCaw Hill,Seattle,United States
 844,20645507,3506,,2018-03-02T19:30:16,,Herbie Hancock,Arlene Schnitzer Concert Hall ,Portland,United States
 844,20645525,3506,,2018-03-04T19:30:00,,Herbie Hancock,Fox Theater,Oakland,United States
@@ -6722,7 +6722,7 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 845,20277322,5341468,,2018-01-31T20:30:22,,Sir Sly,The Rave,Milwaukee,United States
 845,20704301,5341468,,2018-02-02T18:00:06,,Sir Sly,Concord Music Hall,Chicago,United States
 845,20277328,5341468,,2018-02-03T19:00:00,,Sir Sly,Cannery Ballroom,Nashville,United States
-846,Buffalo Springfield,error
+846,Buffalo Springfield,error,,,,,,,
 847,20065815,6984004,2017-10-11T08:00:00,2018-02-04T19:00:00,,PARTYNEXTDOOR,Infinity Tour,Dublin,Ireland
 847,20065823,6984004,2017-10-11T09:00:37,2018-02-05T19:00:00,,PARTYNEXTDOOR,Infinity Tour,Glasgow,United Kingdom
 847,20065845,6984004,,2018-02-07T19:00:00,,PARTYNEXTDOOR,Infinity Tour,London,United Kingdom
@@ -6738,7 +6738,7 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 847,20065885,6984004,,2018-02-26T19:00:00,,PARTYNEXTDOOR,Infinity Tour,Copenhagen,Denmark
 847,20065891,6984004,,2018-02-28T19:00:00,,PARTYNEXTDOOR,Infinity Tour,Oslo,Norway
 847,20065901,6984004,2017-10-13T08:00:00,2018-03-01T19:00:00,,PARTYNEXTDOOR,Infinity Tour,Stockholm,Sweden
-848,JoJo,error
+848,JoJo,error,,,,,,,
 849,20674707,215801,,2018-01-22T20:00:00,The Internet Seoul,The Internet,Yes 24 Live Hall,Seoul,"Korea, Republic Of"
 849,20551140,215801,,2018-01-24T19:30:00,The Internet Osaka,The Internet,Umeda Club Quattro,Osaka,Japan
 849,20551267,215801,2017-11-18T01:00:00,2018-01-25T19:30:00,The Internet Tokyo,The Internet,Tsutaya O-East,Tokyo,Japan
@@ -6759,8 +6759,8 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 851,20860248,304870,,2018-01-13T22:00:00,Neon Indian + Holy Ghost! + Gigamesh,Neon Indian,DJ SET at Exchange LA,Los Angeles,United States
 851,20428706,304870,,2018-12-28T20:00:00,,Neon Indian,Trees,Dallas,United States
 851,20797653,304870,,2018-12-30T20:00:00,,Neon Indian,Paper Tiger,San Antonio,United States
-852,Crowded House,error
-853,Frank Zappa,error
+852,Crowded House,error,,,,,,,
+853,Frank Zappa,error,,,,,,,
 854,20809180,2704931,2017-12-08T15:00:00,2018-02-28T20:00:00,,Denzel Curry,The Fillmore Philadelphia,Philadelphia,United States
 854,20809182,2704931,2017-12-08T15:00:00,2018-03-01T20:00:00,,Denzel Curry,The Fillmore Silver Spring,Silver Spring,United States
 854,20809185,2704931,2017-12-08T10:00:00,2018-03-02T20:00:00,,Denzel Curry,The Norva,Norfolk,United States
@@ -6790,10 +6790,10 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 855,20935218,855,,2018-03-03T19:00:00,Presale code CTLIVE,Cheap Trick,Good Life Festival,San Tan Valley,United States
 855,20935207,855,,2018-04-08T12:00:26,,Cheap Trick,Tortuga Music Festival,Fort Lauderdale,United States
 855,20858278,855,,2018-05-25T19:00:00,,Cheap Trick,Rocklahoma 2018,Pryor,United States
-856,Olly Murs,error
+856,Olly Murs,error,,,,,,,
 857,18932289,262,2017-04-11T16:30:00,2018-04-21T01:00:00,,OK Go,Portland International Raceway,San Antonio,United States
-858,Misfits,error
-859,Chicago,error
+858,Misfits,error,,,,,,,
+859,Chicago,error,,,,,,,
 860,19357985,862,2017-08-02T11:00:41,2018-01-12T19:00:00,,Arch Enemy,TonHalle,Munich,Germany
 860,19357998,862,,2018-01-13T19:00:00,,Arch Enemy,LKA Longhorn,Stuttgart,Germany
 860,19358001,862,,2018-01-15T19:00:00,,Arch Enemy,Komplex,Zurich,Switzerland
@@ -6805,7 +6805,7 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 860,19358018,862,2017-08-02T08:55:00,2018-01-24T19:00:00,,Arch Enemy,Trix,Antwerp,Belgium
 860,19358019,862,2017-08-02T09:00:00,2018-01-26T19:00:00,,Arch Enemy,Turbinenhalle,Oberhausen,Germany
 860,19358023,862,,2018-01-27T19:00:00,,Arch Enemy,Music Hall,Geiselwind,Germany
-860,19496277,862,2017-08-15T09:00:00,2018-01-28T17:30:00,"ARCH ENEMY ""WILL TO POWER TOUR 2018""",Arch Enemy,013,Tilburg,Netherlands
+860,19496277,862,2017-08-15T09:00:00,2018-01-28T17:30:00,"ARCH ENEMY ""WILL TO POWER TOUR 2018""",Arch Enemy,13,Tilburg,Netherlands
 860,19358026,862,,2018-02-01T19:00:00,,Arch Enemy,Rockefeller,Oslo,Norway
 860,19358027,862,,2018-02-02T19:00:00,,Arch Enemy,Arenan,Stockholm,Sweden
 860,19358031,862,,2018-02-05T19:00:00,,Arch Enemy,Huxleys,Berlin,Germany
@@ -6824,25 +6824,25 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 860,20674861,862,,2018-02-28T19:00:00,Arch Enemy Osaka,Arch Enemy,Namba Hatch,Osaka,Japan
 860,20291082,862,2017-10-25T09:00:00,2018-06-29T00:02:00,"TUSKA - FRIDAY / UNDER 18 YEARS, HELSINKI - Tickets",Arch Enemy,Suvilahti,Helsinki,Finland
 861,15755265,261,,2018-07-17T20:00:00,Janet Jackson - State of the World Tour,Janet Jackson,Bok Center,Tulsa,United States
-862,Janis Joplin,error
-863,Missy Elliott,error
-864,Ciara,error
-865,Underworld,error
+862,Janis Joplin,error,,,,,,,
+863,Missy Elliott,error,,,,,,,
+864,Ciara,error,,,,,,,
+865,Underworld,error,,,,,,,
 866,20897781,1255,2018-01-17T07:00:00,2018-05-02T20:30:00,of Montreal,of Montreal,Wonder Ballroom,Portland,United States
-867,Erik Satie,error
-868,Travis,error
-869,T.I.,error
+867,Erik Satie,error,,,,,,,
+868,Travis,error,,,,,,,
+869,T.I.,error,,,,,,,
 870,20874254,787,2017-12-15T12:00:00,2018-02-14T20:30:00,Erykah Badu,Erykah Badu,San Francisco Armory,San Francisco,United States
-871,Grateful Dead,error
-872,Klaxons,error
-873,Sly & The Family Stone,error
-874,Mobb Deep,error
-875,Paolo Nutini,error
-876,Swedish House Mafia,error
-877,AlunaGeorge,error
-878,The Band,error
-879,Lamb of God,error
-881,Busta Rhymes,error
+871,Grateful Dead,error,,,,,,,
+872,Klaxons,error,,,,,,,
+873,Sly & The Family Stone,error,,,,,,,
+874,Mobb Deep,error,,,,,,,
+875,Paolo Nutini,error,,,,,,,
+876,Swedish House Mafia,error,,,,,,,
+877,AlunaGeorge,error,,,,,,,
+878,The Band,error,,,,,,,
+879,Lamb of God,error,,,,,,,
+881,Busta Rhymes,error,,,,,,,
 882,19914631,888,,2018-03-29T21:00:00,The Darkness,The Darkness,The Fonda Theatre,Hollywood,United States
 882,19913202,888,,2018-03-30T19:00:00,The Darkness,The Darkness,Brooklyn Bowl-LV,Las Vegas,United States
 882,19914635,888,,2018-03-31T20:00:00,The Darkness,The Darkness,The Regency Ballroom,San Francisco,United States
@@ -6868,10 +6868,10 @@ Show: 8:00pm",The Zombies,Levon Helm Studios,Woodstock,United States
 882,19942237,888,,2018-05-01T19:00:00,,The Darkness,Emo's-Austin,Austin,United States
 882,20548138,888,,2018-05-02T20:00:00,The Darkness,The Darkness,South Side Music Hall,Dallas,United States
 882,20517543,888,,2018-06-21T19:00:00,Graspop Metal Meeting,The Darkness,Festivalpark Stenehei,Dessel,Belgium
-883,Stan Getz,error
-884,Antonio Vivaldi,error
-885,Woodkid,error
-886,Lukas Graham,error
+883,Stan Getz,error,,,,,,,
+884,Antonio Vivaldi,error,,,,,,,
+885,Woodkid,error,,,,,,,
+886,Lukas Graham,error,,,,,,,
 887,20370453,188770,,2018-03-09T19:00:00,Forward thinking music in the Portuguese capital,Nosaj Thing,Hub Criativo Beato,Lisbon,Portugal
 887,20869771,188770,2017-12-15T08:55:00,2018-03-15T19:30:00,,Nosaj Thing,Melkweg Upstairs,Amsterdam,Netherlands
 887,20891921,188770,2017-12-14T12:12:12,2018-03-31T22:00:00,Nosaj Thing London,Nosaj Thing,Village Underground,London,United Kingdom
