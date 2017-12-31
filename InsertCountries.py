@@ -1,11 +1,8 @@
 import csv
 import MySQLdb
+from connectionInfo import *
 
 INPUT_FILE = "countries\\country.csv"
-SERVER_NAME = "localhost"
-DB_USERNAME = "root"
-DB_PASSWORD = ""
-DB_NAME = "test"
 
 # Open database connection
 db = MySQLdb.connect(SERVER_NAME,DB_USERNAME,DB_PASSWORD,DB_NAME)

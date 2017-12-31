@@ -1,11 +1,8 @@
 import csv
 import MySQLdb
+from connectionInfo import *
 
 INPUT_FILE = "artists\\artists.csv"
-SERVER_NAME = "localhost"
-DB_USERNAME = "root"
-DB_PASSWORD = ""
-DB_NAME = "test"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.
