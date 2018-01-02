@@ -42,9 +42,9 @@ with open(INPUT_FILE, 'r') as fin:
         
 
         # define sql queries
-        add_album = """INSERT INTO album (album_id, title, artist_id, release_year, num_of_tracks)
+        add_album = """INSERT INTO Album (album_id, title, artist_id, release_year, num_of_tracks)
                         VALUES (%s,%s,%s,%s,%s)"""
-        get_artist_id = "SELECT artist_id from artist WHERE name = %s"
+        get_artist_id = "SELECT artist_id from Artist WHERE name = %s"
 
         # getting the foreign keys from artist table
         artist_id = getForeignKeyFromTable(get_artist_id, artist_name)

@@ -23,7 +23,7 @@ with open(INPUT_FILE, 'r') as fin:
         country = row[0]
 
         # define sql query
-        add_country = "INSERT INTO country VALUES (%s,%s)"
+        add_country = "INSERT INTO Country VALUES (%s,%s)"
 
         # inserting the country
         try:

@@ -8,22 +8,22 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema test
+-- Schema DbMysql11
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `test` ;
+DROP SCHEMA IF EXISTS `DbMysql11` ;
 
 -- -----------------------------------------------------
--- Schema test
+-- Schema DbMysql11
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `test` DEFAULT CHARACTER SET utf8 ;
-USE `test` ;
+CREATE SCHEMA IF NOT EXISTS `DbMysql11` DEFAULT CHARACTER SET utf8 ;
+USE `DbMysql11` ;
 
 -- -----------------------------------------------------
--- Table `test`.`genre`
+-- Table `DbMysql11`.`Genre`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`genre` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Genre` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`genre` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Genre` (
   `genre_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `genre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`genre_id`),
@@ -34,11 +34,11 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`artist`
+-- Table `DbMysql11`.`artist`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`artist` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Artist` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`artist` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist` (
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `genre_id` SMALLINT(5) UNSIGNED NULL DEFAULT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `test`.`artist` (
   INDEX `listeners_idx` (`listeners` ASC),
   CONSTRAINT `fk_artist_genre`
     FOREIGN KEY (`genre_id`)
-    REFERENCES `test`.`genre` (`genre_id`)
+    REFERENCES `DbMysql11`.`genre` (`genre_id`)
     ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -58,11 +58,11 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`album`
+-- Table `DbMysql11`.`Album`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`album` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Album` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`album` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Album` (
   `album_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(250) NOT NULL,
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `test`.`album` (
   INDEX `album_release_year_idx` (`release_year` ASC),
   CONSTRAINT `fk_artist_album`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `test`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -82,11 +82,11 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`track`
+-- Table `DbMysql11`.`Track`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`track` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Track` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`track` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Track` (
   `track_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(250) NOT NULL,
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `test`.`track` (
   INDEX `fk_track_artist_idx` (`artist_id` ASC),
   CONSTRAINT `fk_track_artist`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `test`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -106,23 +106,23 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`album_tracks`
+-- Table `DbMysql11`.`AlbumTracks`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`album_tracks` ;
+DROP TABLE IF EXISTS `DbMysql11`.`AlbumTracks` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`album_tracks` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`AlbumTracks` (
   `album_id` SMALLINT(5) UNSIGNED NOT NULL,
   `track_id` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`album_id`, `track_id`),
   INDEX `fk_track_idx` (`track_id` ASC),
   CONSTRAINT `fk_album`
     FOREIGN KEY (`album_id`)
-    REFERENCES `test`.`album` (`album_id`)
+    REFERENCES `DbMysql11`.`album` (`album_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_track`
     FOREIGN KEY (`track_id`)
-    REFERENCES `test`.`track` (`track_id`)
+    REFERENCES `DbMysql11`.`track` (`track_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -130,11 +130,11 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`country`
+-- Table `DbMysql11`.`Country`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`country` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Country` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`country` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Country` (
   `country_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `country` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`country_id`),
@@ -146,11 +146,11 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`city`
+-- Table `DbMysql11`.`City`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`city` ;
+DROP TABLE IF EXISTS `DbMysql11`.`City` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`city` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`City` (
   `city_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `city` VARCHAR(45) NOT NULL,
   `country_id` SMALLINT(5) UNSIGNED NOT NULL,
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `test`.`city` (
   INDEX `city_idx` (`city` ASC),
   CONSTRAINT `fk_city_country`
     FOREIGN KEY (`country_id`)
-    REFERENCES `test`.`country` (`country_id`)
+    REFERENCES `DbMysql11`.`country` (`country_id`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
@@ -167,11 +167,11 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `test`.`event`
+-- Table `DbMysql11`.`Event`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `test`.`event` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Event` ;
 
-CREATE TABLE IF NOT EXISTS `test`.`event` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Event` (
   `event_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
   `description` TEXT NULL DEFAULT NULL,
@@ -187,16 +187,16 @@ CREATE TABLE IF NOT EXISTS `test`.`event` (
   INDEX `event_date_idx` (`date` ASC),
   CONSTRAINT `fk_event_artist`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `test`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_event_city`
     FOREIGN KEY (`city_id`)
-    REFERENCES `test`.`city` (`city_id`)
+    REFERENCES `DbMysql11`.`city` (`city_id`)
     ON UPDATE CASCADE,
   CONSTRAINT `fk_event_country`
     FOREIGN KEY (`country_id`)
-    REFERENCES `test`.`country` (`country_id`)
+    REFERENCES `DbMysql11`.`country` (`country_id`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1

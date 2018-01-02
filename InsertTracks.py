@@ -52,13 +52,13 @@ with open(INPUT_FILE, 'r') as fin:
             track_duration = None
 
         # define sql queries
-        add_track = """INSERT INTO track (track_id, title, artist_id, duration, listeners, lyrics)
+        add_track = """INSERT INTO Track (track_id, title, artist_id, duration, listeners, lyrics)
                         VALUES (%s,%s,%s,%s,%s,%s)"""
-        add_album_track = """INSERT INTO album_tracks (album_id, track_id)
+        add_album_track = """INSERT INTO AlbumTracks (album_id, track_id)
                         VALUES (%s,%s)"""
-        get_album_id = "SELECT album_id from album WHERE title = %s"
-        get_artist_id = "SELECT artist_id from artist WHERE name = %s"
-        get_track_id = "SELECT MAX(track_id) from track"
+        get_album_id = "SELECT album_id from Album WHERE title = %s"
+        get_artist_id = "SELECT artist_id from Artist WHERE name = %s"
+        get_track_id = "SELECT MAX(track_id) from Track"
 
 
         # getting the foreign keys from artist table

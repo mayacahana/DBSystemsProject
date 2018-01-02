@@ -23,7 +23,7 @@ with open(INPUT_FILE, 'r') as fin:
         genre = row[0]
 
         # define sql query
-        add_genre = "INSERT INTO genre VALUES (%s,%s)"
+        add_genre = "INSERT INTO Genre VALUES (%s,%s)"
 
         # inserting the genre
         try:

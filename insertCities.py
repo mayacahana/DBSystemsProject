@@ -33,9 +33,9 @@ cursor.execute('SET CHARACTER SET utf8;')
 cursor.execute('SET character_set_connection=utf8;')
 
 # define sql queries
-add_city = """INSERT INTO city (city_id, city, country_id)
+add_city = """INSERT INTO City (city_id, city, country_id)
                                     VALUES (%s,%s,%s)"""
-get_country_id = "SELECT country_id from country WHERE country = %s"
+get_country_id = "SELECT country_id from Country WHERE country = %s"
 
 
 with open(INPUT_FILE, 'r') as fin:

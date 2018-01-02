@@ -37,9 +37,9 @@ with open(INPUT_FILE, 'r') as fin:
         
 
         # define sql queries
-        add_artist = """INSERT INTO artist (artist_id, name, genre_id, playcount, listeners)
+        add_artist = """INSERT INTO Artist (artist_id, name, genre_id, playcount, listeners)
                         VALUES (%s,%s,%s,%s,%s)"""
-        get_genre_id = "SELECT genre_id from genre WHERE genre = %s"
+        get_genre_id = "SELECT genre_id from Genre WHERE genre = %s"
 
         # getting the foreign keys from genre table
         genre = getForeignKeyFromTable(get_genre_id, artist_genre)

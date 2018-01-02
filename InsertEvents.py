@@ -51,11 +51,11 @@ with open(INPUT_FILE, 'r') as fin:
             event_sale_date = None
 
         # define sql queries
-        add_event = """INSERT INTO event (event_id, artist_id, description, sale_date, date, venue, city_id, country_id)
+        add_event = """INSERT INTO Event (event_id, artist_id, description, sale_date, date, venue, city_id, country_id)
                         VALUES (%s,%s,%s,DATE(%s),DATE(%s),%s,%s,%s)"""
-        get_artist_id = "SELECT artist_id from artist WHERE name = %s"
-        get_city_id = "SELECT city_id from city WHERE city = %s"
-        get_country_id = "SELECT country_id from country WHERE country = %s"
+        get_artist_id = "SELECT artist_id from Artist WHERE name = %s"
+        get_city_id = "SELECT city_id from City WHERE city = %s"
+        get_country_id = "SELECT country_id from Country WHERE country = %s"
 
         # getting the foreign keys from artist table
         artist_id = getForeignKeyFromTable(get_artist_id, event_artist)
