@@ -21,7 +21,7 @@ x = 0
 cities = set()
 
 # Open database connection
-db = MySQLdb.connect(SERVER_NAME,DB_USERNAME,DB_PASSWORD,DB_NAME)
+db = MySQLdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()

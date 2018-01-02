@@ -34,7 +34,7 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `DbMysql11`.`artist`
+-- Table `DbMysql11`.`Artist`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `DbMysql11`.`Artist` ;
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist` (
   INDEX `listeners_idx` (`listeners` ASC),
   CONSTRAINT `fk_artist_genre`
     FOREIGN KEY (`genre_id`)
-    REFERENCES `DbMysql11`.`genre` (`genre_id`)
+    REFERENCES `DbMysql11`.`Genre` (`genre_id`)
     ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Album` (
   INDEX `album_release_year_idx` (`release_year` ASC),
   CONSTRAINT `fk_artist_album`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `DbMysql11`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`Artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Track` (
   INDEX `fk_track_artist_idx` (`artist_id` ASC),
   CONSTRAINT `fk_track_artist`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `DbMysql11`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`Artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -117,12 +117,12 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`AlbumTracks` (
   INDEX `fk_track_idx` (`track_id` ASC),
   CONSTRAINT `fk_album`
     FOREIGN KEY (`album_id`)
-    REFERENCES `DbMysql11`.`album` (`album_id`)
+    REFERENCES `DbMysql11`.`Album` (`album_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_track`
     FOREIGN KEY (`track_id`)
-    REFERENCES `DbMysql11`.`track` (`track_id`)
+    REFERENCES `DbMysql11`.`Track` (`track_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`City` (
   INDEX `city_idx` (`city` ASC),
   CONSTRAINT `fk_city_country`
     FOREIGN KEY (`country_id`)
-    REFERENCES `DbMysql11`.`country` (`country_id`)
+    REFERENCES `DbMysql11`.`Country` (`country_id`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
@@ -187,16 +187,16 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Event` (
   INDEX `event_date_idx` (`date` ASC),
   CONSTRAINT `fk_event_artist`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `DbMysql11`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`Artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_event_city`
     FOREIGN KEY (`city_id`)
-    REFERENCES `DbMysql11`.`city` (`city_id`)
+    REFERENCES `DbMysql11`.`City` (`city_id`)
     ON UPDATE CASCADE,
   CONSTRAINT `fk_event_country`
     FOREIGN KEY (`country_id`)
-    REFERENCES `DbMysql11`.`country` (`country_id`)
+    REFERENCES `DbMysql11`.`Country` (`country_id`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
