@@ -3,7 +3,7 @@ import requests
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = "events\\EventsForArtists_new.csv"
+INPUT_FILE = PATH_ROOT + "events\\EventsForArtists_new.csv"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.

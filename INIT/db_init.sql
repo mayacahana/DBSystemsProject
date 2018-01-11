@@ -72,7 +72,6 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Track` (
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
   `duration` SMALLINT(5) UNSIGNED NULL DEFAULT NULL,
   `listeners` INT(11) UNSIGNED NULL DEFAULT NULL,
-  `lyrics` TEXT NULL DEFAULT NULL,
   PRIMARY KEY (`track_id`),
   INDEX `fk_track_artist_idx` (`artist_id` ASC),
   CONSTRAINT `fk_track_artist`
@@ -118,8 +117,7 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Country` (
   `country_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `country` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`country_id`),
-  UNIQUE INDEX `country_UNIQUE` (`country` ASC),
-  INDEX `country_idx` (`country` ASC))
+  UNIQUE INDEX `country_UNIQUE` (`country` ASC))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
@@ -180,6 +178,20 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Event` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `DbMysql11`.`Lyrics`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `DbMysql11`.`Lyrics` ;
+
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Lyrics` (
+  `track_id` INT(10) UNSIGNED NOT NULL,
+  `lyrics` TEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`track_id`),
+  FULLTEXT INDEX `lyrics_idx` (`lyrics` ASC))
+ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
 

@@ -2,7 +2,7 @@ import csv
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = "genres\\genre.csv"
+INPUT_FILE = PATH_ROOT + "genres\\genre.csv"
 
 # Open database connection
 db = MySQLdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)

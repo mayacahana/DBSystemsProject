@@ -2,7 +2,7 @@ import csv
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = "tracks\\tracksWithListeners.csv"
+INPUT_FILE = PATH_ROOT + "tracks\\tracksWithListeners.csv"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.
@@ -52,14 +52,15 @@ with open(INPUT_FILE, 'r') as fin:
             track_duration = None
 
         # define sql queries
-        add_track = """INSERT INTO Track (track_id, title, artist_id, duration, listeners, lyrics)
-                        VALUES (%s,%s,%s,%s,%s,%s)"""
+        add_track = """INSERT INTO Track (track_id, title, artist_id, duration, listeners)
+                        VALUES (%s,%s,%s,%s,%s)"""
+        add_lyrics = """INSERT INTO Lyrics (track_id, lyrics)
+                        VALUES (%s,%s)"""
         add_album_track = """INSERT INTO AlbumTracks (album_id, track_id)
                         VALUES (%s,%s)"""
         get_album_id = "SELECT album_id from Album WHERE title = %s"
         get_artist_id = "SELECT artist_id from Artist WHERE name = %s"
         get_track_id = "SELECT MAX(track_id) from Track"
-
 
         # getting the foreign keys from artist table
         album_id = getForeignKeyFromTable(get_album_id, album_title)
@@ -68,12 +69,16 @@ with open(INPUT_FILE, 'r') as fin:
         # inserting the album
         try:
             # inserting 0 for artist_id to use sql auto increment
-            cursor.execute(add_track, (0,track_title,artist_id,track_duration,track_listeners,track_lyrics))
+            cursor.execute(add_track, (0,track_title,artist_id,track_duration,track_listeners))
+            db.commit()
             # get the track_id
             cursor.execute(get_track_id)
             track_id = cursor.fetchall()
-            # inserting to album_tracks table
+            # inserting to AlbumTracks table
             cursor.execute(add_album_track, (album_id,track_id[0][0]))
+            db.commit()
+            # inserting to lyrics table
+            cursor.execute(add_lyrics, (track_id[0][0],track_lyrics))
             db.commit()
         except Exception as e:
             print("error")
