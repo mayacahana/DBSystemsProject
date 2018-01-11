@@ -1,12 +1,29 @@
 
-
+DROP VIEW IF EXISTS Events_for_artists;
 CREATE VIEW Events_for_artists AS
-SELECT  *
-FROM Events AS E INNER JOIN Artists AS A ON E.artist_id = A.artist_id
-ORDER BY A.artist_id
-WHERE CURRENT_DATE() <= E.event_date
+SELECT  A.artist_id as artist_id, A.name as A_name,
+		A.genre as genre, A.listeners as listeners, A.playcount as playcount,
+        E.event_id as event_id, E.date as event_date
+FROM Event AS E INNER JOIN Artist AS A ON E.artist_id = A.artist_id
+WHERE CURRENT_DATE() <= E.date;
 
+# find event
+# TOP ARTISTS - Find events of artists with popular songs
+# (at least @numSongs songs with at least @listeners listeners)
+# by your favorite genre (@genre) in specific location 
 
+DROP VIEW IF EXISTS RelevantArtists;
+CREATE VIEW RelevantArtists AS 
+SELECT GenreArtists.artist_id AS artist_id
+FROM GenreArtists INNER JOIN Tracks ON track.artist_id = GenreArtists.artist_id
+WHERE Tracks.listeners >= @listeners
+GROUP BY GenreArtists.artist_id
+HAVING COUNT(track_id) >= @numSongs AND Genre.genre_name = @genre ;
+
+SELECT E.artist_id, E.name COUNT(E.event_id)
+FROM RelevantArtists INNER JOIN Events_for_artists AS E ON E.artist_id = T.artist_id
+WHERE event_location
+GROUP BY E.artist_id;
 
 #parental supervision, return the percentage of songs conatining "bad words"
 #input: event_id, up to 3 "bad words"
@@ -69,20 +86,7 @@ where events.event_id = %input_param and events.artist_id = artist.artist_id and
 order by rand()
 limit 1;
 
-# find event
-# TOP ARTISTS - Find events of artists with popular songs(at least <%param1> songs with at least <%param2> listeners)
-# by your favorite genre in specific location 
-SELECT E.artist_id, COUNT(E.event_id)
-FROM 
-	(SELECT relevant_artists.artist_id AS artist_id
-	FROM (SELECT artist_id FROM Artists INNER JOIN Genres ON Artists.artist_id = Genre.artist_id
-		WHERE Genre.genre_name = '%param') AS relevant_artists
-		INNER JOIN Tracks ON track.artist_id = relevant_artists.artist_id
-		WHERE Tracks.listeners >= <%param2>
-		HAVING COUNT(track_id) >= <%param1>
-		GROUP BY artist_id ) as T INNER JOIN Events_for_artists AS E ON E.artist_id = T.artist_id
-WHERE event_location
-GROUP BY E.artist_id
+
 
 
 # find event

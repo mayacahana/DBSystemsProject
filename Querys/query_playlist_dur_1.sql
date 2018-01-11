@@ -1,37 +1,29 @@
 
 #PLAYLIST QUERY
-
-#VIEW - artist Track
-DROP VIEW IF EXISTS ArtistTracks;
-CREATE VIEW ArtistTracks AS
-SELECT  Track.title as track, Track.duration as duration,
- Track.lyrics as lyrics, Track.listeners as listeners
-FROM  Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
-WHERE Artist.artist_id = @artist_id;
-
-
 #stored procedure
 DELIMITER //
 DROP PROCEDURE IF EXISTS build_playlist//
-CREATE PROCEDURE build_playlist(IN param INT)
+CREATE PROCEDURE build_playlist(IN playlistDuration INT, IN artistId INT)
 BEGIN
 
 DECLARE numOfSongs  INT;
 DECLARE i INT;
-DECLARE playlistDur INT;
- 
+DECLARE currentDur INT;
+
 SET i = 0;
-SET playlistDur = 0;
+SET currentDur = 0;
 SET numOfSongs = (select count(*)
 				  from ArtistTracks);
-SET param = param*60;
-WHILE playlistDur <= param  AND i <= numOfSongs DO
+SET playlistDuration = playlistDuration*60;
+WHILE currentDur <= playlistDuration  AND i <= numOfSongs DO
 	SET  i = i + 1; 
-	SET playlistDur = (select (SUM(A.duration)) as playlist_duration
-					   from (select *
-							  from ArtistTracks
-                              order by listeners DESC
-                              limit i) as A);			   
+	SET currentDur = (select (SUM(duration)) as playlist_duration
+					   from (SELECT  Track.title as track, Track.duration as duration,
+									Track.lyrics as lyrics, Track.listeners as listeners
+							 FROM  Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
+							 WHERE Artist.artist_id = artistId AND Track.lyrics IS NOT NULL) as T
+					  order by listeners DESC
+					  limit i);			   
 	
 END WHILE; 
 SELECT track, lyrics, duration/60 as song_duration
@@ -42,5 +34,5 @@ limit i;
 END//
 DELIMITER ;
 
+#CALL build_playlist(180,2);
  
-CALL build_playlist(180);
