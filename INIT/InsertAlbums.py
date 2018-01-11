@@ -2,7 +2,7 @@ import csv
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = PATH_ROOT + "albums\\artistsAlbumsMusicgraph.csv"
+INPUT_FILE = PATH_ROOT + "\\albums\\artistsAlbumsMusicgraph.csv"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.
