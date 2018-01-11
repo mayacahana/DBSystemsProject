@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Material Design for Bootstrap fonts and icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+        <!-- Material Design for Bootstrap CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/mycss.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                <img src="/static/media/micro-white.png" width="50" height="50" alt="">
+                Event.ly
+                </a>                      
+            </nav>
+        </header>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+        <!--date picker-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+        <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+        <main> 
+        <hr class="extra-margins">
+        <!-- Main layout --> 
+        <div class="container marketing">
+
+                <!-- Three columns of text below the carousel -->
+                <div class="row" id="accordion">
+                  <div class="col-lg-4">
+                    <img class="rounded-circle" src="/static/media/homepage/drum-set.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>TOP Events</h2>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                    <p><a class="btn btn-secondary" data-parent="#accordion" data-toggle="collapse" data-target="#query1" role="button" aria-expanded="false" aria-controls="query1">
+                    View details &raquo;</a></p>
+                        <div id="query1" class="collapse jumbotron jumbotron-fluid" >
+                            <div class="row">
+                            <div class="form-group input col-6 ddl">
+                                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Genres
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        {% for genre in genres %}
+                                        <a value= "{{genre}}" SELECTED>{{genre}}</a>
+                                        {% endfor %}
+                                    </div>                                          
+                            </div>
+                            <div class="form-group input col-6 ddl">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Location
+                                </button>
+                                    <div class="dropdown-menu">
+                                        {% for location in locations %}
+                                        <a value= "{{location}}" SELECTED>{{location}}</a>
+                                        {% endfor %}
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="form-group input col-x3-3">
+                                    <input type="text" id="songs" class="form-control">
+                                    <label for="songs" class="">Number of songs</label>
+                            </div>
+                            <div class="form-group input col-x3-3">
+                                    <input type="text" id="listeners" class="form-control">
+                                    <label for="songs" class="">Number of listeners</label>
+                            </div>
+                            <div class="form-group input col-x3-3 d-block ">
+                             <button class="btn btn-default">Submit<i class="fa fa-magic ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div> <!-- /.col-lg-4 -->
+                  <div class="col-lg-4">
+                    <img class="rounded-circle" src="/static/media/homepage/concert.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>Fresh Artists</h2>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    <p><button class="btn btn-secondary" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query2" role="button" aria-expanded="false" aria-controls="query2">
+                    View details &raquo;</button></p>
+                    <div id="query2" class="collapse jumbotron jumbotron-fluid" >
+                            <div class="form-group input col-x3-3">
+                                <input type="text" id="datepicker"  class="form-control" placeholder="YYYY/MM/DD"/>                                      
+                                <label for="date" class="">Date</label>
+                            </div>
+                            <div class="form-group input col-x3-3">
+                                    <input type="text" id="listeners" class="form-control">
+                                    <label for="songs" class="">Number of times</label>
+                            </div>
+                            <div class="form-group input col-x3-3 d-block ">
+                             <button class="btn btn-default">Submit<i class="fa fa-magic ml-1"></i></button>
+                            </div>
+                    </div>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                    <img class="rounded-circle" src="/static/media/homepage/singer.png" alt="Generic placeholder image" width="140" height="140">
+                    <h2>Latest Artists</h2>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p><button class="btn btn-secondary" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query3" role="button" aria-expanded="false" aria-controls="query2">
+                    View details &raquo;</button></p>
+                    <div id="query3" class="collapse jumbotron jumbotron-fluid" >
+                            <div class="form-group input col-x3-3">
+                                    <input type="text" id="years" class="form-control">
+                                    <label for="songs" class="">Number of years</label>
+                            </div>
+                            <div class="form-group input col-x3-3">
+                                    <input type="text" id="albums" class="form-control">
+                                    <label for="songs" class="">Number of albums</label>
+                            </div>
+                            <div class="form-group input col-x3-3 d-block ">
+                             <button class="btn btn-default">Submit<i class="fa fa-magic ml-1"></i></button>
+                            </div>
+                    </div> 
+                </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div>
+        </main>
+    </body>
+</html>

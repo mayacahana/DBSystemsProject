@@ -8,8 +8,18 @@
   .marketing h2 {
     font-weight: normal;
   }
+  h2 {
+    margin-top: .5rem;
+  }
   .marketing .col-lg-4 p {
     margin-right: .75rem;
     margin-left: .75rem;
   }
-  
+  .input {
+    display: inline-flex;
+    margin-right: 1rem;
+  }
+
+  .ddl {
+    padding-left: 25%;
+  }
