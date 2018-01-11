@@ -1,4 +1,13 @@
-#hello
+
+
+CREATE VIEW Events_for_artists AS
+SELECT  *
+FROM Events AS E INNER JOIN Artists AS A ON E.artist_id = A.artist_id
+ORDER BY A.artist_id
+WHERE CURRENT_DATE() <= E.event_date
+
+
+
 #parental supervision, return the percentage of songs conatining "bad words"
 #input: event_id, up to 3 "bad words"
 #returns the percentage of songs conatining bad words of the artist
@@ -59,13 +68,6 @@ where events.event_id = %input_param and events.artist_id = artist.artist_id and
 	and albums.aritst_id = artist.artist_id and albums.release_year > %input_param
 order by rand()
 limit 1;
-
-
-CREATE VIEW Events_for_artists AS
-SELECT  *
-FROM Events AS E INNER JOIN Artists AS A ON E.artist_id = A.artist_id
-ORDER BY A.artist_id
-WHERE CURRENT_DATE() <= E.event_date
 
 # find event
 # TOP ARTISTS - Find events of artists with popular songs(at least <%param1> songs with at least <%param2> listeners)

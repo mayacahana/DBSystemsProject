@@ -1,6 +1,3 @@
-print("Inserting Genres...")
-import InsertGenres
-
 print("Inserting Countries...")
 import InsertCountries
 
@@ -20,3 +17,4 @@ print("Inserting Events...")
 import InsertEvents
 
 print("DONE")
+

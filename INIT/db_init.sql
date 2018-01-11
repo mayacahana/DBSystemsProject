@@ -18,20 +18,6 @@ DROP SCHEMA IF EXISTS `DbMysql11` ;
 CREATE SCHEMA IF NOT EXISTS `DbMysql11` DEFAULT CHARACTER SET utf8 ;
 USE `DbMysql11` ;
 
--- -----------------------------------------------------
--- Table `DbMysql11`.`Genre`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `DbMysql11`.`Genre` ;
-
-CREATE TABLE IF NOT EXISTS `DbMysql11`.`Genre` (
-  `genre_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `genre` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`genre_id`),
-  INDEX `genre_idx` (`genre` ASC))
-ENGINE = InnoDB
-AUTO_INCREMENT = 1
-DEFAULT CHARACTER SET = utf8;
-
 
 -- -----------------------------------------------------
 -- Table `DbMysql11`.`Artist`
@@ -41,17 +27,11 @@ DROP TABLE IF EXISTS `DbMysql11`.`Artist` ;
 CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist` (
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `genre_id` SMALLINT(5) UNSIGNED NULL DEFAULT NULL,
+  `genre` VARCHAR(45) NULL DEFAULT NULL,
   `playcount` INT(11) UNSIGNED NULL DEFAULT NULL,
   `listeners` INT(11) UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`artist_id`),
-  INDEX `fk_artist_genre_idx` (`genre_id` ASC),
-  INDEX `listeners_idx` (`listeners` ASC),
-  CONSTRAINT `fk_artist_genre`
-    FOREIGN KEY (`genre_id`)
-    REFERENCES `DbMysql11`.`Genre` (`genre_id`)
-    ON DELETE SET NULL
-    ON UPDATE CASCADE)
+  INDEX `listeners_idx` (`listeners` ASC))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
