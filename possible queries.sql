@@ -1,4 +1,4 @@
-
+#hello
 #parental supervision, return the percentage of songs conatining "bad words"
 #input: event_id, up to 3 "bad words"
 #returns the percentage of songs conatining bad words of the artist
