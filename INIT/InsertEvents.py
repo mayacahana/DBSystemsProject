@@ -2,7 +2,7 @@ import csv
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = PATH_ROOT + "\\events\\EventsForArtists_new.csv"
+INPUT_FILE = PATH_ROOT + "/events/EventsForArtists_new.csv"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.
@@ -12,7 +12,7 @@ def getForeignKeyFromTable(query, value):
     if (data== ()):     # not found
         return None
     else:
-        return data[0][0]   
+        return data[0][0]
 
 # Open database connection
 db = MySQLdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -64,7 +64,7 @@ with open(INPUT_FILE, 'r') as fin:
 
         if (artist_id == None):
             continue
-    
+
         # inserting the event
         try:
             # inserting 0 for artist_id to use sql auto increment
@@ -79,5 +79,3 @@ with open(INPUT_FILE, 'r') as fin:
 
 # disconnect from server
 db.close()
-
-

@@ -2,7 +2,7 @@ import csv
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = PATH_ROOT + "\\albums\\artistsAlbumsMusicgraph.csv"
+INPUT_FILE = PATH_ROOT + "/albums/artistsAlbumsMusicgraph.csv"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.
@@ -12,7 +12,7 @@ def getForeignKeyFromTable(query, value):
     if (data== ()):     # not found
         return None
     else:
-        return data[0][0]   
+        return data[0][0]
 
 # Open database connection
 db = MySQLdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -40,7 +40,7 @@ with open(INPUT_FILE, 'r') as fin:
         album_title = row[3]
         album_year = row[4]
         num_of_tracks = row[6]
-        
+
 
         # define sql queries
         add_album = """INSERT INTO Album (album_id, title, artist_id, release_year, num_of_tracks)
@@ -64,5 +64,3 @@ with open(INPUT_FILE, 'r') as fin:
 
 # disconnect from server
 db.close()
-
-

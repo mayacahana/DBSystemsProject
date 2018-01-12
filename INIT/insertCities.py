@@ -3,7 +3,7 @@ import requests
 import MySQLdb
 from connectionInfo import *
 
-INPUT_FILE = PATH_ROOT + "\\events\\EventsForArtists_new.csv"
+INPUT_FILE = PATH_ROOT + "/events/EventsForArtists_new.csv"
 
 def getForeignKeyFromTable(query, value):
     # execute the SQL query using execute() method.
@@ -13,7 +13,7 @@ def getForeignKeyFromTable(query, value):
     if (data== ()):     # not found
         return None
     else:
-        return data[0][0] 
+        return data[0][0]
 
 city_col_index = 8
 country_col_index = 9
@@ -70,4 +70,3 @@ with open(INPUT_FILE, 'r') as fin:
 
 # disconnect from server
 db.close()
-
