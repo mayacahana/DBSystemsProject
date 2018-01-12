@@ -1,25 +1,24 @@
 #PLAYLIST QUERY
 #stored procedure
+DROP FUNCTION IF EXISTS getArtistId;
+CREATE FUNCTION getArtistId() RETURNS INTEGER DETERMINISTIC RETURN @artistId;
 DELIMITER //
-
-DROP FUNCTION IF EXISTS getArtistId//
-CREATE FUNCTION getArtistId() RETURNS INTEGER DETERMINISTIC return @artistId//
-CREATE OR REPLACE VIEW ArtistTracks AS
-	SELECT  Track.title as track_name, Track.duration as duration,
-			Lyrics.lyrics as lyrics, Track.listeners as listeners
-	FROM  Track INNER JOIN Artist ON Artist.artist_id = Track.artist_id
-    INNER JOIN Lyrics ON Track.track_id = Lyrics.track_id		
-	WHERE Artist.artist_id = getArtistId() AND Lyrics.lyrics IS NOT NULL AND duration IS NOT NULL//
 
 
 DROP PROCEDURE IF EXISTS build_playlist//
 CREATE PROCEDURE build_playlist(IN playlistDuration INT)
 BEGIN
 
-
 DECLARE numOfSongs  INT;
 DECLARE i INT;
 DECLARE currentDur INT;
+
+CREATE OR REPLACE VIEW ArtistTracks AS
+SELECT  Track.title as track_name, Track.duration as duration,
+		Lyrics.lyrics as lyrics, Track.listeners as listeners
+FROM  Track INNER JOIN Artist ON Artist.artist_id = Track.artist_id
+INNER JOIN Lyrics ON Track.track_id = Lyrics.track_id		
+WHERE Artist.artist_id = getArtistId() AND Lyrics.lyrics IS NOT NULL AND duration IS NOT NULL;
 
 SET i = 0;
 SET currentDur = 0;
@@ -45,6 +44,6 @@ END//
 DELIMITER ;
 
 #call the procedure:
-SET @artistId = 3;
+SET @artistId = 3 ;
 CALL build_playlist(180);
  

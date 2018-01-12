@@ -1,45 +1,11 @@
-
 DROP VIEW IF EXISTS Events_for_artists;
 CREATE VIEW Events_for_artists AS
-SELECT  A.artist_id as artist_id, A.name as A_name,
+SELECT  A.artist_id as artist_id, A.name as artist_name,
 		A.genre as genre, A.listeners as listeners, A.playcount as playcount,
-        E.event_id as event_id, E.date as event_date
+        E.event_id as event_id, E.date as event_date, E.country_id
 FROM Event AS E INNER JOIN Artist AS A ON E.artist_id = A.artist_id
 WHERE CURRENT_DATE() <= E.date;
 
-# find event
-# TOP ARTISTS - Find events of artists with popular songs
-# (at least @numSongs songs with at least @listeners listeners)
-# by your favorite genre (@genre) in specific location 
-
-
-SELECT A.artist_id, A.artist_name, COUNT(E.event_id)
-FROM  
-	(SELECT E.artist_id AS artist_id
-	FROM Events_for_artists as E INNER JOIN Track as T ON T.artist_id = E.artist_id
-	WHERE T.listeners >= 500,000 AND 
-    HAVING COUNT(T.track_id) >= 5 AND E.genre = "pop"
-	GROUP BY E.artist_id) as A
-GROUP BY A.artist_id;
-
-
-
-#parental supervision, return the percentage of songs conatining "bad words"
-#input: event_id, up to 3 "bad words"
-#returns the percentage of songs conatining bad words of the artist
-select numOfNaughtySongs/numOfsongs as percentageOfNaughtySongs 
-from(
-	select count(lyrics) as numOfNaughtySongs
-	from (
-		select tracks.lyrics as lyrics
-		from artists, tracks, events
-		where events.event_id = %input_param and events.artist_id= track.artist_id and 
-			   track.artist_id = artist.artist_id ) as lyrics_of_event
-	where lyrics REGEXP '%param|%param|%param') as a, 
-    (select count(tracks.lyrics) as numOfSongs
-		from artists, tracks, events
-		where events.event_id = %input_param and events.artist_id= track.artist_id and 
-			   track.artist_id = artist.artist_id ) as lyrics_of_event) as b
                
                
 #Oldies but Goodies vs. Shorties and Newbies

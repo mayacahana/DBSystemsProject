@@ -25,10 +25,10 @@ def main():
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.execute("SELECT DISTINCT genre FROM Artist WHERE genre IS NOT NULL")
         genres = [item['genre'] for item in cur.fetchall()]
-        print genres
+        print (genres)
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.execute("SELECT country FROM Country")
         countries = [[item['country'] for item in cur.fetchall()]]
     return render_template('homepage.html', genres=genres, countries=countries[0])
 if (__name__ == '__main__'):
-    app.run(port=8888, host = "0.0.0.0", debug=True)
+    app.run()
