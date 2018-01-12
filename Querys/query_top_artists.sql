@@ -20,7 +20,7 @@ FROM	(SELECT Artist.artist_id AS artist_id
 		HAVING COUNT(track_id) >= 21) as A INNER JOIN
         Events_for_artists AS E ON A.artist_id = E.artist_id
         INNER JOIN Country AS C ON E.country_id = C.country_id
-         INNER JOIN City ON E.city_id = City.city_id
+		INNER JOIN City ON E.city_id = City.city_id
 WHERE C.country = "United Kingdom"
         
 
