@@ -1,4 +1,4 @@
-"""print("Inserting Countries...")
+print("Inserting Countries...")
 import InsertCountries
 
 print("Inserting Cities...")
@@ -9,7 +9,7 @@ import InsertArtists
 
 print("Inserting Albums...")
 import InsertAlbums
-"""
+
 print("Inserting Tracks...")
 import InsertTracks
 
