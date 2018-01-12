@@ -12,18 +12,17 @@ WHERE CURRENT_DATE() <= E.date;
 # (at least @numSongs songs with at least @listeners listeners)
 # by your favorite genre (@genre) in specific location 
 
-DROP VIEW IF EXISTS RelevantArtists;
-CREATE VIEW RelevantArtists AS 
-SELECT GenreArtists.artist_id AS artist_id
-FROM GenreArtists INNER JOIN Tracks ON track.artist_id = GenreArtists.artist_id
-WHERE Tracks.listeners >= @listeners
-GROUP BY GenreArtists.artist_id
-HAVING COUNT(track_id) >= @numSongs AND Genre.genre_name = @genre ;
 
-SELECT E.artist_id, E.name COUNT(E.event_id)
-FROM RelevantArtists INNER JOIN Events_for_artists AS E ON E.artist_id = T.artist_id
-WHERE event_location
-GROUP BY E.artist_id;
+SELECT A.artist_id, A.artist_name, COUNT(E.event_id)
+FROM  
+	(SELECT E.artist_id AS artist_id
+	FROM Events_for_artists as E INNER JOIN Track as T ON T.artist_id = E.artist_id
+	WHERE T.listeners >= 500,000 AND 
+    HAVING COUNT(T.track_id) >= 5 AND E.genre = "pop"
+	GROUP BY E.artist_id) as A
+GROUP BY A.artist_id;
+
+
 
 #parental supervision, return the percentage of songs conatining "bad words"
 #input: event_id, up to 3 "bad words"
