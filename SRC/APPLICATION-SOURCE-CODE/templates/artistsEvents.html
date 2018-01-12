@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron eventlist" style="padding: 1rem 2rem !important;">
+    <img src="/static/media/homepage/heavy-metal.png" width="90" height="90" alt="">
+    <h1 class="h1-responsive">Hi, we found you some artists related to your desire event!</h1>
+</div>
+    <!--TABLE-->
+    <table class="table table-hover table-striped">
+    <!--Table head-->
+    <thead class="mdb-color darken-3">
+        <tr class="text-white">
+            <th> Artist name</th>
+            <th> Number of events</th>
+            <th> Click for events!</th>
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        {% for artist in data %}
+        <tr>
+            <td>{{ artist[1] }}</td>
+            <td>{{ artist[2] }}</td>
+            <td><input class="btn btn-primary" type="submit" value="{{artist[0]}}"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <!--Table body-->
+    </table>
+    <!--Table-->
+{% endblock %}

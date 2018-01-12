@@ -13,15 +13,15 @@
                     <p><a class="btn btn-secondary" data-parent="#accordion" data-toggle="collapse" data-target="#query1" role="button" aria-expanded="false" aria-controls="query1">
                     View details &raquo;</a></p>
                         <div id="query1" class="collapse jumbotron jumbotron-fluid" >
-                        <form action="http://localhost:8888/eventsList" method="post">
+                        <form  method="POST">
                             <div class="row">
                             <div class="form-group input col-6 ddl">
                                     <button class="btn btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
                                       Genres
                                     </button>
-                                    <select class="btn btn-secondary mdb-select" id="q1_genre" name=genres method="GET">
+                                    <select class="btn btn-secondary mdb-select" name="q1_genre" method="GET">
                                         {% for genre in genres %}
-                                        <option value= "{{genre}}">{{genre}}</option>
+                                        <option value= "{{genre}}" SELECTED>{{genre}}</option>
                                         {% endfor %}
                                     </select>                                          
                             </div>
@@ -29,7 +29,7 @@
                                     <button class="btn btn-secondary btn-sm" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
                                             Location
                                 </button>
-                                    <select class="btn btn-secondary mdb-select" id="q1_country" name=countries method="GET">
+                                    <select class="btn btn-secondary mdb-select" name="q1_country" method="GET">
                                         {% for country in countries %}
                                         <option value= "{{country}}" SELECTED>{{country}}</option>
                                         {% endfor %}
@@ -37,15 +37,15 @@
                             </div>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" id="q1_songs" class="form-control">
+                                    <input type="text" name="q1_songs" class="form-control">
                                     <label for="songs" class="">Number of songs</label>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" id="q1_listeners" class="form-control">
+                                    <input type="text" name="q1_listeners" class="form-control">
                                     <label for="songs" class="">Number of listeners</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
-                             <input type="submit" class="btn btn-default" name="submit" value="Submit 1">
+                             <input type="submit" class="btn btn-default" name="btn" value="Submit 1">
                             </div>
                         </div>
                         </form>
