@@ -2,8 +2,7 @@
 #returns the city who had the most percentage of events of the input genre
 
 #returns how many events in each city
-Drop view if exists ALL_SHOWS_PER_COUNTRY;
-CREATE VIEW ALL_SHOWS_PER_COUNTRY AS
+CREATE OR REPLACE VIEW ALL_SHOWS_PER_COUNTRY AS
 select country.country, city.city , city.city_id, e.event_id, count(e.event_id) as numOfEvents
 from event as e inner join city on e.city_id = city.city_id 
 		inner join country on country.country_id=city.country_id
