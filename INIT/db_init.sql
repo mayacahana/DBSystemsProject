@@ -10,14 +10,12 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema DbMysql11
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `DbMysql11` ;
 
 -- -----------------------------------------------------
 -- Schema DbMysql11
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `DbMysql11` DEFAULT CHARACTER SET utf8 ;
 USE `DbMysql11` ;
-
 
 -- -----------------------------------------------------
 -- Table `DbMysql11`.`Artist`
@@ -194,6 +192,150 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Lyrics` (
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
+USE `DbMysql11` ;
+
+-- -----------------------------------------------------
+-- procedure sp_insertAlbum
+-- -----------------------------------------------------
+
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`sp_insertAlbum`;
+
+DELIMITER $$
+USE `DbMysql11`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertAlbum`(
+	IN p_title VARCHAR(250),
+    IN p_artist_id SMALLINT(5),
+    IN p_release_year YEAR(4),
+    IN p_num_of_tracks TINYINT(5))
+BEGIN
+	IF (SELECT EXISTS (
+		SELECT 1 FROM Album WHERE p_artist_id = artist_id AND p_title = title
+			)
+        ) THEN SELECT 'ERROR: Album already exists';
+	ELSE
+		INSERT INTO Album
+		(
+			title,
+			artist_id,
+			release_year,
+			num_of_tracks
+        )
+        VALUES
+        (
+            p_title,
+            p_artist_id,
+            p_release_year,
+            p_num_of_tracks
+        );
+    END IF;
+END$$
+
+DELIMITER ;
+
+-- -----------------------------------------------------
+-- procedure sp_insertEvent
+-- -----------------------------------------------------
+
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`sp_insertEvent`;
+
+DELIMITER $$
+USE `DbMysql11`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertEvent`(
+    IN p_artist_id SMALLINT(20),
+    IN p_description TEXT,
+    IN p_sale_date DATE,
+    IN p_date DATE,
+    IN p_venue VARCHAR(150),
+    IN p_city_id SMALLINT(5))
+BEGIN
+	INSERT INTO Event
+	(
+		artist_id,
+		description,
+		sale_date,
+        date,
+        venue,
+        city_id,
+        country_id
+	)
+	VALUES
+	(
+		p_artist_id,
+		p_description,
+		p_sale_date,
+		p_date,
+        p_venue,
+        p_city_id,
+        (SELECT country_id FROM City WHERE city_id = p_city_id)
+	);
+END$$
+
+DELIMITER ;
+
+-- -----------------------------------------------------
+-- procedure sp_updateEventDate
+-- -----------------------------------------------------
+
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`sp_updateEventDate`;
+
+DELIMITER $$
+USE `DbMysql11`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateEventDate`(
+	IN p_event_id SMALLINT(5),
+    IN p_event_date DATE)
+BEGIN
+	IF (SELECT NOT EXISTS (
+		SELECT 1 FROM Event WHERE p_event_id = event_id
+			)
+        ) THEN SELECT 'ERROR: No such event_id';
+	ELSE
+		UPDATE Event
+        SET date = p_event_date
+        WHERE p_event_id = event_id;
+    END IF;
+END$$
+
+DELIMITER ;
+USE `DbMysql11`;
+
+DELIMITER $$
+
+USE `DbMysql11`$$
+DROP TRIGGER IF EXISTS `DbMysql11`.`check_date` $$
+USE `DbMysql11`$$
+CREATE
+DEFINER=`root`@`localhost`
+TRIGGER `DbMysql11`.`check_date`
+BEFORE UPDATE ON `DbMysql11`.`Event`
+FOR EACH ROW
+BEGIN
+	IF NEW.date <=> OLD.date THEN 
+		IF (NEW.date < OLD.sale_date) THEN
+			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: Event date cannot be earlier than sale date';
+		END IF;
+	END IF;
+END$$
+
+
+USE `DbMysql11`$$
+DROP TRIGGER IF EXISTS `DbMysql11`.`event_BEFORE_INSERT` $$
+USE `DbMysql11`$$
+CREATE
+DEFINER=`root`@`localhost`
+TRIGGER `DbMysql11`.`event_BEFORE_INSERT`
+BEFORE INSERT ON `DbMysql11`.`Event`
+FOR EACH ROW
+BEGIN
+	IF (NEW.date < NEW.sale_date) THEN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: Event date cannot be earlier than sale date';
+	END IF;
+END$$
+
+
+DELIMITER ;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
