@@ -25,7 +25,7 @@ def main():
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.execute("SELECT DISTINCT genre FROM Artist WHERE genre IS NOT NULL")
         genres = [item['genre'] for item in cur.fetchall()]
-        print (genres)
+        print genres
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.execute("SELECT country FROM Country")
         countries = [[item['country'] for item in cur.fetchall()]]
