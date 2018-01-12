@@ -55,8 +55,10 @@ limit 1;
 
 
 # find event
-# FRESH ARTISTS - Find events of popular artists (sorted by listeners)
-# that dont perform more than <%param> times in the 30 days before the show 
+# FRESH ARTISTS - Find events of popular artists (sorted by playcount)
+# in the 2 months before @date
+# that dont perform more than @times times in the 30 days before the show 
+
 SELECT *
 FROM Events_for_artists AS x
 WHERE (SELECT count(event_id)
