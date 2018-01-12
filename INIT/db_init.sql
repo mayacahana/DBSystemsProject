@@ -304,6 +304,26 @@ USE `DbMysql11`;
 DELIMITER $$
 
 USE `DbMysql11`$$
+DROP TRIGGER IF EXISTS `DbMysql11`.`check_release_year` $$
+USE `DbMysql11`$$
+CREATE
+DEFINER=`root`@`localhost`
+TRIGGER `DbMysql11`.`check_release_year`
+BEFORE INSERT ON `DbMysql11`.`Album`
+FOR EACH ROW
+BEGIN
+	IF (NEW.release_year > YEAR(CURRENT_DATE())) THEN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: Release year cannot be older than current year';
+	END IF;
+END$$
+
+
+DELIMITER ;
+USE `DbMysql11`;
+
+DELIMITER $$
+
+USE `DbMysql11`$$
 DROP TRIGGER IF EXISTS `DbMysql11`.`check_date` $$
 USE `DbMysql11`$$
 CREATE
