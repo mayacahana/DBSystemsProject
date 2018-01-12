@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!--meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Material Design for Bootstrap fonts and icons -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-        <!-- Material Design for Bootstrap CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
-        <link rel="stylesheet" href="/static/mycss.css">
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">
-                <img src="/static/media/micro-white.png" width="50" height="50" alt="">
-                Event.ly
-                </a>                      
-            </nav>
-        </header>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
-        <!--date picker-->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
-        <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-        <main> 
-        <hr class="extra-margins">
+{% extends "layout.html" %}
+{% block body %}
+<hr class="extra-margins">
         <!-- Main layout --> 
         <div class="container marketing">
 
@@ -41,26 +13,27 @@
                     <p><a class="btn btn-secondary" data-parent="#accordion" data-toggle="collapse" data-target="#query1" role="button" aria-expanded="false" aria-controls="query1">
                     View details &raquo;</a></p>
                         <div id="query1" class="collapse jumbotron jumbotron-fluid" >
+                        <form action="http://localhost:8888/eventsList" method="post">
                             <div class="row">
                             <div class="form-group input col-6 ddl">
-                                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
                                       Genres
                                     </button>
-                                    <div class="dropdown-menu">
+                                    <select class="btn btn-secondary mdb-select" name=genres method="GET">
                                         {% for genre in genres %}
-                                        <a value= "{{genre}}" SELECTED>{{genre}}</a>
+                                        <option value= "{{genre}}">{{genre}}</option>
                                         {% endfor %}
-                                    </div>                                          
+                                    </select>                                          
                             </div>
                             <div class="form-group input col-6 ddl">
-                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Location
+                                    <button class="btn btn-secondary btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled>
+                                            Location
                                 </button>
-                                    <div class="dropdown-menu">
-                                        {% for location in locations %}
-                                        <a value= "{{location}}" SELECTED>{{location}}</a>
+                                    <select class="btn btn-secondary mdb-select" name=countries method="GET">
+                                        {% for country in countries %}
+                                        <option value= "{{country}}" SELECTED>{{country}}</option>
                                         {% endfor %}
-                                    </div>
+                                    </select>
                             </div>
                             </div>
                             <div class="form-group input col-x3-3">
@@ -72,9 +45,10 @@
                                     <label for="songs" class="">Number of listeners</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
-                             <button class="btn btn-default">Submit<i class="fa fa-magic ml-1"></i></button>
+                             <button type="submit" class="btn btn-default" name="query1">Submit<i class="fa fa-magic ml-1"></i></button>
                             </div>
                         </div>
+                        </form>
                     </div> <!-- /.col-lg-4 -->
                   <div class="col-lg-4">
                     <img class="rounded-circle" src="/static/media/homepage/concert.png" alt="Generic placeholder image" width="140" height="140">
@@ -92,7 +66,7 @@
                                     <label for="songs" class="">Number of times</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
-                             <button class="btn btn-default">Submit<i class="fa fa-magic ml-1"></i></button>
+                             <button class="btn btn-default" name="query2">Submit<i class="fa fa-magic ml-1"></i></button>
                             </div>
                     </div>
                     </div><!-- /.col-lg-4 -->
@@ -112,12 +86,10 @@
                                     <label for="songs" class="">Number of albums</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
-                             <button class="btn btn-default">Submit<i class="fa fa-magic ml-1"></i></button>
+                             <button class="btn btn-default" name="query3">Submit<i class="fa fa-magic ml-1"></i></button>
                             </div>
                     </div> 
                 </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
             </div>
-        </main>
-    </body>
-</html>
+{% endblock %}

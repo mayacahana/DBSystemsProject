@@ -6,18 +6,29 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 # Create the application instance
 app = Flask(__name__)
 # MySQL configurations
-# =app.config['MYSQL_DATABASE_USER'] = ''
-# app.config['MYSQL_DATABASE_PASSWORD'] = ''
-# app.config['MYSQL_DATABASE_DB'] = ''
-# app.config['MYSQL_DATABASE_HOST'] = ''
-# mysql.init_app(app)
+SERVER_NAME = "127.0.0.1"
+SERVER_PORT = 3305
+DB_USERNAME = "DbMysql11"
+DB_PASSWORD = "DbMysql11"
+DB_NAME = "DbMysql11"
 
-@app.route('/events', methods=['GET'])
+
+@app.route('/eventsList')
 def showEvents():
     return render_template('eventsList.html')
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def main():
-    return render_template('homepage.html')
+    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+    with con:
+        print ("connected")
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.execute("SELECT DISTINCT genre FROM Artist WHERE genre IS NOT NULL")
+        genres = [item['genre'] for item in cur.fetchall()]
+        print genres
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.execute("SELECT country FROM Country")
+        countries = [[item['country'] for item in cur.fetchall()]]
+    return render_template('homepage.html', genres=genres, countries=countries[0])
 if (__name__ == '__main__'):
     app.run(port=8888, host = "0.0.0.0", debug=True)

@@ -8,13 +8,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
         <!-- Material Design for Bootstrap CSS -->
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
-        <link rel="stylesheet" href="mycss.css">
+        <link rel="stylesheet" href="/static/mycss.css">
     </head>
     <body>
         <header>
             <nav class="navbar navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                <img src="/Users/mayacahana/Documents/GitHub/DBSystemsProject/SRC/APPLICATION-SOURCE-CODE/media/micro-white.png" width="50" height="50" alt="">
+                <img src="/static/media/micro-white.png" width="50" height="50" alt="">
                 Event.ly
                 </a>                      
             </nav>
@@ -26,7 +26,6 @@
         <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
         <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
         <main> 
-        <hr class="extra-margins">
         {% block body %}{% endblock %}
          </main>
     </body>
