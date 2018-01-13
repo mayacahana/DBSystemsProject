@@ -8,21 +8,21 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema dbmysql11
+-- Schema DbMysql11
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema dbmysql11
+-- Schema DbMysql11
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `dbmysql11` DEFAULT CHARACTER SET utf8 ;
-USE `dbmysql11` ;
+CREATE SCHEMA IF NOT EXISTS `DbMysql11` DEFAULT CHARACTER SET utf8 ;
+USE `DbMysql11` ;
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`artist`
+-- Table `DbMysql11`.`Artist`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`artist` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Artist` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`artist` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist` (
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `genre` VARCHAR(45) NULL DEFAULT NULL,
@@ -31,16 +31,16 @@ CREATE TABLE IF NOT EXISTS `dbmysql11`.`artist` (
   PRIMARY KEY (`artist_id`),
   INDEX `listeners_idx` (`listeners` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 888
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`album`
+-- Table `DbMysql11`.`Album`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`album` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Album` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`album` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Album` (
   `album_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(250) NOT NULL,
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
@@ -51,20 +51,20 @@ CREATE TABLE IF NOT EXISTS `dbmysql11`.`album` (
   INDEX `album_release_year_idx` (`release_year` ASC),
   CONSTRAINT `fk_artist_album`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `dbmysql11`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`Artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 9648
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`track`
+-- Table `DbMysql11`.`Track`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`track` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Track` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`track` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Track` (
   `track_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(250) NOT NULL,
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
@@ -74,32 +74,32 @@ CREATE TABLE IF NOT EXISTS `dbmysql11`.`track` (
   INDEX `fk_track_artist_idx` (`artist_id` ASC),
   CONSTRAINT `fk_track_artist`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `dbmysql11`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`Artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 24318
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`albumtracks`
+-- Table `DbMysql11`.`AlbumTracks`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`albumtracks` ;
+DROP TABLE IF EXISTS `DbMysql11`.`AlbumTracks` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`albumtracks` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`AlbumTracks` (
   `album_id` SMALLINT(5) UNSIGNED NOT NULL,
   `track_id` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`album_id`, `track_id`),
   INDEX `fk_track_idx` (`track_id` ASC),
   CONSTRAINT `fk_album`
     FOREIGN KEY (`album_id`)
-    REFERENCES `dbmysql11`.`album` (`album_id`)
+    REFERENCES `DbMysql11`.`Album` (`album_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_track`
     FOREIGN KEY (`track_id`)
-    REFERENCES `dbmysql11`.`track` (`track_id`)
+    REFERENCES `DbMysql11`.`Track` (`track_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -107,26 +107,26 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`country`
+-- Table `DbMysql11`.`Country`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`country` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Country` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`country` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Country` (
   `country_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `country` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`country_id`),
   UNIQUE INDEX `country_UNIQUE` (`country` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 70
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`city`
+-- Table `DbMysql11`.`City`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`city` ;
+DROP TABLE IF EXISTS `DbMysql11`.`City` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`city` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`City` (
   `city_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `city` VARCHAR(45) NOT NULL,
   `country_id` SMALLINT(5) UNSIGNED NOT NULL,
@@ -135,19 +135,19 @@ CREATE TABLE IF NOT EXISTS `dbmysql11`.`city` (
   INDEX `city_idx` (`city` ASC),
   CONSTRAINT `fk_city_country`
     FOREIGN KEY (`country_id`)
-    REFERENCES `dbmysql11`.`country` (`country_id`)
+    REFERENCES `DbMysql11`.`Country` (`country_id`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 1061
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`event`
+-- Table `DbMysql11`.`Event`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`event` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Event` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`event` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Event` (
   `event_id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
   `artist_id` SMALLINT(5) UNSIGNED NOT NULL,
   `description` TEXT NULL DEFAULT NULL,
@@ -163,28 +163,28 @@ CREATE TABLE IF NOT EXISTS `dbmysql11`.`event` (
   INDEX `event_date_idx` (`date` ASC),
   CONSTRAINT `fk_event_artist`
     FOREIGN KEY (`artist_id`)
-    REFERENCES `dbmysql11`.`artist` (`artist_id`)
+    REFERENCES `DbMysql11`.`Artist` (`artist_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `fk_event_city`
     FOREIGN KEY (`city_id`)
-    REFERENCES `dbmysql11`.`city` (`city_id`)
+    REFERENCES `DbMysql11`.`City` (`city_id`)
     ON UPDATE CASCADE,
   CONSTRAINT `fk_event_country`
     FOREIGN KEY (`country_id`)
-    REFERENCES `dbmysql11`.`country` (`country_id`)
+    REFERENCES `DbMysql11`.`Country` (`country_id`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 6129
+AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `dbmysql11`.`lyrics`
+-- Table `DbMysql11`.`Lyrics`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `dbmysql11`.`lyrics` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Lyrics` ;
 
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`lyrics` (
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Lyrics` (
   `track_id` INT(10) UNSIGNED NOT NULL,
   `lyrics` TEXT NULL DEFAULT NULL,
   PRIMARY KEY (`track_id`),
@@ -192,31 +192,33 @@ CREATE TABLE IF NOT EXISTS `dbmysql11`.`lyrics` (
 ENGINE = MyISAM
 DEFAULT CHARACTER SET = utf8;
 
-USE `dbmysql11` ;
+USE `DbMysql11` ;
 
 -- -----------------------------------------------------
--- Placeholder table for view `dbmysql11`.`artist_genres`
+-- Placeholder table for view `DbMysql11`.`artist_genres`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`artist_genres` (`genre` INT);
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`artist_genres` (`genre` INT);
 
 -- -----------------------------------------------------
--- Placeholder table for view `dbmysql11`.`artists_with_future_events`
+-- Placeholder table for view `DbMysql11`.`artists_with_future_events`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `dbmysql11`.`artists_with_future_events` (`artist_id` INT, `artist_name` INT, `genre` INT, `listeners` INT, `playcount` INT, `event_id` INT, `event_date` INT, `country_id` INT, `sale_date` INT, `venue` INT, `city_id` INT, `description` INT);
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`artists_with_future_events` (`artist_id` INT, `artist_name` INT, `genre` INT, `listeners` INT, `playcount` INT, `event_id` INT, `event_date` INT, `country_id` INT, `sale_date` INT, `venue` INT, `city_id` INT, `description` INT);
 
 -- -----------------------------------------------------
 -- procedure bad_words
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`bad_words`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`bad_words`;
 
 DELIMITER $$
-USE `dbmysql11`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `bad_words`(IN badWords VARCHAR(255))
+USE `DbMysql11`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `bad_words`(IN artistId SMALLINT(5), IN badWords VARCHAR(255))
 BEGIN
+
 SET @badWords = badWords;
-#return total tracks which has lyrics of input artist's genre
+SET @artistId = artistId;
+#return total tracks which has lyrics of input Artist's genre
 CREATE OR REPLACE VIEW ALL_SONGS AS
 SELECT  A.artist_id, A.name, T.track_id, COUNT(T.track_id) AS num_of_songs
 FROM Track AS T INNER JOIN Artist AS A ON T.artist_id = A.artist_id
@@ -226,20 +228,21 @@ WHERE A.genre = (SELECT Artist.genre FROM Artist WHERE artist_id = getArtistID()
 GROUP BY A.artist_id;                
 
 
-SELECT Track.title
+SELECT Artist.name as artist_name, Track.title as title,
+	   Track.duration as duration, Track.listeners as listeners
 FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
 WHERE Artist.artist_id = (SELECT M.artist_id
 						  FROM (
 								SELECT BAD_LYRICS.artist_id,  COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs*100 AS percentOfBadSongs
 								FROM (SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
-									  FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id INNER JOIN lyrics ON lyrics.track_id = track.track_id
+									  FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id INNER JOIN lyrics ON lyrics.track_id = Track.track_id
 									   WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS , ALL_SONGS
 								WHERE ALL_SONGS.artist_id = BAD_LYRICS.artist_id
 								GROUP BY BAD_LYRICS.artist_id
 								ORDER BY percentOfBadSongs 
 								LIMIT 1) AS M
 
-						  ORDER BY track.listeners
+						  ORDER BY Track.listeners
 						  LIMIT 20);
 END$$
 
@@ -249,11 +252,11 @@ DELIMITER ;
 -- procedure fresh_artists
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`fresh_artists`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`fresh_artists`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `fresh_artists`(IN times INT, IN in_date DATE)
 BEGIN
 SET @times = times;
@@ -261,7 +264,7 @@ SET @in_date = in_date;
 CREATE OR REPLACE VIEW events_60 AS
 	# all the events + 60 from current date
 	SELECT *
-	FROM event as E
+	FROM Event as E
 	WHERE DATEDIFF(E.date,getDate()) <= 60;
 
 CREATE OR REPLACE VIEW relevant_events AS
@@ -270,7 +273,7 @@ CREATE OR REPLACE VIEW relevant_events AS
   FROM events_60 as E2
   WHERE EXISTS (
 				SELECT E3.artist_id
-				FROM event as E3
+				FROM Event as E3
 				WHERE DATEDIFF(E2.date,E3.date) <= 30 AND 
 					  DATEDIFF(E2.date,E3.date) > 0   AND 
 					  E2.artist_id = E3.artist_id
@@ -294,11 +297,11 @@ DELIMITER ;
 -- function getArtistId
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP function IF EXISTS `dbmysql11`.`getArtistId`;
+USE `DbMysql11`;
+DROP function IF EXISTS `DbMysql11`.`getArtistId`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `getArtistId`() RETURNS smallint(5)
     DETERMINISTIC
 RETURN @artistId$$
@@ -309,11 +312,11 @@ DELIMITER ;
 -- function getDate
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP function IF EXISTS `dbmysql11`.`getDate`;
+USE `DbMysql11`;
+DROP function IF EXISTS `DbMysql11`.`getDate`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `getDate`() RETURNS date
     DETERMINISTIC
 RETURN @in_date$$
@@ -324,11 +327,11 @@ DELIMITER ;
 -- function getGenre
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP function IF EXISTS `dbmysql11`.`getGenre`;
+USE `DbMysql11`;
+DROP function IF EXISTS `DbMysql11`.`getGenre`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `getGenre`() RETURNS varchar(45) CHARSET utf8
     DETERMINISTIC
 RETURN @genre$$
@@ -339,11 +342,11 @@ DELIMITER ;
 -- function getNumYears
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP function IF EXISTS `dbmysql11`.`getNumYears`;
+USE `DbMysql11`;
+DROP function IF EXISTS `DbMysql11`.`getNumYears`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `getNumYears`() RETURNS int(11)
     DETERMINISTIC
 RETURN @numYears$$
@@ -354,11 +357,11 @@ DELIMITER ;
 -- function getTimes
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP function IF EXISTS `dbmysql11`.`getTimes`;
+USE `DbMysql11`;
+DROP function IF EXISTS `DbMysql11`.`getTimes`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` FUNCTION `getTimes`() RETURNS int(11)
     DETERMINISTIC
 RETURN @times$$
@@ -369,11 +372,11 @@ DELIMITER ;
 -- procedure latest_artists
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`latest_artists`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`latest_artists`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `latest_artists`(IN numYears INT, IN numAlbums DATE)
 BEGIN
 SET @numYears = numYears;
@@ -403,17 +406,18 @@ DELIMITER ;
 -- procedure playlist_dur
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`playlist_dur`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`playlist_dur`;
 
 DELIMITER $$
-USE `dbmysql11`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `playlist_dur`(IN playlistDuration INT)
+USE `DbMysql11`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `playlist_dur`(IN artistId SMALLINT(5),IN playlistDuration INT)
 BEGIN
 
 DECLARE numOfSongs  INT;
 DECLARE i INT;
 DECLARE currentDur INT;
+SET @artistId = artistId;
 
 CREATE OR REPLACE VIEW ArtistTracks AS
 SELECT  Track.title as track_name, Track.duration as duration,
@@ -437,7 +441,7 @@ WHILE currentDur <= playlistDuration  AND i <= numOfSongs DO
 	
 END WHILE; 
 
-SELECT track_name, lyrics, duration/60 as song_duration
+SELECT track_name as title, (duration/60) as duration, listeners, lyrics
 FROM ArtistTracks
 order by ArtistTracks.listeners DESC
 limit i;
@@ -451,11 +455,11 @@ DELIMITER ;
 -- procedure sp_insertAlbum
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`sp_insertAlbum`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`sp_insertAlbum`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertAlbum`(
 	IN p_title VARCHAR(250),
     IN p_artist_id SMALLINT(5),
@@ -490,11 +494,11 @@ DELIMITER ;
 -- procedure sp_insertEvent
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`sp_insertEvent`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`sp_insertEvent`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertEvent`(
     IN p_artist_id SMALLINT(20),
     IN p_description TEXT,
@@ -531,11 +535,11 @@ DELIMITER ;
 -- procedure sp_updateEventDate
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`sp_updateEventDate`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`sp_updateEventDate`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateEventDate`(
 	IN p_event_id SMALLINT(5),
     IN p_event_date DATE)
@@ -557,16 +561,16 @@ DELIMITER ;
 -- procedure top_artists
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`top_artists`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`top_artists`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `top_artists`(IN inGenre VARCHAR(45), IN numListeners INT, IN numSongs INT, IN country_name VARCHAR(45))
 BEGIN
 SELECT A.artist_id as artist_id, artist_name, sale_date, event_date, country, city, venue, description
 FROM	(SELECT Artist.artist_id AS artist_id
-		FROM Artist INNER JOIN Track ON track.artist_id = artist.artist_id  
+		FROM Artist INNER JOIN Track ON Track.artist_id = Artist.artist_id  
 		WHERE Track.listeners >= numListeners AND genre = inGenre
 		GROUP BY Artist.artist_id
 		HAVING COUNT(track_id) >= numSongs) as A INNER JOIN
@@ -582,11 +586,11 @@ DELIMITER ;
 -- procedure trivia_1
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`trivia_1`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`trivia_1`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `trivia_1`(IN artistId SMALLINT(5), IN word VARCHAR(45), IN numTracks INT)
 BEGIN
 SET @artistId = artistId;
@@ -619,11 +623,11 @@ DELIMITER ;
 -- procedure trivia_2
 -- -----------------------------------------------------
 
-USE `dbmysql11`;
-DROP procedure IF EXISTS `dbmysql11`.`trivia_2`;
+USE `DbMysql11`;
+DROP procedure IF EXISTS `DbMysql11`.`trivia_2`;
 
 DELIMITER $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `trivia_2`(IN artistId SMALLINT(5))
 BEGIN
 
@@ -638,8 +642,8 @@ HAVING numOfEvents >= 5;
 SET @genre = (SELECT genre FROM Artist WHERE artist_id = artistId);
 CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
 SELECT city.city_id, city.city, COUNT(e.event_id) AS numOfEvents
-FROM event AS e, city, artist
-WHERE e.artist_id = artist.artist_id AND city.city_id = e.city_id AND artist.genre = getGenre() 
+FROM Event AS e, city, Artist
+WHERE e.artist_id = Artist.artist_id AND city.city_id = e.city_id AND Artist.genre = getGenre() 
 GROUP BY city.city_id;
 
 # return which city has the highest (total events of genre/total events) ratio
@@ -657,31 +661,31 @@ END$$
 DELIMITER ;
 
 -- -----------------------------------------------------
--- View `dbmysql11`.`artist_genres`
+-- View `DbMysql11`.`artist_genres`
 -- -----------------------------------------------------
-DROP VIEW IF EXISTS `dbmysql11`.`artist_genres` ;
-DROP TABLE IF EXISTS `dbmysql11`.`artist_genres`;
-USE `dbmysql11`;
-CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `dbmysql11`.`artist_genres` AS select distinct `dbmysql11`.`artist`.`genre` AS `genre` from `dbmysql11`.`artist` where (`dbmysql11`.`artist`.`genre` is not null);
+DROP VIEW IF EXISTS `DbMysql11`.`artist_genres` ;
+DROP TABLE IF EXISTS `DbMysql11`.`artist_genres`;
+USE `DbMysql11`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `DbMysql11`.`artist_genres` AS select distinct `DbMysql11`.`Artist`.`genre` AS `genre` from `DbMysql11`.`Artist` where (`DbMysql11`.`Artist`.`genre` is not null);
 
 -- -----------------------------------------------------
--- View `dbmysql11`.`artists_with_future_events`
+-- View `DbMysql11`.`artists_with_future_events`
 -- -----------------------------------------------------
-DROP VIEW IF EXISTS `dbmysql11`.`artists_with_future_events` ;
-DROP TABLE IF EXISTS `dbmysql11`.`artists_with_future_events`;
-USE `dbmysql11`;
-CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `dbmysql11`.`artists_with_future_events` AS select `a`.`artist_id` AS `artist_id`,`a`.`name` AS `artist_name`,`a`.`genre` AS `genre`,`a`.`listeners` AS `listeners`,`a`.`playcount` AS `playcount`,`e`.`event_id` AS `event_id`,`e`.`date` AS `event_date`,`e`.`country_id` AS `country_id`,`e`.`sale_date` AS `sale_date`,`e`.`venue` AS `venue`,`e`.`city_id` AS `city_id`,`e`.`description` AS `description` from (`dbmysql11`.`event` `e` join `dbmysql11`.`artist` `a` on((`e`.`artist_id` = `a`.`artist_id`))) where (curdate() <= `e`.`date`);
-USE `dbmysql11`;
+DROP VIEW IF EXISTS `DbMysql11`.`artists_with_future_events` ;
+DROP TABLE IF EXISTS `DbMysql11`.`artists_with_future_events`;
+USE `DbMysql11`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `DbMysql11`.`artists_with_future_events` AS select `a`.`artist_id` AS `artist_id`,`a`.`name` AS `artist_name`,`a`.`genre` AS `genre`,`a`.`listeners` AS `listeners`,`a`.`playcount` AS `playcount`,`e`.`event_id` AS `event_id`,`e`.`date` AS `event_date`,`e`.`country_id` AS `country_id`,`e`.`sale_date` AS `sale_date`,`e`.`venue` AS `venue`,`e`.`city_id` AS `city_id`,`e`.`description` AS `description` from (`DbMysql11`.`Event` `e` join `DbMysql11`.`Artist` `a` on((`e`.`artist_id` = `a`.`artist_id`))) where (curdate() <= `e`.`date`);
+USE `DbMysql11`;
 
 DELIMITER $$
 
-USE `dbmysql11`$$
-DROP TRIGGER IF EXISTS `dbmysql11`.`check_release_year` $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
+DROP TRIGGER IF EXISTS `DbMysql11`.`check_release_year` $$
+USE `DbMysql11`$$
 CREATE
 DEFINER=`root`@`localhost`
-TRIGGER `dbmysql11`.`check_release_year`
-BEFORE INSERT ON `dbmysql11`.`album`
+TRIGGER `DbMysql11`.`check_release_year`
+BEFORE INSERT ON `DbMysql11`.`Album`
 FOR EACH ROW
 BEGIN
 	IF (NEW.release_year > YEAR(CURRENT_DATE())) THEN
@@ -690,13 +694,13 @@ BEGIN
 END$$
 
 
-USE `dbmysql11`$$
-DROP TRIGGER IF EXISTS `dbmysql11`.`check_date` $$
-USE `dbmysql11`$$
+USE `DbMysql11`$$
+DROP TRIGGER IF EXISTS `DbMysql11`.`check_date` $$
+USE `DbMysql11`$$
 CREATE
 DEFINER=`root`@`localhost`
-TRIGGER `dbmysql11`.`check_date`
-BEFORE UPDATE ON `dbmysql11`.`event`
+TRIGGER `DbMysql11`.`check_date`
+BEFORE UPDATE ON `DbMysql11`.`Event`
 FOR EACH ROW
 BEGIN
 	IF NEW.date <=> OLD.date THEN 
