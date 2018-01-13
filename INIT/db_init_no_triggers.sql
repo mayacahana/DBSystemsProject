@@ -340,33 +340,6 @@ BEGIN
 END$$
 
 
-USE `DbMysql11`$$
-DROP TRIGGER IF EXISTS `DbMysql11`.`event_BEFORE_INSERT` $$
-USE `DbMysql11`$$
-CREATE
-DEFINER=`root`@`localhost`
-TRIGGER `DbMysql11`.`event_BEFORE_INSERT`
-BEFORE INSERT ON `DbMysql11`.`Event`
-FOR EACH ROW
-BEGIN
-	IF (NEW.date <= CURRENT_DATE()) THEN
-		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: Event date cannot be earlier than current date';
-	END IF;
-    
-	IF (NEW.date < NEW.sale_date) THEN
-		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: Event date cannot be earlier than sale date';
-	END IF;
-    
-	IF (SELECT NOT EXISTS (
-		SELECT 1 FROM City WHERE NEW.city_id = city_id AND NEW.country_id = country_id
-			)
-        ) THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: city_id is not corresponded to country_id';
-	END IF;
-END$$
-
-
-DELIMITER ;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
