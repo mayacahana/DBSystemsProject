@@ -68,7 +68,7 @@ END//
 # in @numYears last years
 
 DROP PROCEDURE IF EXISTS latest_artists//
-CREATE PROCEDURE latest_artists(IN numYears INT, IN numAlbums DATE)
+CREATE PROCEDURE latest_artists(IN numYears INT, IN numAlbums INT)
 BEGIN
 SET @numYears = numYears;
 SET @numAlbums = numAlbums;
