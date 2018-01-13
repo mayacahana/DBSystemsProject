@@ -1,5 +1,5 @@
 # Stored procedures
-DELIMITER //
+DELIMITER $$
 #QUERIES FOR FINDING EVENTS
 
 #query_top_artists
@@ -8,7 +8,7 @@ DELIMITER //
 # (at least numSongs songs with at least numListeners listeners)
 # by your favorite genre (inGenre) in specific location
 
-DROP PROCEDURE IF EXISTS top_artists//
+DROP PROCEDURE IF EXISTS top_artists$$
 CREATE PROCEDURE top_artists(IN inGenre VARCHAR(45), IN numListeners INT, IN numSongs INT, IN countryName VARCHAR(45))
 BEGIN
 SELECT A.artist_id as artist_id, artist_name, sale_date, event_date, country, city, venue, description
@@ -21,14 +21,14 @@ FROM	(SELECT Artist.artist_id AS artist_id
         INNER JOIN Country AS C ON E.country_id = C.country_id
 		INNER JOIN City ON E.city_id = City.city_id
 WHERE C.country = countryName;
-END//
+END$$
 
 #query_fresh_artists
 
 # FRESH ARTISTS - Find events of popular artists (sorted by playcount)
 # that dont perform more than @times times in the 30 days before the show
 # in the the 2 months from the date @in_date
-DROP PROCEDURE IF EXISTS fresh_artists//
+DROP PROCEDURE IF EXISTS fresh_artists$$
 CREATE PROCEDURE fresh_artists(IN times INT, IN in_date DATE)
 BEGIN
 SET @times = times;
@@ -61,13 +61,13 @@ ORDER BY A.playcount DESC ;
 
 DROP VIEW events_60;
 DROP VIEW relevant_events;
-END//                      
+END$$                      
 
 #query_latest_artists
 # LATEST ARTISTS - return the events of artists that release at least @numAlbums 
 # in @numYears last years
 
-DROP PROCEDURE IF EXISTS latest_artists//
+DROP PROCEDURE IF EXISTS latest_artists$$
 CREATE PROCEDURE latest_artists(IN numYears INT, IN numAlbums INT)
 BEGIN
 SET @numYears = numYears;
@@ -89,7 +89,7 @@ WHERE T.cnt_albums >= @numAlbums
 ORDER BY E.listeners DESC;
 
 DROP VIEW latest_artists;
-END//
+END$$
 
 #CREATE PLAYLIST
 
@@ -97,7 +97,7 @@ END//
 #PLAYLIST DUR- returns a playlist of the event's artist's songs and their lyrics.
 #The playlist length(sum of all track durations)<=playlistDuration(input)
 
-DROP PROCEDURE IF EXISTS playlist_dur//
+DROP PROCEDURE IF EXISTS playlist_dur$$
 CREATE PROCEDURE playlist_dur(IN artistId SMALLINT(5), IN playlistDuration INT)
 BEGIN
 
@@ -134,14 +134,14 @@ ORDER BY ArtistTracks.listeners DESC
 LIMIT i;
 
 DROP VIEW ArtistTracks;
-END//
+END$$
 
 
 #query_bad_words
 #BAD WORDS- returns a playlist of 20 popular songs of the artist who's songs contain
 #the least percentage of bad words(songs that contain 1 or more words from @badWords
 
-DROP PROCEDURE IF EXISTS bad_words//
+DROP PROCEDURE IF EXISTS bad_words$$
 CREATE PROCEDURE bad_words(IN artistId SMALLINT(5), IN badWords VARCHAR(255))
 BEGIN
 
@@ -175,7 +175,7 @@ ORDER BY track.listeners DESC
 LIMIT 20;
 
 						
-END//
+END$$
 
 
 #TRIVIA
@@ -185,7 +185,7 @@ END//
 # of artist @artistId which contains
 # at least @numTracks tracks with a given word @word
 
-DROP PROCEDURE IF EXISTS trivia_1//
+DROP PROCEDURE IF EXISTS trivia_1$$
 CREATE PROCEDURE trivia_1(IN artistId SMALLINT(5), IN word VARCHAR(45), IN numTracks INT)
 BEGIN
 SET @artistId = artistId;
@@ -210,13 +210,13 @@ ORDER BY SUM(listeners)
 limit 1;
 
 DROP VIEW artistAlbumTracks;
-END//
+END$$
 	
 #query_trivia_2
 #TRIVIA_2 - return which city has the highest (total events of artist's genre/total events) ratio
 # from the genre of the selected artist
 
-DROP PROCEDURE IF EXISTS trivia_2//
+DROP PROCEDURE IF EXISTS trivia_2$$
 CREATE PROCEDURE trivia_2(IN artistId SMALLINT(5))
 BEGIN
 
@@ -245,5 +245,5 @@ ORDER BY percent DESC
 LIMIT 1;
 
 DROP VIEW TOTAL_EVENTS_PER_CITY;
-END//
+END$$
 DELIMITER ;
