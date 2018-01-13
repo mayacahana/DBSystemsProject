@@ -3,7 +3,7 @@
 # that dont perform more than @times times in the 30 days before the show
 # in the the 2 months from the date @date
 
-SET @date = "2018-03-01";
+SET @in_date = "2018-03-01";
 SET @times = 1;
 
 CREATE OR REPLACE VIEW events_60 AS

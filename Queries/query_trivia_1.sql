@@ -3,7 +3,7 @@
 # of artist @artistId which contains
 # at least @numTracks tracks with a given word @word
 
-SET @artistId = 2;
+SET @artistId = 4;
 SET @word = "love";
 SET @numTracks = 4;
 
