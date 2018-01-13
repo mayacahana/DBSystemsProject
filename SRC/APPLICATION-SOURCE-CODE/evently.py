@@ -37,8 +37,10 @@ def main():
         elif request.form["btn"] == "Submit 2":
             print "im in query 2"
             _q2_date = request.form['q2_date']
+            print(_q2_date)
             _q2_times = request.form['q2_times']
             return redirect(url_for('events_query2',date=_q2_date, times=_q2_times))
+
     
     if (request.method == 'GET'):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -67,7 +69,6 @@ def events_query1(genre,country,songs,listeners):
         INNER JOIN Country AS C ON E.country_id = C.country_id\
         INNER JOIN City ON E.city_id = City.city_id\
         WHERE C.country = %s"
-        print query
         cur.execute(query ,(listeners,genre,songs,country))
         rows = cur.fetchall()
         print type(rows)
@@ -80,6 +81,32 @@ def events_query2(date, times):
     with con:
         print("connected")
         cur = con.cursor(mdb.cursors.DictCursor)
+        query = "SET @date = %s; \
+        SET @times = %s; \
+        CREATE OR REPLACE VIEW events_60 AS \
+	    SELECT * FROM event as E \
+	    WHERE DATEDIFF(E.date,getDate()) <= 60;\
+        CREATE OR REPLACE VIEW relevant_events AS \
+        SELECT * FROM events_60 as E2 \
+        WHERE EXISTS (SELECT E3.artist_id \
+				FROM event as E3 \
+				WHERE DATEDIFF(E2.date,E3.date) <= 30 AND \
+					  DATEDIFF(E2.date,E3.date) > 0   AND \
+					  E2.artist_id = E3.artist_id \
+				HAVING COUNT(E3.event_id) < getTimes()); \
+        SELECT A.artist_id, A.name, D.sale_date, D.date, D.venue, C.country, C2.city \
+        FROM relevant_events AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id \
+        INNER JOIN Country AS C ON C.country_id = D.country_id \
+	    INNER JOIN City AS C2 ON C2.city_id = D.city_id \
+        ORDER BY A.playcount DESC ; \
+        DROP VIEW events_60; \
+        DROP VIEW relevant_events;"
+        print query
+        cur.execute(query,(date,times))
+        rows = cur.fetchall()
+        return render_template('artistsEvents.html', data = rows)
+
+
 
 
 
