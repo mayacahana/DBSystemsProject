@@ -10,7 +10,7 @@ SET @numAlbums = 5;
 CREATE OR REPLACE VIEW latest_artists AS
 SELECT  E.artist_id as artist_id, COUNT(A.release_year) as cnt_albums
 FROM Artist AS E INNER JOIN Album AS A ON E.artist_id = A.artist_id
-WHERE A.release_year<=YEAR(current_date()) AND YEAR(current_date()) - A.release_year <= getNumYears()
+WHERE A.release_year<=YEAR(current_date()) AND YEAR(current_date()) - A.release_year <= getNumYears())
 GROUP BY E.artist_id;
 
 SELECT  E.artist_id, E.artist_name, E.sale_date, E.event_date, C.country, C2.city,

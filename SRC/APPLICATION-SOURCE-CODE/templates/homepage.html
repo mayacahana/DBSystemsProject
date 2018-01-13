@@ -61,15 +61,15 @@
                     <div id="query2" class="collapse jumbotron jumbotron-fluid" >
                         <form  method="POST">
                             <div class="form-group input col-x3-3">
-                                <input type="date" id="q2_datepicker"  class="form-control" placeholder="YYYY-MM-DD"/>                                      
+                                <input type="date" name="q2_datepicker"  class="form-control" placeholder="YYYY-MM-DD"/>                                      
                                 <label for="date" class="">Date</label>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" id="q2_listeners" class="form-control">
-                                    <label for="songs" class="">Number of times</label>
+                                    <input type="text" name="q2_times" class="form-control">
+                                    <label for="times" class="">Number of times</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
-                                <input type="submit" class="btn btn-default" name="submit" value="Submit 2">
+                                <input type="submit" class="btn btn-default" name="btn" value="Submit 2">
                             </div>
                         </form>
                     </div>
@@ -81,17 +81,19 @@
                     <p><button class="btn btn-secondary" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query3" role="button" aria-expanded="false" aria-controls="query2">
                     View details &raquo;</button></p>
                     <div id="query3" class="collapse jumbotron jumbotron-fluid" >
+                        <form method="POST">
                             <div class="form-group input col-x3-3">
-                                    <input type="text" id="q3_years" class="form-control">
+                                    <input type="number" name="q3_years" class="form-control">
                                     <label for="songs" class="">Number of years</label>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" id="q3_albums" class="form-control">
+                                    <input type="text" name="q3_albums" class="form-control">
                                     <label for="songs" class="">Number of albums</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
-                                <input type="submit" class="btn btn-default" name="submit" value="Submit 3">
-                        </div>
+                                <input type="submit" class="btn btn-default" name="btn" value="Submit 3">
+                            </div>
+                        </form>
                     </div> 
                 </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
