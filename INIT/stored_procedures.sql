@@ -98,12 +98,13 @@ END//
 #The playlist length(sum of all track durations)<=playlistDuration(input)
 
 DROP PROCEDURE IF EXISTS playlist_dur//
-CREATE PROCEDURE playlist_dur(IN playlistDuration INT)
+CREATE PROCEDURE playlist_dur(IN artistId SMALLINT(5),IN playlistDuration INT)
 BEGIN
 
 DECLARE numOfSongs  INT;
 DECLARE i INT;
 DECLARE currentDur INT;
+SET @artistId = artistId;
 
 CREATE OR REPLACE VIEW ArtistTracks AS
 SELECT  Track.title as track_name, Track.duration as duration,
@@ -127,7 +128,7 @@ WHILE currentDur <= playlistDuration  AND i <= numOfSongs DO
 	
 END WHILE; 
 
-SELECT track_name, lyrics, duration/60 as song_duration
+SELECT track_name as title, (duration/60) as duration, listeners, lyrics
 FROM ArtistTracks
 order by ArtistTracks.listeners DESC
 limit i;
@@ -141,9 +142,11 @@ END//
 #the least percentage of bad words(songs that contain 1 or more words from @badWords
 
 DROP PROCEDURE IF EXISTS bad_words//
-CREATE PROCEDURE bad_words(IN badWords VARCHAR(255))
+CREATE PROCEDURE bad_words(IN artistId SMALLINT(5), IN badWords VARCHAR(255))
 BEGIN
+
 SET @badWords = badWords;
+SET @artistId = artistId;
 #return total tracks which has lyrics of input artist's genre
 CREATE OR REPLACE VIEW ALL_SONGS AS
 SELECT  A.artist_id, A.name, T.track_id, COUNT(T.track_id) AS num_of_songs
@@ -154,7 +157,8 @@ WHERE A.genre = (SELECT Artist.genre FROM Artist WHERE artist_id = getArtistID()
 GROUP BY A.artist_id;                
 
 
-SELECT Track.title
+SELECT Artist.name as artist_name, Track.title as title,
+	   Track.duration as duration, Track.listeners as listeners
 FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
 WHERE Artist.artist_id = (SELECT M.artist_id
 						  FROM (
@@ -240,4 +244,4 @@ LIMIT 1;
 
 DROP VIEW TOTAL_EVENTS_PER_CITY;
 END//
-
+DELIMITER ;
