@@ -26,7 +26,9 @@ CREATE OR REPLACE VIEW relevant_events AS
 
 
 # the query			
-SELECT A.artist_id, A.name, D.sale_date, D.date, D.venue, C.country, C2.city
+SELECT A.artist_id as artist_id, A.name as artist_name, D.sale_date as sale_date,
+	   D.date as event_date, D.venue as venue, C.country as country,
+       C2.city as city, D.description as description
 FROM relevant_events AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id
      INNER JOIN Country AS C ON C.country_id = D.country_id 
 	 INNER JOIN City AS C2 ON C2.city_id = D.city_id  

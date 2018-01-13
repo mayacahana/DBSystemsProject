@@ -1,24 +1,25 @@
-#TRIVIA
-#returns the city who had the most percentage of events of the input genre
+# return num of events per city
+CREATE OR REPLACE VIEW TOTAL_EVENTS_PER_CITY AS
+SELECT e.country_id, e.city_id, city.city, COUNT(e.event_id) AS numOfEvents
+FROM Event AS e INNER JOIN city ON e.city_id = city.city_id 
+GROUP BY e.city_id
+HAVING numOfEvents >= 5;
 
-#returns how many events in each city
-CREATE OR REPLACE VIEW ALL_SHOWS_PER_COUNTRY AS
-select country.country, city.city , city.city_id, e.event_id, count(e.event_id) as numOfEvents
-from event as e inner join city on e.city_id = city.city_id 
-		inner join country on country.country_id=city.country_id
-group by city.city_id;
+# return num of events of spcific genre per city
 
-set @genre = "Country";
+CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
+SELECT city.city_id, city.city, COUNT(e.event_id) AS numOfEvents
+FROM event AS e, city, artist
+WHERE e.artist_id = artist.artist_id AND city.city_id = e.city_id AND artist.genre = getGenre() 
+GROUP BY city.city_id;
 
-select ALL_SHOWS_PER_COUNTRY.country, ALL_SHOWS_PER_COUNTRY.city , ALL_SHOWS_PER_GENRE.numOFEvents as genreEvents, ALL_SHOWS_PER_COUNTRY.numOfEvents as allEvents , 
-		MAX(ALL_SHOWS_PER_GENRE.numOFEvents/ALL_SHOWS_PER_COUNTRY.numOfEvents*100) as percent
-from ALL_SHOWS_PER_COUNTRY, event as e, 
-	(
-    select country.country, city.city , city.city_id, e.event_id, count(e.event_id) as numOfEvents	
-	from artist as a inner join event as e on a.artist_id= e.artist_id 
-		inner join city on e.city_id = city.city_id 
-		inner join country on country.country_id=city.country_id
-	where a.genre = @genre
-	group by city.city_id ) as ALL_SHOWS_PER_GENRE
-where ALL_SHOWS_PER_GENRE.city_id = ALL_SHOWS_PER_COUNTRY.city_id and ALL_SHOWS_PER_COUNTRY.numOfEvents >= 5;
+# return which city has the highest (total events of genre/total events) ratio
+SELECT TOTAL_EVENTS_PER_CITY.country_id, Country.country,TOTAL_EVENTS_PER_CITY.city_id,
+		TOTAL_EVENTS_PER_CITY.city,
+		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / TOTAL_EVENTS_PER_CITY.numOfEvents * 100) AS percent
+FROM TOTAL_EVENTS_PER_CITY JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE ON TOTAL_EVENTS_PER_CITY.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
+	JOIN Country ON TOTAL_EVENTS_PER_CITY.country_id = Country.country_id
+ORDER BY percent DESC
+LIMIT 1;
 
+DROP VIEW TOTAL_EVENTS_PER_CITY;
