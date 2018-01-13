@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron eventlist" style="padding: 1rem 2rem !important;">
+    <img src="/static/media/music.png" width="90" height="90" alt="">
+    <h1 class="h1-responsive">Here is your amazing playlist</h1>
+</div>
+    <!--TABLE-->
+    <table class="table-responsive table table-hover table-striped" cellspacing="0">
+    <!--Table head-->
+    <thead class="blue-gradient white-text">
+        <tr>
+            <th> Track</th>
+            <th> Artist </th>
+            <th> Duration </th>
+            <th> Listeners </th>
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        {% for song in data %}
+        <tr>
+            <td>{{ song.title }}</td>
+            <td>{{ song.artist_name }}</td>
+            <td>{{ song.duration }}</td>
+            <td>{{ song.listeners }}</td>
+            <!-- <form method="POST">
+            <td><input class="btn btn-info" type="submit" name="click" value="{{event.artist_id}}"></td>
+            </form> -->
+        </tr>
+        {% endfor %}
+    </tbody>
+    <!--Table body-->
+    </table>
+    <!--Table-->
+{% endblock %}

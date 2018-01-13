@@ -25,7 +25,6 @@ def main():
         print "after if"
         # QUERY 1 - TOP EVENTS
         if "Submit 1" in request.form["btn"]:
-            print "im in post!"
             _q1_songs = request.form['q1_songs']
             _q1_genre = request.form['q1_genre']
             _q1_country = request.form['q1_country']
@@ -53,7 +52,7 @@ def main():
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT DISTINCT genre FROM Artist WHERE genre IS NOT NULL")
+            cur.execute("SELECT genre FROM artist_genres")
             genres = [item['genre'] for item in cur.fetchall()]
             cur.close()
             cur = con.cursor(mdb.cursors.DictCursor)
@@ -67,21 +66,12 @@ def events_query1(genre,country,songs,listeners):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
         print artist_id
-        return redirect('playlist_query', artist_id=artist_id)
+        return redirect(url_for('playlist_trivia', artist_id=artist_id))
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         print("connected")
         cur = con.cursor(mdb.cursors.DictCursor)
-        query = "SELECT artist_id,artist_name,event_date,sale_date,country,city,venue,description\
-        FROM (SELECT Artist.artist_id AS artist_id\
-		FROM Artist INNER JOIN Track ON track.artist_id = artist.artist_id\
-		WHERE Track.listeners >= %s AND genre = %s\
-        GROUP BY Artist.artist_id HAVING COUNT(track_id) >= %s) as A INNER JOIN\
-        Events_for_artists AS E ON A.artist_id = E.artist_id\
-        INNER JOIN Country AS C ON E.country_id = C.country_id\
-        INNER JOIN City ON E.city_id = City.city_id\
-        WHERE C.country = %s"
-        cur.execute(query ,(listeners,genre,songs,country))
+        cur.callproc('top_artists',(genre,listeners,songs,country))
         rows = cur.fetchall()
         cur.close()
         return render_template('artistsEvents.html', data = rows)
@@ -92,40 +82,13 @@ def events_query2(date, times):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
         print artist_id
-        return redirect('playlist_query', artist_id=artist_id)
+        return redirect(url_for('playlist_trivia', artist_id=artist_id))
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        statements = ["SET @in_date = %s;","SET @times = %s;","CREATE OR REPLACE VIEW events_60 AS \
-	    SELECT * FROM event as E \
-	    WHERE DATEDIFF(E.date,getDate()) <= 60;\
-        CREATE OR REPLACE VIEW relevant_events AS \
-        SELECT * FROM events_60 as E2 \
-        WHERE EXISTS (SELECT E3.artist_id \
-				FROM event as E3 \
-				WHERE DATEDIFF(E2.date,E3.date) <= 30 AND \
-					  DATEDIFF(E2.date,E3.date) > 0   AND \
-					  E2.artist_id = E3.artist_id \
-				HAVING COUNT(E3.event_id) < getTimes());","SELECT A.artist_id as artist_id, A.name as artist_name, D.sale_date as sale_date,\
-	            D.date as event_date, D.venue as venue, C.country as country,\
-                C2.city as city, D.description as description \
-                FROM relevant_events AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id\
-                INNER JOIN Country AS C ON C.country_id = D.country_id \
-	            INNER JOIN City AS C2 ON C2.city_id = D.city_id  \
-                ORDER BY A.playcount DESC ;",
-        "DROP VIEW events_60; ",
-        "DROP VIEW relevant_events;"]
-        for index, statement in enumerate(statements):
-            cur = con.cursor(mdb.cursors.DictCursor)
-            if (index == 0):
-                cur.execute(statement,(date,))
-            elif (index == 1):
-                cur.execute(statement, (times,))
-            elif (index == 3):
-                cur.execute(statement)
-                rows = cur.fetchall()
-            else:
-                cur.execute(statement)
-            cur.close()
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.callproc('fresh_artists',(times, date))
+        rows = cur.fetchall()
+        cur.close()
         return render_template('artistsEvents.html', data = rows)
 
 
@@ -134,42 +97,65 @@ def events_query3(years, albums):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
         print artist_id
-        return redirect('playlist_query', artist_id=artist_id)
+        return redirect(url_for('playlist_trivia', artist_id=artist_id))
     print ("im in func events_query3")
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        statements = ["SET @numYears = %s;","SET @numAlbums = %s;", "CREATE OR REPLACE VIEW latest_artists AS\
-SELECT  E.artist_id as artist_id, COUNT(A.release_year) as cnt_albums\
-FROM Artist AS E INNER JOIN Album AS A ON E.artist_id = A.artist_id\
-WHERE A.release_year<=YEAR(current_date()) AND YEAR(current_date()) - A.release_year <= getNumYears()\
-GROUP BY E.artist_id;", "SELECT  E.artist_id, E.artist_name, E.sale_date, E.event_date, C.country, C2.city,\
-        E.venue, E.description\
-FROM 	latest_artists AS T INNER JOIN Artists_With_Future_Events AS E ON T.artist_id = E.artist_id\
-		INNER JOIN Country as C ON C.country_id = E.country_id\
-        INNER JOIN City as C2 ON C2.city_id = E.city_id\
-WHERE T.cnt_albums >= @numAlbums\
-ORDER BY E.listeners DESC;","DROP VIEW latest_artists;"]
-        for index, statement in statements:
-            cur = con.cursor(mdb.cursors.DictCursor)
-            if (index == 0):
-                cur.execute(statement,(years,))
-            elif (index == 1):
-                cur.execute(statement, (albums,))
-            elif (index == 3):
-                cur.execute(statement)
-                rows = cur.fetchall()
-            else:
-                cur.execute(statement)
-            cur.close() 
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.callproc('latest_artists',(years, albums))
+        rows = cur.fetchall()
+        cur.close()
         return render_template('artistsEvents.html', data = rows)
 
 
 
-
-
-@app.route('/Playlists/<artist_id>')
-def playlist_query(artist_id):
+@app.route('/Playlists/<artist_id>',methods = ['GET','POST'])
+def playlist_trivia(artist_id):
+    if (request.method == 'POST'):
+        if "duration" in request.form["submit"]:
+            _duration = request.form["p1_duration"]
+            return redirect(url_for('playlist_duration', artist_id = artist_id, duration = _duration))
+        if "bad words" in request.form["submit"]:
+            print ("bad bad bad")
+            _word1 = request.form["p2_word1"]
+            _word2 = request.form["p2_word2"]
+            _word3 = request.form["p2_word3"]
+            words = [_word1,_word2,_word3]
+            bad_words = ""
+            for word in words:
+                if (word != ""):
+                    bad_words += word+"+"
+            print bad_words[:-1]
+            print("return ")
+            return redirect(url_for('playlist_badwords', artist_id = artist_id, bad_words = bad_words[:-1]))
+            print "check"
     return render_template('playlists.html')
+
+@app.route('/showPlaylist/<duration>/<artist_id>',methods = ['GET','POST'])
+def playlist_duration(duration,artist_id):
+    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+    with con:
+        print("run diration")
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.callproc('playlist_dur',(artist_id,duration))
+        rows = cur.fetchall()
+        print rows
+        cur.close()
+        return render_template('durationPlaylist.html', data=rows)
+
+@app.route('/showPlaylist/<bad_words>/<artist_id>',methods = ['GET','POST'])
+def playlist_badwords(bad_words,artist_id):
+    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+    with con:
+        print("run bad words")
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.callproc('bad_words',(artist_id,bad_words))
+        rows = cur.fetchall()
+        cur.close()
+        return render_template('badwordsPlaylist.html', data=rows)
+        
+      
+
     
 if (__name__ == '__main__'):
     app.run(port=5000, host="127.0.0.1", debug = True)
