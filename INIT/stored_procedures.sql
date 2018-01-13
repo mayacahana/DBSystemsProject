@@ -9,7 +9,7 @@ DELIMITER //
 # by your favorite genre (inGenre) in specific location
 
 DROP PROCEDURE IF EXISTS top_artists//
-CREATE PROCEDURE top_artists(IN inGenre VARCHAR(45), IN numListeners INT, IN numSongs INT, IN country_name VARCHAR(45))
+CREATE PROCEDURE top_artists(IN inGenre VARCHAR(45), IN numListeners INT, IN numSongs INT, IN countryName VARCHAR(45))
 BEGIN
 SELECT A.artist_id as artist_id, artist_name, sale_date, event_date, country, city, venue, description
 FROM	(SELECT Artist.artist_id AS artist_id
@@ -20,12 +20,12 @@ FROM	(SELECT Artist.artist_id AS artist_id
         Artists_With_Future_Events AS E ON A.artist_id = E.artist_id
         INNER JOIN Country AS C ON E.country_id = C.country_id
 		INNER JOIN City ON E.city_id = City.city_id
-WHERE C.country = country_name;
+WHERE C.country = countryName;
 END//
 
 #query_fresh_artists
 
-# FRESH ARTISTS - Find events of popular artists (sorted by listeners)
+# FRESH ARTISTS - Find events of popular artists (sorted by playcount)
 # that dont perform more than @times times in the 30 days before the show
 # in the the 2 months from the date @in_date
 DROP PROCEDURE IF EXISTS fresh_artists//
@@ -130,8 +130,8 @@ END WHILE;
 SET i = IF(currentDur>playlistDuration,i-1,i);
 SELECT track_name as title, (duration/60) as duration, listeners, lyrics
 FROM ArtistTracks
-order by ArtistTracks.listeners DESC
-limit i;
+ORDER BY ArtistTracks.listeners DESC
+LIMIT i;
 
 DROP VIEW ArtistTracks;
 END//
@@ -147,13 +147,13 @@ BEGIN
 
 SET @badWords = badWords;
 SET @artistId = artistId;
-#return total tracks which has lyrics of input artist's genre
+#return num of tracks which has lyrics per artist of input artist's genre
 CREATE OR REPLACE VIEW ALL_SONGS AS
-SELECT  A.artist_id, A.name, T.track_id, COUNT(T.track_id) AS num_of_songs
+SELECT  A.artist_id, T.track_id, COUNT(T.track_id) AS num_of_songs, A.listeners as listeners
 FROM Track AS T INNER JOIN Artist AS A ON T.artist_id = A.artist_id
 	JOIN Lyrics AS L ON T.track_id = L.track_id
 WHERE A.genre = (SELECT Artist.genre FROM Artist WHERE artist_id = getArtistID())
-		AND L.lyrics IS NOT NULL
+	  AND L.lyrics IS NOT NULL
 GROUP BY A.artist_id;                
 
 
@@ -162,17 +162,19 @@ SELECT Artist.name as artist_name, Track.title as title,
 FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
 WHERE Artist.artist_id = (SELECT M.artist_id
 						  FROM (
-								SELECT BAD_LYRICS.artist_id,  COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs*100 AS percentOfBadSongs
+								SELECT ALL_SONGS.artist_id,  COUNT(ALL_SONGS.track_id)/ALL_SONGS.num_of_songs*100 AS percentOfBadSongs
 								FROM (SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
-									  FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id INNER JOIN lyrics ON lyrics.track_id = track.track_id
-									   WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS , ALL_SONGS
-								WHERE ALL_SONGS.artist_id = BAD_LYRICS.artist_id
-								GROUP BY BAD_LYRICS.artist_id
-								ORDER BY percentOfBadSongs 
-								LIMIT 1) AS M
+									  FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
+                                      INNER JOIN lyrics ON lyrics.track_id = track.track_id
+									  WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS
+                                      INNER JOIN ALL_SONGS ON BAD_LYRICS.artist_id = ALL_SONGS.artist_id								
+								GROUP BY ALL_SONGS.artist_id
+								ORDER BY percentOfBadSongs ASC, ALL_SONGS.listeners DESC
+								LIMIT 1) AS M)
+ORDER BY track.listeners DESC
+LIMIT 20;
 
-						  ORDER BY track.listeners
-						  LIMIT 20);
+						
 END//
 
 
@@ -191,16 +193,16 @@ SET @word = word;
 SET @numTracks = numTracks;
 
 CREATE OR REPLACE VIEW artistAlbumTracks AS
-SELECT Album.album_id as album_id, Album.title as album_title, Track.listeners as listeners, Lyrics.lyrics as lyrics
+SELECT Album.album_id as album_id, Album.title as album_title, 
+	   Track.track_id as track_id, Track.listeners as listeners
 FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id 
 	INNER JOIN Albumtracks ON Albumtracks.album_id = Album.album_id
-	INNER JOIN Track ON Track.track_id = Albumtracks.track_id 
-	INNER JOIN Lyrics ON Track.track_id = Lyrics.track_id
+	INNER JOIN Track ON Track.track_id = Albumtracks.track_id 	
 WHERE Artist.artist_id = getArtistId();
 
 
 SELECT album_title,SUM(listeners)
-FROM artistAlbumTracks 
+FROM artistAlbumTracks as A INNER JOIN Lyrics ON A.track_id = Lyrics.track_id
 WHERE Match(lyrics) Against(@word)
 GROUP BY album_id
 HAVING COUNT(listeners)>=@numTracks
