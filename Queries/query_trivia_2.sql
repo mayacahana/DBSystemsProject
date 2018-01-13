@@ -6,7 +6,7 @@ GROUP BY e.city_id
 HAVING numOfEvents >= 5;
 
 # return num of events of spcific genre per city
-
+SET @genre = "Country";
 CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
 SELECT city.city_id, city.city, COUNT(e.event_id) AS numOfEvents
 FROM event AS e, city, artist
