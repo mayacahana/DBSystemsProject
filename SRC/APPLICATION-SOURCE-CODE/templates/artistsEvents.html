@@ -5,13 +5,18 @@
     <h1 class="h1-responsive">Hi, we found you some artists related to your desire event!</h1>
 </div>
     <!--TABLE-->
-    <table class="table table-hover table-striped">
+    <table class="table-responsive table table-hover table-striped" cellspacing="0">
     <!--Table head-->
-    <thead class="mdb-color darken-3">
-        <tr class="text-white">
+    <thead class="blue-gradient white-text">
+        <tr>
             <th> Artist name</th>
-            <th> Number of events</th>
-            <th> Click for events!</th>
+            <th> Description </th>
+            <th> Event date </th>
+            <th> Sale date </th>
+            <th> Venue </th>
+            <th> City </th>
+            <th> Country </th>
+            <th></th>
         </tr>
     </thead>
     <!--Table head-->
@@ -27,7 +32,7 @@
             <td>{{ event.venue }}</td>
             <td>{{ event.city }}</td>
             <td>{{ event.country }}</td>
-            <td><input class="btn  btn-mdb" type="submit" id="{{event.event_id}}" value="Click!"></td>
+            <td><input class="btn btn-info" type="submit" id="{{event.event_id}}" value="Click!"></td>
         </tr>
         {% endfor %}
     </tbody>
