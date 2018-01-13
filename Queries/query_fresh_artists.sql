@@ -32,5 +32,5 @@ FROM relevant_events AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id
 	 INNER JOIN City AS C2 ON C2.city_id = D.city_id  
 ORDER BY A.playcount DESC ;   
 
-DROP VIEW event_60;
-DROP VIEW relevant_artists;                      
+DROP VIEW events_60;
+DROP VIEW relevant_events;                      
