@@ -18,11 +18,16 @@
 
     <!--Table body-->
     <tbody>
-        {% for artist in data %}
+        {% for event in data %}
         <tr>
-            <td>{{ artist[1] }}</td>
-            <td>{{ artist[2] }}</td>
-            <td><input class="btn btn-primary" type="submit" value="{{artist[0]}}"></td>
+            <td>{{ event.artist_name }}</td>
+            <td>{{ event.description }}</td>
+            <td>{{ event.event_date }}</td>
+            <td>{{ event.sale_date }}</td>
+            <td>{{ event.venue }}</td>
+            <td>{{ event.city }}</td>
+            <td>{{ event.country }}</td>
+            <td><input class="btn  btn-mdb" type="submit" id="{{event.event_id}}" value="Click!"></td>
         </tr>
         {% endfor %}
     </tbody>

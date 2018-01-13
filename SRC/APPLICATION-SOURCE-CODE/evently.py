@@ -34,6 +34,11 @@ def main():
             print _q1_songs
             print _q1_country
             return redirect(url_for('events_query1',genre=_q1_genre, country=_q1_country, songs=_q1_songs, listeners=_q1_listeners))
+        elif request.form["btn"] == "Submit 2":
+            print "im in query 2"
+            _q2_date = request.form['q2_date']
+            _q2_times = request.form['q2_times']
+            return redirect(url_for('events_query2',date=_q2_date, times=_q2_times))
     
     if (request.method == 'GET'):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -53,16 +58,29 @@ def events_query1(genre,country,songs,listeners):
     with con:
         print("connected")
         cur = con.cursor(mdb.cursors.DictCursor)
-        cur.execute("SELECT E.artist_id, artist_name, COUNT(event_id) \
-            FROM  Events_for_artists as E INNER JOIN Track as T ON T.artist_id = E.artist_id \
-	        INNER JOIN Country as C ON E.country_id = C.country_id \
-            WHERE T.listeners >= %s AND E.genre like %s AND  C.country = %s \
-            GROUP BY E.artist_id \
-            HAVING COUNT(T.track_id) >= %s \
-            ORDER BY E.listeners DESC",(genre,country,songs,listeners))
+        query = "SELECT artist_name,event_date,sale_date,country,city,venue,description\
+        FROM (SELECT Artist.artist_id AS artist_id\
+		FROM Artist INNER JOIN Track ON track.artist_id = artist.artist_id\
+		WHERE Track.listeners >= %s AND genre = %s\
+        GROUP BY Artist.artist_id HAVING COUNT(track_id) >= %s) as A INNER JOIN\
+        Events_for_artists AS E ON A.artist_id = E.artist_id\
+        INNER JOIN Country AS C ON E.country_id = C.country_id\
+        INNER JOIN City ON E.city_id = City.city_id\
+        WHERE C.country = %s"
+        print query
+        cur.execute(query ,(listeners,genre,songs,country))
         rows = cur.fetchall()
-        print rows
+        print type(rows)
         return render_template('artistsEvents.html', data = rows)
+
+@app.route('/Events/<date>/<times>', methods = ['GET','POST'])
+def events_query2(date, times):
+    print ("im in func events_query2")
+    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+    with con:
+        print("connected")
+        cur = con.cursor(mdb.cursors.DictCursor)
+
 
 
 @app.route('/artistsEvents/')
