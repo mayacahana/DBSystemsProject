@@ -212,7 +212,7 @@ BEGIN
 	IF (SELECT EXISTS (
 		SELECT 1 FROM Album WHERE p_artist_id = artist_id AND p_title = title
 			)
-        ) THEN SELECT 'ERROR: Album already exists';
+        ) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: Album already exists';
 	ELSE
 		INSERT INTO Album
 		(
@@ -290,7 +290,7 @@ BEGIN
 	IF (SELECT NOT EXISTS (
 		SELECT 1 FROM Event WHERE p_event_id = event_id
 			)
-        ) THEN SELECT 'ERROR: No such event_id';
+        ) THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'ERROR: No such event_id';
 	ELSE
 		UPDATE Event
         SET date = p_event_date

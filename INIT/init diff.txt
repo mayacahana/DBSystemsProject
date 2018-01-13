@@ -1,2 +1,0 @@
-1. delete country index from Country table.
-2. add lyrics index to Track table.
