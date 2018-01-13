@@ -32,7 +32,7 @@ def main():
             _q1_listeners = request.form['q1_listeners']
             print _q1_songs
             print _q1_country
-            return redirect(url_for('events_query1',genre=_q1_genre, country=_q1_country, songs=_q1_songs, listeners=_q1_listeners))
+            return redirect(url_for("events_query1",genre=_q1_genre, country=_q1_country, songs=_q1_songs, listeners=_q1_listeners))
         print "hereee"
         if "Submit 2" in request.form["btn"]:
             print "im in query 2"
@@ -40,14 +40,15 @@ def main():
             print(_q2_date)
             _q2_times = request.form['q2_times']
             print(_q2_times)
-            return redirect(url_for('events_query2',date=_q2_date, times=_q2_times))
+            return redirect(url_for("events_query2",date=_q2_date, times=_q2_times))
         if "Submit 3" in request.form["btn"]:
             print "im in query 3"
             _q3_years = request.form['q3_years']
             _q3_albums = request.form['q3_albums']
             print _q3_albums
             print _q3_years
-            return redirect(url_for('events_query3', years=_q3_years, albums=_q3_years))
+            return redirect(url_for("events_query3", years=_q3_years, albums=_q3_albums))
+
     if (request.method == 'GET'):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
@@ -61,7 +62,7 @@ def main():
             cur.close()
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
-@app.route('/Events/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
+@app.route('/Events1/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
 def events_query1(genre,country,songs,listeners):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
@@ -76,23 +77,7 @@ def events_query1(genre,country,songs,listeners):
         cur.close()
         return render_template('artistsEvents.html', data = rows)
 
-@app.route('/Events/<date>/<times>', methods = ['GET','POST'])
-def events_query2(date, times):
-    print ("im in func events_query2")
-    if (request.method == 'POST'):
-        artist_id = request.form["click"]
-        print artist_id
-        return redirect(url_for('playlist_trivia', artist_id=artist_id))
-    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
-    with con:
-        cur = con.cursor(mdb.cursors.DictCursor)
-        cur.callproc('fresh_artists',(times, date))
-        rows = cur.fetchall()
-        cur.close()
-        return render_template('artistsEvents.html', data = rows)
-
-
-@app.route('/Events/<years>/<albums>', methods = ['GET','POST'])
+@app.route('/Events3/<years>/<albums>', methods = ['GET','POST'])
 def events_query3(years, albums):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
@@ -103,6 +88,21 @@ def events_query3(years, albums):
     with con:
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.callproc('latest_artists',(years, albums))
+        rows = cur.fetchall()
+        cur.close()
+        return render_template('artistsEvents.html', data = rows)
+
+@app.route('/Events2/<date>/<times>', methods = ['GET','POST'])
+def events_query2(date, times):
+    print ("im in func events_query2")
+    if (request.method == 'POST'):
+        artist_id = request.form["click"]
+        print artist_id
+        return redirect(url_for('playlist_trivia', artist_id=artist_id))
+    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+    with con:
+        cur = con.cursor(mdb.cursors.DictCursor)
+        cur.callproc('fresh_artists',(times, date))
         rows = cur.fetchall()
         cur.close()
         return render_template('artistsEvents.html', data = rows)
@@ -131,7 +131,7 @@ def playlist_trivia(artist_id):
             print "check"
     return render_template('playlists.html')
 
-@app.route('/showPlaylist/<duration>/<artist_id>',methods = ['GET','POST'])
+@app.route('/showPlaylist_duration/<duration>/<artist_id>',methods = ['GET','POST'])
 def playlist_duration(duration,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
@@ -143,7 +143,7 @@ def playlist_duration(duration,artist_id):
         cur.close()
         return render_template('durationPlaylist.html', data=rows)
 
-@app.route('/showPlaylist/<bad_words>/<artist_id>',methods = ['GET','POST'])
+@app.route('/showPlaylist_badwords/<bad_words>/<artist_id>',methods = ['GET','POST'])
 def playlist_badwords(bad_words,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
@@ -158,4 +158,4 @@ def playlist_badwords(bad_words,artist_id):
 
     
 if (__name__ == '__main__'):
-    app.run(port=5000, host="127.0.0.1", debug = True)
+    app.run(port=5000, host="127.0.0.1")
