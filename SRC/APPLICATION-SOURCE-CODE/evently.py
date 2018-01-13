@@ -64,9 +64,10 @@ def main():
 
 @app.route('/Events/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
 def events_query1(genre,country,songs,listeners):
-    if request.method == 'POST':
-        
-    print "im in here"
+    if (request.method == 'POST'):
+        artist_id = request.form["click"]
+        print artist_id
+        return redirect('playlist_query', artist_id=artist_id)
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         print("connected")
@@ -88,6 +89,10 @@ def events_query1(genre,country,songs,listeners):
 @app.route('/Events/<date>/<times>', methods = ['GET','POST'])
 def events_query2(date, times):
     print ("im in func events_query2")
+    if (request.method == 'POST'):
+        artist_id = request.form["click"]
+        print artist_id
+        return redirect('playlist_query', artist_id=artist_id)
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         statements = ["SET @in_date = %s;","SET @times = %s;","CREATE OR REPLACE VIEW events_60 AS \
@@ -126,6 +131,10 @@ def events_query2(date, times):
 
 @app.route('/Events/<years>/<albums>', methods = ['GET','POST'])
 def events_query3(years, albums):
+    if (request.method == 'POST'):
+        artist_id = request.form["click"]
+        print artist_id
+        return redirect('playlist_query', artist_id=artist_id)
     print ("im in func events_query3")
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
@@ -158,10 +167,9 @@ ORDER BY E.listeners DESC;","DROP VIEW latest_artists;"]
 
 
 
-@app.route('/artistsEvents/')
-def test():
-    data=[['0','Beyonce','2'],['1','Coldplay','5']]
-    return render_template('artistsEvents.html', data = data)
+@app.route('/Playlists/<artist_id>')
+def playlist_query(artist_id):
+    return render_template('playlists.html')
     
 if (__name__ == '__main__'):
     app.run(port=5000, host="127.0.0.1", debug = True)

@@ -32,7 +32,9 @@
             <td>{{ event.venue }}</td>
             <td>{{ event.city }}</td>
             <td>{{ event.country }}</td>
-            <td><input class="btn btn-info" type="submit" id="{{event.event_id}}" value="Click!"></td>
+            <form method="POST">
+            <td><input class="btn btn-info" type="submit" name="click" value="{{event.artist_id}}"></td>
+            </form>
         </tr>
         {% endfor %}
     </tbody>
