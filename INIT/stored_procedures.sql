@@ -98,7 +98,7 @@ END//
 #The playlist length(sum of all track durations)<=playlistDuration(input)
 
 DROP PROCEDURE IF EXISTS playlist_dur//
-CREATE PROCEDURE playlist_dur(IN artistId SMALLINT(5),IN playlistDuration INT)
+CREATE PROCEDURE playlist_dur(IN artistId SMALLINT(5), IN playlistDuration INT)
 BEGIN
 
 DECLARE numOfSongs  INT;
@@ -114,6 +114,7 @@ INNER JOIN Lyrics ON Track.track_id = Lyrics.track_id
 WHERE Artist.artist_id = getArtistId() AND Lyrics.lyrics IS NOT NULL
 AND duration IS NOT NULL;
 
+
 SET i = 0;
 SET currentDur = 0;
 SET numOfSongs = (select count(*)
@@ -121,13 +122,12 @@ SET numOfSongs = (select count(*)
 SET playlistDuration = playlistDuration*60;
 WHILE currentDur <= playlistDuration  AND i <= numOfSongs DO
 	SET  i = i + 1; 
-	SET currentDur = (select (SUM(duration)) as playlist_duration
-					  from ArtistTracks
-					  order by listeners DESC
-					  limit i);			   
+	SET currentDur = (SELECT (SUM(duration)) as playlist_duration
+					  FROM (SELECT * FROM ArtistTracks ORDER BY listeners DESC limit i ) as R);	
 	
 END WHILE; 
 
+SET i = IF(currentDur>playlistDuration,i-1,i);
 SELECT track_name as title, (duration/60) as duration, listeners, lyrics
 FROM ArtistTracks
 order by ArtistTracks.listeners DESC
