@@ -138,9 +138,10 @@ END$$
 
 
 #query_bad_words
-#BAD WORDS- returns a playlist of 20 popular songs of the artist who's songs contain
-#the least percentage of bad words(songs that contain 1 or more words from @badWords
-
+#BAD WORDS- returns a playlist of 20 popular songs of an artist
+# from the same genre of artistId who has at least 10 songs with lyrics in our db
+# and who's songs contain the least percentage of bad words.
+# in case of a tie, the most popular artist(by listeners) is selected.
 DROP PROCEDURE IF EXISTS bad_words$$
 CREATE PROCEDURE bad_words(IN artistId SMALLINT(5), IN badWords VARCHAR(255))
 BEGIN
@@ -149,30 +150,34 @@ SET @badWords = badWords;
 SET @artistId = artistId;
 #return num of tracks which has lyrics per artist of input artist's genre
 CREATE OR REPLACE VIEW ALL_SONGS AS
-SELECT  A.artist_id, T.track_id, COUNT(T.track_id) AS num_of_songs, A.listeners as listeners
+SELECT  A.artist_id, COUNT(T.track_id) AS num_of_songs, A.listeners
 FROM Track AS T INNER JOIN Artist AS A ON T.artist_id = A.artist_id
 	JOIN Lyrics AS L ON T.track_id = L.track_id
-WHERE A.genre = (SELECT Artist.genre FROM Artist WHERE artist_id = getArtistID())
-	  AND L.lyrics IS NOT NULL
-GROUP BY A.artist_id;                
+WHERE A.genre = (SELECT Artist.genre FROM Artist WHERE artist_id = getArtistId())
+		AND L.lyrics IS NOT NULL
+GROUP BY A.artist_id
+HAVING num_of_songs>10;               
 
 
-SELECT Artist.name as artist_name, Track.title as title,
-	   Track.duration as duration, Track.listeners as listeners
+SELECT Artist.name AS artist_name, Track.title AS title, (Track.duration/60) AS duration
 FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
-WHERE Artist.artist_id = (SELECT M.artist_id
+WHERE Artist.artist_id = (SELECT M.ALL_SONGS_ID
 						  FROM (
-								SELECT ALL_SONGS.artist_id,  COUNT(ALL_SONGS.track_id)/ALL_SONGS.num_of_songs*100 AS percentOfBadSongs
-								FROM (SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
-									  FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
-                                      INNER JOIN lyrics ON lyrics.track_id = track.track_id
-									  WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS
-                                      INNER JOIN ALL_SONGS ON BAD_LYRICS.artist_id = ALL_SONGS.artist_id								
+								SELECT ALL_SONGS.artist_id as ALL_SONGS_ID
+								FROM ( SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
+										FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
+                                        INNER JOIN lyrics ON lyrics.track_id = track.track_id
+										WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS 
+								RIGHT JOIN ALL_SONGS ON ALL_SONGS.artist_id = BAD_LYRICS.artist_id
 								GROUP BY ALL_SONGS.artist_id
-								ORDER BY percentOfBadSongs ASC, ALL_SONGS.listeners DESC
-								LIMIT 1) AS M)
-ORDER BY track.listeners DESC
+								ORDER BY (COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs) asc, 
+										  listeners desc 
+                                limit 1) AS M)
+
+ORDER BY track.listeners
 LIMIT 20;
+
+DROP VIEW ALL_SONGS;
 
 						
 END$$
