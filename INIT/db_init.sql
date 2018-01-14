@@ -29,7 +29,8 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist` (
   `playcount` INT(11) UNSIGNED NULL DEFAULT NULL,
   `listeners` INT(11) UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`artist_id`),
-  INDEX `listeners_idx` (`listeners` ASC))
+  INDEX `listeners_idx` (`listeners` ASC),
+  INDEX `genre_idx` (`genre` ASC))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;

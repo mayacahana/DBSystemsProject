@@ -29,7 +29,8 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist` (
   `playcount` INT(11) UNSIGNED NULL DEFAULT NULL,
   `listeners` INT(11) UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`artist_id`),
-  INDEX `listeners_idx` (`listeners` ASC))
+  INDEX `listeners_idx` (`listeners` ASC),
+  INDEX `genre_idx` (`genre` ASC))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = utf8;
@@ -203,7 +204,7 @@ DROP procedure IF EXISTS `DbMysql11`.`sp_insertAlbum`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertAlbum`(
+CREATE PROCEDURE `sp_insertAlbum`(
 	IN p_title VARCHAR(250),
     IN p_artist_id SMALLINT(5),
     IN p_release_year YEAR(4),
@@ -242,7 +243,7 @@ DROP procedure IF EXISTS `DbMysql11`.`sp_insertEvent`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insertEvent`(
+CREATE PROCEDURE `sp_insertEvent`(
     IN p_artist_id SMALLINT(20),
     IN p_description TEXT,
     IN p_sale_date DATE,
@@ -283,7 +284,7 @@ DROP procedure IF EXISTS `DbMysql11`.`sp_updateEventDate`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_updateEventDate`(
+CREATE PROCEDURE `sp_updateEventDate`(
 	IN p_event_id SMALLINT(5),
     IN p_event_date DATE)
 BEGIN
@@ -306,9 +307,7 @@ DELIMITER $$
 USE `DbMysql11`$$
 DROP TRIGGER IF EXISTS `DbMysql11`.`check_release_year` $$
 USE `DbMysql11`$$
-CREATE
-DEFINER=`root`@`localhost`
-TRIGGER `DbMysql11`.`check_release_year`
+CREATE TRIGGER `DbMysql11`.`check_release_year`
 BEFORE INSERT ON `DbMysql11`.`Album`
 FOR EACH ROW
 BEGIN
@@ -326,9 +325,7 @@ DELIMITER $$
 USE `DbMysql11`$$
 DROP TRIGGER IF EXISTS `DbMysql11`.`check_date` $$
 USE `DbMysql11`$$
-CREATE
-DEFINER=`root`@`localhost`
-TRIGGER `DbMysql11`.`check_date`
+CREATE TRIGGER `DbMysql11`.`check_date`
 BEFORE UPDATE ON `DbMysql11`.`Event`
 FOR EACH ROW
 BEGIN
