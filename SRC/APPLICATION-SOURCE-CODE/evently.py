@@ -126,7 +126,6 @@ def playlist_trivia(artist_id):
 def playlist_duration(duration,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        print("run diration")
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.callproc('playlist_dur',(artist_id,duration))
         rows = cur.fetchall()
@@ -145,9 +144,8 @@ def playlist_badwords(bad_words,artist_id):
         cur.close()
         return render_template('badwordsPlaylist.html', data=rows)
         
-      
 
-@app.route('/Edit/')
+@app.route('/Edit/', methods=['GET','POST'])
 def edit():
     if (request.method == 'POST'):
         if "Insert event" in request.form["btn"]:
@@ -184,7 +182,7 @@ def edit():
                 else:
                     return_string = "Failed to insert album. Please try again"
                 return render_template('edit.html',cities = cities, artists=artists, insert_album=return_string)
-            
+
     if (request.method == 'GET'):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
@@ -196,6 +194,12 @@ def edit():
             cur.execute("SELECT city_id, city FROM city")
             cities = cur.fetchall()
             cur.close()
-    return render_template('edit.html',cities = cities, artists=artists)
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT genre FROM artist_genres")
+            genres = [item['genre'] for item in cur.fetchall()]
+            cur.close()
+    return render_template('edit.html',cities = cities, artists=artists, genres=genres)
+
+
 if (__name__ == '__main__'):
     app.run(port=5000, host="127.0.0.1", debug=True)
