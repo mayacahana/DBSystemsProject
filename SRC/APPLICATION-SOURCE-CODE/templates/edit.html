@@ -5,80 +5,90 @@
     <div class="container marketing">
         <div class="" id="accordion">
             <div class="col-lg-6 card card-dark"> <!--QUERY1-->
-                <div class="view gradient-card-header blue-gradient">
-                        <h1 class="h1-responsive">Insert new event</h1>
-                </div>
+                <blockquote class="blockquote bq-primary">
+                    <h1 class="card-h1 h1-responsive">Insert new event</h1>
+                </blockquote>
                 <form method="POST">
                     <div class="form-group bmd-form-group col-x3-3">
                         <select class="btn mdb-select" name="i1_artist" method="GET">
                             <option value="disabled selected" DISABLED>Choose an artist</option>
                             {% for artist in artists %}
-                            <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.artist_name}}</option>
+                            <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.name}}</option>
                             {% endfor %}
                         </select>   
                     </div>
                     <div class="form-group col-x3-3">
-                        <input type="text" name="i1_desc" class="form-control">
+                        <input type="text" name="i1_desc" class="form-control" required>
                         <label for="i1_desc" class="">Description of the event</label>
                     </div>
                     <div class="form-group col-x3-3">
-                        <input type="date" name="i1_sale" class="form control">
+                        <input type="date" name="i1_sale" class="form-control" required>
                         <label for="i1_sale" class="bmd-label-static">Sale date</label>
                     </div>
                     <div class="form-group col-x3-3">
-                        <input type="date" name="i1_date" class="form control">
+                        <input type="date" name="i1_date" class="form-control" required>
                         <label for="i1_date" class="bmd-label-static">Date</label>
                     </div>
                     <div class="form-group bmd-form-group col-x3-3">
-                        <input type="text" name="i1_venue" class="form control">
+                        <input type="text" name="i1_venue" class="form-control" required>
                         <label for="i1_venue" class="bmd-label-static">Venue</label>
                     </div>
                     <div class="form-group col-x3-3">
-                        <select class="btn mdb-select" name="i1_cities" method="GET">
+                        <select class="btn mdb-select" name="i1_city" method="GET">
                             <option value="disabled selected" DISABLED>Choose a city</option>
                             {% for city in cities %}
-                            <option class="dropdown-item" value= "{{city.city_id}}">{{city.city_name}}</option>
+                            <option class="dropdown-item" value= "{{city.city_id}}">{{city.city}}</option>
                             {% endfor %}
                             </select>   
                     </div>
                     <div class="form-group input col-x3-3 d-block ">
                         <input type="submit" class="btn btn-success" name="btn" value="Insert event">
+                        {% if insert_event %}
+                        <p class=error>{{ insert_event }}
+                        {% endif %}
                     </div>                   
                 </form>
             </div>
             <hr class="extra-margins">
             <div class="col-lg-6 card"> <!--QUERY2-->
-                <h1>Insert new album</h1>
+                <blockquote class="blockquote bq-warning">
+                    <h1 class="card-h1 h1-responsive">Insert new album</h1>
+                </blockquote>
                 <form method="POST">
                     <div class="form-group col-x3-3">
                         <select class="btn mdb-select" name="i2_artist" method="GET">
                             <option value="disabled selected" DISABLED>Choose an artist</option>
                             {% for artist in artists %}
-                            <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.artist_name}}</option>
+                            <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.name}}</option>
                             {% endfor %}
                         </select>   
                     </div>
                     <div class="form-group col-x3-3">
-                            <input type="text" name="i2_title" class="form control">
+                            <input type="text" name="i2_title" class="form-control" required>
                             <label for="i1_venue" class="bmd-label-static">Album title</label>
                         </div>
                     <div class="form-group col-x3-3">
-                        <input type="number" min="1800" max="2018" name="i2_year" class="form control">
+                        <input type="number" min="1800" max="2018" name="i2_year" class="form-control" required>
                         <label for="i1_sale" class="bmd-label-static">Release year</label>
                     </div>
                     <div class="form-group col-x3-3">
-                        <input type="number" name="i2_tracks" class="form control">
+                        <input type="number" name="i2_tracks" class="form-control" required>
                         <label for="i1_venue" class="bmd-label-static">Number of tracks</label>
                     </div>
                     <div class="form-group input col-x3-3 d-block ">
                         <input type="submit" class="btn btn-success" name="btn" value="Insert album">
+                        {% if insert_album %}
+                        <p class=error>{{ insert_album }}
+                        {% endif %}
                     </div>                   
                 </form>
             </div>
             <hr class="extra-margins">
             <div class="col-lg-6 card"> <!--QUERY3-->
-                <h1>Update event date</h1>
-                <form method="POST">
+                <blockquote class="blockquote bq-success">
+                    <h1 class="card-h1 h1-responsive">Update event date</h1>
+                </blockquote>
+                <form method="POST" class="card-body">
                     <div class="form-group col-x3-3">
                         <select class="btn mdb-select" name="i2_artist" method="GET">
                             <option value="disabled selected" DISABLED>Choose an event</option>
@@ -88,7 +98,7 @@
                         </select>   
                     </div>
                     <div class="form-group col-x3-3">
-                        <input type="date" name="i2_year" class="form control">
+                        <input type="date" name="i2_year" class="form control" required>
                         <label for="i1_sale" class="bmd-label-static">Event date</label>
                     </div>
                     <div class="form-group input col-x3-3 d-block ">
