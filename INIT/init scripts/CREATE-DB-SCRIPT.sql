@@ -237,7 +237,7 @@ WHERE Artist.artist_id = (SELECT M.ALL_SONGS_ID
 								SELECT ALL_SONGS.artist_id as ALL_SONGS_ID
 								FROM ( SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
 										FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
-                                        INNER JOIN lyrics ON lyrics.track_id = track.track_id
+                                        INNER JOIN Lyrics ON Lyrics.track_id = Track.track_id
 										WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS 
 								RIGHT JOIN ALL_SONGS ON ALL_SONGS.artist_id = BAD_LYRICS.artist_id
 								GROUP BY ALL_SONGS.artist_id
@@ -245,7 +245,7 @@ WHERE Artist.artist_id = (SELECT M.ALL_SONGS_ID
 										  listeners desc 
                                 limit 1) AS M)
 
-ORDER BY track.listeners
+ORDER BY Track.listeners
 LIMIT 20;
 
 DROP VIEW ALL_SONGS;
@@ -271,7 +271,7 @@ SET @in_date = in_date;
 CREATE OR REPLACE VIEW events_60 AS
 	# all the events + 60 from current date
 	SELECT *
-	FROM event as E
+	FROM Event as E
 	WHERE DATEDIFF(E.date,getDate()) <= 60;
 
 CREATE OR REPLACE VIEW relevant_events AS
@@ -280,7 +280,7 @@ CREATE OR REPLACE VIEW relevant_events AS
   FROM events_60 as E2
   WHERE EXISTS (
 				SELECT E3.artist_id
-				FROM event as E3
+				FROM Event as E3
 				WHERE DATEDIFF(E2.date,E3.date) <= 30 AND 
 					  DATEDIFF(E2.date,E3.date) > 0   AND 
 					  E2.artist_id = E3.artist_id
@@ -437,8 +437,8 @@ AND duration IS NOT NULL;
 
 SET i = 0;
 SET currentDur = 0;
-SET numOfSongs = (select count(*)
-				  from ArtistTracks);
+SET numOfSongs = (SELECT COUNT(*)
+				  FROM ArtistTracks);
 SET playlistDuration = playlistDuration*60;
 WHILE currentDur <= playlistDuration  AND i <= numOfSongs DO
 	SET  i = i + 1; 
@@ -577,7 +577,7 @@ CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `top_artists`(IN inGenre V
 BEGIN
 SELECT A.artist_id as artist_id, artist_name, sale_date, event_date, country, city, venue, description
 FROM	(SELECT Artist.artist_id AS artist_id
-		FROM Artist INNER JOIN Track ON track.artist_id = artist.artist_id  
+		FROM Artist INNER JOIN Track ON Track.artist_id = Artist.artist_id  
 		WHERE Track.listeners >= numListeners AND genre = inGenre
 		GROUP BY Artist.artist_id
 		HAVING COUNT(track_id) >= numSongs) as A INNER JOIN
@@ -608,8 +608,8 @@ CREATE OR REPLACE VIEW artistAlbumTracks AS
 SELECT Album.album_id as album_id, Album.title as album_title, 
 	   Track.track_id as track_id, Track.listeners as listeners
 FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id 
-	INNER JOIN Albumtracks ON Albumtracks.album_id = Album.album_id
-	INNER JOIN Track ON Track.track_id = Albumtracks.track_id 	
+	INNER JOIN Albumtracks ON AlbumTracks.album_id = Album.album_id
+	INNER JOIN Track ON Track.track_id = AlbumTracks.track_id 	
 WHERE Artist.artist_id = getArtistId();
 
 
@@ -640,18 +640,18 @@ BEGIN
 
 # return num of events per city
 CREATE OR REPLACE VIEW TOTAL_EVENTS_PER_CITY AS
-SELECT e.country_id, e.city_id, city.city, COUNT(e.event_id) AS numOfEvents
-FROM Event AS e INNER JOIN city ON e.city_id = city.city_id 
-GROUP BY e.city_id
+SELECT E.country_id, E.city_id, City.city, COUNT(E.event_id) AS numOfEvents
+FROM Event AS E INNER JOIN City ON E.city_id = City.city_id 
+GROUP BY E.city_id
 HAVING numOfEvents >= 5;
 
 # return num of events of spcific genre per city
 SET @genre = (SELECT genre FROM Artist WHERE artist_id = artistId);
 CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
-SELECT city.city_id, city.city, COUNT(e.event_id) AS numOfEvents
-FROM event AS e, city, artist
-WHERE e.artist_id = artist.artist_id AND city.city_id = e.city_id AND artist.genre = getGenre() 
-GROUP BY city.city_id;
+SELECT City.city_id, City.city, COUNT(E.event_id) AS numOfEvents
+FROM Event AS E, City, Artist
+WHERE E.artist_id = Artist.artist_id AND City.city_id = E.city_id AND Artist.genre = getGenre() 
+GROUP BY City.city_id;
 
 # return which city has the highest (total events of genre/total events) ratio
 SELECT TOTAL_EVENTS_PER_CITY.country_id, Country.country,TOTAL_EVENTS_PER_CITY.city_id,
