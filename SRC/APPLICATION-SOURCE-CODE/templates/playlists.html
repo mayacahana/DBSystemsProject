@@ -15,7 +15,7 @@
                     <div id="playlist1" class="collapse jumbotron jumbotron-fluid" >
                     <form  method="POST">
                                 <div class="form-group input col-x3-3">
-                                    <input type="number" name="p1_duration"  class="form-control"/>                                      
+                                    <input type="number" name="p1_duration"  class="form-control" required/>                                      
                                     <label for="date" class="">Duration(in minutes):</label>
                                 </div>
                                 <div class="form-group input col-x3-3 d-block ">
@@ -34,7 +34,7 @@
                             <div id="playlist2" class="collapse jumbotron jumbotron-fluid" >
                             <form  method="POST">
                                         <div class="form-group input col-x3-3">
-                                            <input type="text" name="p2_word1"  class="form-control"/>                                      
+                                            <input type="text" name="p2_word1"  class="form-control" required/>                                      
                                             <label for="date" class="">First word:</label>
                                         </div>
                                         <div class="form-group input col-x3-3">
@@ -54,40 +54,52 @@
                 </div><!-- /.row -->
                 <!-- TRIVIA -->
                 <div class="row" id="accordion">
-                        <div class="col-lg-6"> 
-                          <img class="rounded-circle" src="/static/media/playlists/music.png" alt="Generic placeholder image" width="160" height="160">
-                          <h2>Trivia 1</h2>
-                          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                          <p><a class="btn btn-blue-grey" data-parent="#accordion" data-toggle="collapse" data-target="#query1" role="button" aria-expanded="false" aria-controls="query1">
-                          View details &raquo;</a></p>
-                              <div id="p_query1" class="collapse jumbotron jumbotron-fluid" >
-                              <form  method="POST">
-                                  <div class="form-group input col-x3-3">
-                                          <input type="text" name="q1_listeners" class="form-control">
-                                          <label for="songs" class="">Duration: </label>
-                                  </div>
-                                  <div class="form-group input col-x3-3 d-block ">
-                                   <input type="submit" class="btn btn-default" name="btn" value="Submit 1">
-                                  </div>
-                              </div>
-                              </form>
-                          </div> <!-- /.col-lg-6 -->
                         <div class="col-lg-6"> <!--QUERY2-->
                           <img class="rounded-circle" src="/static/media/playlists/earphones_2.png" alt="Generic placeholder image" width="160" height="160">
-                          <h2>Trivia 2</h2>
+                          <h2>Trivia 1</h2>
                           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                          <p><button class="btn btn-blue-grey" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query2" role="button" aria-expanded="false" aria-controls="query2">
-                          View details &raquo;</button></p>
-                          <div id="query2" class="collapse jumbotron jumbotron-fluid" >
-                                  <div class="form-group input col-x3-3">
-                                      <input type="text" id="q2_datepicker"  class="form-control" placeholder="YYYY/MM/DD"/>                                      
-                                      <label for="date" class="">Date</label>
-                                  </div>
-                                  <div class="form-group input col-x3-3 d-block ">
-                                      <input type="submit" class="btn btn-default" name="submit" value="Submit 2">
-                                  </div>
+                          <p><a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" data-target="#trivia2" role="button" aria-expanded="false" aria-controls="query1">
+                                Play trivia! </a>
+                                </p>
+                                <div id="trivia2" class="collapse jumbotron jumbotron-fluid" >
+                                <form  method="POST">
+                                    <div class="form-group input col-x3-3">
+                                    <input type="text" name="t1_word"  class="form-control" required/>                                      
+                                    <label for="date" class="">Word:</label>
+                                    </div>
+                                    <div class="form-group input col-x3-3">
+                                    <input type="number" name="t1_tracks"  class="form-control" required/>                                      
+                                    <label for="date" class="">Number of tracks:</label>
+                                    </div>
+                                    <div class="form-group input col-x3-3 d-block ">
+                                        <input type="submit" class="btn btn-default" name="submit" value="Let's play trivia 1!">
+                                    </div>  
+                                </form>
                           </div>
                           </div><!-- /.col-lg-6 -->
+                          <div class="col-lg-6"> 
+                                <img class="rounded-circle" src="/static/media/playlists/music.png" alt="Generic placeholder image" width="160" height="160">
+                                <h2>Trivia 2</h2>
+                                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                                <p><a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" data-target="#trivia1" role="button" aria-expanded="false" aria-controls="query1">
+                                      Play trivia! </a>
+                                      </p>
+                                      <div id="trivia1" class="collapse jumbotron jumbotron-fluid" >
+                                      <form  method="POST">
+                                          <div class="form-group input col-x3-3">
+                                          <select class="btn mdb-select btn-blue-grey" name="q1_genre" method="GET" required>
+                                              <option value="disabled selected" DISABLED>Choose a genre</option>
+                                              {% for genre in genres %}
+                                              <option class="dropdown-item" value= "{{genre}}">{{genre}}</option>
+                                              {% endfor %}
+                                          </select>     
+                                          </div>
+                                          <div class="form-group input col-x3-3 d-block ">
+                                              <input type="submit" class="btn btn-success" name="submit" value="Let's play trivia 2!">
+                                          </div>  
+                                      </form>
+                                      </div>
+                                </div> <!-- /.col-lg-6 -->
                       </div><!-- /.row -->
             </div>
 {% endblock %}
