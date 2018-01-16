@@ -158,6 +158,17 @@ def playlist_badwords(bad_words,artist_id):
 
 @app.route('/Edit/')
 def edit():
-    return render_template('edit.html')
+    if (request.method == 'GET'):
+        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+        with con:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT artist_id, name FROM artist")
+            artists = cur.fetchall()
+            cur.close()
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT city_id, city FROM city")
+            cities = cur.fetchall()
+            cur.close()
+    return render_template('edit.html',cities = cities, artists=artists)
 if (__name__ == '__main__'):
     app.run(port=5000, host="127.0.0.1", debug=True)
