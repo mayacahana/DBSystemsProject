@@ -5,7 +5,7 @@
     <h1 class="h1-responsive">Hi, we found you some artists related to your desire event!</h1>
 </div>
     <!--TABLE-->
-    <table class="table-responsive table table-hover table-striped" cellspacing="0">
+    <table class="table-responsive table table-hover table-striped" cellspacing="0" style="table-layout:fixed">
     <!--Table head-->
     <thead class="blue-gradient white-text">
         <tr>
@@ -33,7 +33,7 @@
             <td>{{ event.city }}</td>
             <td>{{ event.country }}</td>
             <form method="POST">
-            <td><input class="btn btn-info" type="submit" name="click" value="{{event.artist_id}}"></td>
+            <td><button class="btn btn-info" type="submit" name="click" value="{{event.artist_id}}">Click me!</button></td>
             </form>
         </tr>
         {% endfor %}

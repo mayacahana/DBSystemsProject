@@ -25,3 +25,12 @@ h2 {
 .eventlist {
   padding: 0.5rem 2rem !important;
 }
+
+.card-h1 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.blockquote{
+  padding-top: 1rem !important;
+}

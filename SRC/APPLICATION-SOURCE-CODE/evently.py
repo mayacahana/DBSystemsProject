@@ -22,7 +22,6 @@ def main():
     genres = []
     countries = [""]
     if (request.method == 'POST'):
-        print "after if"
         # QUERY 1 - TOP EVENTS
         if "Submit 1" in request.form["btn"]:
             _q1_songs = request.form['q1_songs']
@@ -30,23 +29,16 @@ def main():
             _q1_country = request.form['q1_country']
             _q1_songs = request.form['q1_songs']
             _q1_listeners = request.form['q1_listeners']
-            print _q1_songs
-            print _q1_country
             return redirect(url_for("events_query1",genre=_q1_genre, country=_q1_country, songs=_q1_songs, listeners=_q1_listeners))
-        print "hereee"
+        
         if "Submit 2" in request.form["btn"]:
-            print "im in query 2"
             _q2_date = request.form['q2_datepicker']
-            print(_q2_date)
             _q2_times = request.form['q2_times']
-            print(_q2_times)
             return redirect(url_for("events_query2",date=_q2_date, times=_q2_times))
+        
         if "Submit 3" in request.form["btn"]:
-            print "im in query 3"
             _q3_years = request.form['q3_years']
             _q3_albums = request.form['q3_albums']
-            print _q3_albums
-            print _q3_years
             return redirect(url_for("events_query3", years=_q3_years, albums=_q3_albums))
 
     if (request.method == 'GET'):
@@ -116,7 +108,6 @@ def playlist_trivia(artist_id):
             _duration = request.form["p1_duration"]
             return redirect(url_for('playlist_duration', artist_id = artist_id, duration = _duration))
         if "bad words" in request.form["submit"]:
-            print ("bad bad bad")
             _word1 = request.form["p2_word1"]
             _word2 = request.form["p2_word2"]
             _word3 = request.form["p2_word3"]
@@ -135,7 +126,6 @@ def playlist_trivia(artist_id):
 def playlist_duration(duration,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        print("run diration")
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.callproc('playlist_dur',(artist_id,duration))
         rows = cur.fetchall()
@@ -154,10 +144,62 @@ def playlist_badwords(bad_words,artist_id):
         cur.close()
         return render_template('badwordsPlaylist.html', data=rows)
         
-      
 
-@app.route('/Edit/')
+@app.route('/Edit/', methods=['GET','POST'])
 def edit():
-    return render_template('edit.html')
+    if (request.method == 'POST'):
+        if "Insert event" in request.form["btn"]:
+            # insert new event
+            event_artist = requset.form["i1_artist"]
+            event_desc = request.form["i1_desc"]
+            event_sale = request.form["i1_sale"]
+            event_date = request.form["i1_date"]
+            event_venue = request.form["i1_venue"]
+            event_city = request.form["i1_city"]
+            con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+            with con:
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.callproc('sp_insertEvent',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
+                affected_rows = cur.fetchall()
+                if affected_rows:
+                    return_string = "Event inserted successfully!"
+                else:
+                    return_string = "Failed to insert event. Please try again"
+                return render_template('edit.html',cities = cities, artists=artists, insert_event=return_string)
+        if "Insert album" in request.form["btn"]:
+            #insert new album
+            album_artist = request.form["i2_artist"]
+            album_title = request.form["i2_title"]
+            album_year = request.form["i2_year"]
+            album_tracks = request.form["i2_tracks"]
+            con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+            with con:
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.callproc('sp_insertAlbum',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
+                affected_rows = cur.fetchall()
+                if affected_rows:
+                    return_string = "Album inserted successfully!"
+                else:
+                    return_string = "Failed to insert album. Please try again"
+                return render_template('edit.html',cities = cities, artists=artists, insert_album=return_string)
+
+    if (request.method == 'GET'):
+        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+        with con:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT artist_id, name FROM artist")
+            artists = cur.fetchall()
+            cur.close()
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT city_id, city FROM city")
+            cities = cur.fetchall()
+            cur.close()
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT genre FROM artist_genres")
+            genres = [item['genre'] for item in cur.fetchall()]
+            cur.close()
+    return render_template('edit.html',cities = cities, artists=artists, genres=genres)
+
+
 if (__name__ == '__main__'):
     app.run(port=5000, host="127.0.0.1", debug=True)
