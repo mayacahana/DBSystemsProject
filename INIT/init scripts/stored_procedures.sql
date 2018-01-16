@@ -224,7 +224,7 @@ END$$
 # from the genre of the selected artist
 
 DROP PROCEDURE IF EXISTS trivia_2$$
-CREATE PROCEDURE trivia_2(IN artistId SMALLINT(5))
+CREATE PROCEDURE trivia_2(IN p_genre VARCHAR(45))
 BEGIN
 
 # return num of events per city
@@ -234,21 +234,19 @@ FROM Event AS E INNER JOIN City ON E.city_id = City.city_id
 GROUP BY E.city_id
 HAVING numOfEvents >= 5;
 
+SET @genre = p_genre;
 # return num of events of spcific genre per city
-SET @genre = (SELECT genre FROM Artist WHERE artist_id = artistId);
 CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
 SELECT City.city_id, City.city, COUNT(E.event_id) AS numOfEvents
-FROM Event AS E, City, Artist
-WHERE E.artist_id = Artist.artist_id AND City.city_id = E.city_id AND Artist.genre = getGenre() 
+FROM Artist INNER JOIN Event AS E on Artist.artist_id = E.artist_id INNER Join City ON E.city_id = City.city_id
+WHERE Artist.genre = getGenre()
 GROUP BY City.city_id;
 
-# return which city has the highest (total events of genre/total events) ratio
+#return which city has the highest (total events of genre/total events) ratio
 SELECT TOTAL_EVENTS_PER_CITY.country_id, Country.country,TOTAL_EVENTS_PER_CITY.city_id,
 		TOTAL_EVENTS_PER_CITY.city,
-		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / TOTAL_EVENTS_PER_CITY.numOfEvents * 100) 
-		AS percent
-FROM TOTAL_EVENTS_PER_CITY JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE 
-		ON TOTAL_EVENTS_PER_CITY.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
+		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / TOTAL_EVENTS_PER_CITY.numOfEvents * 100) AS percent
+FROM TOTAL_EVENTS_PER_CITY JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE ON TOTAL_EVENTS_PER_CITY.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
 	JOIN Country ON TOTAL_EVENTS_PER_CITY.country_id = Country.country_id
 ORDER BY percent DESC
 LIMIT 1;
