@@ -3,12 +3,14 @@
 <hr class="extra-margins">
 <!-- Main layout --> 
     <div class="container marketing">
-        <div class="row" id="accordion">
-            <div class="col-lg-6"> <!--QUERY1-->
-                <h1>Insert new event</h1>
+        <div class="" id="accordion">
+            <div class="col-lg-6 card card-dark"> <!--QUERY1-->
+                <div class="view gradient-card-header blue-gradient">
+                        <h1 class="h1-responsive">Insert new event</h1>
+                </div>
                 <form method="POST">
-                    <div class="form-group col-x3-3">
-                        <select class="btn mdb-select" name="q1_genre" method="GET">
+                    <div class="form-group bmd-form-group col-x3-3">
+                        <select class="btn mdb-select" name="i1_artist" method="GET">
                             <option value="disabled selected" DISABLED>Choose an artist</option>
                             {% for artist in artists %}
                             <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.artist_name}}</option>
@@ -17,22 +19,22 @@
                     </div>
                     <div class="form-group col-x3-3">
                         <input type="text" name="i1_desc" class="form-control">
-                        <label for="i1_dec" class="">Description of the event</label>
+                        <label for="i1_desc" class="">Description of the event</label>
                     </div>
                     <div class="form-group col-x3-3">
                         <input type="date" name="i1_sale" class="form control">
-                        <label for="i1_sale" class="">Sale date</label>
+                        <label for="i1_sale" class="bmd-label-static">Sale date</label>
                     </div>
                     <div class="form-group col-x3-3">
                         <input type="date" name="i1_date" class="form control">
-                        <label for="i1_date" class="">Date</label>
+                        <label for="i1_date" class="bmd-label-static">Date</label>
                     </div>
-                    <div class="form-group col-x3-3">
+                    <div class="form-group bmd-form-group col-x3-3">
                         <input type="text" name="i1_venue" class="form control">
-                        <label for="i1_venue" class="">Venue</label>
+                        <label for="i1_venue" class="bmd-label-static">Venue</label>
                     </div>
                     <div class="form-group col-x3-3">
-                        <select class="btn mdb-select" name="q1_genre" method="GET">
+                        <select class="btn mdb-select" name="i1_cities" method="GET">
                             <option value="disabled selected" DISABLED>Choose a city</option>
                             {% for city in cities %}
                             <option class="dropdown-item" value= "{{city.city_id}}">{{city.city_name}}</option>
@@ -40,11 +42,60 @@
                             </select>   
                     </div>
                     <div class="form-group input col-x3-3 d-block ">
-                        <input type="submit" class="btn btn-default" name="btn" value="Insert event">
+                        <input type="submit" class="btn btn-success" name="btn" value="Insert event">
                     </div>                   
                 </form>
             </div>
             <hr class="extra-margins">
+            <div class="col-lg-6 card"> <!--QUERY2-->
+                <h1>Insert new album</h1>
+                <form method="POST">
+                    <div class="form-group col-x3-3">
+                        <select class="btn mdb-select" name="i2_artist" method="GET">
+                            <option value="disabled selected" DISABLED>Choose an artist</option>
+                            {% for artist in artists %}
+                            <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.artist_name}}</option>
+                            {% endfor %}
+                        </select>   
+                    </div>
+                    <div class="form-group col-x3-3">
+                            <input type="text" name="i2_title" class="form control">
+                            <label for="i1_venue" class="bmd-label-static">Album title</label>
+                        </div>
+                    <div class="form-group col-x3-3">
+                        <input type="number" min="1800" max="2018" name="i2_year" class="form control">
+                        <label for="i1_sale" class="bmd-label-static">Release year</label>
+                    </div>
+                    <div class="form-group col-x3-3">
+                        <input type="number" name="i2_tracks" class="form control">
+                        <label for="i1_venue" class="bmd-label-static">Number of tracks</label>
+                    </div>
+                    <div class="form-group input col-x3-3 d-block ">
+                        <input type="submit" class="btn btn-success" name="btn" value="Insert album">
+                    </div>                   
+                </form>
+            </div>
+            <hr class="extra-margins">
+            <div class="col-lg-6 card"> <!--QUERY3-->
+                <h1>Update event date</h1>
+                <form method="POST">
+                    <div class="form-group col-x3-3">
+                        <select class="btn mdb-select" name="i2_artist" method="GET">
+                            <option value="disabled selected" DISABLED>Choose an event</option>
+                            {% for event in events %}
+                            <option class="dropdown-item" value= "{{event.event_id}}">{{event.event_id}}</option>
+                            {% endfor %}
+                        </select>   
+                    </div>
+                    <div class="form-group col-x3-3">
+                        <input type="date" name="i2_year" class="form control">
+                        <label for="i1_sale" class="bmd-label-static">Event date</label>
+                    </div>
+                    <div class="form-group input col-x3-3 d-block ">
+                        <input type="submit" class="btn btn-success" name="btn" value="Update event date">
+                    </div>                   
+                </form>
+            </div>
         </div>
     </div>
 
