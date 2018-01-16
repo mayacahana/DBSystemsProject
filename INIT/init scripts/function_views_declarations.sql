@@ -14,6 +14,12 @@ SELECT  A.artist_id AS artist_id, A.name AS artist_name,
 FROM Event AS E INNER JOIN Artist AS A ON E.artist_id = A.artist_id
 WHERE CURRENT_DATE() <= E.date;
 
+# Number of events per city which has more than 5 events
+CREATE OR REPLACE VIEW Total_Events_Per_City AS
+SELECT E.country_id, E.city_id, City.city, COUNT(E.event_id) AS numOfEvents
+FROM Event AS E INNER JOIN City ON E.city_id = City.city_id 
+GROUP BY E.city_id
+HAVING numOfEvents >= 5;
 
 #getter functions for using params in views
 DROP FUNCTION IF EXISTS getArtistId;

@@ -165,18 +165,19 @@ HAVING num_of_songs>10;
 
 SELECT Artist.name AS artist_name, Track.title AS title, (Track.duration/60) AS duration
 FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
-WHERE Artist.artist_id = (SELECT M.ALL_SONGS_ID
-						  FROM (
-								SELECT ALL_SONGS.artist_id as ALL_SONGS_ID
-								FROM ( SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
-										FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
-                                        INNER JOIN Lyrics ON Lyrics.track_id = Track.track_id
-										WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS 
-								RIGHT JOIN ALL_SONGS ON ALL_SONGS.artist_id = BAD_LYRICS.artist_id
-								GROUP BY ALL_SONGS.artist_id
-								ORDER BY (COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs) asc, 
-										  listeners desc 
-                                limit 1) AS M)
+WHERE Artist.artist_id = 
+		(SELECT M.ALL_SONGS_ID
+		  FROM (
+				SELECT ALL_SONGS.artist_id as ALL_SONGS_ID
+				FROM ( SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
+						FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
+						INNER JOIN Lyrics ON Lyrics.track_id = Track.track_id
+						WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS 
+				RIGHT JOIN ALL_SONGS ON ALL_SONGS.artist_id = BAD_LYRICS.artist_id
+				GROUP BY ALL_SONGS.artist_id
+				ORDER BY (COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs) asc, 
+						  listeners desc 
+				limit 1) AS M)
 
 ORDER BY Track.listeners
 LIMIT 20;
@@ -227,30 +228,26 @@ DROP PROCEDURE IF EXISTS trivia_2$$
 CREATE PROCEDURE trivia_2(IN p_genre VARCHAR(45))
 BEGIN
 
-# return num of events per city
-CREATE OR REPLACE VIEW TOTAL_EVENTS_PER_CITY AS
-SELECT E.country_id, E.city_id, City.city, COUNT(E.event_id) AS numOfEvents
-FROM Event AS E INNER JOIN City ON E.city_id = City.city_id 
-GROUP BY E.city_id
-HAVING numOfEvents >= 5;
-
 SET @genre = p_genre;
 # return num of events of spcific genre per city
 CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
 SELECT City.city_id, City.city, COUNT(E.event_id) AS numOfEvents
-FROM Artist INNER JOIN Event AS E on Artist.artist_id = E.artist_id INNER Join City ON E.city_id = City.city_id
+FROM Artist INNER JOIN Event AS E on Artist.artist_id = E.artist_id 
+			INNER Join City ON E.city_id = City.city_id
 WHERE Artist.genre = getGenre()
 GROUP BY City.city_id;
 
 #return which city has the highest (total events of genre/total events) ratio
-SELECT TOTAL_EVENTS_PER_CITY.country_id, Country.country,TOTAL_EVENTS_PER_CITY.city_id,
-		TOTAL_EVENTS_PER_CITY.city,
-		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / TOTAL_EVENTS_PER_CITY.numOfEvents * 100) AS percent
-FROM TOTAL_EVENTS_PER_CITY JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE ON TOTAL_EVENTS_PER_CITY.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
-	JOIN Country ON TOTAL_EVENTS_PER_CITY.country_id = Country.country_id
+SELECT Total_Events_Per_City.country_id, Country.country,Total_Events_Per_City.city_id,
+		Total_Events_Per_City.city,
+		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / Total_Events_Per_City.numOfEvents * 100) 
+        AS percent
+FROM Total_Events_Per_City JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE 
+			ON Total_Events_Per_City.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
+	JOIN Country ON Total_Events_Per_City.country_id = Country.country_id
 ORDER BY percent DESC
 LIMIT 1;
 
-DROP VIEW TOTAL_EVENTS_PER_CITY;
+DROP VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE;
 END$$
 DELIMITER ;
