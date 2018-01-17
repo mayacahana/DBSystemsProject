@@ -73,9 +73,7 @@ def events_query1(genre,country,songs,listeners):
 def events_query3(years, albums):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
-        print artist_id
         return redirect(url_for('playlist_trivia', artist_id=artist_id))
-    print ("im in func events_query3")
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         cur = con.cursor(mdb.cursors.DictCursor)
@@ -137,7 +135,6 @@ def playlist_duration(duration,artist_id):
 def playlist_badwords(bad_words,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        print("run bad words")
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.callproc('bad_words',(artist_id,bad_words))
         rows = cur.fetchall()
@@ -182,6 +179,10 @@ def edit():
                 else:
                     return_string = "Failed to insert album. Please try again"
                 return render_template('edit.html',cities = cities, artists=artists, insert_album=return_string)
+        if "Update event date" in request.form["btn"]:
+            # update event date
+            artist = request.form["i3_artist"]
+            return redirect(url_for('update_event', artist_id=artist))
 
     if (request.method == 'GET'):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -200,6 +201,37 @@ def edit():
             cur.close()
     return render_template('edit.html',cities = cities, artists=artists, genres=genres)
 
+@app.route('/EditDate/<artist_id>', methods=['GET','POST'])
+def update_event(artist_id):
+    print ("in in")
+    if request.method == 'POST':
+            print ("im in post")
+            event_id = request.form["click"]
+            print event_id
+            new_date = request.form[event_id]
+            print new_date
+            con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+            with con:
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.callproc('sp_updateEventDate'(event_id,new_date))
+                affected_rows = cur.fetchall()
+                if affected_rows:
+                    return_string = "Event date updated successfully!"
+                else:
+                    return_string = "Failed to update event date. Please try again"
+                return render_template('eventsUpdateDate.html', message = return_string)
+    if request.method == 'GET':
+        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+        with con:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT A.artist_id as artist_id, A.name as artist_name, E.date as event_date, E.event_id as event_id\
+            FROM Event AS E INNER JOIN Artist AS A ON E.artist_id = A.artist_id \
+            WHERE A.artist_id = %s",(artist_id))
+            rows = cur.fetchall()
+            cur.close()
+            return render_template('eventsUpdateDate.html', events = rows)
+    
+    
 
 if (__name__ == '__main__'):
     app.run(port=5000, host="127.0.0.1", debug=True)
