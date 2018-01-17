@@ -74,9 +74,25 @@
                                     <label for="date" class="">Number of tracks:</label>
                                     </div>
                                     <div class="form-group input col-x3-3 d-block ">
-                                        <input type="submit" class="btn btn-default" name="submit" value="Let's play trivia 1!">
+                                        <input type="submit" class="btn btn-default" id="trivia1" name="submit" value="Let's play trivia 1!">
                                     </div>  
-                                    
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+                                    <script>
+                                    $(document).ready(function() {
+                                    $("#submit").click(function() {
+                                        var t1_words = $('input[name="t1_word"]').val();;
+                                        var t1_tracks = $('input[name="t1_tracks"]').val();;
+                                        var artist_id = {{ artist_id }}
+                                        $.getJSON({
+                                        url: "/Trivia",
+                                        data: { words: t1_words, tracks: t1_tracks, artist: artist_id },
+                                        success: function(data){
+                                            $("#varID").html(data.var1);
+                                        }
+                                        });
+                                    });
+                                    });
+                                    </script>
                                 </form>
                           </div>
                           </div><!-- /.col-lg-6 -->
@@ -100,31 +116,10 @@
                                           </select>     
                                           </div>
                                           <div class="form-group input col-x3-3 d-block ">
-                                              <input type="submit" class="btn btn-success" name="submit" data-toggle="modal" value="Let's play trivia 2!">
+                                              <input type="submit" class="btn btn-success" id="trivia2" name="submit" data-toggle="modal" value="Let's play trivia 2!">
                                           </div>  
                                       </form>
-                                      {% if trivia_success %}
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="myOutput" role="dialog">
-                                            <div class="modal-dialog modal-lg">
-
-                                            <!-- Modal content-->
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Task Output</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                <p>{{ answer }}</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                        {% endif %}
+                                      
                                       </div>
                                 </div> <!-- /.col-lg-6 -->
                       </div><!-- /.row -->
