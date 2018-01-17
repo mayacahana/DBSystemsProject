@@ -54,8 +54,7 @@ def main():
                 countries = [[item['country'] for item in cur.fetchall()]]
                 cur.close()
             except Exception as e:
-                error_string = e
-                return render_template('homepage', error = error_string)
+                return render_template('homepage', error = e)
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
 @app.route('/Events1/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
@@ -72,8 +71,7 @@ def events_query1(genre,country,songs,listeners):
             rows = cur.fetchall()
             cur.close()
         except Exception as e:
-            error_string = e
-            return render_template('artistsEvents.html', error = error_string)
+            return render_template('artistsEvents.html', error = e)
         return render_template('artistsEvents.html', data = rows)
 
 @app.route('/Events3/<years>/<albums>', methods = ['GET','POST'])

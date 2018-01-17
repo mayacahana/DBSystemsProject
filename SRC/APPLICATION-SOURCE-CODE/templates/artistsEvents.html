@@ -3,6 +3,9 @@
 <div class="jumbotron eventlist" style="padding: 1rem 2rem !important;">
     <img src="/static/media/homepage/heavy-metal.png" width="90" height="90" alt="">
     <h1 class="h1-responsive">Hi, we found you some artists related to your desire event!</h1>
+    {% if error %}
+    <p><strong>Error:</strong> {{ error }} </p>
+    {% endif %}
 </div>
     <!--TABLE-->
     <table class="table-responsive table table-hover table-striped" cellspacing="0" style="table-layout:fixed">

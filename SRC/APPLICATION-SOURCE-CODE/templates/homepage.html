@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
 <hr class="extra-margins">
+        {% if error %}
+        <p><strong>Error:</strong> {{ error }} </p>
+        {% endif %}
         <!-- Main layout --> 
         <div class="container marketing">
 
