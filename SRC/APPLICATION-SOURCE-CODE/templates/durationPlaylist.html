@@ -22,7 +22,7 @@
         {% for song in data %}
         <tr>
             <td>{{ song.title }}</td>
-            <td>{{ song.lyrics.decode('utf-8') }}</td>
+            <td>{{ song.lyrics.decode('utf-8',errors='replace') }}</td>
             <td>{{ song.duration }}</td>
             <td>{{ song.listeners }}</td>
         </tr>
