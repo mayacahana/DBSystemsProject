@@ -46,7 +46,7 @@ def main():
         with con:
             try:
                 cur = con.cursor(mdb.cursors.DictCursor)
-                cur.execute("SELECT genre FROM artist_genres")
+                cur.execute("SELECT genre FROM Artist_Genres")
                 genres = [item['genre'] for item in cur.fetchall()]
                 cur.close()
                 cur = con.cursor(mdb.cursors.DictCursor)
@@ -129,7 +129,7 @@ def playlist_trivia(artist_id):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT genre FROM artist_genres")
+            cur.execute("SELECT genre FROM Artist_Genres")
             genres = [item['genre'] for item in cur.fetchall()]
             cur.close()
             return render_template('playlists.html', genres=genres)
@@ -207,21 +207,21 @@ def edit():
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT artist_id, name FROM artist")
+            cur.execute("SELECT artist_id, name FROM Artist")
             artists = cur.fetchall()
             cur.close()
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT city_id, city FROM city")
+            cur.execute("SELECT city_id, city FROM City")
             cities = cur.fetchall()
             cur.close()
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT genre FROM artist_genres")
+            cur.execute("SELECT genre FROM Artist_Genres")
             genres = [item['genre'] for item in cur.fetchall()]
             cur.close()
             return render_template('edit.html',cities = cities, artists=artists, genres=genres)
 
-@app.route('/EditDateOfEvent/<event_id>', methods = ['GET', 'POST'])
-def edit_date(event_id):
+@app.route('/EditDateOfEvent/<event_id>/<message>', methods = ['GET', 'POST'])
+def edit_date(event_id, message):
     if request.method == 'POST':
         print "test"
         edited_date = request.form["new_date"]
@@ -229,13 +229,13 @@ def edit_date(event_id):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
-                cur.callproc('sp_updateEventDate'(event_id,new_date))
+                cur.callproc('sp_updateEventDate',(event_id,edited_date))
                 affected_rows = cur.fetchall()
-                if affected_rows:
-                    return_string = "Event date updated successfully!"
-                else:
+                if affected_rows == 0:
                     return_string = "Failed to update event date. Please try again"
-                return render_template('editDate.html', error = return_string)
+                else:
+                    return_string = "Event date updated successfully!"
+                return redirect(url_for('edit_date',event_id = event_id, message = return_string))
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
@@ -247,14 +247,16 @@ def edit_date(event_id):
             WHERE event_id = %s LIMIT 1;", event_id)
             event = cur.fetchall()
             print event
-            return render_template('editDate.html', events = event)
+            return render_template('editDate.html', events = event, message = message)
 
 @app.route('/EditDate/<artist_id>', methods=['GET','POST'])
 def update_event(artist_id):
     if request.method == 'POST':
         print ("im in post")
         event_id = request.form["click"]
-        return redirect(url_for('edit_date', event_id = event_id))
+        message = "Please edit date"
+        print message
+        return redirect(url_for('edit_date', event_id = event_id, message = message))
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
