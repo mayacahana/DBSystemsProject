@@ -240,7 +240,7 @@ GROUP BY City.city_id;
 
 #return which city has the highest (total events of genre/total events) ratio
 SELECT Total_Events_Per_City.country_id as country_id, Country.country as country,
-	   Total_Events_Per_City.city_id as city_id, Total_Events_Per_City.city as city
+	   Total_Events_Per_City.city_id as city_id, Total_Events_Per_City.city as city,
 		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / Total_Events_Per_City.numOfEvents * 100) 
         AS percent
 FROM Total_Events_Per_City JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE 
