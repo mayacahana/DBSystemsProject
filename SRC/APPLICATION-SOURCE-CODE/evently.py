@@ -191,7 +191,7 @@ def edit():
             con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
             with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
-                cur.callproc('sp_insertAlbum',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
+                cur.callproc('sp_insertAlbum',(album_title,album_artist, album_year,album_tracks))
                 affected_rows = cur.fetchall()
                 if affected_rows:
                     return_string = "Album inserted successfully!"
