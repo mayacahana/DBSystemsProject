@@ -36,10 +36,10 @@ BEGIN
 SET @times = times;
 SET @in_date = in_date;
 CREATE OR REPLACE VIEW events_60 AS
-	# all the events + 60 from current date
+	# all the events + 60 from in_date
 	SELECT *
 	FROM Event as E
-	WHERE DATEDIFF(E.date,getDate()) <= 60;
+	WHERE DATEDIFF(E.date,getDate()) <= 60 AND DATEDIFF(E.date,getDate()) >=0;
 
 CREATE OR REPLACE VIEW relevant_events AS
   # all the relevant events as defined above
