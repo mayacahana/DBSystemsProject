@@ -7,8 +7,8 @@
                 <!-- Three columns of text below the carousel -->
                 <div class="row" id="accordion">
                   <div class="col-lg-4"> <!--QUERY1-->
-                    <img class="rounded-circle" src="/static/media/homepage/drum-set.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>TOP Events</h2>
+                    <img class="rounded-circle" src="/static/media/homepage/drum-set.png" alt="Generic placeholder image" width="160" height="160">
+                    <h1 id="h1-home">TOP Events</h1>
                     <p>Get a list of events of the TOP artists of your favorite genre! Just insert the genre of your choosing, the minimal number of tracks per artist, the minimal number of listeners per artist and the country where you would like the event to take place.</p>
                     <p><button class="btn btn-secondary" data-parent="#accordion" data-toggle="collapse" data-target="#query1" role="button" aria-expanded="false" aria-controls="query1">
                     View details &raquo;</button></p>
@@ -39,11 +39,11 @@
                             </div>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" name="q1_songs" class="form-control" required>
+                                    <input type="text" min="1" max="" name="q1_songs" class="form-control" required>
                                     <label for="songs" class="">Number of songs</label>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" name="q1_listeners" class="form-control" required>
+                                    <input type="text" min="1" max="" name="q1_listeners" class="form-control" required>
                                     <label for="songs" class="">Number of listeners</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
@@ -56,8 +56,8 @@
                         </form>
                     </div> <!-- /.col-lg-4 -->
                   <div class="col-lg-4"> <!--QUERY2-->
-                    <img class="rounded-circle" src="/static/media/homepage/concert.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Fresh Artists</h2>
+                    <img class="rounded-circle" src="/static/media/homepage/concert.png" alt="Generic placeholder image" width="160" height="160">
+                    <h1>Fresh Artists</h1>
                     <p>Tired of seeing tired artists performing? All you have to do is insert the maximum number of events the artist participated in before your show, and receive a list of events where the performer is guaranteed to be “fresh”!</p>
                     <p><button class="btn btn-secondary" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query2" role="button" aria-expanded="false" aria-controls="query2">
                     View details &raquo;</button></p>
@@ -68,7 +68,7 @@
                                 <label for="date" class="">Date</label>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" name="q2_times" class="form-control" required>
+                                    <input type="text" min="1" max="" name="q2_times" class="form-control" required>
                                     <label for="times" class="">Number of times</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
@@ -78,8 +78,8 @@
                     </div>
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">  <!--QUERY3-->
-                    <img class="rounded-circle" src="/static/media/homepage/singer.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Latest Artists</h2>
+                    <img class="rounded-circle" src="/static/media/homepage/singer.png" alt="Generic placeholder image" width="160" height="160">
+                    <h1>Latest Artists</h1>
                     <p>Do you like contemporary music? Would you like to see artists who are up-to-date? 
                             Just insert the number of albums and the number of years, and we’ll let you choose an event by artists who release at least that number of albums in the last number of years!</p>
                     <p><button class="btn btn-secondary" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query3" role="button" aria-expanded="false" aria-controls="query2">
@@ -87,12 +87,12 @@
                     <div id="query3" class="collapse jumbotron jumbotron-fluid" >
                         <form method="POST">
                             <div class="form-group input col-x3-3">
-                                    <input type="number" name="q3_years" class="form-control" required>
+                                    <input type="number" min="1" max="" name="q3_years" class="form-control" required>
                                     <label for="songs" class="">Number of years</label>
                                     
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="number" name="q3_albums" class="form-control" required>
+                                    <input type="number" min="1" max="" name="q3_albums" class="form-control" required>
                                     <label for="songs" class="">Number of albums</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">

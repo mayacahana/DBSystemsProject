@@ -147,7 +147,7 @@ def edit():
     if (request.method == 'POST'):
         if "Insert event" in request.form["btn"]:
             # insert new event
-            event_artist = requset.form["i1_artist"]
+            event_artist = request.form["i1_artist"]
             event_desc = request.form["i1_desc"]
             event_sale = request.form["i1_sale"]
             event_date = request.form["i1_date"]
@@ -157,12 +157,17 @@ def edit():
             with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
                 cur.callproc('sp_insertEvent',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
-                affected_rows = cur.fetchall()
-                if affected_rows:
-                    return_string = "Event inserted successfully!"
-                else:
-                    return_string = "Failed to insert event. Please try again"
-                return render_template('edit.html',cities = cities, artists=artists, insert_event=return_string)
+                try: 
+                    affected_rows = cur.fetchall()
+                    if affected_rows == 0:
+                        return_string = "Failed to insert event. Please try again"
+                    else:
+                        return_string = "Event inserted successfully!"
+                except:
+                    return_string 
+                cities =[]
+                artists=[]
+                return redirect(url_for('edit',cities = cities, artists=artists, insert_event=return_string))
         if "Insert album" in request.form["btn"]:
             #insert new album
             album_artist = request.form["i2_artist"]
@@ -199,7 +204,7 @@ def edit():
             cur.execute("SELECT genre FROM artist_genres")
             genres = [item['genre'] for item in cur.fetchall()]
             cur.close()
-    return render_template('edit.html',cities = cities, artists=artists, genres=genres)
+            return render_template('edit.html',cities = cities, artists=artists, genres=genres)
 
 @app.route('/EditDate/<artist_id>', methods=['GET','POST'])
 def update_event(artist_id):
