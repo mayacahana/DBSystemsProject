@@ -10,7 +10,7 @@
                 </blockquote>
                 <form method="POST">
                     <div class="form-group bmd-form-group col-x3-3">
-                        <select class="btn mdb-select" name="i1_artist" method="GET">
+                        <select class="btn mdb-select btn-primary" name="i1_artist" method="GET">
                             <option value="disabled selected" DISABLED>Choose an artist</option>
                             {% for artist in artists %}
                             <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.name}}</option>
@@ -34,7 +34,7 @@
                         <label for="i1_venue" class="bmd-label-static">Venue</label>
                     </div>
                     <div class="form-group col-x3-3">
-                        <select class="btn mdb-select" name="i1_city" method="GET">
+                        <select class="btn mdb-select btn-primary" name="i1_city" method="GET">
                             <option value="disabled selected" DISABLED>Choose a city</option>
                             {% for city in cities %}
                             <option class="dropdown-item" value= "{{city.city_id}}">{{city.city}}</option>
@@ -56,7 +56,7 @@
                 </blockquote>
                 <form method="POST">
                     <div class="form-group col-x3-3">
-                        <select class="btn mdb-select" name="i2_artist" method="GET">
+                        <select class="btn mdb-select btn-warning" name="i2_artist" method="GET">
                             <option value="disabled selected" DISABLED>Choose an artist</option>
                             {% for artist in artists %}
                             <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.name}}</option>
@@ -90,17 +90,17 @@
                 </blockquote>
                 <form method="POST" class="card-body">
                     <div class="form-group col-x3-3">
-                        <select class="btn mdb-select" name="i2_artist" method="GET">
-                            <option value="disabled selected" DISABLED>Choose an event</option>
-                            {% for event in events %}
-                            <option class="dropdown-item" value= "{{event.event_id}}">{{event.event_id}}</option>
+                        <select class="btn mdb-select btn-success" name="i3_artist" method="GET">
+                            <option value="disabled selected" DISABLED>Choose an artist</option>
+                            {% for artist in artists %}
+                            <option class="dropdown-item" value= "{{artist.artist_id}}">{{artist.name}}</option>
                             {% endfor %}
                         </select>   
                     </div>
-                    <div class="form-group col-x3-3">
+                    <!-- <div class="form-group col-x3-3">
                         <input type="date" name="i2_year" class="form control" required>
                         <label for="i1_sale" class="bmd-label-static">Event date</label>
-                    </div>
+                    </div> -->
                     <div class="form-group input col-x3-3 d-block ">
                         <input type="submit" class="btn btn-success" name="btn" value="Update event date">
                     </div>                   
