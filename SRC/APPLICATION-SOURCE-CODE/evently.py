@@ -134,14 +134,13 @@ def playlist_trivia(artist_id):
             cur.close()
             return render_template('playlists.html', genres=genres)
 
-@app.route(/Trivia, methods=['POST','GET'])
+@app.route('/Trivia', methods=['POST','GET'])
 def get_trivia_data():
     word_value = request.args.get('words')
     tracks_value = request.args.get('tracks')
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
-        with con:
-           cur = con.cursor(mdb.cursors.DictCursor)
-           cur.callproc 
+    with con:
+        cur = con.cursor(mdb.cursors.DictCursor)
     
 @app.route('/showPlaylist_duration/<duration>/<artist_id>',methods = ['GET','POST'])
 def playlist_duration(duration,artist_id):
