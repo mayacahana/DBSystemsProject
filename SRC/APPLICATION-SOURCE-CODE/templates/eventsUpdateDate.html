@@ -24,7 +24,7 @@
         <tr>
             <td>{{ event.artist_name }}</td>
             <form method="POST">
-            <td><input type="date" value="{{event.event_date}}" name="{{event.event_id}}" class="form-control"></td>
+            <td><input type="date" placeholder="YYYY-DD-MM"  name="date_{{event.event_id}}" class="form-control"></td>
             <td><button class="btn btn-info" type="submit" name="click" value="{{event.event_id}}">Update date</button></td>
             </form>
         </tr>

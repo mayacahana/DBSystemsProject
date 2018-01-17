@@ -203,12 +203,11 @@ def edit():
 
 @app.route('/EditDate/<artist_id>', methods=['GET','POST'])
 def update_event(artist_id):
-    print ("in in")
     if request.method == 'POST':
             print ("im in post")
             event_id = request.form["click"]
-            print event_id
-            new_date = request.form[event_id]
+            print "date_{}".format(event_id)
+            new_date = request.form["date_{}".format(event_id)]
             print new_date
             con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
             with con:
