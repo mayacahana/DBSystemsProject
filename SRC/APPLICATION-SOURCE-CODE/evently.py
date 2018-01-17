@@ -135,7 +135,7 @@ def playlist_trivia(artist_id):
             return render_template('playlists.html', genres=genres)
 
 @app.route('/Trivia', methods=['POST','GET'])
-def get_trivia_data():
+def get_trivia1_data():
     word_value = request.args.get('words')
     tracks_value = request.args.get('tracks')
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -164,8 +164,8 @@ def playlist_badwords(bad_words,artist_id):
         return render_template('badwordsPlaylist.html', data=rows)
         
 
-@app.route('/Edit/', methods=['GET','POST'])
-def edit():
+@app.route('/Edit/<insert_album>/<insert_event>', methods=['GET','POST'])
+def edit(insert_album, insert_event):
     if (request.method == 'POST'):
         if "Insert event" in request.form["btn"]:
             # insert new event
@@ -180,16 +180,15 @@ def edit():
                 cur = con.cursor(mdb.cursors.DictCursor)
                 cur.callproc('sp_insertEvent',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
                 try: 
-                    affected_rows = cur.fetchall()
-                    if affected_rows == 0:
-                        return_string = "Failed to insert event. Please try again"
-                    else:
-                        return_string = "Event inserted successfully!"
-                except:
-                    return_string 
+                    affected_rows = cur.fetchall()    
+                    return_string = "Event inserted successfully."
+                    return2_string = "Thank you!"
+                except (mdb.Error, mdb.Warning ,mdb.OperationalError) as e:
+                    return_string = "Failed to insert event. Please try again"
+                    return2_string = str(e)
                 cities =[]
                 artists=[]
-                return redirect(url_for('edit',cities = cities, artists=artists, insert_event=return_string))
+                return redirect(url_for('edit',cities = cities, artists=artists, insert_event=return_string, insert_album=return2_string))
         if "Insert album" in request.form["btn"]:
             #insert new album
             album_artist = request.form["i2_artist"]
@@ -202,15 +201,14 @@ def edit():
                 cur.callproc('sp_insertAlbum',(album_title,album_artist, album_year,album_tracks))
                 try: 
                     affected_rows = cur.fetchall()
-                    if affected_rows == 0:
-                        return_string = "Failed to insert album. Please try again"
-                    else:
-                        return_string = "Album inserted successfully!"
-                except:
-                    return_string 
+                    return_string = "Album inserted successfully!"
+                    return2_string = "Thank you!"
+                except (mdb.Error, mdb.Warning ,mdb.OperationalError), e:
+                    return_string = "Failed to insert album. Please try again"
+                    return2_string = str(e)
                 cities =[]
                 artists=[]
-                return redirect(url_for('edit',cities = cities, artists=artists, insert_album=return_string))
+                return redirect(url_for('edit',cities = cities, artists=artists, insert_album=return_string, insert_event=return2_string))
 
         if "Update event date" in request.form["btn"]:
             # update event date
@@ -232,7 +230,7 @@ def edit():
             cur.execute("SELECT genre FROM Artist_Genres")
             genres = [item['genre'] for item in cur.fetchall()]
             cur.close()
-            return render_template('edit.html',cities = cities, artists=artists, genres=genres)
+            return render_template('edit.html',cities = cities, artists=artists, genres=genres, insert_album=insert_album, insert_event=insert_event)
 
 @app.route('/EditDateOfEvent/<event_id>/<message>', methods = ['GET', 'POST'])
 def edit_date(event_id, message):

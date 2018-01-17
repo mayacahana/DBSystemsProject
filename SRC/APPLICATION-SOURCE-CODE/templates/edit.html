@@ -1,15 +1,20 @@
 {% extends "layout.html" %}
 {% block body %}
 <hr class="extra-margins">
+<div class="jumbotron" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+{% if insert_album %}
+<p><strong></strong> <h2>{{ insert_album }}</h2> </p>
+{% endif %}
+{% if insert_event %}
+<p><strong></strong> <h2>{{ insert_event }}</h2> </p>
+{% endif %}<hr class="extra-margins">
+</div>
 <!-- Main layout --> 
     <div class="container marketing">
         <div class="" id="accordion">
             <div class="col-lg-6 card card-dark"> <!--QUERY1-->
                 <blockquote class="blockquote bq-primary">
                     <h1 class="card-h1 h1-responsive">Insert new event</h1>
-                    {% if insert_event %}
-                    <p><strong></strong> <h2>{{ insert_event }}</h2> </p>
-                    {% endif %}
                 </blockquote>
                 <form method="POST">
                     <div class="form-group bmd-form-group col-x3-3">
@@ -53,9 +58,6 @@
             <div class="col-lg-6 card"> <!--QUERY2-->
                 <blockquote class="blockquote bq-warning">
                     <h1 class="card-h1 h1-responsive">Insert new album</h1>
-                    {% if insert_album %}
-                    <p><strong></strong> <h2>{{ insert_album }}</h2> </p>
-                    {% endif %}
                 </blockquote>
                 <form method="POST">
                     <div class="form-group col-x3-3">
