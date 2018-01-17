@@ -54,7 +54,7 @@ def main():
                 countries = [[item['country'] for item in cur.fetchall()]]
                 cur.close()
             except Exception as e:
-                return render_template('homepage', error = e)
+                return render_template('homepage', error = str(e))
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
 @app.route('/Events1/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
@@ -71,7 +71,7 @@ def events_query1(genre,country,songs,listeners):
             rows = cur.fetchall()
             cur.close()
         except Exception as e:
-            return render_template('artistsEvents.html', error = e)
+            return render_template('artistsEvents.html', error = str(e))
         return render_template('artistsEvents.html', data = rows)
 
 @app.route('/Events3/<years>/<albums>', methods = ['GET','POST'])
@@ -220,16 +220,14 @@ def edit():
             cur.close()
             return render_template('edit.html',cities = cities, artists=artists, genres=genres)
 
-@app.route('/EditDate/<artist_id>', methods=['GET','POST'])
-def update_event(artist_id):
+@app.route('/EditDateOfEvent/<event_id>', methods = ['GET', 'POST'])
+def edit_date(event_id):
     if request.method == 'POST':
-            print ("im in post")
-            event_id = request.form["click"]
-            print "date_{}".format(event_id)
-            new_date = request.form["date_{}".format(event_id)]
-            print new_date
-            con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
-            with con:
+        print "test"
+        edited_date = request.form["new_date"]
+        print edited_date
+        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+        with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
                 cur.callproc('sp_updateEventDate'(event_id,new_date))
                 affected_rows = cur.fetchall()
@@ -237,7 +235,26 @@ def update_event(artist_id):
                     return_string = "Event date updated successfully!"
                 else:
                     return_string = "Failed to update event date. Please try again"
-                return render_template('eventsUpdateDate.html', message = return_string)
+                return render_template('editDate.html', error = return_string)
+    if request.method == 'GET':
+        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+        with con:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT  description, sale_date, date, venue, name, genre, country, city \
+            FROM Event AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id \
+            INNER JOIN Country AS C ON C.country_id = D.country_id  \
+	        INNER JOIN City AS C2 ON C2.city_id = D.city_id   \
+            WHERE event_id = %s LIMIT 1;", event_id)
+            event = cur.fetchall()
+            print event
+            return render_template('editDate.html', events = event)
+
+@app.route('/EditDate/<artist_id>', methods=['GET','POST'])
+def update_event(artist_id):
+    if request.method == 'POST':
+        print ("im in post")
+        event_id = request.form["click"]
+        return redirect(url_for('edit_date', event_id = event_id))
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
