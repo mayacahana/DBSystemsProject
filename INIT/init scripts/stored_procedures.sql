@@ -210,7 +210,7 @@ FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id
 WHERE Artist.artist_id = getArtistId();
 
 
-SELECT album_title, release_year, num_of_tracks, SUM(listeners)
+SELECT album_title, release_year, num_of_tracks, SUM(listeners) as listeners
 FROM artistAlbumTracks AS A INNER JOIN Lyrics ON A.track_id = Lyrics.track_id
 WHERE MATCH(lyrics) AGAINST(@word)
 GROUP BY album_id
@@ -239,8 +239,8 @@ WHERE Artist.genre = getGenre()
 GROUP BY City.city_id;
 
 #return which city has the highest (total events of genre/total events) ratio
-SELECT Total_Events_Per_City.country_id, Country.country,Total_Events_Per_City.city_id,
-		Total_Events_Per_City.city,
+SELECT Total_Events_Per_City.country_id as country_id, Country.country as country,
+	   Total_Events_Per_City.city_id as city_id, Total_Events_Per_City.city as city,
 		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / Total_Events_Per_City.numOfEvents * 100) 
         AS percent
 FROM Total_Events_Per_City JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE 
