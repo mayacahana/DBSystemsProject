@@ -102,8 +102,18 @@
                                               <input type="submit" class="btn btn-success" name="submit" value="Let's play trivia 2!">
                                           </div>  
                                       </form>
+                                      {% if trivia_success %}
+                                      <div class="col-x3-3 d-block">
+                                            <h1>check</h1>
+
+                                      </div>
+                                        
+                                        {% endif %}
                                       </div>
                                 </div> <!-- /.col-lg-6 -->
                       </div><!-- /.row -->
             </div>
+
+<!-- Modal -->
+
 {% endblock %}

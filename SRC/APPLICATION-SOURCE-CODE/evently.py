@@ -44,14 +44,18 @@ def main():
     if (request.method == 'GET'):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
-            cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT genre FROM artist_genres")
-            genres = [item['genre'] for item in cur.fetchall()]
-            cur.close()
-            cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT country FROM Country")
-            countries = [[item['country'] for item in cur.fetchall()]]
-            cur.close()
+            try:
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.execute("SELECT genre FROM artist_genres")
+                genres = [item['genre'] for item in cur.fetchall()]
+                cur.close()
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.execute("SELECT country FROM Country")
+                countries = [[item['country'] for item in cur.fetchall()]]
+                cur.close()
+            except Exception as e:
+                error_string = e
+                return render_template('homepage', error = error_string)
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
 @app.route('/Events1/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
@@ -62,11 +66,14 @@ def events_query1(genre,country,songs,listeners):
         return redirect(url_for('playlist_trivia', artist_id=artist_id))
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        print("connected")
-        cur = con.cursor(mdb.cursors.DictCursor)
-        cur.callproc('top_artists',(genre,listeners,songs,country))
-        rows = cur.fetchall()
-        cur.close()
+        try:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.callproc('top_artists',(genre,listeners,songs,country))
+            rows = cur.fetchall()
+            cur.close()
+        except Exception as e:
+            error_string = e
+            return render_template('artistsEvents.html', error = error_string)
         return render_template('artistsEvents.html', data = rows)
 
 @app.route('/Events3/<years>/<albums>', methods = ['GET','POST'])
@@ -84,7 +91,6 @@ def events_query3(years, albums):
 
 @app.route('/Events2/<date>/<times>', methods = ['GET','POST'])
 def events_query2(date, times):
-    print ("im in func events_query2")
     if (request.method == 'POST'):
         artist_id = request.form["click"]
         print artist_id
@@ -101,7 +107,7 @@ def events_query2(date, times):
 
 @app.route('/Playlists/<artist_id>',methods = ['GET','POST'])
 def playlist_trivia(artist_id):
-    if (request.method == 'POST'):
+    if request.method == 'POST':
         if "duration" in request.form["submit"]:
             _duration = request.form["p1_duration"]
             return redirect(url_for('playlist_duration', artist_id = artist_id, duration = _duration))
@@ -117,8 +123,18 @@ def playlist_trivia(artist_id):
             print bad_words[:-1]
             print("return ")
             return redirect(url_for('playlist_badwords', artist_id = artist_id, bad_words = bad_words[:-1]))
-            print "check"
-    return render_template('playlists.html')
+        if "trivia 1" in request.form["submit"]:
+            _word = request.form["t1_word"]
+            _tracks = request.form["t1_tracks"]
+            return redirect(url_for('playlist_trivia', artist_id=artist_id, trivia_success=1))
+    if request.method == 'GET':
+        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+        with con:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.execute("SELECT genre FROM artist_genres")
+            genres = [item['genre'] for item in cur.fetchall()]
+            cur.close()
+            return render_template('playlists.html', genres=genres)
 
 @app.route('/showPlaylist_duration/<duration>/<artist_id>',methods = ['GET','POST'])
 def playlist_duration(duration,artist_id):

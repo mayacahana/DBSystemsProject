@@ -9,7 +9,7 @@
                   <div class="col-lg-4"> <!--QUERY1-->
                     <img class="rounded-circle" src="/static/media/homepage/drum-set.png" alt="Generic placeholder image" width="160" height="160">
                     <h1 id="h1-home">TOP Events</h1>
-                    <p>Get a list of events of the TOP artists of your favorite genre! Just insert the genre of your choosing, the minimal number of tracks per artist, the minimal number of listeners per artist and the country where you would like the event to take place.</p>
+                    <p>Get a list of events of the TOP artists of your favorite genre! Just insert the genre of your choosing, the minimal number of tracks per artist, the minimal number of listeners per track and the country where you would like the event to take place.</p>
                     <p><button class="btn btn-secondary" data-parent="#accordion" data-toggle="collapse" data-target="#query1" role="button" aria-expanded="false" aria-controls="query1">
                     View details &raquo;</button></p>
                         <div id="query1" class="collapse jumbotron jumbotron-fluid" >
@@ -58,7 +58,7 @@
                   <div class="col-lg-4"> <!--QUERY2-->
                     <img class="rounded-circle" src="/static/media/homepage/concert.png" alt="Generic placeholder image" width="160" height="160">
                     <h1>Fresh Artists</h1>
-                    <p>Tired of seeing tired artists performing? All you have to do is insert the maximum number of events the artist participated in before your show, and receive a list of events where the performer is guaranteed to be “fresh”!</p>
+                    <p>Tired of seeing tired artists performing? All you have to do is insert the maximum number of events you want the artist to participate in before your show, and a starting date. We will find you a list of events taking place at most 2 months after the date you entered, where the performer is guaranteed to be “fresh”!</p>
                     <p><button class="btn btn-secondary" data-parent="#accordion" id="2" data-toggle="collapse" data-target="#query2" role="button" aria-expanded="false" aria-controls="query2">
                     View details &raquo;</button></p>
                     <div id="query2" class="collapse jumbotron jumbotron-fluid" >
@@ -68,7 +68,7 @@
                                 <label for="date" class="">Date</label>
                             </div>
                             <div class="form-group input col-x3-3">
-                                    <input type="text" min="1" max="" name="q2_times" class="form-control" required>
+                                    <input type="text" min="1" max="30" name="q2_times" class="form-control" required>
                                     <label for="times" class="">Number of times</label>
                             </div>
                             <div class="form-group input col-x3-3 d-block ">
