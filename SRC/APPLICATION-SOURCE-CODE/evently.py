@@ -178,8 +178,8 @@ def edit(insert_album, insert_event):
             con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
             with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
-                cur.callproc('sp_insertEvent',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
                 try: 
+                    cur.callproc('sp_insertEvent',(event_artist,event_desc, event_sale, event_date, event_venue, event_city))
                     affected_rows = cur.fetchall()    
                     return_string = "Event inserted successfully."
                     return2_string = "Thank you!"
@@ -198,8 +198,8 @@ def edit(insert_album, insert_event):
             con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
             with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
-                cur.callproc('sp_insertAlbum',(album_title,album_artist, album_year,album_tracks))
-                try: 
+                try:
+                    cur.callproc('sp_insertAlbum',(album_title,album_artist, album_year,album_tracks))
                     affected_rows = cur.fetchall()
                     return_string = "Album inserted successfully!"
                     return2_string = "Thank you!"
