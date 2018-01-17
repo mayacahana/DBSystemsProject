@@ -2,7 +2,7 @@
 {% block body %}
 <div class="jumbotron eventlist" style="padding: 1rem 2rem !important;">
     <img src="/static/media/homepage/heavy-metal.png" width="90" height="90" alt="">
-    <h1 class="h1-responsive">Here are the events of the artist you have chosen:</h1>
+    <h1 class="h1-responsive">Here are the events of the artist you have chosen, please select one:</h1>
     {% if message %}
         <p class=error>{{ message }}
     {% endif %}
@@ -27,7 +27,7 @@
             <td><input type="date" placeholder="YYYY-DD-MM" value="{{event.event_date}}" name="date_{{event.event_id}}" class=""></td>
             </form>
             <form method="POST">
-            <td><button class="btn btn-info" type="submit" name="click" value="{{event.event_id}}">Update date</button></td>
+            <td><button class="btn btn-info" type="submit" name="click" value="{{event.event_id}}">select event</button></td>
             </form>
         </tr>
         {% endfor %}
