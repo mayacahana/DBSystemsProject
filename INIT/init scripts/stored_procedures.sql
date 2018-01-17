@@ -9,8 +9,8 @@ DELIMITER $$
 # by your favorite genre (inGenre) in specific location
 
 DROP PROCEDURE IF EXISTS top_artists$$
-CREATE PROCEDURE top_artists(IN inGenre VARCHAR(45), IN numListeners INT, 
-							 IN numSongs INT, IN countryName VARCHAR(45))
+CREATE PROCEDURE top_artists(IN inGenre VARCHAR(45), IN numListeners INT(11), 
+							 IN numSongs TINYINT, IN countryName VARCHAR(45))
 BEGIN
 SELECT A.artist_id AS artist_id, artist_name, sale_date, event_date,
 		country, city, venue, description
@@ -31,7 +31,7 @@ END$$
 # that dont perform more than @times times in the 30 days before the show
 # in the the 2 months from the date @in_date
 DROP PROCEDURE IF EXISTS fresh_artists$$
-CREATE PROCEDURE fresh_artists(IN times INT, IN in_date DATE)
+CREATE PROCEDURE fresh_artists(IN times TINYINT, IN in_date DATE)
 BEGIN
 SET @times = times;
 SET @in_date = in_date;
@@ -70,7 +70,7 @@ END$$
 # in @numYears last years
 
 DROP PROCEDURE IF EXISTS latest_artists$$
-CREATE PROCEDURE latest_artists(IN numYears INT, IN numAlbums INT)
+CREATE PROCEDURE latest_artists(IN numYears TINYINT, IN numAlbums TINYINT)
 BEGIN
 SET @numYears = numYears;
 SET @numAlbums = numAlbums;
@@ -194,7 +194,7 @@ END$$
 # at least @numTracks tracks with a given word @word
 
 DROP PROCEDURE IF EXISTS trivia_1$$
-CREATE PROCEDURE trivia_1(IN artistId SMALLINT(5), IN word VARCHAR(45), IN numTracks INT)
+CREATE PROCEDURE trivia_1(IN artistId SMALLINT(5), IN word VARCHAR(45), IN numTracks TINYINT)
 BEGIN
 SET @artistId = artistId;
 SET @word = word;
@@ -202,6 +202,7 @@ SET @numTracks = numTracks;
 
 CREATE OR REPLACE VIEW artistAlbumTracks AS
 SELECT Album.album_id AS album_id, Album.title AS album_title, 
+	   Album.num_of_tracks AS num_of_tracks, Album.release_year AS release_year,
 	   Track.track_id AS track_id, Track.listeners AS listeners
 FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id 
 	INNER JOIN Albumtracks ON AlbumTracks.album_id = Album.album_id
@@ -209,7 +210,7 @@ FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id
 WHERE Artist.artist_id = getArtistId();
 
 
-SELECT album_title,SUM(listeners)
+SELECT album_title, release_year, num_of_tracks, SUM(listeners)
 FROM artistAlbumTracks AS A INNER JOIN Lyrics ON A.track_id = Lyrics.track_id
 WHERE MATCH(lyrics) AGAINST(@word)
 GROUP BY album_id

@@ -206,6 +206,11 @@ CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artist_Genres` (`genre` INT);
 CREATE TABLE IF NOT EXISTS `DbMysql11`.`Artists_With_Future_Events` (`artist_id` INT, `artist_name` INT, `genre` INT, `listeners` INT, `playcount` INT, `event_id` INT, `event_date` INT, `country_id` INT, `sale_date` INT, `venue` INT, `city_id` INT, `description` INT);
 
 -- -----------------------------------------------------
+-- Placeholder table for view `DbMysql11`.`Total_Events_Per_City`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DbMysql11`.`Total_Events_Per_City` (`country_id` INT, `city_id` INT, `city` INT, `numOfEvents` INT);
+
+-- -----------------------------------------------------
 -- procedure bad_words
 -- -----------------------------------------------------
 
@@ -232,25 +237,24 @@ HAVING num_of_songs>10;
 
 SELECT Artist.name AS artist_name, Track.title AS title, (Track.duration/60) AS duration
 FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id
-WHERE Artist.artist_id = (SELECT M.ALL_SONGS_ID
-						  FROM (
-								SELECT ALL_SONGS.artist_id as ALL_SONGS_ID
-								FROM ( SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
-										FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
-                                        INNER JOIN Lyrics ON Lyrics.track_id = Track.track_id
-										WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS 
-								RIGHT JOIN ALL_SONGS ON ALL_SONGS.artist_id = BAD_LYRICS.artist_id
-								GROUP BY ALL_SONGS.artist_id
-								ORDER BY (COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs) asc, 
-										  listeners desc 
-                                limit 1) AS M)
+WHERE Artist.artist_id = 
+		(SELECT M.ALL_SONGS_ID
+		  FROM (
+				SELECT ALL_SONGS.artist_id as ALL_SONGS_ID
+				FROM ( SELECT Artist.artist_id as artist_id, Track.track_id AS track_id
+						FROM Artist INNER JOIN Track ON Artist.artist_id = Track.artist_id 
+						INNER JOIN Lyrics ON Lyrics.track_id = Track.track_id
+						WHERE MATCH (lyrics) AGAINST (@badWords IN BOOLEAN MODE)) AS BAD_LYRICS 
+				RIGHT JOIN ALL_SONGS ON ALL_SONGS.artist_id = BAD_LYRICS.artist_id
+				GROUP BY ALL_SONGS.artist_id
+				ORDER BY (COUNT(BAD_LYRICS.track_id)/ALL_SONGS.num_of_songs) asc, 
+						  listeners desc 
+				limit 1) AS M)
 
 ORDER BY Track.listeners
 LIMIT 20;
 
 DROP VIEW ALL_SONGS;
-
-						
 END$$
 
 DELIMITER ;
@@ -264,7 +268,7 @@ DROP procedure IF EXISTS `DbMysql11`.`fresh_artists`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `fresh_artists`(IN times INT, IN in_date DATE)
+CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `fresh_artists`(IN times TINYINT, IN in_date DATE)
 BEGIN
 SET @times = times;
 SET @in_date = in_date;
@@ -277,7 +281,7 @@ CREATE OR REPLACE VIEW events_60 AS
 CREATE OR REPLACE VIEW relevant_events AS
   # all the relevant events as defined above
   SELECT *
-  FROM events_60 as E2
+  FROM events_60 AS E2
   WHERE EXISTS (
 				SELECT E3.artist_id
 				FROM Event as E3
@@ -286,9 +290,9 @@ CREATE OR REPLACE VIEW relevant_events AS
 					  E2.artist_id = E3.artist_id
 				HAVING COUNT(E3.event_id) < getTimes());
 		
-SELECT A.artist_id as artist_id, A.name as artist_name, D.sale_date as sale_date,
-	   D.date as event_date, D.venue as venue, C.country as country,
-       C2.city as city, D.description as description
+SELECT A.artist_id AS artist_id, A.name AS artist_name, D.sale_date AS sale_date,
+	   D.date AS event_date, D.venue AS venue, C.country AS country,
+       C2.city AS city, D.description AS description
 FROM relevant_events AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id
      INNER JOIN Country AS C ON C.country_id = D.country_id 
 	 INNER JOIN City AS C2 ON C2.city_id = D.city_id  
@@ -384,7 +388,7 @@ DROP procedure IF EXISTS `DbMysql11`.`latest_artists`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `latest_artists`(IN numYears INT, IN numAlbums INT)
+CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `latest_artists`(IN numYears TINYINT, IN numAlbums TINYINT)
 BEGIN
 SET @numYears = numYears;
 SET @numAlbums = numAlbums;
@@ -393,12 +397,14 @@ SET @numAlbums = numAlbums;
 CREATE OR REPLACE VIEW latest_artists AS
 SELECT  E.artist_id as artist_id, COUNT(A.release_year) as cnt_albums
 FROM Artist AS E INNER JOIN Album AS A ON E.artist_id = A.artist_id
-WHERE A.release_year<=YEAR(current_date()) AND YEAR(current_date()) - A.release_year <= getNumYears()
+WHERE A.release_year<=YEAR(current_date())
+		AND YEAR(current_date()) - A.release_year <= getNumYears()
 GROUP BY E.artist_id;
 
 SELECT  E.artist_id as artist_id, artist_name, sale_date, event_date, country, city,
         venue, description
-FROM 	latest_artists AS T INNER JOIN Artists_With_Future_Events AS E ON T.artist_id = E.artist_id
+FROM 	latest_artists AS T INNER JOIN Artists_With_Future_Events AS E 
+							ON T.artist_id = E.artist_id
 		INNER JOIN Country as C ON C.country_id = E.country_id
         INNER JOIN City as C2 ON C2.city_id = E.city_id
 WHERE T.cnt_albums >= @numAlbums
@@ -427,13 +433,12 @@ DECLARE currentDur INT;
 SET @artistId = artistId;
 
 CREATE OR REPLACE VIEW ArtistTracks AS
-SELECT  Track.title as track_name, Track.duration as duration,
-		Lyrics.lyrics as lyrics, Track.listeners as listeners
+SELECT  Track.title as track_name, Track.duration AS duration,
+		Lyrics.lyrics as lyrics, Track.listeners AS listeners
 FROM  Track INNER JOIN Artist ON Artist.artist_id = Track.artist_id
 INNER JOIN Lyrics ON Track.track_id = Lyrics.track_id		
 WHERE Artist.artist_id = getArtistId() AND Lyrics.lyrics IS NOT NULL
 AND duration IS NOT NULL;
-
 
 SET i = 0;
 SET currentDur = 0;
@@ -442,13 +447,14 @@ SET numOfSongs = (SELECT COUNT(*)
 SET playlistDuration = playlistDuration*60;
 WHILE currentDur <= playlistDuration  AND i <= numOfSongs DO
 	SET  i = i + 1; 
-	SET currentDur = (SELECT (SUM(duration)) as playlist_duration
-					  FROM (SELECT * FROM ArtistTracks ORDER BY listeners DESC limit i ) as R);	
+	SET currentDur = (SELECT (SUM(duration)) AS playlist_duration
+					  FROM (SELECT * FROM ArtistTracks ORDER BY listeners DESC LIMIT i ) AS R);	
 	
 END WHILE; 
 
+
 SET i = IF(currentDur>playlistDuration,i-1,i);
-SELECT track_name as title, (duration/60) as duration, listeners, lyrics
+SELECT track_name AS title, (duration/60) AS duration, listeners, lyrics
 FROM ArtistTracks
 ORDER BY ArtistTracks.listeners DESC
 LIMIT i;
@@ -573,14 +579,16 @@ DROP procedure IF EXISTS `DbMysql11`.`top_artists`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `top_artists`(IN inGenre VARCHAR(45), IN numListeners INT, IN numSongs INT, IN countryName VARCHAR(45))
+CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `top_artists`(IN inGenre VARCHAR(45), IN numListeners INT(11), 
+							 IN numSongs TINYINT, IN countryName VARCHAR(45))
 BEGIN
-SELECT A.artist_id as artist_id, artist_name, sale_date, event_date, country, city, venue, description
+SELECT A.artist_id AS artist_id, artist_name, sale_date, event_date,
+		country, city, venue, description
 FROM	(SELECT Artist.artist_id AS artist_id
 		FROM Artist INNER JOIN Track ON Track.artist_id = Artist.artist_id  
 		WHERE Track.listeners >= numListeners AND genre = inGenre
 		GROUP BY Artist.artist_id
-		HAVING COUNT(track_id) >= numSongs) as A INNER JOIN
+		HAVING COUNT(track_id) >= numSongs) AS A INNER JOIN
         Artists_With_Future_Events AS E ON A.artist_id = E.artist_id
         INNER JOIN Country AS C ON E.country_id = C.country_id
 		INNER JOIN City ON E.city_id = City.city_id
@@ -598,28 +606,29 @@ DROP procedure IF EXISTS `DbMysql11`.`trivia_1`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `trivia_1`(IN artistId SMALLINT(5), IN word VARCHAR(45), IN numTracks INT)
+CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `trivia_1`(IN artistId SMALLINT(5), IN word VARCHAR(45), IN numTracks TINYINT)
 BEGIN
 SET @artistId = artistId;
 SET @word = word;
 SET @numTracks = numTracks;
 
 CREATE OR REPLACE VIEW artistAlbumTracks AS
-SELECT Album.album_id as album_id, Album.title as album_title, 
-	   Track.track_id as track_id, Track.listeners as listeners
+SELECT Album.album_id AS album_id, Album.title AS album_title, 
+	   Album.num_of_tracks AS num_of_tracks, Album.release_year AS release_year,
+	   Track.track_id AS track_id, Track.listeners AS listeners
 FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id 
 	INNER JOIN Albumtracks ON AlbumTracks.album_id = Album.album_id
 	INNER JOIN Track ON Track.track_id = AlbumTracks.track_id 	
 WHERE Artist.artist_id = getArtistId();
 
 
-SELECT album_title,SUM(listeners)
-FROM artistAlbumTracks as A INNER JOIN Lyrics ON A.track_id = Lyrics.track_id
-WHERE Match(lyrics) Against(@word)
+SELECT album_title, release_year, num_of_tracks, SUM(listeners)
+FROM artistAlbumTracks AS A INNER JOIN Lyrics ON A.track_id = Lyrics.track_id
+WHERE MATCH(lyrics) AGAINST(@word)
 GROUP BY album_id
 HAVING COUNT(listeners)>=@numTracks
 ORDER BY SUM(listeners)
-limit 1;
+LIMIT 1;
 
 DROP VIEW artistAlbumTracks;
 END$$
@@ -635,34 +644,30 @@ DROP procedure IF EXISTS `DbMysql11`.`trivia_2`;
 
 DELIMITER $$
 USE `DbMysql11`$$
-CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `trivia_2`(IN artistId SMALLINT(5))
+CREATE DEFINER=`DbMysql11`@`%.cs.tau.ac.il` PROCEDURE `trivia_2`(IN p_genre VARCHAR(45))
 BEGIN
 
-# return num of events per city
-CREATE OR REPLACE VIEW TOTAL_EVENTS_PER_CITY AS
-SELECT E.country_id, E.city_id, City.city, COUNT(E.event_id) AS numOfEvents
-FROM Event AS E INNER JOIN City ON E.city_id = City.city_id 
-GROUP BY E.city_id
-HAVING numOfEvents >= 5;
-
+SET @genre = p_genre;
 # return num of events of spcific genre per city
-SET @genre = (SELECT genre FROM Artist WHERE artist_id = artistId);
 CREATE OR REPLACE VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE AS
 SELECT City.city_id, City.city, COUNT(E.event_id) AS numOfEvents
-FROM Event AS E, City, Artist
-WHERE E.artist_id = Artist.artist_id AND City.city_id = E.city_id AND Artist.genre = getGenre() 
+FROM Artist INNER JOIN Event AS E on Artist.artist_id = E.artist_id 
+			INNER Join City ON E.city_id = City.city_id
+WHERE Artist.genre = getGenre()
 GROUP BY City.city_id;
 
-# return which city has the highest (total events of genre/total events) ratio
-SELECT TOTAL_EVENTS_PER_CITY.country_id, Country.country,TOTAL_EVENTS_PER_CITY.city_id,
-		TOTAL_EVENTS_PER_CITY.city,
-		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / TOTAL_EVENTS_PER_CITY.numOfEvents * 100) AS percent
-FROM TOTAL_EVENTS_PER_CITY JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE ON TOTAL_EVENTS_PER_CITY.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
-	JOIN Country ON TOTAL_EVENTS_PER_CITY.country_id = Country.country_id
+#return which city has the highest (total events of genre/total events) ratio
+SELECT Total_Events_Per_City.country_id, Country.country,Total_Events_Per_City.city_id,
+		Total_Events_Per_City.city,
+		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / Total_Events_Per_City.numOfEvents * 100) 
+        AS percent
+FROM Total_Events_Per_City JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE 
+			ON Total_Events_Per_City.city_id = TOTAL_EVENTS_IN_CITY_PER_GENRE.city_id
+	JOIN Country ON Total_Events_Per_City.country_id = Country.country_id
 ORDER BY percent DESC
 LIMIT 1;
 
-DROP VIEW TOTAL_EVENTS_PER_CITY;
+DROP VIEW TOTAL_EVENTS_IN_CITY_PER_GENRE;
 END$$
 
 DELIMITER ;
@@ -682,6 +687,14 @@ DROP VIEW IF EXISTS `DbMysql11`.`Artists_With_Future_Events` ;
 DROP TABLE IF EXISTS `DbMysql11`.`Artists_With_Future_Events`;
 USE `DbMysql11`;
 CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`DbMysql11`@`%.cs.tau.ac.il` SQL SECURITY DEFINER VIEW `DbMysql11`.`Artists_With_Future_Events` AS select `A`.`artist_id` AS `artist_id`,`A`.`name` AS `artist_name`,`A`.`genre` AS `genre`,`A`.`listeners` AS `listeners`,`A`.`playcount` AS `playcount`,`E`.`event_id` AS `event_id`,`E`.`date` AS `event_date`,`E`.`country_id` AS `country_id`,`E`.`sale_date` AS `sale_date`,`E`.`venue` AS `venue`,`E`.`city_id` AS `city_id`,`E`.`description` AS `description` from (`DbMysql11`.`Event` `E` join `DbMysql11`.`Artist` `A` on((`E`.`artist_id` = `A`.`artist_id`))) where (curdate() <= `E`.`date`);
+
+-- -----------------------------------------------------
+-- View `DbMysql11`.`Total_Events_Per_City`
+-- -----------------------------------------------------
+DROP VIEW IF EXISTS `DbMysql11`.`Total_Events_Per_City` ;
+DROP TABLE IF EXISTS `DbMysql11`.`Total_Events_Per_City`;
+USE `DbMysql11`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`DbMysql11`@`%.cs.tau.ac.il` SQL SECURITY DEFINER VIEW `DbMysql11`.`Total_Events_Per_City` AS select `E`.`country_id` AS `country_id`,`E`.`city_id` AS `city_id`,`DbMysql11`.`City`.`city` AS `city`,count(`E`.`event_id`) AS `numOfEvents` from (`DbMysql11`.`Event` `E` join `DbMysql11`.`City` on((`E`.`city_id` = `DbMysql11`.`City`.`city_id`))) group by `E`.`city_id` having (`numOfEvents` >= 5);
 USE `DbMysql11`;
 
 DELIMITER $$
