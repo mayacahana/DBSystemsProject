@@ -192,12 +192,18 @@ def edit():
             with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
                 cur.callproc('sp_insertAlbum',(album_title,album_artist, album_year,album_tracks))
-                affected_rows = cur.fetchall()
-                if affected_rows:
-                    return_string = "Album inserted successfully!"
-                else:
-                    return_string = "Failed to insert album. Please try again"
-                return render_template('edit.html',cities = cities, artists=artists, insert_album=return_string)
+                try: 
+                    affected_rows = cur.fetchall()
+                    if affected_rows == 0:
+                        return_string = "Failed to insert album. Please try again"
+                    else:
+                        return_string = "Album inserted successfully!"
+                except:
+                    return_string 
+                cities =[]
+                artists=[]
+                return redirect(url_for('edit',cities = cities, artists=artists, insert_album=return_string))
+
         if "Update event date" in request.form["btn"]:
             # update event date
             artist = request.form["i3_artist"]
