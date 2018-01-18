@@ -7,7 +7,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 app = Flask(__name__)
 # MySQL configurations
 SERVER_NAME = "mysqlsrv.cs.tau.ac.il"
-SERVER_PORT = 3306
+SERVER_PORT = 3305
 DB_USERNAME = "DbMysql11"
 DB_PASSWORD = "DbMysql11"
 DB_NAME = "DbMysql11"
@@ -33,11 +33,13 @@ def main():
             _q1_listeners = request.form['q1_listeners']
             return redirect(url_for("events_query1",genre=_q1_genre, country=_q1_country, songs=_q1_songs, listeners=_q1_listeners))
         
+        # QUERY 2 - FREASH ARTISTS
         if "Submit 2" in request.form["btn"]:
             _q2_date = request.form['q2_datepicker']
             _q2_times = request.form['q2_times']
             return redirect(url_for("events_query2",date=_q2_date, times=_q2_times))
         
+        # QUERY 3 - LATEST ARTISTS
         if "Submit 3" in request.form["btn"]:
             _q3_years = request.form['q3_years']
             _q3_albums = request.form['q3_albums']
@@ -66,7 +68,6 @@ def main():
 def events_query1(genre,country,songs,listeners):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
-        print artist_id
         return redirect(url_for('playlist_trivia', artist_id=artist_id))
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
@@ -105,7 +106,6 @@ def events_query3(years, albums):
 def events_query2(date, times):
     if (request.method == 'POST'):
         artist_id = request.form["click"]
-        print artist_id
         return redirect(url_for('playlist_trivia', artist_id=artist_id))
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
@@ -137,16 +137,17 @@ def playlist_trivia(artist_id):
             for word in words:
                 if (word != ""):
                     bad_words += word+"+"
-            print bad_words[:-1]
-            print("return ")
             return redirect(url_for('playlist_badwords', artist_id = artist_id, bad_words = bad_words[:-1]))
+        
         if "trivia 1" in request.form["submit"]:
             _word = request.form["t1_word"]
             _tracks = request.form["t1_tracks"]
             return redirect(url_for('get_trivia1_data', artist_id=artist_id, word=_word, tracks = _tracks))
+        
         if "trivia 2" in request.form["submit"]:
             _genre = request.form["q1_genre"]
             return redirect(url_for('get_trivia2_data', genre = _genre))
+
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
@@ -168,8 +169,7 @@ def get_trivia2_data(genre):
     with con:
         try:
             cur = con.cursor(mdb.cursors.DictCursor)
-            print genre
-            cur.callproc('trivia_2',(genre))
+            cur.callproc('trivia_2',(genre,))
             rows = cur.fetchall()
             cur.close()
         except Exception as e:
@@ -182,7 +182,6 @@ def get_trivia2_data(genre):
 @app.route('/Trivia1/<artist_id>/<word>/<tracks>', methods=['POST','GET'])
 def get_trivia1_data(artist_id, word, tracks):
     if request.method == 'POST':
-        print "i want back"
         return request.referrer
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
@@ -312,9 +311,7 @@ def edit(insert_album, insert_event):
 @app.route('/EditDateOfEvent/<event_id>/<message>', methods = ['GET', 'POST'])
 def edit_date(event_id, message):
     if request.method == 'POST':
-        print "test"
         edited_date = request.form["new_date"]
-        print edited_date
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
@@ -340,7 +337,6 @@ def edit_date(event_id, message):
                 INNER JOIN City AS C2 ON C2.city_id = D.city_id   \
                 WHERE event_id = %s LIMIT 1;", event_id)
                 event = cur.fetchall()
-                print event
                 return render_template('editDate.html', events = event, message = message)
             except Exception as e:
                 return render_template('editDate.html',  message = str(e))
@@ -352,10 +348,8 @@ def edit_date(event_id, message):
 @app.route('/EditDate/<artist_id>', methods=['GET','POST'])
 def update_event(artist_id):
     if request.method == 'POST':
-        print ("im in post")
         event_id = request.form["click"]
         message = "Please edit date"
-        print message
         return redirect(url_for('edit_date', event_id = event_id, message = message))
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -374,4 +368,4 @@ def update_event(artist_id):
     
 
 if (__name__ == '__main__'):
-    app.run(port=40333, host="0.0.0.0")
+    app.run(port=40333, host="0.0.0.0", debug=True)
