@@ -205,7 +205,7 @@ SELECT Album.album_id AS album_id, Album.title AS album_title,
 	   Album.num_of_tracks AS num_of_tracks, Album.release_year AS release_year,
 	   Track.track_id AS track_id, Track.listeners AS listeners
 FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id 
-	INNER JOIN Albumtracks ON AlbumTracks.album_id = Album.album_id
+	INNER JOIN AlbumTracks ON AlbumTracks.album_id = Album.album_id
 	INNER JOIN Track ON Track.track_id = AlbumTracks.track_id 	
 WHERE Artist.artist_id = getArtistId();
 
