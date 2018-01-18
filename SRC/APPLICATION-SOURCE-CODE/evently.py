@@ -157,8 +157,7 @@ def playlist_trivia(artist_id):
                 cur.close()
                 return render_template('playlists.html', genres=genres)
             except Exception as e:
-                return render_template('playlists.html', message= str(e)
-
+                return render_template('playlists.html', message= str(e))
 
 #
 # Show trivia 2 answer
@@ -169,6 +168,7 @@ def get_trivia2_data(genre):
     with con:
         try:
             cur = con.cursor(mdb.cursors.DictCursor)
+            print genre
             cur.callproc('trivia_2',(genre))
             rows = cur.fetchall()
             cur.close()
@@ -208,7 +208,7 @@ def playlist_duration(duration,artist_id):
             rows = cur.fetchall()
             cur.close()
             return render_template('durationPlaylist.html', data=rows)
-        catch Exception as e:
+        except Exception as e:
             return render_template('durationPlaylist.html', message=str(e))
 
 #
