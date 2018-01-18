@@ -368,4 +368,4 @@ def update_event(artist_id):
     
 
 if (__name__ == '__main__'):
-    app.run(port=40333, host="0.0.0.0", debug=True)
+    app.run(port=40321, host="0.0.0.0", debug=True)
