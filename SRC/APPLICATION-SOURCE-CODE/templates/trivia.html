@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+<hr class="extra-margins">
+<div class="jumbotron" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient2.jpg);">
+{% if trivia_1 %}
+<div class="card text-center" style="width:500px; margin:0 auto;">
+        <div class="card-header success-color white-text">
+            Trivia 
+        </div>
+        {% for answer in answers %}
+        <div class="card-body">
+            <h4 class="card-title">Which album contains what words?</h4>
+            <p class="card-text">Album title: {{answer.album_title}}</p>
+            <p class="card-text">Listeners: {{answer.listeners}}</p>
+            <p class="card-text">Tracks: {{answer.num_of_tracks}}</p>
+            <p class="card-text">Year: {{answer.release_year}}</p>
+
+            <a class="btn btn-success btn-sm">Go back</a>
+        </div>
+        {% endfor %}
+        
+    </div>
+{% endif %}
+{% if trivia_2 %}
+<div class="card text-center" style="width:500px; margin:0 auto;">
+        <div class="card-header success-color white-text">
+            Trivia 
+        </div>
+        {% for answer in answers %}
+        <div class="card-body">
+            <h4 class="card-title">Which city loves the genre most?</h4>
+            <p class="card-text">City: {{answer.city}}</p>
+            <p class="card-text">Country: {{answer.country}}</p>
+
+            <a class="btn btn-success btn-sm">Go back</a>
+        </div>
+        {% endfor %}
+        
+    </div>{% endif %}<hr class="extra-margins">
+{% if error %}
+<p class="error">{{ error }} </p>
+</div>
+{% endif %}
+<!--Panel-->
+
+                  
+{% endblock %}

@@ -124,7 +124,10 @@ def playlist_trivia(artist_id):
         if "trivia 1" in request.form["submit"]:
             _word = request.form["t1_word"]
             _tracks = request.form["t1_tracks"]
-            return redirect(url_for('playlist_trivia', artist_id=artist_id, trivia_success=1))
+            return redirect(url_for('get_trivia1_data', artist_id=artist_id, word=_word, tracks = _tracks))
+        if "trivia 2" in request.form["submit"]:
+            _genre = request.form["q1_genre"]
+            return redirect(url_for('get_trivia2_data', genre = _genre))
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
@@ -134,13 +137,32 @@ def playlist_trivia(artist_id):
             cur.close()
             return render_template('playlists.html', genres=genres)
 
-@app.route('/Trivia', methods=['POST','GET'])
-def get_trivia1_data():
-    word_value = request.args.get('words')
-    tracks_value = request.args.get('tracks')
+@app.route('/Trivia2/<genre>')
+def get_trivia2_data(genre):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
-        cur = con.cursor(mdb.cursors.DictCursor)
+        try:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            print genre
+            cur.callproc('trivia_2',(genre))
+            rows = cur.fetchall()
+            cur.close()
+        except Exception as e:
+            return render_template('trivia.html', error = str(e))
+        return render_template('trivia.html',trivia_2='1', answers = rows)
+@app.route('/Trivia1/<artist_id>/<word>/<tracks>', methods=['POST','GET'])
+def get_trivia1_data(artist_id, word, tracks):
+    con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+    with con:
+        try:
+            cur = con.cursor(mdb.cursors.DictCursor)
+            cur.callproc('trivia_1',(artist_id, word, tracks))
+            rows = cur.fetchall()
+            cur.close()
+            
+        except Exception as e:
+            return render_template('trivia.html', error = str(e))
+        return render_template('trivia.html',trivia_1='1', answers = rows)
     
 @app.route('/showPlaylist_duration/<duration>/<artist_id>',methods = ['GET','POST'])
 def playlist_duration(duration,artist_id):
@@ -149,7 +171,6 @@ def playlist_duration(duration,artist_id):
         cur = con.cursor(mdb.cursors.DictCursor)
         cur.callproc('playlist_dur',(artist_id,duration))
         rows = cur.fetchall()
-        print rows
         cur.close()
         return render_template('durationPlaylist.html', data=rows)
 
