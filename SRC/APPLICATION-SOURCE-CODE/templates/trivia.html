@@ -15,7 +15,9 @@
             <p class="card-text">Tracks: {{answer.num_of_tracks}}</p>
             <p class="card-text">Year: {{answer.release_year}}</p>
 
+            <form method="POST">
             <a class="btn btn-success btn-sm">Go back</a>
+            </form>
         </div>
         {% endfor %}
         
@@ -31,8 +33,9 @@
             <h4 class="card-title">Which city loves the genre most?</h4>
             <p class="card-text">City: {{answer.city}}</p>
             <p class="card-text">Country: {{answer.country}}</p>
-
+            <form method="POST">
             <a class="btn btn-success btn-sm">Go back</a>
+            </form>
         </div>
         {% endfor %}
         

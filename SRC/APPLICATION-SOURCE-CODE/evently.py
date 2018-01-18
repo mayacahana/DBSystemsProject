@@ -12,7 +12,9 @@ DB_USERNAME = "root"
 DB_PASSWORD = "Mc240195"
 DB_NAME = "DbMysql11"
 
-
+#
+# Main page
+#
 @app.route('/', methods=['GET','POST'])
 def main():
     _q1_genre = ""
@@ -57,6 +59,9 @@ def main():
                 return render_template('homepage', error = str(e))
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
+#
+# show events after query 1 - TOP events
+#
 @app.route('/Events1/<path:genre>/<country>/<songs>/<listeners>', methods = ['GET','POST'])
 def events_query1(genre,country,songs,listeners):
     if (request.method == 'POST'):
@@ -70,10 +75,13 @@ def events_query1(genre,country,songs,listeners):
             cur.callproc('top_artists',(genre,listeners,songs,country))
             rows = cur.fetchall()
             cur.close()
+            return render_template('artistsEvents.html', data = rows)
         except Exception as e:
             return render_template('artistsEvents.html', error = str(e))
-        return render_template('artistsEvents.html', data = rows)
 
+#
+# show events - latest artists
+#
 @app.route('/Events3/<years>/<albums>', methods = ['GET','POST'])
 def events_query3(years, albums):
     if (request.method == 'POST'):
@@ -82,11 +90,17 @@ def events_query3(years, albums):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         cur = con.cursor(mdb.cursors.DictCursor)
-        cur.callproc('latest_artists',(years, albums))
-        rows = cur.fetchall()
-        cur.close()
-        return render_template('artistsEvents.html', data = rows)
+        try:
+            cur.callproc('latest_artists',(years, albums))
+            rows = cur.fetchall()
+            cur.close()
+            return render_template('artistsEvents.html', data = rows)
+        except Exception as e:
+            return render_template('artistsEvents.html', message = str(e))
 
+#
+# show events - Fresh artists
+#
 @app.route('/Events2/<date>/<times>', methods = ['GET','POST'])
 def events_query2(date, times):
     if (request.method == 'POST'):
@@ -96,13 +110,18 @@ def events_query2(date, times):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         cur = con.cursor(mdb.cursors.DictCursor)
-        cur.callproc('fresh_artists',(times, date))
-        rows = cur.fetchall()
-        cur.close()
-        return render_template('artistsEvents.html', data = rows)
+        try:
+            cur.callproc('fresh_artists',(times, date))
+            rows = cur.fetchall()
+            cur.close()
+            return render_template('artistsEvents.html', data = rows)
+        except Exception as e:
+            return render_template('artistsEvents.html', message = str(e))
 
 
-
+#
+# after choosing an event - show playlist and trivia options
+#
 @app.route('/Playlists/<artist_id>',methods = ['GET','POST'])
 def playlist_trivia(artist_id):
     if request.method == 'POST':
@@ -132,11 +151,18 @@ def playlist_trivia(artist_id):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT genre FROM Artist_Genres")
-            genres = [item['genre'] for item in cur.fetchall()]
-            cur.close()
-            return render_template('playlists.html', genres=genres)
+            try:
+                cur.execute("SELECT genre FROM Artist_Genres")
+                genres = [item['genre'] for item in cur.fetchall()]
+                cur.close()
+                return render_template('playlists.html', genres=genres)
+            except Exception as e:
+                return render_template('playlists.html', message= str(e)
 
+
+#
+# Show trivia 2 answer
+#
 @app.route('/Trivia2/<genre>', methods=['GET', 'POST'])
 def get_trivia2_data(genre):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -150,8 +176,14 @@ def get_trivia2_data(genre):
             return render_template('trivia.html', error = str(e))
         return render_template('trivia.html',trivia_2='1', answers = rows)
 
+#
+# Show trivia 1 answer
+#
 @app.route('/Trivia1/<artist_id>/<word>/<tracks>', methods=['POST','GET'])
 def get_trivia1_data(artist_id, word, tracks):
+    if request.method == 'POST':
+        print "i want back"
+        return request.referrer
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         try:
@@ -163,27 +195,41 @@ def get_trivia1_data(artist_id, word, tracks):
             return render_template('trivia.html', error = str(e))
         return render_template('trivia.html',trivia_1='1', answers = rows)
     
+#
+# Show playlist by duration
+#
 @app.route('/showPlaylist_duration/<duration>/<artist_id>',methods = ['GET','POST'])
 def playlist_duration(duration,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         cur = con.cursor(mdb.cursors.DictCursor)
-        cur.callproc('playlist_dur',(artist_id,duration))
-        rows = cur.fetchall()
-        cur.close()
-        return render_template('durationPlaylist.html', data=rows)
+        try:
+            cur.callproc('playlist_dur',(artist_id,duration))
+            rows = cur.fetchall()
+            cur.close()
+            return render_template('durationPlaylist.html', data=rows)
+        catch Exception as e:
+            return render_template('durationPlaylist.html', message=str(e))
 
+#
+# Show playlist - bad words
+#
 @app.route('/showPlaylist_badwords/<bad_words>/<artist_id>',methods = ['GET','POST'])
 def playlist_badwords(bad_words,artist_id):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         cur = con.cursor(mdb.cursors.DictCursor)
-        cur.callproc('bad_words',(artist_id,bad_words))
-        rows = cur.fetchall()
-        cur.close()
-        return render_template('badwordsPlaylist.html', data=rows)
+        try:
+            cur.callproc('bad_words',(artist_id,bad_words))
+            rows = cur.fetchall()
+            cur.close()
+            return render_template('badwordsPlaylist.html', data=rows)
+        except Exception as e:
+            return render_template('badwordsPlaylist.html', message=str(e))
         
-
+#
+# Edit page
+#
 @app.route('/Edit/<insert_album>/<insert_event>', methods=['GET','POST'])
 def edit(insert_album, insert_event):
     if (request.method == 'POST'):
@@ -239,19 +285,30 @@ def edit(insert_album, insert_event):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT artist_id, name FROM Artist")
-            artists = cur.fetchall()
-            cur.close()
-            cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT city_id, city FROM City")
-            cities = cur.fetchall()
-            cur.close()
-            cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT genre FROM Artist_Genres")
-            genres = [item['genre'] for item in cur.fetchall()]
-            cur.close()
-            return render_template('edit.html',cities = cities, artists=artists, genres=genres, insert_album=insert_album, insert_event=insert_event)
+            try:
+                cur.execute("SELECT artist_id, name FROM Artist")
+                artists = cur.fetchall()
+                cur.close()
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.execute("SELECT city_id, city FROM City")
+                cities = cur.fetchall()
+                cur.close()
+                cur = con.cursor(mdb.cursors.DictCursor)
+                cur.execute("SELECT genre FROM Artist_Genres")
+                genres = [item['genre'] for item in cur.fetchall()]
+                cur.close()
+                return render_template('edit.html',cities = cities, artists=artists, genres=genres, insert_album=insert_album, insert_event=insert_event)
+            except Exception as e:
+                cities =[]
+                artists=[]
+                return_string = "Failed to load page. Please try again"
+                return2_string = str(e)
+                return redirect(url_for('edit',cities = cities, artists=artists, insert_album=return_string, insert_event=return2_string))
 
+
+#
+# after choosing an event and edit the date
+#
 @app.route('/EditDateOfEvent/<event_id>/<message>', methods = ['GET', 'POST'])
 def edit_date(event_id, message):
     if request.method == 'POST':
@@ -261,26 +318,37 @@ def edit_date(event_id, message):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
-                cur.callproc('sp_updateEventDate',(event_id,edited_date))
-                affected_rows = cur.fetchall()
-                if affected_rows == 0:
-                    return_string = "Failed to update event date. Please try again"
-                else:
-                    return_string = "Event date updated successfully!"
-                return redirect(url_for('edit_date',event_id = event_id, message = return_string))
+                try:
+                    cur.callproc('sp_updateEventDate',(event_id,edited_date))
+                    affected_rows = cur.fetchall()
+                    if affected_rows == 0:
+                        return_string = "Failed to update event date. Please try again"
+                    else:
+                        return_string = "Event date updated successfully!"
+                    return redirect(url_for('edit_date',event_id = event_id, message = return_string))
+                except Exception as e:
+                    return redirect(url_for('edit_date',event_id = event_id, message = str(e)))
+
     if request.method == 'GET':
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT  description, sale_date, date, venue, name, genre, country, city \
-            FROM Event AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id \
-            INNER JOIN Country AS C ON C.country_id = D.country_id  \
-	        INNER JOIN City AS C2 ON C2.city_id = D.city_id   \
-            WHERE event_id = %s LIMIT 1;", event_id)
-            event = cur.fetchall()
-            print event
-            return render_template('editDate.html', events = event, message = message)
+            try: 
+                cur.execute("SELECT  description, sale_date, date, venue, name, genre, country, city \
+                FROM Event AS D INNER JOIN Artist AS A ON D.artist_id = A.artist_id \
+                INNER JOIN Country AS C ON C.country_id = D.country_id  \
+                INNER JOIN City AS C2 ON C2.city_id = D.city_id   \
+                WHERE event_id = %s LIMIT 1;", event_id)
+                event = cur.fetchall()
+                print event
+                return render_template('editDate.html', events = event, message = message)
+            except Exception as e:
+                return render_template('editDate.html',  message = str(e))
 
+
+#
+# choose an event to edit date
+#
 @app.route('/EditDate/<artist_id>', methods=['GET','POST'])
 def update_event(artist_id):
     if request.method == 'POST':
@@ -293,12 +361,15 @@ def update_event(artist_id):
         con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
         with con:
             cur = con.cursor(mdb.cursors.DictCursor)
-            cur.execute("SELECT A.artist_id as artist_id, A.name as artist_name, E.date as event_date, E.event_id as event_id\
-            FROM Event AS E INNER JOIN Artist AS A ON E.artist_id = A.artist_id \
-            WHERE A.artist_id = %s",(artist_id))
-            rows = cur.fetchall()
-            cur.close()
-            return render_template('eventsUpdateDate.html', events = rows)
+            try: 
+                cur.execute("SELECT A.artist_id as artist_id, A.name as artist_name, E.date as event_date, E.event_id as event_id\
+                FROM Event AS E INNER JOIN Artist AS A ON E.artist_id = A.artist_id \
+                WHERE A.artist_id = %s",(artist_id))
+                rows = cur.fetchall()
+                cur.close()
+                return render_template('eventsUpdateDate.html', events = rows)
+            except Exception as e:
+                return render_templr('eventsUpdateDate.html', message = str(e))
     
     
 

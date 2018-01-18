@@ -3,5 +3,8 @@
 <div class="jumbotron eventlist" style="padding: 1rem 2rem !important;">
     <img src="/static/media/homepage/heavy-metal.png" width="90" height="90" alt="">
     <h1 class="h1-responsive">Hi, we found your events!</h1>
+    {% if message %}
+        <p class=error>{{ message }}
+    {% endif %}
 </div>
 {% endblock %}
