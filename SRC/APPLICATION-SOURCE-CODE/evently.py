@@ -7,7 +7,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 app = Flask(__name__)
 # MySQL configurations
 SERVER_NAME = "mysqlsrv.cs.tau.ac.il"
-SERVER_PORT = 3305
+SERVER_PORT = 3306
 DB_USERNAME = "DbMysql11"
 DB_PASSWORD = "DbMysql11"
 DB_NAME = "DbMysql11"
