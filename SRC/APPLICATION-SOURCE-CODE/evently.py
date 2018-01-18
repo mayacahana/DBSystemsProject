@@ -137,19 +137,19 @@ def playlist_trivia(artist_id):
             cur.close()
             return render_template('playlists.html', genres=genres)
 
-@app.route('/Trivia2/<genre>')
+@app.route('/Trivia2/<genre>', methods=['GET', 'POST'])
 def get_trivia2_data(genre):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
         try:
             cur = con.cursor(mdb.cursors.DictCursor)
-            print genre
             cur.callproc('trivia_2',(genre))
             rows = cur.fetchall()
             cur.close()
         except Exception as e:
             return render_template('trivia.html', error = str(e))
         return render_template('trivia.html',trivia_2='1', answers = rows)
+
 @app.route('/Trivia1/<artist_id>/<word>/<tracks>', methods=['POST','GET'])
 def get_trivia1_data(artist_id, word, tracks):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
@@ -159,7 +159,6 @@ def get_trivia1_data(artist_id, word, tracks):
             cur.callproc('trivia_1',(artist_id, word, tracks))
             rows = cur.fetchall()
             cur.close()
-            
         except Exception as e:
             return render_template('trivia.html', error = str(e))
         return render_template('trivia.html',trivia_1='1', answers = rows)
