@@ -162,7 +162,7 @@ def playlist_trivia(artist_id):
 #
 # Show trivia 2 answer
 #
-@app.route('/Trivia2/<genre>', methods=['GET', 'POST'])
+@app.route('/Trivia2/<path:genre>', methods=['GET', 'POST'])
 def get_trivia2_data(genre):
     con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
     with con:
