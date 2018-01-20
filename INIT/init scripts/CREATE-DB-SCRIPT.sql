@@ -10,6 +10,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema DbMysql11
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `DbMysql11` ;
 
 -- -----------------------------------------------------
 -- Schema DbMysql11
@@ -273,10 +274,10 @@ BEGIN
 SET @times = times;
 SET @in_date = in_date;
 CREATE OR REPLACE VIEW events_60 AS
-	# all the events + 60 from current date
+	# all the events + 60 from in_date
 	SELECT *
 	FROM Event as E
-	WHERE DATEDIFF(E.date,getDate()) <= 60;
+	WHERE DATEDIFF(E.date,getDate()) <= 60 AND DATEDIFF(E.date,getDate()) >=0;
 
 CREATE OR REPLACE VIEW relevant_events AS
   # all the relevant events as defined above
@@ -617,12 +618,12 @@ SELECT Album.album_id AS album_id, Album.title AS album_title,
 	   Album.num_of_tracks AS num_of_tracks, Album.release_year AS release_year,
 	   Track.track_id AS track_id, Track.listeners AS listeners
 FROM Artist INNER JOIN Album ON Artist.artist_id = Album.artist_id 
-	INNER JOIN Albumtracks ON AlbumTracks.album_id = Album.album_id
+	INNER JOIN AlbumTracks ON AlbumTracks.album_id = Album.album_id
 	INNER JOIN Track ON Track.track_id = AlbumTracks.track_id 	
 WHERE Artist.artist_id = getArtistId();
 
 
-SELECT album_title, release_year, num_of_tracks, SUM(listeners)
+SELECT album_title, release_year, num_of_tracks, SUM(listeners) as listeners
 FROM artistAlbumTracks AS A INNER JOIN Lyrics ON A.track_id = Lyrics.track_id
 WHERE MATCH(lyrics) AGAINST(@word)
 GROUP BY album_id
@@ -657,8 +658,8 @@ WHERE Artist.genre = getGenre()
 GROUP BY City.city_id;
 
 #return which city has the highest (total events of genre/total events) ratio
-SELECT Total_Events_Per_City.country_id, Country.country,Total_Events_Per_City.city_id,
-		Total_Events_Per_City.city,
+SELECT Total_Events_Per_City.country_id as country_id, Country.country as country,
+	   Total_Events_Per_City.city_id as city_id, Total_Events_Per_City.city as city,
 		(TOTAL_EVENTS_IN_CITY_PER_GENRE.numOfEvents / Total_Events_Per_City.numOfEvents * 100) 
         AS percent
 FROM Total_Events_Per_City JOIN TOTAL_EVENTS_IN_CITY_PER_GENRE 
