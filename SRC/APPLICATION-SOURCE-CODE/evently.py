@@ -6,10 +6,10 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 # Create the application instance
 app = Flask(__name__)
 # MySQL configurations
-SERVER_NAME = "127.0.0.1"
+SERVER_NAME = "mysqlsrv.cs.tau.ac.il"
 SERVER_PORT = 3306
-DB_USERNAME = "root"
-DB_PASSWORD = "Mc240195"
+DB_USERNAME = "DbMysql11"
+DB_PASSWORD = "DbMysql11"
 DB_NAME = "DbMysql11"
 
 #
