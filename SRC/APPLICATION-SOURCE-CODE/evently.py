@@ -2,6 +2,7 @@ import os
 import MySQLdb as mdb
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
+from gevent.wsgi import WSGIServer
 
 # Create the application instance
 app = Flask(__name__)
@@ -368,4 +369,6 @@ def update_event(artist_id):
     
 
 if (__name__ == '__main__'):
-    app.run(port=40321, host="0.0.0.0")
+    http_server = WSGIServer(('0.0.0.0', 40321), app)
+    http_server.serve_forever()
+    #app.run(port=40321, host="0.0.0.0")
