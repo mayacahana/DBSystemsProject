@@ -179,7 +179,7 @@ WHERE Artist.artist_id =
 						  listeners desc 
 				limit 1) AS M)
 
-ORDER BY Track.listeners
+ORDER BY Track.listeners DESC
 LIMIT 20;
 
 DROP VIEW ALL_SONGS;
