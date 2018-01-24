@@ -47,9 +47,9 @@ def main():
             return redirect(url_for("events_query3", years=_q3_years, albums=_q3_albums))
 
     if (request.method == 'GET'):
-        con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
-        with con:
-            try:
+        try:
+            con = mdb.connect(host=SERVER_NAME, port=SERVER_PORT, user=DB_USERNAME, passwd=DB_PASSWORD, db=DB_NAME)
+            with con:
                 cur = con.cursor(mdb.cursors.DictCursor)
                 cur.execute("SELECT genre FROM Artist_Genres")
                 genres = [item['genre'] for item in cur.fetchall()]
@@ -58,8 +58,8 @@ def main():
                 cur.execute("SELECT country FROM Country")
                 countries = [[item['country'] for item in cur.fetchall()]]
                 cur.close()
-            except Exception as e:
-                return render_template('homepage', error = str(e))
+        except Exception as e:
+            return render_template('homepage', error = str(e))
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
 #
