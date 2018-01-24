@@ -59,7 +59,7 @@ def main():
                 countries = [[item['country'] for item in cur.fetchall()]]
                 cur.close()
         except Exception as e:
-            return render_template('homepage', error = str(e))
+            return render_template('homepage.html', error = str(e))
     return render_template('homepage.html',genres = genres, countries=countries[0])
 
 #
