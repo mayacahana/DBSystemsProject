@@ -7,10 +7,10 @@ from gevent.wsgi import WSGIServer
 # Create the application instance
 app = Flask(__name__)
 # MySQL configurations
-SERVER_NAME = "mysqlsrv.cs.tau.ac.il"
+SERVER_NAME = ""
 SERVER_PORT = 3306
 DB_USERNAME = "DbMysql11"
-DB_PASSWORD = "DbMysql11"
+DB_PASSWORD = ""
 DB_NAME = "DbMysql11"
 
 #
